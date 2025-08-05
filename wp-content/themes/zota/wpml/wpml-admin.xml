@@ -1,0 +1,32 @@
+<wpml-config>
+  <admin-texts>
+    <key name="zota_tbay_theme_options">
+      <key name="copyright_text"/>
+      <key name="mobile_footer_slides">
+        <key name="0">
+          <key name="title"/>
+          <key name="url"/>
+        </key>
+        <key name="1">
+          <key name="title"/>
+          <key name="url"/>
+        </key>
+        <key name="2">
+          <key name="title"/>
+          <key name="url"/>
+        </key>
+        <key name="3">
+          <key name="title"/>
+          <key name="url"/>
+        </key>
+      </key>
+      <key name="mobile_search_placeholder"/>
+      <key name="sale_tag_custom"/>
+      <key name="custom_label_featured"/>
+      <key name="size_guide_title"/>
+      <key name="html_before_add_to_cart_btn"/>
+      <key name="html_after_add_to_cart_btn"/>
+      <key name="text_readmore"/>
+    </key>
+  </admin-texts>
+</wpml-config>

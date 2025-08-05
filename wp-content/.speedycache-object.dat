@@ -1,0 +1,1 @@
+{"enable":true,"host":"localhost","port":"6379","username":"rUrJOPciPz&EjZvnh(vnBghb","password":"","hashed_prefix":"8cccf5e81f13","ttl":"360","db-id":0,"persistent":true,"admin":true,"async_flush":false,"serialization":"SERIALIZER_PHP","compress":"none","non_cache_group":["plugins\r","comment\r","counts\r","wc_session_id"]}

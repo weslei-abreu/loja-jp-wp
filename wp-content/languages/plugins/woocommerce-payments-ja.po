@@ -1,0 +1,3280 @@
+# Translation of Plugins - WooPayments: Integrated WooCommerce Payments - Stable (latest release) in Japanese
+# This file is distributed under the same license as the Plugins - WooPayments: Integrated WooCommerce Payments - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-02-22 01:31:19+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/4.0.1\n"
+"Language: ja_JP\n"
+"Project-Id-Version: Plugins - WooPayments: Integrated WooCommerce Payments - Stable (latest release)\n"
+
+#. translators: %1$s terms page link, %2$s privacy page link.
+#: includes/woopay/class-woopay-session.php:1023
+msgid "You must accept our %1$s and %2$s to continue with your purchase."
+msgstr "購入を続行するには、%1$s と %2$s に同意する必要があります。"
+
+#: includes/woopay/class-woopay-session.php:1018
+#: includes/woopay/class-woopay-session.php:1019
+msgid "Terms and Conditions"
+msgstr "利用規約"
+
+#. translators: %1: the authorized amount, %2: WooPayments, %3: transaction ID
+#. of the payment, %4: timestamp
+#: includes/class-wc-payments-order-service.php:1608
+msgid "A terminal payment of %1$s <strong>failed</strong> using %2$s (<a>%3$s</a>)"
+msgstr "%2$s (<a>%3$s</a>) を使用した %1$s の端末支払いが <strong>失敗</strong> しました"
+
+#: src/Internal/Service/Level3Service.php:192
+msgid "Rounding fix"
+msgstr "丸めの修正"
+
+#. translators: %1: the dispute status
+#: includes/class-wc-payments-order-service.php:1912
+msgid "Payment inquiry has been closed with status %1$s. See <a>payment status</a> for more details."
+msgstr "支払い照会はステータス %1$s で終了しました。詳細については<a>支払いステータス</a>を参照してください。"
+
+#. translators: %1: the disputed amount and currency; %2: the dispute reason;
+#. %3 the deadline date for responding to the inquiry
+#: includes/class-wc-payments-order-service.php:1869
+msgid "A payment inquiry has been raised for %1$s with reason \"%2$s\". <a>Response due by %3$s</a>."
+msgstr "%1$s に対して、理由「%2$s」による支払いの問い合わせが行われました。<a>応答期限は %3$s です</a>。"
+
+#. translators: %1$s% is the fee percentage
+#: includes/class-wc-payments-captured-event-note.php:383 dist/index.js:2
+msgid "Currency conversion fee: %1$s%%"
+msgstr "通貨換算手数料: %1$s%%"
+
+#. translators: %1$s% is the fee percentage and %2$s is the fixed rate
+#: includes/class-wc-payments-captured-event-note.php:381 dist/index.js:2
+msgid "Currency conversion fee: %1$s%% + %2$s"
+msgstr "通貨換算手数料: %1$s%% + %2$s"
+
+#: includes/class-wc-payments-order-success-page.php:235
+msgid "•••"
+msgstr "•••"
+
+#. Translators: %s is a test card number.
+#: includes/payment-methods/class-cc-payment-method.php:78
+msgid "Use test card <number>%s</number> or refer to our <a>testing guide</a>."
+msgstr "テストカードを使用する<number>%s</number>または、<a>テストガイド</a>を参照してください。"
+
+#: includes/fraud-prevention/class-order-fraud-and-risk-meta-box.php:238
+msgid "This order has a high risk of being fraudulent. We suggest contacting the customer to confirm their details before fulfilling it."
+msgstr "この注文は不正であるリスクが高いです。注文を実行する前に顧客に連絡して詳細を確認することをお勧めします。"
+
+#: includes/fraud-prevention/class-order-fraud-and-risk-meta-box.php:237
+msgid "This order has a moderate risk of being fraudulent. We suggest contacting the customer to confirm their details before fulfilling it."
+msgstr "この注文には詐欺のリスクが中程度あります。注文を実行する前に顧客に連絡して詳細を確認することをお勧めします。"
+
+#: includes/fraud-prevention/class-order-fraud-and-risk-meta-box.php:236
+msgid "This payment shows a lower than normal risk of fraudulent activity."
+msgstr "この支払いは、不正行為のリスクが通常より低いことを示しています。"
+
+#: includes/fraud-prevention/class-order-fraud-and-risk-meta-box.php:108
+msgid "Adjust risk filters"
+msgstr "リスクフィルターを調整する"
+
+#. translators: %s is a monetary amount
+#: includes/class-wc-payments-captured-event-note.php:212 dist/index.js:2
+msgid "Net payout: %s"
+msgstr "純支払額: %s"
+
+#: includes/admin/class-wc-payments-admin.php:531 dist/index.js:2
+#: dist/index.js:9
+msgid "Payout details"
+msgstr "支払詳細"
+
+#: includes/admin/class-wc-payments-admin.php:326 dist/index.js:2
+#: dist/index.js:9 dist/settings.js:2
+msgid "Payouts"
+msgstr "支払い"
+
+#: includes/class-wc-payments-onboarding-service.php:402
+msgid "Failed to finalize onboarding session."
+msgstr "オンボーディングセッションを完了できませんでした。"
+
+#: includes/class-wc-payments-checkout.php:372
+#: includes/class-wc-payments-checkout.php:481 dist/index.js:2
+msgid "Copy to clipboard"
+msgstr "クリップボードにコピー"
+
+#: includes/class-wc-payments-checkout.php:372
+#: includes/class-wc-payments-checkout.php:481
+msgid "Click to copy the test number to clipboard"
+msgstr "クリックするとテスト番号がクリップボードにコピーされます"
+
+#. translators: 1: WooPayments.
+#: includes/admin/class-wc-payments-admin.php:1271
+msgid "Please <b>complete your %1$s setup</b> to continue using it."
+msgstr "引き続き使用するには、 <b>%1$s の設定を完了してください</b>。"
+
+#: includes/admin/class-wc-payments-admin.php:417
+#: includes/admin/class-wc-payments-admin.php:438 dist/index.js:9
+msgid "Continue onboarding"
+msgstr "オンボーディングを続ける"
+
+#: includes/payment-methods/class-klarna-payment-method.php:104
+msgid "Allow customers to pay over time or pay now with Klarna."
+msgstr "顧客が Klarna で分割払いまたは今すぐ支払いできるようにします。"
+
+#: includes/payment-methods/class-afterpay-payment-method.php:121
+msgid "Allow customers to pay over time with Afterpay."
+msgstr "Afterpay を使用して顧客が分割払いできるようにします。"
+
+#: includes/payment-methods/class-afterpay-payment-method.php:115
+msgid "Allow customers to pay over time with Clearpay."
+msgstr "Clearpay を使用して顧客が分割払いできるようにします。"
+
+#: includes/payment-methods/class-affirm-payment-method.php:70
+msgid "Allow customers to pay over time with Affirm."
+msgstr "Affirm を使用すると、顧客は分割払いで支払うことができます。"
+
+#. translators: %1$s custom addon price in order
+#: includes/multi-currency/Compatibility/WooCommerceProductAddOns.php:309
+msgctxt "custom addon price in order"
+msgid " (%1$s)"
+msgstr " (%1$s)"
+
+#. translators: %1$s addon price in order
+#: includes/multi-currency/Compatibility/WooCommerceProductAddOns.php:306
+msgctxt "addon price in order"
+msgid " (%1$s)"
+msgstr " (%1$s)"
+
+#. translators: %1$s flat fee addon price in order
+#: includes/multi-currency/Compatibility/WooCommerceProductAddOns.php:303
+msgctxt "flat fee addon price in order"
+msgid " (+ %1$s)"
+msgstr " (%1$s)"
+
+#. translators: %1$s addon price in order
+#: includes/multi-currency/Compatibility/WooCommerceProductAddOns.php:165
+msgctxt "percentage based addon price in cart"
+msgid " (%1$s)"
+msgstr " (%1$s)"
+
+#. translators: %1$s addon price in order
+#: includes/multi-currency/Compatibility/WooCommerceProductAddOns.php:156
+msgctxt "quantity based addon price in cart"
+msgid " (%1$s)"
+msgstr " (%1$s)"
+
+#. translators: %1$s flat fee addon price in order
+#: includes/multi-currency/Compatibility/WooCommerceProductAddOns.php:145
+msgctxt "flat fee addon price in cart"
+msgid " (+ %1$s)"
+msgstr " (%1$s)"
+
+#. translators: %1$s custom addon price in cart
+#: includes/multi-currency/Compatibility/WooCommerceProductAddOns.php:133
+msgctxt "custom price addon price in cart"
+msgid " (%1$s)"
+msgstr " (%1$s)"
+
+#: includes/class-wc-payments-webhook-processing-service.php:790
+msgid "The mandate used for this renewal payment is invalid. You may need to bring the customer back to your store and ask them to resubmit their payment information."
+msgstr "この更新支払いに使用された委任状は無効です。顧客を店舗に戻し、支払い情報を再送信するよう依頼する必要がある場合があります。"
+
+#: includes/class-wc-payments-payment-request-session-handler.php:65
+msgid "Invalid token: cookie and session customer mismatch"
+msgstr "無効なトークン: Cookie とセッションの顧客が一致しません"
+
+#. translators: %s: WooPayments.
+#: includes/class-wc-payments-account.php:1777
+msgid "There was a problem setting up your %s account. Please try again."
+msgstr "%s アカウントの設定中に問題が発生しました。もう一度お試しください。"
+
+#. translators: 1: anchor opening markup 2: closing anchor markup
+#: includes/class-wc-payments-account.php:1726
+msgid "Another account setup session is already in progress. Please finish it or %1$sclick here to start again%2$s."
+msgstr "別のアカウント設定セッションがすでに進行中です。終了するか、%1$sここをクリックしてもう一度開始してください%2$s。"
+
+#. translators: 1: WooPayments.
+#: includes/class-wc-payments-account.php:944
+#: includes/class-wc-payments-account.php:1158
+#: includes/class-wc-payments-account.php:1574
+msgid "Please <b>complete your %1$s setup</b> to process transactions."
+msgstr "取引を処理するには、 <b>%1$s の設定を完了してください</b>。"
+
+#: includes/class-wc-payments.php:2066
+msgid "is required to create an WooPay account."
+msgstr "WooPay アカウントを作成するには必要です。"
+
+#: includes/class-wc-payments.php:2066
+msgid "Mobile Number"
+msgstr "携帯番号"
+
+#: includes/woopay/class-woopay-utilities.php:287
+msgid "WooPay blog_token is currently misconfigured."
+msgstr "WooPay blog_token は現在、正しく構成されていません。"
+
+#: includes/admin/class-wc-rest-payments-settings-controller.php:252
+msgid "1-click checkout button border radius."
+msgstr "1 クリックチェックアウトボタンの境界の半径。"
+
+#. Author of the plugin
+#: woocommerce-payments.php
+msgid "WooCommerce"
+msgstr "WooCommerce"
+
+#: includes/wc-payment-api/class-wc-payments-api-client.php:241
+#: includes/wc-payment-api/class-wc-payments-api-client.php:562
+#: includes/wc-payment-api/class-wc-payments-api-client.php:641
+#: includes/wc-payment-api/class-wc-payments-api-client.php:671
+#: includes/wc-payment-api/class-wc-payments-api-client.php:707
+#: includes/wc-payment-api/class-wc-payments-api-client.php:834
+#: includes/wc-payment-api/class-wc-payments-api-client.php:859
+#: includes/wc-payment-api/class-wc-payments-api-client.php:892
+#: includes/wc-payment-api/class-wc-payments-api-client.php:1286
+#: includes/wc-payment-api/class-wc-payments-api-client.php:1354
+#: includes/wc-payment-api/class-wc-payments-api-client.php:1386
+#: includes/wc-payment-api/class-wc-payments-api-client.php:1411
+#: includes/wc-payment-api/class-wc-payments-api-client.php:1438
+#: includes/wc-payment-api/class-wc-payments-api-client.php:1463
+#: includes/wc-payment-api/class-wc-payments-api-client.php:1488
+#: includes/wc-payment-api/class-wc-payments-api-client.php:1512
+#: includes/wc-payment-api/class-wc-payments-api-client.php:1537
+#: includes/wc-payment-api/class-wc-payments-api-client.php:1562
+#: includes/wc-payment-api/class-wc-payments-api-client.php:1605
+#: includes/wc-payment-api/class-wc-payments-api-client.php:1630
+#: includes/wc-payment-api/class-wc-payments-api-client.php:1656
+#: includes/wc-payment-api/class-wc-payments-api-client.php:1681
+#: includes/wc-payment-api/class-wc-payments-api-client.php:1707
+#: includes/wc-payment-api/class-wc-payments-api-client.php:1734
+#: includes/wc-payment-api/class-wc-payments-api-client.php:1763
+#: includes/wc-payment-api/class-wc-payments-api-client.php:1942
+#: includes/wc-payment-api/class-wc-payments-api-client.php:1974
+#: includes/wc-payment-api/class-wc-payments-api-client.php:2018
+#: includes/wc-payment-api/class-wc-payments-api-client.php:2104
+#: includes/wc-payment-api/class-wc-payments-api-client.php:2375
+#: includes/wc-payment-api/class-wc-payments-api-client.php:2409
+msgid "Route param validation failed."
+msgstr "ルートパラメータの検証に失敗しました。"
+
+#. Translators: %1$s and %2$s are both currency codes, e.g. `USD` or `EUR`.
+#: includes/subscriptions/class-wc-payments-subscription-service.php:440
+msgid "The subscription couldn't be created because it uses a different currency (%1$s) from your existing subscriptions (%2$s). Please ensure all subscriptions use the same currency."
+msgstr "既存の定期購入 (%2$s) とは異なる通貨 (%1$s) を使用しているため、定期購入を作成できませんでした。すべての定期購入で同じ通貨が使用されていることを確認してください。"
+
+#: includes/class-wc-payments-utils.php:287
+msgid "Puerto Rico"
+msgstr "プエルトリコ"
+
+#. translators: %s: WooPay,
+#: includes/class-wc-payment-gateway-wcpay.php:4510
+msgid "Payments made simple — including %s, a new express checkout feature."
+msgstr "新しいエクスプレス チェックアウト機能 %s などにより、お支払いが簡単になります。"
+
+#. translators: %1$s: WooPayments
+#: includes/class-wc-payment-gateway-wcpay.php:4500
+msgid "%1$s gives your store flexibility to accept credit cards, debit cards, and Apple Pay. Enable popular local payment methods and other digital wallets like Google Pay to give customers even more choice."
+msgstr "%1$s を使用すると、ストアでクレジットカード、デビットカード、Apple Pay を柔軟に受け入れることができます。一般的な現地の支払い方法や Google Pay などのデジタル ウォレットを有効にして、顧客にさらに多くの選択肢を提供します。"
+
+#. translators: %1: charge ID
+#: includes/class-wc-payments-webhook-processing-service.php:861
+msgid "The refund amount is not valid for charge ID: %1$s"
+msgstr "払い戻し金額は請求 ID: %1$s に対して有効ではありません"
+
+#: includes/class-wc-payments-webhook-processing-service.php:626
+msgid "Payment dispute and fees have been deducted from your next payout"
+msgstr "支払い紛争と手数料は次回の支払いから差し引かれました"
+
+#. translators: %1$: order id.
+#: includes/class-wc-payment-gateway-wcpay.php:2362
+msgid "A refund cannot be found for order: %1$s"
+msgstr "注文の払い戻しが見つかりません: %1$s"
+
+#: includes/class-wc-payments-order-service.php:1510 dist/order.js:2
+msgid "cancelled"
+msgstr "キャンセル"
+
+#. translators: %1$s and %2$s are both numbers
+#: includes/core/server/class-request.php:694
+msgid "Invalid number passed. Number %1$s needs to be larger than %2$s"
+msgstr "無効な数値が渡されました。数値 %1$s は %2$s より大きくする必要があります"
+
+#: includes/class-wc-payments-order-service.php:1403
+msgid "Capture authorization <strong>failed</strong> to complete."
+msgstr "キャプチャ認証を完了<strong>できませんでした</strong>。"
+
+#: includes/woopay/class-woopay-session.php:676
+#: includes/woopay/class-woopay-session.php:745
+msgid "Could not determine the blog ID."
+msgstr "ブログ ID を特定できませんでした。"
+
+#: includes/payment-methods/class-afterpay-payment-method.php:50
+msgid "Clearpay"
+msgstr "Clearpay"
+
+#. translators: %s: metadata. We do not need to translate WooPayMeta
+#: includes/class-wc-payment-gateway-wcpay.php:1513
+msgid "We're not able to process this payment. Please try again later. WooPayMeta: intent_meta_order_id: %1$s, order_id: %2$s"
+msgstr "この支払いを処理できません。後でもう一度試してください。 WooPayMeta: mental_meta_order_id: %1$s、order_id: %2$s"
+
+#: includes/class-wc-payments-status.php:143
+msgid "Enabled APMs"
+msgstr "有効な APM"
+
+#: includes/class-payment-information.php:161 dist/blocks-checkout.js:2
+#: dist/checkout.js:1
+msgid "Invalid or missing payment details. Please ensure the provided payment method is correctly entered."
+msgstr "支払い詳細が無効または欠落しています。指定された支払い方法が正しく入力されていることを確認してください。"
+
+#: includes/express-checkout/class-wc-payments-express-checkout-ajax-handler.php:85
+msgid "Invalid product id"
+msgstr "無効な商品 ID"
+
+#: includes/class-wc-payment-gateway-wcpay.php:538
+msgid "Small"
+msgstr "小"
+
+#. translators: This is an error API response.
+#: includes/wc-payment-api/class-wc-payments-api-client.php:2647
+msgid "Error: The payment could not be captured because the requested capture amount is greater than the amount you can capture for this charge."
+msgstr "エラー: 要求された取得金額がこの請求で取得できる金額を超えているため、支払いを取得できませんでした。"
+
+#: includes/class-wc-payment-gateway-wcpay.php:563
+msgid "By placing this order, you agree to our [terms] and understand our [privacy_policy]."
+msgstr "この注文を行うことにより、当社の [利用規約] に同意し、当社の [プライバシー ポリシー] を理解したものとみなされます。"
+
+#. Plugin Name of the plugin
+#: woocommerce-payments.php
+msgid "WooPayments"
+msgstr "WooPayments"
+
+#: includes/class-wc-payment-gateway-wcpay.php:4631
+msgid "A valid shipping address is required for Afterpay payments."
+msgstr "後払い支払いには有効な配送先住所が必要です。"
+
+#: includes/class-wc-payment-gateway-wcpay.php:544
+msgid "WooPay button locations"
+msgstr "WooPay ボタンの位置"
+
+#: includes/admin/class-wc-rest-payments-payment-intents-controller.php:181
+msgid "The date when the payment intent was created."
+msgstr "支払い意図が作成された日付。"
+
+#. Translators: %d is the ID of an order.
+#: src/Internal/Service/OrderService.php:270
+msgid "The requested order (ID %d) was not found."
+msgstr "要求された注文（ID %d）が見つかりません。"
+
+#. Translators: placeholders are opening and closing strong HTML tags. %6$s:
+#. WooPayments, %7$s: Woo Subscriptions.
+#: includes/subscriptions/templates/html-woo-payments-deactivate-warning.php:24
+msgid "Your store has subscriptions using %6$s Stripe Billing functionality for payment processing. Due to the %1$soff-site billing engine%3$s these subscriptions use,%4$s they will continue to renew even after you deactivate %6$s%5$s."
+msgstr "ストアには、支払い処理に%6$s Stripe Billing 機能を使用している定期購入があります。これらの定期購入は%1$sオフサイト課金エンジン%3$sを使用しているため、%4$sあなたが%6$sを無効化した後も更新され続けます%5$s。"
+
+#. translators: $1 $2 placeholders are opening and closing HTML link tags,
+#. linking to documentation. $3 is WooPayments.
+#: includes/subscriptions/templates/html-subscriptions-plugin-notice.php:38
+#: includes/subscriptions/templates/html-woo-payments-deactivate-warning.php:38
+msgid "If you do not want these subscriptions to continue to be billed, you should %1$scancel these subscriptions%2$s prior to deactivating %3$s."
+msgstr "これらのサブスクリプションの継続課金を希望しない場合は、%3$sを無効化する前に、これらのサブスクリプションを%1$sキャンセル%2$sしてください。"
+
+#. Translators: %1-%4 placeholders are opening and closing a or strong HTML
+#. tags. %5$s: WooPayments, %6$s: Woo Subscriptions.
+#: includes/subscriptions/templates/html-subscriptions-plugin-notice.php:24
+msgid "Your store has subscriptions using %5$s Stripe Billing functionality for payment processing. Due to the %1$soff-site billing engine%2$s these subscriptions use,%3$s they will continue to renew even after you deactivate %6$s%4$s."
+msgstr "あなたのストアには、支払い処理に%5$sStripe Billing機能を使用しているサブスクリプションがあります。これらのサブスクリプションは%1$sオフサイト課金エンジン%2$sを使用しているため、%3$sあなたが%6$s%4$sを無効化した後も更新され続けます。"
+
+#: includes/class-wc-payments-status.php:262
+msgid "Whether debug logging is enabled and working or not."
+msgstr "デバッグ・ロギングが有効で動作しているかどうか。"
+
+#: includes/class-wc-payments-status.php:261
+msgid "Logging"
+msgstr "ログ記録中"
+
+#: includes/class-wc-payments-status.php:255
+msgid "Whether the tax documents section is enabled or not."
+msgstr "税務書類セクションが有効かどうか。"
+
+#: includes/class-wc-payments-status.php:245
+msgid "Whether the store has the Auth & Capture feature enabled or not."
+msgstr "店舗がAuth & Capture機能を有効にしているかどうか。"
+
+#: includes/class-wc-payments-status.php:244
+msgid "Auth and Capture"
+msgstr "認証とキャプチャ"
+
+#: includes/class-wc-payments-status.php:240
+msgid "Whether the store has the Multi-currency feature enabled or not."
+msgstr "ストアがマルチカレンシー機能を有効にしているかどうか。"
+
+#: includes/class-wc-payments-status.php:239
+msgid "Multi-currency"
+msgstr "多通貨決済"
+
+#: includes/class-wc-payments-status.php:198
+msgid "The advanced fraud protection filters currently enabled."
+msgstr "現在有効になっている高度な詐欺防止フィルター。"
+
+#: includes/class-wc-payments-status.php:197
+msgid "Enabled Fraud Filters"
+msgstr "有効な不正フィルター"
+
+#: includes/class-wc-payments-status.php:192
+msgid "The current fraud protection level the payment gateway is using."
+msgstr "ペイメントゲートウェイが現在使用している詐欺防止レベル。"
+
+#: includes/class-wc-payments-status.php:191
+msgid "Fraud Protection Level"
+msgstr "詐欺防止レベル"
+
+#: includes/class-wc-payments-status.php:180
+msgid "Whether the store has Payment Request enabled or not."
+msgstr "ストアが支払いリクエストを有効にしているかどうか。"
+
+#: includes/class-wc-payments-status.php:179
+msgid "Apple Pay / Google Pay Express Checkout"
+msgstr "アップルペイ／グーグルペイ・エクスプレスチェックアウト"
+
+#: includes/class-wc-payments-status.php:173
+msgid "Whether there are extensions active that are have known incompatibilities with the functioning of the new WooPay Express Checkout."
+msgstr "新しい WooPay Express Checkout の機能と互換性のない拡張の有無。"
+
+#: includes/class-wc-payments-status.php:172
+msgid "WooPay Incompatible Extensions"
+msgstr "WooPay 非互換拡張"
+
+#: includes/class-wc-payments-status.php:162
+msgid "Whether the new WooPay Express Checkout is enabled or not."
+msgstr "新しい WooPay エクスプレスチェックアウトが有効かどうか。"
+
+#: includes/class-wc-payments-status.php:157
+msgid "Not active"
+msgstr "無効"
+
+#: includes/class-wc-payments-status.php:157
+msgid "Not eligible"
+msgstr "対象外"
+
+#. translators: %s: WooPayments
+#: includes/class-wc-payments-status.php:154
+msgid "WooPay is not available, as a %s feature, or the store is not yet eligible."
+msgstr "WooPay は%s機能として利用できないか、ストアはまだ対象外です。"
+
+#: includes/class-wc-payments-status.php:150
+#: includes/class-wc-payments-status.php:161
+msgid "WooPay Express Checkout"
+msgstr "WooPay エクスプレスチェックアウト"
+
+#: includes/class-wc-payments-status.php:144
+msgid "What payment methods are enabled for the store."
+msgstr "ストアで有効になっている支払い方法。"
+
+#: includes/class-wc-payments-status.php:139
+msgid "Whether the payment gateway has test payments enabled or not."
+msgstr "決済がテスト決済を有効にしているかどうか。"
+
+#: includes/class-wc-payments-status.php:138 dist/blocks-checkout.js:2
+msgid "Test Mode"
+msgstr "テストモード"
+
+#: includes/class-wc-payments-status.php:135
+msgid "Needs setup"
+msgstr "セットアップが必要"
+
+#: includes/class-wc-payments-status.php:134
+msgid "Is the payment gateway ready and enabled for use on your store?"
+msgstr "決済の準備はできていますか？"
+
+#: includes/class-wc-payments-status.php:133
+msgid "Payment Gateway"
+msgstr "決済"
+
+#: includes/class-wc-payments-status.php:125
+msgid "The merchant account ID you are currently using to process payments with."
+msgstr "現在お支払い処理に使用しているマーチャントアカウントID。"
+
+#: includes/class-wc-payments-status.php:120
+msgid "The corresponding wordpress.com blog ID for this store."
+msgstr "この店舗に対応する wordpress.com ブログ ID 。"
+
+#: includes/class-wc-payments-status.php:119
+msgid "WPCOM Blog ID"
+msgstr "WPCOM ブログ ID"
+
+#. translators: %s: WooPayments
+#: includes/class-wc-payments-status.php:112
+msgid "Can your store connect securely to wordpress.com? Without a proper WPCOM connection %s can't function!"
+msgstr "ストアは wordpress.com に安全に接続できますか?適切な WPCOM 接続がなければ%sは機能しません!"
+
+#. translators: %s: WooPayments
+#: includes/class-wc-payments-status.php:102
+msgid "The current version of the %s extension."
+msgstr "%s拡張の現在のバージョン。"
+
+#: includes/admin/class-wc-rest-payments-payment-intents-controller.php:196
+msgid "Charge object associated with this payment intention."
+msgstr "この支払意思に関連するチャージオブジェクト。"
+
+#: includes/admin/class-wc-rest-payments-payment-intents-controller.php:191
+msgid "The status of the payment intent."
+msgstr "支払意思のステータス。"
+
+#: includes/admin/class-wc-rest-payments-payment-intents-controller.php:186
+msgid "The customer id of the intent"
+msgstr "インテントの顧客ID"
+
+#: includes/admin/class-wc-rest-payments-payment-intents-controller.php:166
+msgid "ID for the payment intent."
+msgstr "支払意思のID。"
+
+#: includes/admin/class-wc-rest-payments-orders-controller.php:170
+msgid "The payment cannot be captured for completed or processed orders."
+msgstr "支払いが完了した注文、または処理された注文については、支払いを捕捉することはできません。"
+
+#: includes/admin/class-wc-rest-payments-customer-controller.php:270
+msgid "Email associated with the link."
+msgstr "リンクに関連付けられた電子メール。"
+
+#: includes/admin/class-wc-rest-payments-customer-controller.php:265
+msgid "Link details for the payment method."
+msgstr "支払方法のリンク詳細。"
+
+#: includes/admin/class-wc-rest-payments-customer-controller.php:258
+msgid "Last 4 digits of the SEPA Debit."
+msgstr "SEPAデビットの下4桁。"
+
+#: includes/admin/class-wc-rest-payments-customer-controller.php:253
+msgid "SEPA Debit details for the payment method."
+msgstr "お支払い方法のSEPAデビットの詳細。"
+
+#: includes/admin/class-wc-rest-payments-customer-controller.php:246
+msgid "Expiration year of the card."
+msgstr "カードの有効期限。"
+
+#: includes/admin/class-wc-rest-payments-customer-controller.php:241
+msgid "Expiration month of the card."
+msgstr "カードの有効期限月。"
+
+#: includes/admin/class-wc-rest-payments-customer-controller.php:236
+msgid "Last 4 digits of the card."
+msgstr "カードの下4桁。"
+
+#: includes/admin/class-wc-rest-payments-customer-controller.php:231
+msgid "Brand of the card."
+msgstr "カードのブランド。"
+
+#: includes/admin/class-wc-rest-payments-customer-controller.php:226
+msgid "Card details for the payment method."
+msgstr "お支払い方法のカード詳細。"
+
+#: includes/admin/class-wc-rest-payments-customer-controller.php:219
+#: includes/admin/class-wc-rest-payments-payment-intents-controller.php:308
+msgid "Phone number associated with the billing details."
+msgstr "請求詳細に関連付けられている電話番号。"
+
+#: includes/admin/class-wc-rest-payments-customer-controller.php:214
+#: includes/admin/class-wc-rest-payments-payment-intents-controller.php:303
+msgid "Name associated with the billing details."
+msgstr "請求明細に関連する名前。"
+
+#: includes/admin/class-wc-rest-payments-customer-controller.php:208
+#: includes/admin/class-wc-rest-payments-payment-intents-controller.php:297
+msgid "Email associated with the billing details."
+msgstr "請求の詳細に関連付けられた電子メール。"
+
+#: includes/admin/class-wc-rest-payments-customer-controller.php:201
+#: includes/admin/class-wc-rest-payments-payment-intents-controller.php:290
+msgid "State of the billing address."
+msgstr "請求先住所の州。"
+
+#: includes/admin/class-wc-rest-payments-customer-controller.php:196
+#: includes/admin/class-wc-rest-payments-payment-intents-controller.php:285
+msgid "Postal code of the billing address."
+msgstr "請求先住所の郵便番号。"
+
+#: includes/admin/class-wc-rest-payments-customer-controller.php:191
+#: includes/admin/class-wc-rest-payments-payment-intents-controller.php:280
+msgid "Line 2 of the billing address."
+msgstr "請求先住所の2行目。"
+
+#: includes/admin/class-wc-rest-payments-customer-controller.php:186
+#: includes/admin/class-wc-rest-payments-payment-intents-controller.php:275
+msgid "Line 1 of the billing address."
+msgstr "請求先住所の1行目。"
+
+#: includes/admin/class-wc-rest-payments-customer-controller.php:181
+#: includes/admin/class-wc-rest-payments-payment-intents-controller.php:270
+msgid "Country of the billing address."
+msgstr "請求先住所の国。"
+
+#: includes/admin/class-wc-rest-payments-customer-controller.php:176
+#: includes/admin/class-wc-rest-payments-payment-intents-controller.php:265
+msgid "City of the billing address."
+msgstr "請求先住所の都市名。"
+
+#: includes/admin/class-wc-rest-payments-customer-controller.php:171
+#: includes/admin/class-wc-rest-payments-payment-intents-controller.php:260
+msgid "Address associated with the billing details."
+msgstr "請求の詳細に関連付けられている住所。"
+
+#: includes/admin/class-wc-rest-payments-customer-controller.php:166
+#: includes/admin/class-wc-rest-payments-payment-intents-controller.php:255
+msgid "Billing details for the payment method."
+msgstr "支払方法の請求詳細。"
+
+#: includes/admin/class-wc-rest-payments-customer-controller.php:160
+msgid "Type of the payment method."
+msgstr "支払方法の種類。"
+
+#: includes/admin/class-wc-rest-payments-customer-controller.php:155
+msgid "ID for the payment method."
+msgstr "支払い方法の ID。"
+
+#. translators: %s: WooPayments
+#: includes/class-wc-payments-account.php:1004
+msgid "Please connect to WordPress.com to start using %s."
+msgstr "%sを使用するには、WordPress.com に接続してください。"
+
+#: includes/wc-payment-api/class-wc-payments-api-client.php:1190
+msgid "Onboarding field data could not be retrieved"
+msgstr "オンボーディングフィールドのデータが取得できませんでした"
+
+#. translators: %1$s is a new line character and %2$d is the number of
+#. subscriptions.
+#: includes/subscriptions/class-wc-payments-subscriptions-migrator.php:551
+msgid "This tool will migrate all Stripe Billing subscriptions to tokenized subscriptions with WooPayments.%1$sNumber of Stripe Billing subscriptions found: %2$d"
+msgstr "このツールはすべての Stripe Billing 定期購入を WooPayments のトークン化された定期購入に移行します。%1$sStripe Billing 定期購入の数が見つかりました: %2$d"
+
+#: includes/subscriptions/class-wc-payments-subscriptions-migrator.php:548
+msgid "Migrate Subscriptions"
+msgstr "定期購入の移行"
+
+#: includes/subscriptions/class-wc-payments-subscriptions-migrator.php:548
+msgid "Migration in progress"
+msgstr "移行が進行中です"
+
+#: includes/subscriptions/class-wc-payments-subscriptions-migrator.php:547
+msgid "Migrate Stripe Billing subscriptions"
+msgstr "Stripe Billing 定期購入の移行"
+
+#: includes/admin/class-wc-rest-payments-settings-controller.php:297
+msgid "The number of subscriptions migrated from Stripe Billing to on-site billing."
+msgstr "Stripe Billing からオンサイト課金に移行した定期購入数。"
+
+#: includes/admin/class-wc-rest-payments-settings-controller.php:292
+msgid "The number of subscriptions using Stripe Billing"
+msgstr "Stripe Billing を使用した定期購入数"
+
+#: includes/admin/class-wc-rest-payments-settings-controller.php:287
+msgid "Whether there is a Stripe Billing off-site to on-site billing migration in progress."
+msgstr "Stripe Billing のオフサイトからオンサイトへの課金移行が進行中かどうか。"
+
+#: includes/admin/class-wc-rest-payments-settings-controller.php:282
+msgid "If Stripe Billing is enabled."
+msgstr "Stripe Billing が有効な場合。"
+
+#: includes/wc-payment-api/class-wc-payments-api-client.php:1234
+msgid "Link type is required"
+msgstr "リンクタイプが必要です"
+
+#: includes/reports/class-wc-rest-payments-reports-authorizations-controller.php:385
+#: includes/reports/class-wc-rest-payments-reports-transactions-controller.php:378
+msgid "The status of the deposit"
+msgstr "入金状況"
+
+#: includes/reports/class-wc-rest-payments-reports-authorizations-controller.php:380
+#: includes/reports/class-wc-rest-payments-reports-transactions-controller.php:373
+msgid "A unique identifier for the deposit."
+msgstr "入金の一意の識別子。"
+
+#: includes/reports/class-wc-rest-payments-reports-authorizations-controller.php:375
+#: includes/reports/class-wc-rest-payments-reports-transactions-controller.php:368
+msgid "Deposit date of transaction"
+msgstr "取引の入金日"
+
+#: includes/reports/class-wc-rest-payments-reports-authorizations-controller.php:370
+#: includes/reports/class-wc-rest-payments-reports-transactions-controller.php:363
+msgid "Fraud risk level."
+msgstr "詐欺のリスクレベル。"
+
+#: includes/reports/class-wc-rest-payments-reports-authorizations-controller.php:365
+#: includes/reports/class-wc-rest-payments-reports-transactions-controller.php:358
+msgid "The identifier of the WooCommerce order associated with this transaction."
+msgstr "このトランザクションに関連付けられた WooCommerce 注文の識別子。"
+
+#: includes/reports/class-wc-rest-payments-reports-authorizations-controller.php:360
+#: includes/reports/class-wc-rest-payments-reports-transactions-controller.php:353
+msgid "Net amount."
+msgstr "正味金額。"
+
+#: includes/reports/class-wc-rest-payments-reports-authorizations-controller.php:353
+#: includes/reports/class-wc-rest-payments-reports-transactions-controller.php:346
+msgid "Customer country."
+msgstr "顧客の国。"
+
+#: includes/reports/class-wc-rest-payments-reports-authorizations-controller.php:348
+#: includes/reports/class-wc-rest-payments-reports-transactions-controller.php:341
+msgid "Customer email."
+msgstr "顧客のメールアドレス。"
+
+#: includes/reports/class-wc-rest-payments-reports-authorizations-controller.php:343
+#: includes/reports/class-wc-rest-payments-reports-transactions-controller.php:336
+msgid "Customer name."
+msgstr "顧客名。"
+
+#: includes/reports/class-wc-rest-payments-reports-authorizations-controller.php:338
+#: includes/reports/class-wc-rest-payments-reports-transactions-controller.php:331
+msgid "Customer details."
+msgstr "顧客の詳細。"
+
+#: includes/reports/class-wc-rest-payments-reports-authorizations-controller.php:333
+#: includes/reports/class-wc-rest-payments-reports-transactions-controller.php:326
+msgid "Transaction fees."
+msgstr "取引手数料。"
+
+#: includes/reports/class-wc-rest-payments-reports-authorizations-controller.php:328
+#: includes/reports/class-wc-rest-payments-reports-transactions-controller.php:321
+msgid "The currency of the store."
+msgstr "ストアの通貨。"
+
+#: includes/reports/class-wc-rest-payments-reports-authorizations-controller.php:323
+#: includes/reports/class-wc-rest-payments-reports-transactions-controller.php:316
+msgid "The exchange rate of the transaction."
+msgstr "取引の為替レート。"
+
+#: includes/admin/class-wc-rest-payments-payment-intents-controller.php:171
+#: includes/reports/class-wc-rest-payments-reports-authorizations-controller.php:318
+#: includes/reports/class-wc-rest-payments-reports-transactions-controller.php:311
+msgid "The amount of the transaction."
+msgstr "取引金額。"
+
+#: includes/admin/class-wc-rest-payments-payment-intents-controller.php:176
+#: includes/reports/class-wc-rest-payments-reports-authorizations-controller.php:313
+#: includes/reports/class-wc-rest-payments-reports-transactions-controller.php:306
+msgid "The currency of the transaction."
+msgstr "取引通貨。"
+
+#: includes/reports/class-wc-rest-payments-reports-authorizations-controller.php:308
+#: includes/reports/class-wc-rest-payments-reports-transactions-controller.php:301
+msgid "The type of the transaction."
+msgstr "取引のタイプ。"
+
+#: includes/reports/class-wc-rest-payments-reports-authorizations-controller.php:301
+#: includes/reports/class-wc-rest-payments-reports-transactions-controller.php:294
+msgid "The payment method ID used to create the transaction type."
+msgstr "トランザクション タイプの作成に使用される支払い方法 ID。"
+
+#: includes/reports/class-wc-rest-payments-reports-authorizations-controller.php:291
+#: includes/reports/class-wc-rest-payments-reports-authorizations-controller.php:296
+#: includes/reports/class-wc-rest-payments-reports-transactions-controller.php:284
+#: includes/reports/class-wc-rest-payments-reports-transactions-controller.php:289
+msgid "Specifies whether the payment method used was a card (Visa, Mastercard, etc.) or an Alternative Payment Method (APM) or Local Payment Method (LPM) (iDEAL, Apple Pay, Google Pay, etc.)."
+msgstr "使用された支払い方法がカード (Visa、Mastercard など) だったのか、代替支払い方法 (APM) またはローカル支払い方法 (LPM) (iDEAL、Apple Pay、Google Pay など) だったのかを指定します。"
+
+#: includes/reports/class-wc-rest-payments-reports-authorizations-controller.php:286
+#: includes/reports/class-wc-rest-payments-reports-transactions-controller.php:279
+msgid "Indicates whether the transaction was made online or offline."
+msgstr "トランザクションがオンラインで行われたかオフラインで行われたかを示します。"
+
+#: includes/reports/class-wc-rest-payments-reports-authorizations-controller.php:281
+#: includes/reports/class-wc-rest-payments-reports-transactions-controller.php:274
+msgid "A unique source id for each transaction."
+msgstr "各トランザクションのユニークなソース ID。"
+
+#: includes/reports/class-wc-rest-payments-reports-authorizations-controller.php:276
+#: includes/reports/class-wc-rest-payments-reports-transactions-controller.php:269
+msgid "A unique identifier for each transaction based on its transaction type."
+msgstr "トランザクションの種類に基づいた各トランザクションのユニークな識別子。"
+
+#: includes/reports/class-wc-rest-payments-reports-authorizations-controller.php:270
+#: includes/reports/class-wc-rest-payments-reports-transactions-controller.php:263
+msgid "The date and time when the transaction was created."
+msgstr "トランザクションが作成された日時。"
+
+#: includes/reports/class-wc-rest-payments-reports-authorizations-controller.php:249
+#: includes/reports/class-wc-rest-payments-reports-transactions-controller.php:242
+msgid "Direction on which to sort."
+msgstr "並べ替える方向。"
+
+#: includes/reports/class-wc-rest-payments-reports-authorizations-controller.php:243
+#: includes/reports/class-wc-rest-payments-reports-transactions-controller.php:236
+msgid "Field on which to sort."
+msgstr "並べ替えるフィールド。"
+
+#: includes/reports/class-wc-rest-payments-reports-authorizations-controller.php:235
+#: includes/reports/class-wc-rest-payments-reports-transactions-controller.php:228
+msgid "Page size."
+msgstr "ページサイズ。"
+
+#: includes/reports/class-wc-rest-payments-reports-authorizations-controller.php:228
+#: includes/reports/class-wc-rest-payments-reports-transactions-controller.php:221
+msgid "Page number."
+msgstr "ページ番号。"
+
+#: includes/reports/class-wc-rest-payments-reports-authorizations-controller.php:223
+#: includes/reports/class-wc-rest-payments-reports-transactions-controller.php:216
+msgid "Include timezone into date filtering."
+msgstr "日付フィルターにタイムゾーンを含めます。"
+
+#: includes/reports/class-wc-rest-payments-reports-authorizations-controller.php:218
+#: includes/reports/class-wc-rest-payments-reports-transactions-controller.php:211
+msgid "Match filter for the transactions."
+msgstr "トランザクションの一致フィルター。"
+
+#: includes/reports/class-wc-rest-payments-reports-authorizations-controller.php:212
+#: includes/reports/class-wc-rest-payments-reports-transactions-controller.php:205
+msgid "Filter transactions where type is a specific value."
+msgstr "タイプが特定の値であるトランザクションをフィルターします。"
+
+#: includes/reports/class-wc-rest-payments-reports-authorizations-controller.php:206
+#: includes/reports/class-wc-rest-payments-reports-transactions-controller.php:199
+msgid "Filter transactions based on the payment method used."
+msgstr "使用された支払い方法に基づいてトランザクションをフィルターします。"
+
+#: includes/reports/class-wc-rest-payments-reports-authorizations-controller.php:200
+#: includes/reports/class-wc-rest-payments-reports-transactions-controller.php:193
+msgid "Filter transactions based on the customer email."
+msgstr "顧客のメールに基づいてトランザクションをフィルターします。"
+
+#: includes/reports/class-wc-rest-payments-reports-authorizations-controller.php:194
+#: includes/reports/class-wc-rest-payments-reports-transactions-controller.php:187
+msgid "Filter transactions based on the associated deposit ID."
+msgstr "関連付けられた入金 ID に基づいてトランザクションをフィルターします。"
+
+#: includes/reports/class-wc-rest-payments-reports-authorizations-controller.php:187
+#: includes/reports/class-wc-rest-payments-reports-transactions-controller.php:180
+msgid "Filter transactions based on the associated order ID."
+msgstr "関連付けられた注文 ID に基づいてトランザクションをフィルターします。"
+
+#: includes/reports/class-wc-rest-payments-reports-authorizations-controller.php:183
+#: includes/reports/class-wc-rest-payments-reports-transactions-controller.php:176
+msgid "Filter transactions between these dates."
+msgstr "これらの日付間のトランザクションをフィルターします。"
+
+#: includes/reports/class-wc-rest-payments-reports-authorizations-controller.php:177
+#: includes/reports/class-wc-rest-payments-reports-transactions-controller.php:170
+msgid "Filter transactions after this date."
+msgstr "この日付以降のトランザクションをフィルターします。"
+
+#: includes/reports/class-wc-rest-payments-reports-authorizations-controller.php:171
+#: includes/reports/class-wc-rest-payments-reports-transactions-controller.php:164
+msgid "Filter transactions before this date."
+msgstr "この日付より前のトランザクションをフィルターします。"
+
+#. translators: customer email
+#: includes/class-wc-payment-token-wcpay-link.php:53
+msgid "Stripe Link email ending in %s"
+msgstr "%s で終わる Stripe Link メール"
+
+#: includes/subscriptions/class-wc-payments-subscriptions-migrator.php:140
+msgid "This subscription has been successfully migrated to a WooPayments tokenized subscription."
+msgstr "このサブスクリプションは、WooPayments のトークン化されたサブスクリプションに正常に移行されました。"
+
+#: includes/class-wc-payment-gateway-wcpay.php:694
+msgid "We're not able to process this payment due to the order ID mismatch. Please try again later."
+msgstr "注文 ID が一致しないため、この支払いを処理できません。 後でもう一度試してください。"
+
+#: includes/class-wc-payments-utils.php:265
+msgid "Japan"
+msgstr "日本"
+
+#: includes/class-wc-payments-utils.php:249
+msgid "United Arab Emirates"
+msgstr "アラブ首長国連邦"
+
+#: includes/admin/class-wc-rest-payments-settings-controller.php:393
+msgid "Error: Invalid Japanese phone number: "
+msgstr "エラー: 日本の電話番号としては正しくありません: "
+
+#: includes/class-wc-payments-order-success-page.php:84
+#: includes/class-wc-payments-order-success-page.php:546
+#: includes/payment-methods/class-multibanco-payment-method.php:46
+msgid "Multibanco"
+msgstr "Multibanco"
+
+#: includes/payment-methods/class-klarna-payment-method.php:48
+msgid "Klarna"
+msgstr "Klarna"
+
+#: includes/payment-methods/Configs/Definitions/AlipayDefinition.php:56
+msgid "Alipay"
+msgstr "Alipay"
+
+#. translators: %1$s: The current site domain name. %2$s: The original site
+#. domain name. Please keep hostname tags in your translation so that they can
+#. be formatted properly. %3$s: WooPayments.
+#: woocommerce-payments.php:366
+msgid "Transfer your %3$s connection from <hostname>%2$s</hostname> to this site <hostname>%1$s</hostname>. <hostname>%2$s</hostname> will be disconnected from %3$s."
+msgstr "%3$s 接続を <hostname>%2$s</hostname> からこのサイト <hostname>%1$s</hostname> に転送します。 <hostname>%2$s</hostname> は %3$s から切断されます。"
+
+#. translators: %s: WooPayments.
+#: woocommerce-payments.php:347
+msgid "%s Safe Mode"
+msgstr "%s はセーフモードです"
+
+#. translators: %s: WooPayments.
+#: woocommerce-payments.php:331
+msgid "Safe Mode has been deactivated and %s is fully functional."
+msgstr "セーフ モードは無効になり、%s は完全に機能します。"
+
+#. translators: %s: WooPayments.
+#: woocommerce-payments.php:326
+msgid "%s connection successfully transferred"
+msgstr "%s 接続は正常に転送されました"
+
+#. translators: %1 WooPayments.
+#: woocommerce-payments.php:301
+msgid "The version of Jetpack installed is too old to be used with %1$s. %1$s has been disabled. Please deactivate or update Jetpack."
+msgstr "インストールされている Jetpack のバージョンは古すぎるため、%1$s で使用できません。 %1$s は無効になりました。 Jetpack を無効化するか更新してください。"
+
+#. translators: Placeholder is "Woo Subscriptions"".
+#. translators: %s: WooPayments
+#: includes/subscriptions/templates/html-subscriptions-plugin-notice.php:62
+#: includes/subscriptions/templates/html-wcpay-deactivate-warning.php:61
+#: includes/subscriptions/templates/html-woo-payments-deactivate-warning.php:62
+msgid "Yes, deactivate %s"
+msgstr "はい、%s を無効化します"
+
+#. translators: Placeholder is "Woo Subscriptions"".
+#. translators: %s: WooPayments.
+#: includes/subscriptions/templates/html-subscriptions-plugin-notice.php:49
+#: includes/subscriptions/templates/html-wcpay-deactivate-warning.php:49
+#: includes/subscriptions/templates/html-woo-payments-deactivate-warning.php:49
+msgid "Are you sure you want to deactivate %s?"
+msgstr "%s を無効化してもよろしいですか?"
+
+#. translators: %s: WooPayments
+#: includes/subscriptions/class-wc-payments-subscription-service.php:730
+msgid "%s Subscription ID"
+msgstr "%s 定期購入 ID"
+
+#. translators: %s: WooPayments
+#: includes/notes/class-wc-payments-notes-qualitative-feedback.php:70
+msgid "Help us make improvements to %s"
+msgstr "%s の改善にご協力ください"
+
+#. translators: %s: WooPayments
+#: includes/notes/class-wc-payments-notes-instant-deposits-eligible.php:33
+msgid "You’re now eligible to receive Instant Payouts with %s"
+msgstr "%s で即時支払いを受け取る資格ができました"
+
+#. translators: %s: WooPayments
+#: includes/multi-currency/SettingsOnboardCta.php:74
+msgid "To add new currencies to your store, please finish setting up %s."
+msgstr "ストアに新しい通貨を追加するには、%s のセットアップを完了してください。"
+
+#. translators: %s: WooPayments
+#: includes/fraud-prevention/class-order-fraud-and-risk-meta-box.php:144
+msgid "Risk filtering is only available for orders processed using credit cards with %s."
+msgstr "リスクフィルタリングは、%s のクレジット カードを使用して処理された注文に対してのみ使用できます。"
+
+#. translators: %1$s: WooCommerce, %2$s: WooPayments, a1: documentation URL
+#: includes/class-wc-payments.php:1553
+msgid "The %1$s version you have installed is not compatible with %2$s for a Norwegian business. Please update %1$s to version 7.5 or above. You can do that via the <a1>the plugins page.</a1>"
+msgstr "インストールされている %1$s バージョンは、ノルウェー企業向けの %2$s と互換性がありません。 %1$s をバージョン 7.5 以降に更新してください。 これは、<a1>プラグイン ページ</a1>から行うことができます"
+
+#. translators: %s: WooPayments
+#: includes/class-wc-payments-status.php:75
+msgid "This tool will clear the account cached values used in %s."
+msgstr "このツールは、%s で使用されているアカウントのキャッシュされた値をクリアします。"
+
+#. translators: %s: WooPayments
+#: includes/class-wc-payments-status.php:69
+msgid "Clear %s account cache"
+msgstr "%s アカウントのキャッシュをクリア"
+
+#. translators: %1: the authorized amount, %2: WooPayments, %3: transaction ID
+#. of the payment
+#: includes/class-wc-payments-order-service.php:1722
+msgid "A capture of %1$s <strong>failed</strong> to complete using %2$s (<a>%3$s</a>)."
+msgstr "%2$s を使用して、%1$s の取得を<strong>完了できませんでした</strong> (<a>%3$s</a>)。"
+
+#. translators: %1: the successfully charged amount, %2: WooPayments, %3:
+#. transaction ID of the payment
+#: includes/class-wc-payments-order-service.php:1694
+msgid "A payment of %1$s was <strong>successfully captured</strong> using %2$s (<a>%3$s</a>)."
+msgstr "%2$s を使用して、%1$sの支払いが<strong>正常に取得されました</strong> (<a>%3$s</a>)。"
+
+#. translators: %1: the authorized amount, %2: WooPayments, %3: intent ID of
+#. the payment
+#: includes/class-wc-payments-order-service.php:1666
+msgid "A payment of %1$s was <strong>started</strong> using %2$s (<code>%3$s</code>)."
+msgstr "%2$s を使用して、%1$sの支払いが<strong>開始されました</strong> (<code>%3$s</code>)。"
+
+#. translators: %1: the authorized amount, %2: WooPayments, %3: transaction ID
+#. of the payment
+#: includes/class-wc-payments-order-service.php:1640
+msgid "A payment of %1$s was <strong>authorized</strong> using %2$s (<a>%3$s</a>)."
+msgstr "%2$s を使用して、%1$sの支払いが<strong>承認されました</strong> (<a>%3$s</a>)。"
+
+#. translators: %1: the authorized amount, %2: WooPayments, %3: transaction ID
+#. of the payment
+#: includes/class-wc-payments-order-service.php:1574
+msgid "A payment of %1$s <strong>failed</strong> using %2$s (<a>%3$s</a>)."
+msgstr "%2$s を使用して、%1$s の支払いに<strong>失敗しました</strong> (<a>%3$s</a>)。"
+
+#. translators: %1: the successfully charged amount, %2: WooPayments, %3:
+#. transaction ID of the payment
+#: includes/class-wc-payments-order-service.php:1547
+msgid "A payment of %1$s was <strong>successfully charged</strong> using %2$s (<a>%3$s</a>)."
+msgstr "%2$s を使用して、%1$sの支払いが<strong>正常に請求されました</strong> (<a>%3$s</a>)。"
+
+#. translators: %1: WooPayments, %2: required WP version number, %3: currently
+#. installed WP version number
+#: includes/class-wc-payments-dependency-service.php:297
+msgid "%1$s requires <strong>WordPress %2$s</strong> or greater (you are using %3$s)."
+msgstr "%1$s には<strong>WordPress %2$s</strong> 以上が必要です (現在 %3$s を使用しています)。"
+
+#. translators: %1: WooPayments, %2: WooCommerce Admin, %3: required WC-Admin
+#. version number, %4: currently installed WC-Admin version number
+#: includes/class-wc-payments-dependency-service.php:275
+msgid "%1$s requires <strong>%2$s %3$s</strong> or greater to be installed (you are using %4$s)."
+msgstr "%1$s を使用するには、<strong>%2$s %3$s</strong> 以上がインストールされている必要があります (現在 %4$s を使用しています)。"
+
+#. translators: %1$s: WooPayments, %2$s: WooCommerce Admin
+#: includes/class-wc-payments-dependency-service.php:263
+msgid "%1$s requires %2$s to be enabled. Please remove the <code>woocommerce_admin_disabled</code> filter to use %1$s."
+msgstr "%1$s を使用するには、%2$s を有効にする必要があります。 %1$s を使用するには、<code>woocommerce_admin_disabled</code> フィルターを削除してください。"
+
+#. translators: %1$s: WooCommerce, %2$s: WooPayments, a1: link to the Plugins
+#. page, a2: link to the page having all previous versions
+#: includes/class-wc-payments-dependency-service.php:245
+msgid "<a1>Update %1$s</a1> <strong>(recommended)</strong> or manually re-install <a2>a previous version</a2> of %2$s."
+msgstr "<a1>%1$s を更新する</a1><strong>(推奨)</strong>か、%2$s の<a2>以前のバージョン</a2>を手動で再インストールします。"
+
+#. translators: %1: WooPayments, %2: current WooCommerce Payment version, %3:
+#. WooCommerce, %4: required WC version number, %5: currently installed WC
+#. version number
+#: includes/class-wc-payments-dependency-service.php:229
+msgid "%1$s %2$s requires <strong>%3$s %4$s</strong> or greater to be installed (you are using %5$s). "
+msgstr "%1$s %2$s を使用するには、<strong>%3$s %4$s</strong> 以上がインストールされている必要があります (現在 %5$s を使用しています)。 "
+
+#. translators: %1$s: WooPayments, %2$s: WooCommerce
+#: includes/class-wc-payments-dependency-service.php:204
+msgid "%1$s requires <a>%2$s</a> to be installed and active."
+msgstr "%1$s を使用するには、<a>%2$s</a> をインストールしてアクティブにする必要があります。"
+
+#. translators: %s: WooPayments
+#: includes/class-wc-payment-gateway-wcpay.php:3659
+msgid "A %s payment method was not provided"
+msgstr "%s の支払い方法が指定されていませんでした"
+
+#. translators: %s: WooPayments
+#: includes/class-wc-payment-gateway-wcpay.php:402 dist/settings.js:2
+msgid "Enable %s"
+msgstr "%s を有効化する"
+
+#. translators: %d is a number greater than 1.
+#: includes/admin/tasks/class-wc-payments-task-disputes.php:124 dist/index.js:9
+msgid "Respond to %d active disputes"
+msgstr "%d 件の有効な異議申し立てに応答します"
+
+#. translators: %s: WooPayments
+#: includes/admin/class-wc-rest-payments-settings-controller.php:208
+msgid "If %s express checkouts should be enabled."
+msgstr "%s の場合、エクスプレス購入手続きを有効にする必要があります。"
+
+#. translators: %s: WooPayments
+#: includes/admin/class-wc-rest-payments-settings-controller.php:148
+msgid "%s bank account descriptor to be displayed in customers' bank accounts."
+msgstr "顧客の銀行口座に表示される %s 銀行口座記述語。"
+
+#. translators: %s: WooPayments
+#: includes/admin/class-wc-rest-payments-settings-controller.php:139
+msgid "%s Subscriptions feature flag setting."
+msgstr "%s 定期購入機能フラグの設定。"
+
+#. translators: %s: WooPayments
+#: includes/admin/class-wc-rest-payments-settings-controller.php:130
+msgid "%s Multi-Currency feature flag setting."
+msgstr "%s 多通貨機能フラグの設定。"
+
+#. translators: %s: WooPayments
+#: includes/admin/class-wc-rest-payments-settings-controller.php:121
+msgid "%s test mode setting."
+msgstr "%s テストモード設定。"
+
+#. translators: %s: WooPayments
+#: includes/admin/class-wc-rest-payments-settings-controller.php:112
+msgid "If %s \"Saved cards\" should be enabled."
+msgstr "%s の場合、「保存されたカード」を有効にする必要があります。"
+
+#. translators: %s: WooPayments
+#: includes/admin/class-wc-rest-payments-settings-controller.php:103
+msgid "If %s manual capture of charges should be enabled."
+msgstr "%s の料金の手動キャプチャを有効にする必要がある場合。"
+
+#. translators: %s: WooPayments
+#: includes/admin/class-wc-rest-payments-settings-controller.php:85
+msgid "If %s should be enabled."
+msgstr "%s を有効にする必要がある場合。"
+
+#. translators: %s: WooPayments
+#: includes/admin/class-wc-payments-admin.php:1324
+msgid "This represents the fee %s collects for the transaction."
+msgstr "これは、%s がトランザクションに対して徴収する手数料を表します。"
+
+#. translators: %s: WooPayments
+#: includes/admin/class-wc-payments-admin.php:251
+msgid "The selected currency is not available for the country set in your %s account."
+msgstr "選択した通貨は、%s アカウントに設定されている国では使用できません。"
+
+#. translators: %s: WooPayments
+#: includes/admin/class-wc-payments-admin-settings.php:62
+msgid "All transactions are simulated. Customers can't make real purchases through %s."
+msgstr "すべてのトランザクションはシミュレーションされます。 顧客は %s を通じて実際に購入することはできません。"
+
+#: includes/payment-methods/class-afterpay-payment-method.php:57
+msgid "Afterpay"
+msgstr "Afterpay"
+
+#: includes/payment-methods/class-affirm-payment-method.php:49
+msgid "Affirm"
+msgstr "Affirm"
+
+#. translators: %1$s: WooCommerce , %2$s: WooPayments, %3$s: The current
+#. WooCommerce version used by the store
+#: includes/class-wc-payments.php:2022
+msgid "The %1$s version you have installed is not compatible with %2$s for a Czech Republic business. Please update %1$s to version 7.8 or above (you are using %3$s). You can do that via the <a1>the plugins page.</a1>"
+msgstr "インストールされている %1$s のバージョンは、チェコ共和国の企業向けの %2$s と互換性がありません。 %1$s をバージョン 7.8 以降に更新してください (%3$s を使用しています)。 これは、<a1>プラグイン ページ</a1>から行うことができます"
+
+#. translators: %1$s: WooCommerce , %2$s: WooPayments, %3$s: The current
+#. WooCommerce version used by the store
+#: includes/class-wc-payments.php:2018
+msgid "The %1$s version you have installed is not compatible with %2$s for a Swedish business. Please update %1$s to version 7.8 or above (you are using %3$s). You can do that via the <a1>the plugins page.</a1>"
+msgstr "インストールされている %1$s のバージョンは、スウェーデンの企業向けの %2$s と互換性がありません。 %1$s をバージョン 7.8 以降に更新してください (%3$s を使用しています)。 これは、<a1>プラグイン ページ</a1>から行うことができます"
+
+#. translators: %1$s: WooCommerce , %2$s: WooPayments, %3$s: The current
+#. WooCommerce version used by the store
+#: includes/class-wc-payments.php:2014
+msgid "The %1$s version you have installed is not compatible with %2$s for a Hungarian business. Please update %1$s to version 7.8 or above (you are using %3$s). You can do that via the <a1>the plugins page.</a1>"
+msgstr "インストールされている %1$s のバージョンは、ハンガリーの企業向けの %2$s と互換性がありません。 %1$s をバージョン 7.8 以降に更新してください (%3$s を使用しています)。 これは、<a1>プラグイン ページ</a1>から行うことができます"
+
+#: includes/class-wc-payments-utils.php:1222 dist/index.js:2
+#: dist/multi-currency-switcher-block.js:2 dist/multi-currency.js:2
+#: dist/order.js:2 dist/payment-gateways.js:2 dist/settings.js:2
+msgid "Transaction unauthorized"
+msgstr "非承認のトランザクションです"
+
+#: includes/class-wc-payments-utils.php:282
+msgid "Sweden"
+msgstr "スウェーデン"
+
+#: includes/class-wc-payments-utils.php:270
+msgid "Hungary"
+msgstr "ハンガリー"
+
+#: includes/class-wc-payments-utils.php:257
+msgid "Czech Republic"
+msgstr "チェコ共和国"
+
+#. translators: %1: the disputed amount and currency; %2: the dispute reason;
+#. %3 the deadline date for responding to dispute
+#: includes/class-wc-payments-order-service.php:1884
+msgid "Payment has been disputed for %1$s with reason \"%2$s\". <a>Response due by %3$s</a>."
+msgstr "%1$s の支払いが \"%2$s\" の理由で異議申し立てされました。 <a>%3$s までに応答する必要があります</a>。"
+
+#. translators: %d is the number of disputes.
+#: includes/admin/tasks/class-wc-payments-task-disputes.php:213 dist/index.js:9
+msgid "Last week to respond to %d of the disputes"
+msgstr "%d件の係争の対応期限が今週です"
+
+#. translators: %d is the number of disputes.
+#: includes/admin/tasks/class-wc-payments-task-disputes.php:203 dist/index.js:9
+msgid "Final day to respond to %d of the disputes"
+msgstr "%d件の係争の対応期限が今日です"
+
+#. translators: %s is the number of days left, e.g. 1 day.
+#. translators: %d: number of days
+#: includes/admin/tasks/class-wc-payments-task-disputes.php:196
+#: includes/class-wc-payments-order-success-page.php:111
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] "%d日"
+
+#. translators: %1$s is a date, eg: Jan 1, 2021. %2$s is the number of days
+#. left, eg: 2 days.
+#: includes/admin/tasks/class-wc-payments-task-disputes.php:193
+msgid "By %1$s – %2$s left to respond"
+msgstr "%1$sまで – 対応すべき係争%2$s件"
+
+#. translators: %s is time, eg: 11:59 PM
+#: includes/admin/tasks/class-wc-payments-task-disputes.php:183 dist/index.js:9
+msgid "Respond today by %s"
+msgstr "本日%sまでに対応"
+
+#. translators: %d is a number greater than 1. %s is a formatted amount, eg:
+#. $10.00
+#: includes/admin/tasks/class-wc-payments-task-disputes.php:145
+msgid "Respond to %1$d active disputes for a total of %2$s"
+msgstr "総額%2$sの%1$d件の有効な係争に対応"
+
+#. translators: %s is a currency formatted amount
+#: includes/admin/tasks/class-wc-payments-task-disputes.php:108 dist/index.js:9
+msgid "Respond to a dispute for %s"
+msgstr "%sの係争に対応"
+
+#. translators: %s is a currency formatted amount
+#: includes/admin/tasks/class-wc-payments-task-disputes.php:102 dist/index.js:9
+msgid "Respond to a dispute for %s – Last day"
+msgstr "%sの係争に対応する - 最終日"
+
+#: includes/class-wc-payments-status.php:126
+msgid "Not connected"
+msgstr "未接続"
+
+#. Translators: %1$s: Opening anchor tag. %2$s: Closing anchor tag.
+#: includes/admin/class-wc-payments-admin.php:292
+msgid "Icelandic Króna does not accept decimals. Please update your currency number of decimals to 0 or select a different currency. %1$sVisit settings%2$s"
+msgstr "アイスランド クローナは小数を受け付けていません。小数点以下の桁数を0に更新するか、他の通貨を選択してください。%1$s設定を見る%2$s"
+
+#: includes/fraud-prevention/class-order-fraud-and-risk-meta-box.php:168
+msgid "The payment for this order was held for review by your risk filtering and manually approved."
+msgstr "この注文の支払いは、リスクフィルタリングによる審査のために保留され、手動で承認されました。"
+
+#: includes/fraud-prevention/class-order-fraud-and-risk-meta-box.php:103
+msgid "Approved"
+msgstr "承認済み"
+
+#: includes/class-wc-payments-utils.php:281
+msgid "Romania"
+msgstr "ルーマニア"
+
+#: includes/class-wc-payments-utils.php:264
+msgid "Croatia"
+msgstr "クロアチア"
+
+#: includes/class-wc-payments-utils.php:253
+msgid "Bulgaria"
+msgstr "ブルガリア"
+
+#: includes/woopay/class-woopay-session.php:97
+#: includes/woopay/class-woopay-session.php:98
+msgid "WooPay request is not signed correctly."
+msgstr "WooPayリクエストが正しく署名されていません。"
+
+#: includes/fraud-prevention/class-order-fraud-and-risk-meta-box.php:194
+msgid "The payment for this order was done in person and has bypassed your risk filtering."
+msgstr "この注文の支払いは直接行われ、リスクフィルターをバイパスしています。"
+
+#: includes/fraud-prevention/class-order-fraud-and-risk-meta-box.php:187
+msgid "The payment for this order was held for review by your risk filtering. The authorization for the charge appears to have failed."
+msgstr "この注文の支払いは、リスクフィルタリングによる審査のため保留されました。請求の承認に失敗したようです。"
+
+#: includes/fraud-prevention/class-order-fraud-and-risk-meta-box.php:180
+msgid "The payment for this order was held for review by your risk filtering. The authorization for the charge appears to have expired."
+msgstr "この注文の支払いは、リスクフィルタリングによる審査のため保留されました。請求の承認は期限切れのようです。"
+
+#: includes/fraud-prevention/class-order-fraud-and-risk-meta-box.php:156
+msgid "The payment for this order has not yet been passed to the fraud and risk filters to determine its outcome status."
+msgstr "この注文の支払いは、その結果ステータスを決定するための不正行為およびリスクフィルターにまだ渡されていない。"
+
+#: includes/core/server/request/class-update-account.php:61
+msgid "No account settings provided"
+msgstr "アカウント設定なし"
+
+#. Translators: %s is a provided username.
+#: includes/core/server/class-request.php:817
+msgid "%s is not a valid username."
+msgstr "%s は有効なユーザー名ではありません。"
+
+#. Translators: %s is a currency code.
+#: includes/core/server/class-request.php:793
+msgid "%1$s is not a valid redirect URL. Use a URL in the allowed_redirect_hosts filter."
+msgstr "%1$s は有効なリダイレクト URL ではありません。allowed_redirect_hosts フィルターにある URL を使用してください。"
+
+#: includes/class-wc-payment-gateway-wcpay.php:1093
+msgid "Invalid phone number."
+msgstr "無効な電話番号です。"
+
+#. translators: %s: WooPayments
+#: includes/fraud-prevention/class-order-fraud-and-risk-meta-box.php:201
+msgid "Risk filtering through %s was not found on this order, it may have been created while filtering was not enabled."
+msgstr "この注文で%sによるリスクフィルタリングが見つからなかった場合、フィルタリングが有効になっていない間に作成された可能性があります。"
+
+#. translators: %1: WooPayments, %2: Payment method title
+#: includes/fraud-prevention/class-order-fraud-and-risk-meta-box.php:137
+msgid "Risk filtering is only available for orders processed using credit cards with %1$s. This order was processed with %2$s."
+msgstr "リスクフィルタリングは、%1$sのクレジットカードで処理された注文に対してのみ有効です。この注文は %2$s で処理されました。"
+
+#: includes/fraud-prevention/class-order-fraud-and-risk-meta-box.php:124
+msgid "View more details"
+msgstr "詳細を見る"
+
+#: includes/fraud-prevention/class-order-fraud-and-risk-meta-box.php:123
+msgid "The payment for this order was blocked by your risk filtering. There is no pending authorization, and the order can be cancelled to reduce any held stock."
+msgstr "この注文の支払いは、リスクフィルタリングによってブロックされました。保留中の承認はなく、注文をキャンセルして保有在庫を減らすことができます。"
+
+#: includes/fraud-prevention/class-order-fraud-and-risk-meta-box.php:102
+#: dist/index.js:2
+msgid "Blocked"
+msgstr "ブロック済み"
+
+#: includes/fraud-prevention/class-order-fraud-and-risk-meta-box.php:173
+msgid "This transaction was held for review by your risk filters, and the charge was manually blocked after review."
+msgstr "このトランザクションはリスクフィルターによるレビューのために保留され、レビュー後に手動でチャージがブロックされました。"
+
+#: includes/fraud-prevention/class-order-fraud-and-risk-meta-box.php:97
+msgid "Red shield outline"
+msgstr "Red shield の概要"
+
+#: includes/fraud-prevention/class-order-fraud-and-risk-meta-box.php:162
+#: includes/fraud-prevention/class-order-fraud-and-risk-meta-box.php:174
+#: includes/fraud-prevention/class-order-fraud-and-risk-meta-box.php:181
+#: includes/fraud-prevention/class-order-fraud-and-risk-meta-box.php:188
+msgid "Review payment"
+msgstr "支払いレビュー"
+
+#: includes/fraud-prevention/class-order-fraud-and-risk-meta-box.php:161
+msgid "The payment for this order was held for review by your risk filtering. You can review the details and determine whether to approve or block the payment."
+msgstr "この注文の支払いは、リスクフィルタリングによるレビューのために保留されました。詳細を確認し、支払いを承認するかブロックするかを決定することができます。"
+
+#: includes/fraud-prevention/class-order-fraud-and-risk-meta-box.php:104
+msgid "Held for review"
+msgstr "審査保留"
+
+#: includes/fraud-prevention/class-order-fraud-and-risk-meta-box.php:93
+msgid "Orange shield outline"
+msgstr "Orange shield の概要"
+
+#: includes/fraud-prevention/class-order-fraud-and-risk-meta-box.php:118
+msgid "The payment for this order passed your risk filtering."
+msgstr "この注文の支払いは、あなたのリスクフィルタリングに合格しました。"
+
+#: includes/fraud-prevention/class-order-fraud-and-risk-meta-box.php:105
+msgid "No action taken"
+msgstr "処置なし"
+
+#: includes/fraud-prevention/class-order-fraud-and-risk-meta-box.php:89
+msgid "Green check mark"
+msgstr "緑のチェックマーク"
+
+#: includes/fraud-prevention/class-order-fraud-and-risk-meta-box.php:57
+msgid "Fraud &amp; Risk"
+msgstr "詐欺とリスク"
+
+#: includes/class-wc-payments-order-service.php:2232
+msgid "The requested order was not found."
+msgstr "リクエストされた注文は見つかりませんでした。"
+
+#. translators: %1: the blocked amount, %2: transaction ID of the payment
+#: includes/class-wc-payments-order-service.php:1834
+msgid "&#x1F6AB; A payment of %1$s was <strong>blocked</strong> by one or more risk filters.<br><br><a>View more details</a>."
+msgstr "&#x1F6AB; %1$sの支払いは1つ以上のリスクフィルターによって<strong>ブロック</strong>されました。<br><br><a>詳細をさらに表示</a>します。"
+
+#. translators: %1: the authorized amount, %2: transaction ID of the payment
+#: includes/class-wc-payments-order-service.php:1800
+msgid "&#x26D4; A payment of %1$s was <strong>held for review</strong> by one or more risk filters.<br><br><a>View more details</a>."
+msgstr "&#x26D4; %1$sの支払いは1つ以上のリスクフィルターにより<strong>確認のために保留</strong>されました。<br><br><a>詳細をさらに表示</a>します。"
+
+#. translators: %s: the error message.
+#: includes/admin/class-wc-rest-payments-orders-controller.php:555
+msgid "Payment cancel failed to complete with the following message: %s"
+msgstr "お支払いのキャンセルに失敗しました：%s"
+
+#: includes/admin/class-wc-rest-payments-orders-controller.php:540
+#: includes/admin/class-wc-rest-payments-orders-controller.php:543
+msgid "The payment cannot be canceled"
+msgstr "支払いはキャンセルできない"
+
+#: includes/admin/class-wc-rest-payments-orders-controller.php:525
+msgid "Payment cannot be canceled for partially or fully refunded orders."
+msgstr "ご注文の一部または全額を払い戻した場合、お支払いをキャンセルすることはできません。"
+
+#: includes/admin/class-wc-payments-admin.php:1329
+msgid "Transaction Fee:"
+msgstr "取引手数料:"
+
+#: includes/fraud-prevention/class-fraud-risk-tools.php:105 dist/settings.js:2
+msgid "Fraud protection"
+msgstr "不正行為防止"
+
+#: includes/fraud-prevention/class-order-fraud-and-risk-meta-box.php:232
+msgid "High"
+msgstr "高い"
+
+#: includes/core/server/request/class-list-disputes.php:137
+msgid "The search parameter must be a string, or an array of strings."
+msgstr "検索パラメーターは文字列、または文字列の配列でなければなりません。"
+
+#: includes/core/server/request/class-create-and-confirm-setup-intention.php:105
+msgid "Intentions require at least one payment method"
+msgstr "少なくとも1つの支払い方法が必要"
+
+#. Translators: %1$s is a provided date string, %2$s is a date format.
+#: includes/core/server/class-request.php:768
+msgid "%1$s is not a valid date for format %2$s."
+msgstr "%1$sはフォーマット%2$sの有効な日付ではありません。"
+
+#. Translators: %s is a currency code.
+#: includes/core/server/class-request.php:718
+msgid "%s is not a supported currency for payments."
+msgstr "%sは決済に対応していない通貨です。"
+
+#. Translators: %s is a Stripe ID.
+#: includes/core/server/class-request.php:669
+msgid "%s is not a valid Stripe identifier"
+msgstr "%sは有効な Stripe 識別子ではありません"
+
+#: includes/core/server/class-request.php:638
+msgid "Empty parameter is not allowed"
+msgstr "変数は空白にできません"
+
+#: includes/class-wc-payments-utils.php:284
+msgid "Slovakia"
+msgstr "スロバキア"
+
+#: includes/class-wc-payments-utils.php:283
+msgid "Slovenia"
+msgstr "スロベニア"
+
+#: includes/class-wc-payments-utils.php:277
+msgid "Norway"
+msgstr "ノルウェー"
+
+#: includes/class-wc-payments-utils.php:275
+msgid "Malta"
+msgstr "マルタ"
+
+#: includes/class-wc-payments-utils.php:274
+msgid "Latvia"
+msgstr "ラトビア"
+
+#: includes/class-wc-payments-utils.php:273
+msgid "Lithuania"
+msgstr "リトアニア"
+
+#: includes/class-wc-payments-utils.php:268
+msgid "Greece"
+msgstr "ギリシャ"
+
+#: includes/class-wc-payments-utils.php:266
+msgid "Luxembourg"
+msgstr "ルクセンブルク"
+
+#: includes/class-wc-payments-utils.php:261
+msgid "Finland"
+msgstr "フィンランド"
+
+#: includes/class-wc-payments-utils.php:260
+msgid "Estonia"
+msgstr "エストニア"
+
+#: includes/class-wc-payments-utils.php:259
+msgid "Denmark"
+msgstr "デンマーク"
+
+#: includes/class-wc-payments-utils.php:256
+msgid "Cyprus"
+msgstr "キプロス"
+
+#: includes/payment-methods/class-sepa-payment-method.php:47
+msgid "<strong>Test mode:</strong> use the test account number <number>AT611904300234573201</number>. Other payment methods may redirect to a Stripe test page to authorize payment. More test card numbers are listed <a>here</a>."
+msgstr "<strong>テストモード:</strong> テストアカウント番号 <number>AT611904300234573201</number> を使用します。その他の支払い方法では、支払いを承認するために Stripe テストページにリダイレクトされる場合があります。その他のテストカード番号は <a>こちら</a> に記載されています。"
+
+#: includes/payment-methods/class-becs-payment-method.php:43
+msgid "<strong>Test mode:</strong> use the test account number <number>000123456</number>. Other payment methods may redirect to a Stripe test page to authorize payment. More test card numbers are listed <a>here</a>."
+msgstr "<strong>テスト モード:</strong> テストアカウント番号 <number>000123456</number> を使用します。その他の支払い方法では、支払いを承認するために Stripe テストページにリダイレクトされる場合があります。その他のテストカード番号は <a>こちら</a> に記載されています。"
+
+#: includes/class-wc-payments-order-success-page.php:333
+msgid "We prevented multiple payments for the same order. If this was a mistake and you wish to try again, please create a new order."
+msgstr "同じご注文に対して複数のお支払いができないようにしました。もしこれが間違いであり、再度注文をされたい場合は、新規注文を作成してください。"
+
+#: includes/class-wc-payments-order-success-page.php:316
+msgid "We detected and prevented an attempt to pay for a duplicate order. If this was a mistake and you wish to try again, please create a new order."
+msgstr "重複注文のお支払いを未然に防ぎました。もしこれが間違いであった場合、もう一度ご注文をやり直してください。"
+
+#. translators: order ID integer number
+#: includes/class-duplicate-payment-prevention-service.php:168
+msgid "WooCommerce Payments: detected and deleted order ID %d, which has duplicate cart content with this order."
+msgstr "WooCommerce Payments: カートの内容が重複している注文 ID %d を検出し、削除しました。"
+
+#: includes/wc-payment-api/class-wc-payments-api-client.php:960
+msgid "Currency From parameter is required"
+msgstr "Currency From パラメータが必要です"
+
+#. translators: $1 $2 placeholders are opening and closing HTML link tags,
+#. linking to documentation. $3 is WooPayments.
+#: includes/subscriptions/templates/html-wcpay-deactivate-warning.php:38
+msgid "If you do not want these subscriptions to continue to be billed, you should %1$scancel all subscriptions%2$s prior to deactivating %3$s. "
+msgstr "これらのサブスクリプションの継続課金を希望しない場合は、%3$sを無効化する前に、%1$sすべてのサブスクリプションをキャンセル%2$sしてください。 "
+
+#. translators: $1 $2 $3 placeholders are opening and closing HTML link tags,
+#. linking to documentation. $4 $5 placeholders are opening and closing strong
+#. HTML tags. $6 is WooPayments.
+#: includes/subscriptions/templates/html-wcpay-deactivate-warning.php:24
+msgid "Your store has active subscriptions using the built-in %6$s functionality. Due to the %1$soff-site billing engine%3$s these subscriptions use, %4$sthey will continue to renew even after you deactivate %6$s%5$s. %2$sLearn more%3$s."
+msgstr "ストアは、組み込みの%6$s機能を使用して有効な定期購入を持っています。これらの定期購入は%1$sオフサイト課金エンジン%3$sを使用しているため、%4$sあなたが%6$s%5$sを無効化した後も更新され続けます。%2$sさらに詳しく%3$s。"
+
+#. translators: 1) date in date_format or 'F j, Y'; 2) time in time_format or
+#. 'g:i a'
+#: includes/compat/subscriptions/trait-wc-payment-gateway-wcpay-subscriptions.php:1015
+msgid "The customer must authorize this payment via a notification sent to them by the bank which issued their card. The authorization must be completed before %1$s at %2$s, when the charge will be attempted."
+msgstr "顧客は、カードを発行した銀行から送られてくる通知によって、この支払いを承認しなければなりません。この承認は、チャージが試行される%2$sの%1$sの前に完了していなければなりません。"
+
+#. translators: %s Stripe error message.
+#: includes/class-wc-payments-webhook-processing-service.php:801
+msgid "With the following message: <code>%s</code>"
+msgstr "追加のメッセージ: <code>%s</code>"
+
+#: includes/class-wc-payments-webhook-processing-service.php:796
+msgid "For recurring payment greater than mandate amount or INR 15000, payment was not approved by the card holder."
+msgstr "委任金額または15000インドルピーを超える定期的な支払いについては、カード所有者の承認が得られませんでした。"
+
+#: includes/class-wc-payments-webhook-processing-service.php:794
+msgid "The customer's bank could not send pre-debit notification for the payment."
+msgstr "顧客の銀行が、支払いのための事前引き落とし通知を送信できなかった。"
+
+#: includes/notes/class-wc-payments-notes-set-up-stripelink.php:73
+msgid "Reduce cart abandonment and create a frictionless checkout experience with Link by Stripe. Link autofills your customer’s payment and shipping details, so they can check out in just six seconds with the Link optimized experience."
+msgstr "Link by Stripe でカート放棄を減らし、摩擦のない購入手続き体験を実現しましょう。Link は顧客のお支払いと配送に関する情報を自動入力するため、顧客は Link に最適化された体験でわずか6秒で購入手続きができます。"
+
+#: includes/notes/class-wc-payments-notes-set-up-stripelink.php:72
+msgid "Increase conversion at checkout"
+msgstr "購入手続き時のコンバージョンを高める"
+
+#: includes/class-wc-payments-token-service.php:363
+msgid "Stripe Link email"
+msgstr "Stripe Link メール"
+
+#: includes/notes/class-wc-payments-notes-set-https-for-checkout.php:52
+msgid "Enable HTTPS on your checkout pages to display all available payment methods and protect your customers data."
+msgstr "購入手続きページで HTTPS を有効にして、利用可能なすべての支払い方法を表示し、顧客データを保護しましょう。"
+
+#: includes/notes/class-wc-payments-notes-set-https-for-checkout.php:51
+msgid "Enable secure checkout"
+msgstr "安全な購入手続きを有効にする"
+
+#. Translators: %d is the numeric ID of the product without a price.
+#: includes/express-checkout/class-wc-payments-express-checkout-button-helper.php:762
+msgid "Express checkout does not support products without prices! Please add a price to product #%d"
+msgstr "エクスプレスチェックアウトは価格のない商品をサポートしていません !商品#%dに価格を追加してください"
+
+#: includes/admin/class-wc-rest-payments-settings-controller.php:202
+msgid "Monthly anchor for deposit scheduling when interval is set to monthly"
+msgstr "入金間隔が毎月に設定されている場合の入金スケジュール用マンスリーアンカー"
+
+#: includes/admin/class-wc-rest-payments-settings-controller.php:198
+msgid "Weekly anchor for deposit scheduling when interval is set to weekly"
+msgstr "入金間隔を週単位に設定した場合の入金スケジュール用ウィークリー・アンカー"
+
+#: includes/admin/class-wc-rest-payments-settings-controller.php:194
+msgid "An interval for deposit scheduling."
+msgstr "預け入れスケジューリングのためのインターバル。"
+
+#: includes/class-wc-payments-order-service.php:553
+msgid "<strong>Fee details:</strong>"
+msgstr "<strong>料金の詳細</strong>"
+
+#: includes/class-wc-payments-apple-pay-registration.php:266
+msgid "<a>Learn more</a>."
+msgstr "<a>詳細を読む</a>."
+
+#. translators: a: Link to the logs page
+#: includes/class-wc-payments-apple-pay-registration.php:259
+msgid "Please check the <a>logs</a> for more details on this issue. Debug log must be enabled under <strong>Advanced settings</strong> to see recorded logs."
+msgstr "この問題の詳細については、<a>ログを</a>確認してください。記録されたログを見るには、<strong>詳細</strong>設定でデバッグログを有効にする必要があります。"
+
+#: includes/class-wc-payments-apple-pay-registration.php:254
+msgid "Express checkouts:"
+msgstr "エクスプレスチェックアウト:"
+
+#. translators: %1$s: <h3> tag, %2$s: </h3> tag, %3$s: <p> tag, %4$s:
+#. WooPayments, %5$s: <em> tag, %6$s: </em> tag, %7$s: <em> tag, %8$s: </em>
+#. tag, %9$s: </p> tag.
+#: includes/subscriptions/class-wc-payments-subscriptions-onboarding-handler.php:262
+msgctxt "used in admin pointer script params in javascript as type pointer content"
+msgid "%1$sChoose Subscription%2$s%3$s%4$s adds two new subscription product types - %5$sSimple subscription%6$s and %7$sVariable subscription%8$s.%9$s"
+msgstr "%1$s定期購入を選択%2$s%3$s%4$sは、2つの新しい定期購入商品タイプ、%5$sシンプル定期購入%6$sと%7$sバリエーションのある定期購入%8$sを追加する。%9$s"
+
+#: includes/admin/class-wc-rest-payments-settings-controller.php:267
+msgid "Store logo to display to WooPay customers."
+msgstr "WooPay の顧客に表示する店舗ロゴ。"
+
+#: includes/admin/class-wc-payments-admin.php:1297
+#: includes/class-wc-payments-order-success-page.php:259
+msgid "Card ending in"
+msgstr "で終わるカード"
+
+#: includes/admin/class-wc-payments-admin.php:1293
+msgid "Paid with"
+msgstr "支払元"
+
+#: includes/payment-methods/class-link-payment-method.php:42
+#: dist/multi-currency.js:2 dist/payment-gateways.js:2 dist/settings.js:2
+msgid "Link"
+msgstr "リンク"
+
+#: includes/class-wc-payments-account.php:2540
+msgid "Failed to update Account locale. "
+msgstr "アカウントロケールの更新に失敗しました。 "
+
+#: templates/emails/email-ipp-receipt-compliance-details.php:34
+#: templates/emails/plain/email-ipp-receipt-compliance-details.php:21
+msgid "Application Name"
+msgstr "アプリケーション名"
+
+#: templates/emails/email-ipp-receipt-compliance-details.php:26
+#: templates/emails/plain/email-ipp-receipt-compliance-details.php:19
+#: dist/index.js:2
+msgid "Payment Method"
+msgstr "支払い方法"
+
+#. translators: %s: Order number
+#: templates/emails/customer-ipp-receipt.php:31
+#: templates/emails/plain/customer-ipp-receipt.php:26
+msgid "This is the receipt for your order #%s:"
+msgstr "これは注文番号%sの領収書です："
+
+#. translators: %s: Customer first name
+#: templates/emails/customer-ipp-receipt.php:29
+#: templates/emails/plain/customer-ipp-receipt.php:24
+msgid "Hi %s,"
+msgstr "%s さん、こんにちは、"
+
+#: includes/class-wc-payments-woopay-button-handler.php:345
+#: dist/blocks-checkout.js:2 dist/multi-currency.js:2
+#: dist/payment-gateways.js:2 dist/settings.js:2
+#: dist/woopay-express-button.js:2
+msgid "WooPay"
+msgstr "WooPay"
+
+#. translators: %s: WooPayments.
+#: woocommerce-payments.php:353
+msgid "<strong>Notice:</strong> It appears that your 'wp-config.php' file might be using dynamic site URL values. Dynamic site URLs could cause %s to enter Safe Mode. <dynamicSiteUrlSupportLink>Learn how to set a static site URL.</dynamicSiteUrlSupportLink>"
+msgstr "<strong>お知らせ</strong> 'wp-config.php' ファイルが動的なサイト URL 値を使用している可能性があるようです。動的なサイト URL は、%s がセーフモードに入る原因となる可能性があります。<dynamicSiteUrlSupportLink>静的なサイト URL を設定する方法をご覧ください。</dynamicSiteUrlSupportLink>"
+
+#: includes/in-person-payments/templates/html-in-person-payment-receipt.php:176
+msgid "Shipping:"
+msgstr "発送方法:"
+
+#: includes/in-person-payments/templates/html-in-person-payment-receipt.php:168
+msgid "Fees:"
+msgstr "手数料："
+
+#: includes/emails/class-wc-payments-email-ipp-receipt.php:364
+msgid "Thanks for using {site_url}!"
+msgstr "{site_url} をご利用いただき、ありがとうございます !"
+
+#: includes/emails/class-wc-payments-email-ipp-receipt.php:156
+msgid "Your receipt for order: #{order_number}"
+msgstr "ご注文の領収書#{order_number}"
+
+#: includes/emails/class-wc-payments-email-ipp-receipt.php:146
+msgid "Your {site_title} Receipt"
+msgstr "{site_title}領収書"
+
+#: includes/emails/class-wc-payments-email-ipp-receipt.php:62
+msgid "New receipt emails are sent to customers when a new order is paid for with a card reader."
+msgstr "新しい注文がカードリーダーで決済されると、新しい領収書メールが顧客に送信されます。"
+
+#: includes/emails/class-wc-payments-email-ipp-receipt.php:61
+msgid "New receipt"
+msgstr "新しい領収書"
+
+#: includes/class-wc-payment-gateway-wcpay.php:2319
+msgid "You shall refund this payment in the same application where the payment was made."
+msgstr "この支払いは、支払いが行われたアプリケーションと同じアプリケーションで返金されるものとします。"
+
+#: includes/admin/class-wc-rest-payments-settings-controller.php:262
+msgid "Custom message to display to WooPay customers."
+msgstr "WooPay の顧客に表示するカスタムメッセージ。"
+
+#: includes/admin/class-wc-rest-payments-settings-controller.php:257
+msgid "If WooPay should be enabled."
+msgstr "WooPay を有効にする場合。"
+
+#. translators: %1: The document ID. %2: The error message.
+#: includes/admin/class-wc-rest-payments-documents-controller.php:94
+msgid "There was an error accessing document %1$s. %2$s"
+msgstr "ドキュメント%1$sへのアクセスエラーが発生しました。%2$s"
+
+#: includes/admin/class-wc-payments-admin.php:400 dist/index.js:9
+msgid "Onboarding"
+msgstr "オンボーディング"
+
+#: includes/admin/class-wc-payments-admin.php:478
+#: includes/class-wc-payments-status.php:254 dist/index.js:9
+msgid "Documents"
+msgstr "ドキュメント"
+
+#: includes/woopay/class-woopay-session.php:881
+#: includes/woopay/class-woopay-session.php:882
+#: includes/woopay/class-woopay-session.php:1008
+#: includes/woopay/class-woopay-session.php:1009 dist/woopay.js:2
+msgid "Privacy Policy"
+msgstr "プライバシーポリシー"
+
+#: includes/woopay/class-woopay-session.php:878
+#: includes/woopay/class-woopay-session.php:879 dist/woopay.js:2
+msgid "Terms of Service"
+msgstr "利用規約"
+
+#: includes/notes/class-wc-payments-notes-loan-approved.php:76
+msgid "View loan details"
+msgstr "ローンの詳細を見る"
+
+#. Translators: %1: total amount lent to the merchant formatted in the account
+#. currency, %2: WooPayments
+#: includes/notes/class-wc-payments-notes-loan-approved.php:50
+msgid "Congratulations! Your capital loan has been approved and %1$s was deposited into the bank account linked to %2$s. You'll automatically repay the loan, plus a flat fee, through a fixed percentage of each %2$s transaction."
+msgstr "おめでとうございます！キャピタルローンが承認され、%1$sが%2$sにリンクされた銀行口座に入金されました。あなたは、%2$sの各取引の一定パーセンテージを通じて、ローンと定額手数料を自動的に返済します。"
+
+#: includes/notes/class-wc-payments-notes-loan-approved.php:46
+msgid "Your capital loan has been approved!"
+msgstr "キャピタル・ローンが承認されました！"
+
+#: includes/in-person-payments/templates/html-in-person-payment-receipt.php:217
+msgid "Powered by WooCommerce"
+msgstr "Powered by WooCommerce"
+
+#: includes/class-wc-payments-order-service.php:2159
+msgid "Intent id was not included for payment complete status change."
+msgstr "支払い完了ステータスの変更にインテントIDが含まれていませんでした。"
+
+#: includes/class-woopay-tracker.php:98
+msgid "No valid event name or type."
+msgstr "有効なイベント名またはタイプがありません。"
+
+#: includes/class-wc-payments-woopay-button-handler.php:210
+#: includes/class-wc-payments.php:1764 includes/class-woopay-tracker.php:91
+#: includes/woopay/class-woopay-session.php:616
+#: includes/woopay/class-woopay-session.php:668
+#: includes/woopay/class-woopay-session.php:694
+#: includes/woopay/class-woopay-session.php:737
+msgid "You aren’t authorized to do that."
+msgstr "この操作を行う権限がありません。"
+
+#: includes/admin/class-wc-rest-payments-files-controller.php:103
+msgid "Sorry, you are not allowed to do that."
+msgstr "その操作を実行する権限がありません。"
+
+#: includes/admin/class-wc-payments-admin.php:465 dist/index.js:9
+msgid "Capital Loans"
+msgstr "キャピタル・ローン"
+
+#: includes/payment-methods/class-eps-payment-method.php:54
+msgid "Accept your payment with EPS — a common payment method in Austria."
+msgstr "オーストリアでは一般的な支払方法であるEPSでのお支払いが可能です。"
+
+#: includes/payment-methods/class-becs-payment-method.php:54
+msgid "Bulk Electronic Clearing System — Accept secure bank transfer from Australia."
+msgstr "一括電子決済システム - オーストラリアからの安全な銀行振込を受け付けます。"
+
+#. translators: %1$s: The current site domain name. %2$s: The original site
+#. domain name. Please keep hostname tags in your translation so that they can
+#. be formatted properly. %3$s: WooPayments.
+#: woocommerce-payments.php:378
+msgid "Create a new connection to %3$s for <hostname>%1$s</hostname>. You’ll have to re-verify your business details to begin accepting payments. Your <hostname>%2$s</hostname> connection will remain as is."
+msgstr "%3$s 。 <hostname>%1$s</hostname>.支払いの受付を開始するには、ビジネスの詳細を再度確認する必要があります。あなたの <hostname>%2$s</hostname>接続はそのまま残ります。"
+
+#: woocommerce-payments.php:336 woocommerce-payments.php:337
+msgid "Create a new connection"
+msgstr "新しい接続を作成する"
+
+#: woocommerce-payments.php:335
+msgid "Transfer your connection"
+msgstr "接続を転送する"
+
+#: woocommerce-payments.php:334
+msgid "Transfer connection"
+msgstr "トランスファー接続"
+
+#. translators: %s: WooPayments.
+#: woocommerce-payments.php:321
+msgid "We’ve detected that you have duplicate sites connected to %s. When Safe Mode is active, payments will not be interrupted. However, some features may not be available until you’ve resolved this issue below. Safe Mode is most frequently activated when you’re transferring your site from one domain to another, or creating a staging site for testing. <safeModeLink>Learn more</safeModeLink>"
+msgstr "%s 。セーフモードが有効な場合、お支払いが中断されることはありません。ただし、以下の問題を解決するまで、一部の機能が使用できない場合があります。セーフモードは、サイトを1つのドメインから別のドメインに移行する場合や、テスト用のステージングサイトを作成する場合に最も頻繁に有効になります。<safeModeLink>さらに詳しく</safeModeLink>"
+
+#: woocommerce-payments.php:318 woocommerce-payments.php:338
+msgid "Safe Mode activated"
+msgstr "セーフモード有効"
+
+#: woocommerce-payments.php:317
+msgid "Safe Mode"
+msgstr "セーフモード"
+
+#: includes/class-wc-payments.php:1838 dist/index.js:2
+msgid "Email address"
+msgstr "メールアドレス"
+
+#: includes/class-wc-payments.php:1831
+msgid "Contact information"
+msgstr "連絡先情報"
+
+#: includes/admin/class-wc-rest-payments-settings-controller.php:420
+msgid "Error: Invalid address format!"
+msgstr "エラー: 無効なアドレス形式です！"
+
+#: includes/admin/class-wc-rest-payments-settings-controller.php:384
+msgid "Error: Invalid phone number: "
+msgstr "エラー無効な電話番号です: "
+
+#: includes/admin/class-wc-rest-payments-settings-controller.php:360
+msgid "Error: Invalid email address: "
+msgstr "エラー: メールアドレスが無効です: "
+
+#. Translators: The %1 placeholder is a currency formatted price string
+#. ($0.50). The %2 and %3 placeholders are opening and closing strong HTML
+#. tags.
+#: includes/subscriptions/class-wc-payments-subscription-service.php:430
+msgid "There was a problem creating your subscription. %1$s doesn't meet the %2$sminimum recurring amount%3$s this payment method can process."
+msgstr "定期購入の作成に問題が発生しました。%1$sは、この支払い方法で処理できる%2$s最低定期金額%3$sを満たしていません。"
+
+#: includes/class-wc-payments-webhook-processing-service.php:788
+msgid "You have exceeded the number of allowed verification attempts."
+msgstr "認証の試行回数を超えています。"
+
+#: includes/class-wc-payments-webhook-processing-service.php:786
+msgid "Microdeposit transfers failed. Please check the account, institution and transit numbers."
+msgstr "マイクロデポジットの送金に失敗しました。口座番号、機関番号、トランジット番号をご確認ください。"
+
+#: includes/class-wc-payments-webhook-processing-service.php:784
+msgid "The customer's bank account could not be located."
+msgstr "顧客の銀行口座は見つかりませんでした。"
+
+#: includes/class-wc-payments-webhook-processing-service.php:782
+msgid "The customer's account has insufficient funds to cover this payment."
+msgstr "顧客の口座には、この支払いをカバーするための資金が不足しています。"
+
+#: includes/class-wc-payments-webhook-processing-service.php:780
+msgid "The customer has notified their bank that this payment was unauthorized."
+msgstr "顧客はこの支払いが不正であることを銀行に通知した。"
+
+#: includes/class-wc-payments-webhook-processing-service.php:778
+msgid "The customer's bank account has been closed."
+msgstr "顧客の銀行口座が閉鎖されました。"
+
+#. translators: %s: the error message.
+#: includes/class-wc-payment-gateway-wcpay.php:3791
+msgid "Intent creation failed with the following message: %s"
+msgstr "インテントの作成に失敗しました: %s"
+
+#: includes/admin/class-wc-payments-admin.php:574 dist/index.js:9
+msgid "Set up multiple currencies"
+msgstr "複数通貨の設定"
+
+#: includes/in-person-payments/templates/html-in-person-payment-receipt.php:216
+#: templates/emails/email-ipp-receipt-compliance-details.php:50
+#: templates/emails/plain/email-ipp-receipt-compliance-details.php:25
+msgid "Account Type"
+msgstr "アカウントタイプ"
+
+#: includes/in-person-payments/templates/html-in-person-payment-receipt.php:215
+#: templates/emails/email-ipp-receipt-compliance-details.php:42
+#: templates/emails/plain/email-ipp-receipt-compliance-details.php:23
+msgid "AID"
+msgstr "AID"
+
+#: includes/in-person-payments/templates/html-in-person-payment-receipt.php:214
+msgid "Application name"
+msgstr "アプリケーション名"
+
+#: includes/in-person-payments/templates/html-in-person-payment-receipt.php:204
+msgid "AMOUNT PAID"
+msgstr "支払額"
+
+#: includes/in-person-payments/templates/html-in-person-payment-receipt.php:195
+msgid "TOTAL"
+msgstr "合計"
+
+#: includes/in-person-payments/templates/html-in-person-payment-receipt.php:154
+msgid "SUBTOTAL"
+msgstr "小計"
+
+#: includes/in-person-payments/templates/html-in-person-payment-receipt.php:143
+msgid "SKU"
+msgstr "SKU"
+
+#: includes/class-wc-payment-gateway-wcpay.php:793
+msgid "Next we’ll ask you to share a few details about your business to create your account."
+msgstr "次に、アカウントを作成するために、あなたのビジネスについていくつかの詳細を共有していただきます。"
+
+#: includes/class-wc-payment-gateway-wcpay.php:3201
+msgid "Failed to update Stripe account. "
+msgstr "Stripe アカウントの更新に失敗しました。 "
+
+#: includes/admin/class-wc-rest-payments-settings-controller.php:190
+msgid "A CSS hex color value representing the secondary branding color for this account."
+msgstr "このアカウントのセカンダリーブランドの色を表す CSS の16進数の色値。"
+
+#: includes/admin/class-wc-rest-payments-settings-controller.php:186
+msgid "A CSS hex color value representing the primary branding color for this account."
+msgstr "このアカウントの主要なブランディングカラーを表す CSS の16進数カラー値。"
+
+#: includes/admin/class-wc-rest-payments-settings-controller.php:182
+msgid "An icon for the account."
+msgstr "アカウントのアイコン。"
+
+#: includes/admin/class-wc-rest-payments-settings-controller.php:178
+msgid "A logo id for the account that will be used in Checkout"
+msgstr "購入手続きで使用されるアカウントのロゴ ID"
+
+#: includes/admin/class-wc-rest-payments-settings-controller.php:173
+msgid "A publicly available phone number to call with support issues."
+msgstr "サポートが必要な場合の電話番号。"
+
+#: includes/admin/class-wc-rest-payments-settings-controller.php:168
+msgid "A publicly available email address for sending support issues to."
+msgstr "サポートに関する問題を送信するための、一般に公開されているメールアドレス。"
+
+#: includes/admin/class-wc-rest-payments-settings-controller.php:163
+msgid "A publicly available mailing address for sending support issues to."
+msgstr "一般に公開されている、サポートに関する問題の送付先住所。"
+
+#: includes/admin/class-wc-rest-payments-settings-controller.php:159
+msgid "The business’s publicly available website."
+msgstr "事業者が公開しているウェブサイト。"
+
+#: includes/admin/class-wc-rest-payments-settings-controller.php:155
+msgid "The customer-facing business name."
+msgstr "顧客向けのビジネス名。"
+
+#: includes/admin/class-wc-rest-payments-reader-controller.php:284
+msgid "Invalid payment intent"
+msgstr "支払い方法が無効です"
+
+#: includes/admin/class-wc-payments-admin.php:566
+msgid "Add new payment methods"
+msgstr "新しい支払い方法の追加"
+
+#: includes/admin/class-wc-payments-admin.php:452
+msgid "Card Readers"
+msgstr "カードリーダー"
+
+#. translators: %1$s% is the fee percentage
+#: includes/class-wc-payments-captured-event-note.php:389 dist/index.js:2
+msgid "Subscription transaction fee: %1$s%%"
+msgstr "定期購入取引手数料: %1$s%%"
+
+#. translators: %1$s% is the fee percentage and %2$s is the fixed rate
+#: includes/class-wc-payments-captured-event-note.php:387 dist/index.js:2
+msgid "Subscription transaction fee: %1$s%% + %2$s"
+msgstr "定期購入取引手数料: %1$s%% + %2$s"
+
+#. translators: %1$s Opening strong tag, %2$s Closing strong tag
+#: includes/subscriptions/class-wc-payments-product-service.php:663
+msgid "%1$sThere was an issue saving your variations!%2$s A subscription product's billing period cannot be longer than one year. We have updated one or more of this product's variations to renew every %3$s."
+msgstr "%1$sバリエーションを保存する際に問題が発生しました！%2$s 定期購入商品の請求期間は1年を超えることはできません。この商品のバリエーションの1つ以上を更新して、%3$sごとに更新するようにしました。"
+
+#. translators: %1$s Opening strong tag, %2$s Closing strong tag, %3$s The
+#. subscription renewal interval (every x time)
+#: includes/subscriptions/class-wc-payments-product-service.php:618
+msgid "%1$sThere was an issue saving your product!%2$s A subscription product's billing period cannot be longer than one year. We have updated this product to renew every %3$s."
+msgstr "%1$s商品の保存に問題が発生しました！%2$s 定期購入商品の請求期間は1年を超えることはできません。この商品は%3$sごとに更新されます。"
+
+#: includes/class-wc-payments-utils.php:693
+msgid "We couldn’t verify the postal code in your billing address. Make sure the information is current with your card issuing bank and try again."
+msgstr "請求先住所の郵便番号が確認できませんでした。カード発行銀行で情報が最新であることを確認し、もう一度やり直してください。"
+
+#. translators: %s a formatted price.
+#: includes/class-wc-payments-utils.php:680
+msgid "The selected payment method requires a total amount of at least %s."
+msgstr "選択された支払い方法には、少なくとも%sの合計金額が必要です。"
+
+#: includes/class-wc-payments-status.php:124
+msgid "Account ID"
+msgstr "アカウント ID"
+
+#: includes/class-wc-payments-status.php:115
+#: includes/class-wc-payments-status.php:174 dist/index.js:2
+msgid "No"
+msgstr "いいえ"
+
+#: includes/class-wc-payments-status.php:115
+#: includes/class-wc-payments-status.php:174 dist/index.js:2
+msgid "Yes"
+msgstr "はい"
+
+#: includes/class-wc-payments-status.php:108
+msgid "Connected to WPCOM"
+msgstr "WPCOM に接続"
+
+#: includes/class-wc-payments-status.php:98
+msgid "Version"
+msgstr "バージョン"
+
+#. translators: %s: WooPayments
+#: includes/class-wc-payments-dependency-service.php:312
+msgid "You have installed a development version of %s which requires files to be built. From the plugin directory, run <code>npm run build:client</code> to build and minify assets. Alternatively, you can download a pre-built version of the plugin from the <a1>WordPress.org repository</a1> or by visiting the <a2>releases page in the GitHub repository</a2>."
+msgstr "%s の開発版をインストールし、ファイルをビルドする必要があります。プラグインディレクトリから<code>npm run build:client</code>を実行し、アセットをビルドして最小化します。あるいは、<a1>WordPress.org のリポジトリから</a1>、または<a2>GitHub リポジトリのリリースページに</a2>アクセスして、ビルド済みバージョンのプラグインをダウンロードすることもできます。"
+
+#: includes/class-wc-payment-gateway-wcpay.php:1191
+msgid "We couldn’t verify the postal code in the billing address. If the issue persists, suggest the customer to reach out to the card issuing bank."
+msgstr "請求先住所の郵便番号を確認できませんでした。それでも問題が解決しない場合は、カード発行銀行にお問い合わせください。"
+
+#. translators: %1: the failed payment amount, %2: error message
+#: includes/class-wc-payment-gateway-wcpay.php:1186
+msgid "A payment of %1$s <strong>failed</strong>. %2$s"
+msgstr "%1$s の支払いに<strong>失敗</strong>した。%2$s"
+
+#. translators: %1: the dispute message, %2: the dispute details URL
+#: includes/class-wc-payments-webhook-processing-service.php:637
+msgid "%1$s. See <a href=\"%2$s\">dispute overview</a> for more details."
+msgstr "%1$s。詳細は<a href=\"%2$s\">紛争概要を</a>参照。"
+
+#: includes/class-wc-payments-webhook-processing-service.php:632
+msgid "Payment dispute has been updated"
+msgstr "支払紛争が更新されました"
+
+#: includes/class-wc-payments-webhook-processing-service.php:629
+msgid "Payment dispute funds have been reinstated"
+msgstr "支払紛争資金が復活しました"
+
+#: includes/class-wc-payments-order-service.php:419
+msgid "Dispute lost."
+msgstr "紛争は失われました。"
+
+#. translators: %1: the dispute status
+#: includes/class-wc-payments-order-service.php:1925
+msgid "Dispute has been closed with status %1$s. See <a>dispute overview</a> for more details."
+msgstr "紛争はステータス %1$s で終了しました。詳細については、<a>紛争の概要</a> を参照してください。"
+
+#: includes/admin/class-wc-rest-payments-orders-controller.php:191
+#: includes/emails/class-wc-payments-email-ipp-receipt.php:103
+msgid "WooCommerce In-Person Payments"
+msgstr "WooCommerce 対面決済"
+
+#. translators: %2$s is the capped fee
+#: includes/class-wc-payments-captured-event-note.php:364 dist/index.js:2
+msgid "Base fee: capped at %2$s"
+msgstr "基本料金: 上限%2$s"
+
+#: includes/wc-payment-api/class-wc-payments-api-client.php:1378
+msgid "Price ID is required"
+msgstr "価格 ID が必要"
+
+#: includes/wc-payment-api/class-wc-payments-api-client.php:1346
+msgid "Product ID is required"
+msgstr "商品 ID は必須"
+
+#. Translators: %s Property name not found in event data array.
+#: includes/subscriptions/class-wc-payments-subscriptions-event-handler.php:330
+msgid "%s not found in array"
+msgstr "配列に%sが見つからない"
+
+#: includes/subscriptions/class-wc-payments-subscriptions-event-handler.php:260
+msgid "Unable to generate renewal order for subscription to record the incoming \"invoice.payment_failed\" event."
+msgstr "受信した「invoice.payment_failed」イベントを記録するために、サブスクリプションの更新オーダーを生成できません。"
+
+#: includes/subscriptions/class-wc-payments-subscriptions-event-handler.php:233
+msgid "Cannot find subscription for the incoming \"invoice.payment_failed\" event."
+msgstr "着信イベント「invoice.payment_failed」の定期購入が見つかりません。"
+
+#: includes/subscriptions/class-wc-payments-subscriptions-event-handler.php:152
+msgid "Unable to generate renewal order for subscription on the \"invoice.paid\" event."
+msgstr "\"invoice.paid \"イベントで定期購入の更新注文を生成できない。"
+
+#: includes/subscriptions/class-wc-payments-subscriptions-event-handler.php:138
+msgid "Cannot find subscription for the incoming \"invoice.paid\" event."
+msgstr "着信イベント\"invoice.paid\"の定期購入が見つかりません。"
+
+#. Translators: %s Scheduled/upcoming payment date in Y-m-d H:i:s format.
+#: includes/subscriptions/class-wc-payments-subscriptions-event-handler.php:102
+msgid "Next automatic payment scheduled for %s."
+msgstr "次回の自動支払いは%sの予定です。"
+
+#: includes/subscriptions/class-wc-payments-subscriptions-event-handler.php:79
+msgid "Cannot find subscription to handle the \"invoice.upcoming\" event."
+msgstr "\"invoice.upcoming」イベントを処理するサブスクリプションが見つかりません。"
+
+#: includes/subscriptions/class-wc-payments-subscription-service.php:656
+msgid "We've successfully collected payment for your subscription using your new payment method."
+msgstr "新しいお支払い方法でのお支払いが完了しました。"
+
+#: includes/subscriptions/class-wc-payments-subscription-service.php:397
+msgid "There was a problem creating your subscription. Please try again or contact us for assistance."
+msgstr "購読の作成に問題が発生しました。もう一度お試しいただくか、弊社までお問い合わせください。"
+
+#. Translators: %s Coupon code.
+#: includes/subscriptions/class-wc-payments-subscription-service.php:347
+msgid "Coupon - %s"
+msgstr "クーポン - %s"
+
+#: includes/subscriptions/class-wc-payments-subscription-change-payment-method-handler.php:226
+msgid "Update and retry payment"
+msgstr "更新と支払いの再試行"
+
+#: includes/subscriptions/class-wc-payments-subscription-change-payment-method-handler.php:175
+msgid "Your subscription's last renewal failed payment. Please update your payment details so we can reattempt payment."
+msgstr "あなたの購読の最終更新は支払いに失敗しました。お支払いの詳細を更新してください。"
+
+#: includes/subscriptions/class-wc-payments-subscription-change-payment-method-handler.php:159
+msgid "Update payment details"
+msgstr "支払い情報を更新"
+
+#: includes/subscriptions/class-wc-payments-subscription-change-payment-method-handler.php:53
+msgid "Update payment method"
+msgstr "支払い方法を更新"
+
+#: includes/subscriptions/class-wc-payments-invoice-service.php:302
+msgid "The payment info couldn't be added to the order."
+msgstr "支払い情報を注文に追加できませんでした。"
+
+#: includes/admin/class-wc-rest-payments-orders-controller.php:153
+#: includes/admin/class-wc-rest-payments-orders-controller.php:293
+msgid "Payment cannot be captured for partially or fully refunded orders."
+msgstr "部分的または全額返金された注文の支払いを請求することはできません。"
+
+#: includes/multi-currency/CurrencySwitcherWidget.php:50
+msgid "Currency Switcher Widget"
+msgstr "通貨切り替えウィジェット"
+
+#: includes/wc-payment-api/class-wc-payments-api-client.php:1899
+msgid "Address country and line 1 are required."
+msgstr "住所国名と1行目は必須。"
+
+#: includes/class-wc-payments-utils.php:689
+#: includes/class-wc-payments-utils.php:691
+msgid "We're not able to process this request. Please refresh the page and try again."
+msgstr "このリクエストを処理できません。ページを更新して再度お試しください。"
+
+#: includes/class-wc-payments-account.php:1669
+msgid "There was a duplicate attempt to initiate account setup. Please wait a few seconds and try again."
+msgstr "アカウント設定の試みが重複しています。数秒待ってからもう一度お試しください。"
+
+#. translators: %1: the failed payment amount
+#: includes/class-wc-payment-gateway-wcpay.php:1220
+msgid "A payment of %1$s <strong>failed</strong> to complete because of too many failed transactions. A rate limiter was enabled for the user to prevent more attempts temporarily."
+msgstr "%1$s の支払いが、失敗したトランザクションが多すぎたために<strong>完了しませんでした</strong>。これ以上の試行を一時的に防止するため、ユーザーに対してレートリミッターが有効にされました。"
+
+#: includes/class-wc-payment-gateway-wcpay.php:1111
+msgid "Your payment was not processed."
+msgstr "お支払いが処理されませんでした。"
+
+#: includes/class-wc-payments-order-success-page.php:136
+#: includes/class-wc-payments-order-success-page.php:530
+#: includes/class-wc-payments-order-success-page.php:589 dist/index.js:2
+msgid "Reference"
+msgstr "参照"
+
+#. translators: %s is a monetary amount
+#: includes/class-wc-payments-captured-event-note.php:276 dist/index.js:2
+msgid "Fixed fee: %s"
+msgstr "固定料金： %s"
+
+#. translators: %s is a percentage number
+#: includes/class-wc-payments-captured-event-note.php:271 dist/index.js:2
+msgid "Variable fee: %s"
+msgstr "変動費：%s"
+
+#: includes/payment-methods/class-p24-payment-method.php:54
+msgid "Accept payments with Przelewy24 (P24), the most popular payment method in Poland."
+msgstr "ポーランドで最もポピュラーな決済方法であるPrzelewy24 (P24)でのお支払いが可能です。"
+
+#: includes/payment-methods/class-ideal-payment-method.php:54
+msgid "Expand your business with iDEAL — Netherlands’s most popular payment method."
+msgstr "オランダで最も人気のある決済手段 iDEAL でビジネスを拡大しましょう。"
+
+#: includes/payment-methods/class-bancontact-payment-method.php:54
+msgid "Bancontact is a bank redirect payment method offered by more than 80% of online businesses in Belgium."
+msgstr "Bancontact は、ベルギーの80% o以上のオンラインビジネスで提供されている銀行リダイレクト決済方法である。"
+
+#: includes/admin/class-wc-rest-payments-orders-controller.php:379
+msgid "Invalid order status"
+msgstr "注文ステータスが無効です"
+
+#: includes/multi-currency/SettingsOnboardCta.php:80
+msgid "Get started"
+msgstr "始めましょう"
+
+#. translators: %1$s% is the fee percentage
+#: includes/class-wc-payments-captured-event-note.php:377 dist/index.js:2
+msgid "International card fee: %1$s%%"
+msgstr "国際カード手数料: %1$s%%"
+
+#. translators: %1$s% is the fee percentage and %2$s is the fixed rate
+#: includes/class-wc-payments-captured-event-note.php:375 dist/index.js:2
+msgid "International card fee: %1$s%% + %2$s"
+msgstr "国際カード手数料: %1$s%% + %2$s"
+
+#. translators: %1$s% is the fee percentage
+#: includes/class-wc-payments-captured-event-note.php:370 dist/index.js:2
+msgid "Base fee: %1$s%%"
+msgstr "基本料金: %1$s%%"
+
+#. translators: %1$s% is the fee percentage and %2$s is the fixed rate
+#: includes/class-wc-payments-captured-event-note.php:368 dist/index.js:2
+msgid "Base fee: %1$s%% + %2$s"
+msgstr "基本料金:  %1$s%% + %2$s"
+
+#: includes/class-wc-payment-gateway-wcpay.php:4145
+#: includes/class-wc-payment-gateway-wcpay.php:4155
+msgid "Unable to update UPE appearance values at this time."
+msgstr "現在、UPE の外観値を更新できません。"
+
+#. translators: %1 User's country, %2 Selected currency name, %3 Default store
+#. currency name, %4 Link to switch currency
+#: includes/multi-currency/MultiCurrency.php:980
+msgid "We noticed you're visiting from %1$s. We've updated our prices to %2$s for your shopping convenience. <a href=\"%4$s\">Use %3$s instead.</a>"
+msgstr "%1$s からアクセスされていることに気付きました。%2$s に価格を更新しましたので、お買い物をお楽しみください。<a href=\"%4$s\">代わりに%3$s をご利用ください。</a>"
+
+#: includes/compat/subscriptions/trait-wc-payment-gateway-wcpay-subscriptions.php:323
+msgid ""
+"Almost there!\n"
+"\n"
+"Your order has already been created, the only thing that still needs to be done is for you to authorize the payment with your bank."
+msgstr ""
+"もうすぐです！\n"
+"\n"
+"ご注文はすでに作成されていますので、あとは銀行でのお支払いを承認するだけです。"
+
+#. translators: %1$s: name of the blog, %2$s: link to payment re-authentication
+#. URL, note: no full stop due to url at the end.
+#: includes/compat/subscriptions/emails/failed-renewal-authentication.php:18
+msgid "Authorize the payment &raquo;"
+msgstr "支払いを承認 &raquo;"
+
+#. translators: %1$s: name of the blog, %2$s: link to payment re-authentication
+#. URL, note: no full stop due to url at the end.
+#. translators: %1$s: name of the blog, %2$s: link to checkout payment url,
+#. note: no full stop due to url at the end.
+#: includes/compat/subscriptions/emails/failed-renewal-authentication.php:18
+#: includes/compat/subscriptions/emails/plain/failed-renewal-authentication.php:17
+msgctxt "In failed renewal authentication email"
+msgid "The automatic payment to renew your subscription with %1$s has failed. To reactivate the subscription, please login and authorize the renewal from your account page: %2$s"
+msgstr "%1$sで定期購入を継続するための自動支払いに失敗しました。定期購入を再開するには、ログインしてアカウントページから継続のお支払い手続きを行なってください：%2$s"
+
+#: includes/compat/subscriptions/emails/failed-renewal-authentication-requested.php:34
+#: includes/compat/subscriptions/emails/plain/failed-renewal-authentication-requested.php:27
+msgid "The renewal order is as follows:"
+msgstr "ご契約の更新内容は次のとおりです："
+
+#. translators: %1$s: an order number, %2$s: the customer's full name, %3$s:
+#. lowercase human time diff in the form returned by wcs_get_human_time_diff(),
+#. e.g. 'in 12 hours'.
+#: includes/compat/subscriptions/emails/failed-renewal-authentication-requested.php:22
+#: includes/compat/subscriptions/emails/plain/failed-renewal-authentication-requested.php:18
+msgctxt "In admin renewal failed email"
+msgid "The automatic recurring payment for order %1$s from %2$s has failed. The customer was sent an email requesting authentication of payment. If the customer does not authenticate the payment, they will be requested by email again %3$s."
+msgstr "%2$s からの注文 %1$s の自動定期支払いに失敗しました。顧客には、支払いの認証を要求するメールが送信されました。顧客が支払いを認証しない場合は、再度 %3$s にメールで要求されます。"
+
+#: includes/compat/subscriptions/class-wc-payments-email-failed-renewal-authentication.php:143
+msgid "Payment authorization needed for renewal of order {order_number}"
+msgstr "注文更新のために必要な支払い承認 {order_number} 注文更新のために必要な支払い承認"
+
+#: includes/compat/subscriptions/class-wc-payments-email-failed-renewal-authentication.php:134
+msgid "Payment authorization needed for renewal of {site_title} order {order_number}"
+msgstr "{site_title}の更新に必要な支払い承認注文 {order_number}"
+
+#: includes/compat/subscriptions/class-wc-payments-email-failed-renewal-authentication.php:118
+msgid "Enable this email notification"
+msgstr "このメール通知を有効化する"
+
+#: includes/compat/subscriptions/class-wc-payments-email-failed-renewal-authentication.php:116
+msgctxt "an email notification"
+msgid "Enable/disable"
+msgstr "有効／無効"
+
+#: includes/compat/subscriptions/class-wc-payments-email-failed-renewal-authentication.php:33
+msgid "Sent to a customer when a renewal fails because the transaction requires an SCA verification. The email contains renewal order information and payment links."
+msgstr "取引に SCA の認証が必要なため、更新に失敗した場合に顧客に送信されます。メールには更新注文情報と支払いリンクが記載されています。"
+
+#: includes/compat/subscriptions/class-wc-payments-email-failed-renewal-authentication.php:32
+msgid "Failed subscription renewal SCA authentication"
+msgstr "購読更新SCA認証の失敗"
+
+#: includes/compat/subscriptions/class-wc-payments-email-failed-authentication-retry.php:58
+msgid "[{site_title}] Automatic payment failed for {order_number}. Customer asked to authenticate payment and will be notified again {retry_time}"
+msgstr "[{site_title}] {order_number}の自動支払いに失敗しました。顧客が支払いの認証を求めてきたため、再度{retry_time}回通知されます"
+
+#: includes/compat/subscriptions/class-wc-payments-email-failed-authentication-retry.php:57
+msgid "Automatic renewal payment failed due to authentication required"
+msgstr "認証が必要なため自動更新の支払いに失敗"
+
+#: includes/compat/subscriptions/class-wc-payments-email-failed-authentication-retry.php:55
+msgid "Payment authentication requested emails are sent to chosen recipient(s) when an attempt to automatically process a subscription renewal payment fails because the transaction requires an SCA verification, the customer is requested to authenticate the payment, and a retry rule has been applied to notify the customer again within a certain time period."
+msgstr "支払い認証を要求されたメールは、トランザクションに SCA 検証が必要なため、購読更新の支払いを自動的に処理しようとする試みが失敗した場合、顧客は支払いの認証を要求され、一定期間内に再度顧客に通知するために再試行ルールが適用された場合に、選択した受信者に送信されます。"
+
+#: includes/compat/subscriptions/class-wc-payments-email-failed-authentication-retry.php:54
+msgid "Payment authentication requested email"
+msgstr "支払い認証依頼メール"
+
+#: includes/class-wc-payments-utils.php:285
+msgid "Singapore"
+msgstr "シンガポール"
+
+#: includes/class-wc-payments-utils.php:280
+msgid "Portugal"
+msgstr "ポルトガル"
+
+#: includes/class-wc-payments-utils.php:279
+msgid "Poland"
+msgstr "ポーランド"
+
+#: includes/class-wc-payments-utils.php:276
+msgid "Netherlands"
+msgstr "オランダ"
+
+#: includes/class-wc-payments-utils.php:269
+msgid "Hong Kong"
+msgstr "香港"
+
+#: includes/class-wc-payments-utils.php:255
+msgid "Switzerland"
+msgstr "スイス"
+
+#: includes/class-wc-payments-utils.php:252
+msgid "Belgium"
+msgstr "ベルギー"
+
+#: includes/class-wc-payments-utils.php:250
+msgid "Austria"
+msgstr "オーストリア"
+
+#: includes/class-wc-payment-gateway-wcpay.php:2291
+msgid "The refund amount is not valid."
+msgstr "払い戻し金額は無効です。"
+
+#: includes/admin/class-wc-payments-admin.php:245
+#: includes/admin/class-wc-payments-admin.php:285
+msgid "Unsupported currency:"
+msgstr "未対応の通貨:"
+
+#: includes/multi-currency/CurrencySwitcherWidget.php:66
+msgid "Display flags in supported devices"
+msgstr "対応デバイスのフラグ表示"
+
+#. translators: %s List of currencies that are already translated in
+#. WooCommerce core.
+#: includes/multi-currency/AdminNotices.php:112
+msgid "The store currency was recently changed. The following currencies are set to manual rates and may need updates: %s"
+msgstr "ストアの通貨が最近変更されました。以下の通貨は手動レートに設定されており、更新が必要な場合があります: %s"
+
+#: includes/multi-currency/AdminNotices.php:76
+msgid "Cheatin&#8217; huh?"
+msgstr "間違えましたか&#8217; ?"
+
+#: includes/multi-currency/AdminNotices.php:72
+msgid "Action failed. Please refresh the page and retry."
+msgstr "アクションは失敗しました。 ページを更新して再試行してください。"
+
+#: includes/subscriptions/templates/html-subscriptions-plugin-notice.php:14
+#: includes/subscriptions/templates/html-wcpay-deactivate-warning.php:14
+#: includes/subscriptions/templates/html-woo-payments-deactivate-warning.php:14
+msgid "Are you sure?"
+msgstr "本当に実行しますか ?"
+
+#: includes/class-wc-payment-gateway-wcpay.php:1840
+msgid "Payment method successfully added."
+msgstr "お支払い方法が正常に追加されました。"
+
+#: includes/notes/class-wc-payments-notes-instant-deposits-eligible.php:53
+msgid "Request an instant payout"
+msgstr "即時支払いをリクエストする"
+
+#. translators: %s: WooPayments
+#: includes/notes/class-wc-payments-notes-instant-deposits-eligible.php:41
+msgid "Get immediate access to your funds when you need them – including nights, weekends, and holidays. With %s' <a>Instant Payouts feature</a>, you're able to transfer your earnings to a debit card within minutes."
+msgstr "夜間、週末、休日など、必要なときにすぐに資金にアクセスできます。%s の <a>即時支払い機能</a> を使用すると、数分以内に収益をデビットカードに送金できます。"
+
+#: includes/multi-currency/Notes/NoteMultiCurrencyAvailable.php:54
+#: includes/notes/class-wc-payments-notes-set-up-stripelink.php:80
+msgid "Set up now"
+msgstr "セットアップ"
+
+#: includes/multi-currency/Notes/NoteMultiCurrencyAvailable.php:47
+msgid "Boost your international sales by allowing your customers to shop and pay in their local currency."
+msgstr "顧客が現地通貨で買い物や支払いができるようにすることで、国際的な売上を伸ばしましょう。"
+
+#: includes/multi-currency/Notes/NoteMultiCurrencyAvailable.php:46
+msgid "Sell worldwide in multiple currencies"
+msgstr "複数の通貨で世界中に販売"
+
+#: includes/multi-currency/UserSettings.php:69
+msgid "Select your preferred currency for shopping and payments."
+msgstr "ショッピングやお支払いに使用する通貨をお選びください。"
+
+#: includes/multi-currency/UserSettings.php:54 dist/multi-currency.js:2
+msgid "Default currency"
+msgstr "デフォルトの通貨"
+
+#. translators: %s: url to documentation.
+#: includes/multi-currency/SettingsOnboardCta.php:102
+msgid "Accept payments in multiple currencies. Prices are converted based on exchange rates and rounding rules. <a href=\"%s\">Learn more</a>"
+msgstr "複数の通貨でのお支払いが可能です。価格は為替レートと四捨五入ルールに基づいて換算されます。<a href=\"%s\">詳細はこちら</a>"
+
+#: includes/multi-currency/SettingsOnboardCta.php:99 dist/multi-currency.js:2
+msgid "Enabled currencies"
+msgstr "使用可能通貨"
+
+#: includes/multi-currency/Settings.php:46
+#: includes/multi-currency/SettingsOnboardCta.php:49
+msgctxt "Settings tab label"
+msgid "Multi-currency"
+msgstr "多通貨"
+
+#: includes/multi-currency/CurrencySwitcherWidget.php:61
+#: dist/multi-currency-switcher-block.js:2
+msgid "Display currency symbols"
+msgstr "通貨記号の表示"
+
+#: includes/multi-currency/CurrencySwitcherWidget.php:56
+msgid "Title"
+msgstr "タイトル"
+
+#: includes/multi-currency/CurrencySwitcherWidget.php:51
+#: dist/multi-currency-switcher-block.js:2
+msgid "Let your customers switch between your enabled currencies"
+msgstr "有効な通貨を顧客が切り替える"
+
+#: includes/class-wc-payments-utils.php:286
+msgid "United States (US)"
+msgstr "アメリカ合衆国"
+
+#: includes/class-wc-payments-utils.php:278
+msgid "New Zealand"
+msgstr "ニュージーランド"
+
+#: includes/class-wc-payments-utils.php:272
+msgid "Italy"
+msgstr "イタリア"
+
+#: includes/class-wc-payments-utils.php:271
+msgid "Ireland"
+msgstr "アイルランド"
+
+#: includes/class-wc-payments-utils.php:267
+msgid "United Kingdom (UK)"
+msgstr "イギリス"
+
+#: includes/class-wc-payments-utils.php:263
+msgid "France"
+msgstr "フランス"
+
+#: includes/class-wc-payments-utils.php:262
+msgid "Spain"
+msgstr "スペイン"
+
+#: includes/class-wc-payments-utils.php:258
+msgid "Germany"
+msgstr "ドイツ"
+
+#: includes/class-wc-payments-utils.php:254
+msgid "Canada"
+msgstr "カナダ"
+
+#: includes/class-wc-payments-utils.php:251
+msgid "Australia"
+msgstr "オーストラリア"
+
+#. translators: The text encapsulated in `**` can be replaced with "Apple Pay"
+#. or "Google Pay". Please translate this text, but don't remove the `**`.
+#: includes/express-checkout/class-wc-payments-express-checkout-button-handler.php:133
+msgid "To complete your transaction with **the selected payment method**, you must log in or create an account with our site."
+msgstr "**選択した支払い方法**で取引を完了するには、当サイトにログインするか、アカウントを作成する必要があります。"
+
+#: includes/class-wc-payment-gateway-wcpay.php:540
+msgid "Large"
+msgstr "ラージ"
+
+#: includes/class-wc-payment-gateway-wcpay.php:539
+msgid "Medium"
+msgstr "ミドル"
+
+#: includes/class-wc-payment-gateway-wcpay.php:534
+msgid "Select the size of the button."
+msgstr "ボタンのサイズを選択します。"
+
+#: includes/class-wc-payment-gateway-wcpay.php:532
+msgid "Size of the button displayed for Express Checkouts"
+msgstr "エクスプレスチェックアウトに表示されるボタンのサイズ"
+
+#: includes/admin/class-wc-rest-payments-settings-controller.php:243
+msgid "1-click checkout button themes."
+msgstr "1クリック購入手続きボタンのテーマ。"
+
+#: includes/admin/class-wc-rest-payments-settings-controller.php:233
+msgid "1-click checkout button sizes."
+msgstr "1クリック購入手続きボタンのサイズ。"
+
+#: includes/admin/class-wc-rest-payments-settings-controller.php:224
+msgid "1-click checkout button types."
+msgstr "1クリック購入手続きボタンの種類。"
+
+#: includes/admin/class-wc-payments-admin.php:842
+msgid "Refunding manually requires reimbursing your customer offline via cash, check, etc. The refund amounts entered here will only be used to balance your analytics."
+msgstr "手動での払戻は、現金、小切手などを介してオフラインで顧客を払い戻す必要があります。ここに入力された払戻額は、分析のバランスを取るためにのみ使用されます。"
+
+#: includes/multi-currency/MultiCurrency.php:993 dist/index.js:2
+#: dist/index.js:9
+msgid "Dismiss"
+msgstr "非表示"
+
+#: includes/class-wc-payment-gateway-wcpay.php:476
+msgid "Book"
+msgstr "予約する"
+
+#: includes/class-wc-payment-gateway-wcpay.php:473 dist/settings.js:2
+msgid "Only icon"
+msgstr "アイコンのみ"
+
+#. translators: localized exception message
+#: includes/class-wc-payment-gateway-wcpay.php:2028
+msgid "UPE payment failed: %s"
+msgstr "UPE 支払いに失敗しました：%s"
+
+#: includes/admin/class-wc-rest-payments-settings-controller.php:215
+#: includes/admin/class-wc-rest-payments-settings-controller.php:272
+msgid "Express checkout locations that should be enabled."
+msgstr "有効にする必要がある高速購入手続き場所。"
+
+#: includes/admin/class-wc-rest-payments-settings-controller.php:92
+msgid "Payment method IDs that should be enabled. Other methods will be disabled."
+msgstr "有効にする支払方法 ID。その他のメソッドは無効になります。"
+
+#: includes/class-wc-payment-gateway-wcpay.php:526 dist/settings.js:2
+msgid "Payments accepted on checkout"
+msgstr "購入手続き時に受け入れられる支払い"
+
+#: includes/payment-methods/class-sepa-payment-method.php:58
+msgid "Reach 500 million customers and over 20 million businesses across the European Union."
+msgstr "欧州連合全体で5億人の顧客と2000万を超える企業にリーチします。"
+
+#: includes/payment-methods/class-sofort-payment-method.php:55
+msgid "Accept secure bank transfers from Austria, Belgium, Germany, Italy, Netherlands, and Spain."
+msgstr "オーストリア、ベルギー、ドイツ、イタリア、オランダ、スペインからの安全な銀行送金に対応。"
+
+#: includes/payment-methods/class-giropay-payment-method.php:54
+msgid "Expand your business with giropay — Germany’s second most popular payment system."
+msgstr "ドイツで2番目に利用されている決済システム、giropay でビジネスを拡大しましょう。"
+
+#: includes/payment-methods/class-cc-payment-method.php:91
+msgid "Let your customers pay with major credit and debit cards without leaving your store."
+msgstr "顧客がストアを離れることなく主要なクレジットカードとデビットカードで支払うようにしましょう。"
+
+#: includes/subscriptions/templates/html-subscriptions-plugin-notice.php:57
+#: includes/subscriptions/templates/html-wcpay-deactivate-warning.php:57
+#: includes/subscriptions/templates/html-woo-payments-deactivate-warning.php:57
+#: dist/index.js:2 dist/index.js:9 dist/multi-currency.js:2 dist/order.js:2
+#: dist/settings.js:2
+msgid "Cancel"
+msgstr "キャンセル"
+
+#: includes/admin/class-wc-rest-payments-orders-controller.php:267
+#: includes/admin/class-wc-rest-payments-orders-controller.php:346
+#: includes/admin/class-wc-rest-payments-orders-controller.php:407
+#: includes/admin/class-wc-rest-payments-orders-controller.php:449
+#: includes/admin/class-wc-rest-payments-orders-controller.php:572
+msgid "Unexpected server error"
+msgstr "予期しないサーバー エラー"
+
+#: includes/admin/class-wc-rest-payments-orders-controller.php:215
+#: includes/admin/class-wc-rest-payments-orders-controller.php:326
+#: includes/admin/class-wc-rest-payments-orders-controller.php:556
+#: includes/class-wc-payment-gateway-wcpay.php:3792
+msgid "Unknown error"
+msgstr "不明なエラー"
+
+#. translators: %s: the error message.
+#: includes/admin/class-wc-rest-payments-orders-controller.php:214
+#: includes/admin/class-wc-rest-payments-orders-controller.php:325
+msgid "Payment capture failed to complete with the following message: %s"
+msgstr "売上請求が完了できませんでした: %s"
+
+#: includes/admin/class-wc-rest-payments-orders-controller.php:183
+#: includes/admin/class-wc-rest-payments-orders-controller.php:186
+#: includes/admin/class-wc-rest-payments-orders-controller.php:308
+#: includes/admin/class-wc-rest-payments-orders-controller.php:311
+msgid "The payment cannot be captured"
+msgstr "支払いをキャプチャできません"
+
+#: includes/admin/class-wc-rest-payments-charges-controller.php:79
+#: includes/admin/class-wc-rest-payments-orders-controller.php:146
+#: includes/admin/class-wc-rest-payments-orders-controller.php:286
+#: includes/admin/class-wc-rest-payments-orders-controller.php:366
+#: includes/admin/class-wc-rest-payments-orders-controller.php:422
+#: includes/admin/class-wc-rest-payments-orders-controller.php:518
+#: includes/admin/class-wc-rest-payments-payment-intents-controller.php:121
+#: includes/admin/class-wc-rest-payments-reader-controller.php:295
+msgid "Order not found"
+msgstr "注文が見つかりません"
+
+#. translators: %1: intent ID
+#: includes/class-wc-payments-webhook-processing-service.php:753
+msgid "Could not find order via intent ID: %1$s"
+msgstr "インテント ID で注文を見つけらませんでした: %1$s"
+
+#. translators: last 4 digits of IBAN account
+#: includes/class-wc-payment-token-wcpay-sepa.php:53
+msgid "SEPA IBAN ending in %s"
+msgstr "SEPA IBAN が%s終了"
+
+#: includes/class-wc-payments-token-service.php:347
+#: includes/class-wc-payments-token-service.php:376
+msgid "SEPA IBAN"
+msgstr "SEPA IBAN"
+
+#: includes/notes/class-wc-payments-notes-qualitative-feedback.php:81
+msgid "Share feedback"
+msgstr "フィードバックの共有"
+
+#: includes/notes/class-wc-payments-notes-qualitative-feedback.php:74
+msgid "Share your feedback in this 2 minute survey about how we can make the process of accepting payments more useful for your store."
+msgstr "この2分間のアンケートで、あなたのお店の決済プロセスをより便利にする方法についてご意見をお聞かせください。"
+
+#: includes/class-wc-payment-gateway-wcpay.php:522
+#: includes/class-wc-payment-gateway-wcpay.php:560
+msgid "Select pages"
+msgstr "ページを選択"
+
+#: includes/class-wc-payment-gateway-wcpay.php:519
+#: includes/class-wc-payment-gateway-wcpay.php:557
+msgid "Checkout"
+msgstr "購入手続き"
+
+#: includes/class-wc-payment-gateway-wcpay.php:518
+#: includes/class-wc-payment-gateway-wcpay.php:556
+msgid "Cart"
+msgstr "お買い物カゴ"
+
+#: includes/class-wc-payment-gateway-wcpay.php:517
+#: includes/class-wc-payment-gateway-wcpay.php:555
+msgid "Product"
+msgstr "商品"
+
+#: includes/class-wc-payment-gateway-wcpay.php:508
+#: includes/class-wc-payment-gateway-wcpay.php:546
+msgid "Select where you would like to display the button."
+msgstr "ボタンを表示する場所を選択します。"
+
+#: includes/class-wc-payment-gateway-wcpay.php:506
+msgid "Button locations"
+msgstr "ボタンの場所"
+
+#: includes/class-wc-payment-gateway-wcpay.php:499
+msgid "Custom button label"
+msgstr "カスタムボタンラベル"
+
+#: includes/class-wc-payments-status.php:72
+msgid "Clear"
+msgstr "クリア"
+
+#: includes/admin/class-wc-payments-admin.php:316 dist/index.js:9
+msgid "Overview"
+msgstr "概要"
+
+#. translators: 1: payment method likely credit card, 2: last 4 digit.
+#: includes/compat/subscriptions/trait-wc-payment-gateway-wcpay-subscriptions.php:680
+#: includes/compat/subscriptions/trait-wc-payment-gateway-wcpay-subscriptions.php:699
+#: includes/compat/subscriptions/trait-wc-payment-gateway-wcpay-subscriptions.php:740
+#: includes/compat/subscriptions/trait-wc-payment-gateway-wcpay-subscriptions.php:748
+msgid "%1$s ending in %2$s"
+msgstr "%1$s (末尾 %2$s)"
+
+#: includes/class-wc-payments-apple-pay-registration.php:256
+msgid "Apple Pay domain verification failed with the following error:"
+msgstr "Apple Pay ドメインの検証が次のエラーで失敗しました:"
+
+#: includes/class-wc-payments-apple-pay-registration.php:255
+msgid "Apple Pay domain verification failed."
+msgstr "Apple Pay ドメインの検証に失敗しました。"
+
+#: includes/class-wc-payments-apple-pay-registration.php:157
+msgid "Your domain has been verified with Apple Pay!"
+msgstr "顧客のドメインが Apple Pay で認証されました！"
+
+#: includes/class-wc-payment-gateway-wcpay.php:501
+msgid "Enter the custom text you would like the button to have."
+msgstr "ボタンに使用するカスタム テキストを入力します。"
+
+#: includes/class-wc-payment-gateway-wcpay.php:494
+msgid "Enter the height you would like the button to be in pixels. Width will always be 100%."
+msgstr "ボタンの高さをピクセル単位で入力します。幅は常に100%になります。"
+
+#: includes/class-wc-payment-gateway-wcpay.php:492
+msgid "Button height"
+msgstr "ボタンの高さ"
+
+#: includes/class-wc-payment-gateway-wcpay.php:488
+msgid "Light-Outline"
+msgstr "ライト−アウトライン"
+
+#: includes/class-wc-payment-gateway-wcpay.php:487
+msgid "Light"
+msgstr "ライト"
+
+#: includes/class-wc-payment-gateway-wcpay.php:486
+msgid "Dark"
+msgstr "ダーク"
+
+#: includes/class-wc-payment-gateway-wcpay.php:482
+msgid "Select the button theme you would like to show."
+msgstr "表示したいボタンテーマを選択します。"
+
+#: includes/class-wc-payment-gateway-wcpay.php:480
+msgid "Button theme"
+msgstr "ボタンのテーマ"
+
+#: includes/class-wc-payment-gateway-wcpay.php:475
+msgid "Donate"
+msgstr "寄付する"
+
+#: includes/class-wc-payment-gateway-wcpay.php:474
+msgid "Buy"
+msgstr "購入"
+
+#: includes/class-wc-payment-gateway-wcpay.php:469
+msgid "Select the button type you would like to show."
+msgstr "表示するボタンの種類を選択します。"
+
+#: includes/class-wc-payment-gateway-wcpay.php:467
+msgid "Button type"
+msgstr "ボタンタイプ"
+
+#: includes/class-wc-payment-gateway-wcpay.php:462
+msgid "If enabled, users will be able to pay using Apple Pay, Google Pay or the Payment Request API if supported by the browser."
+msgstr "有効にすると、ユーザーは Apple Pay, Google Pay 、またはブラウザがサポートしている場合はペイメントリクエスト API を使用して支払うことができるようになります。"
+
+#. translators: 1) br tag 2) Stripe anchor tag 3) Apple anchor tag
+#: includes/class-wc-payment-gateway-wcpay.php:456
+msgid "Enable payment request buttons (Apple Pay, Google Pay, and more). %1$sBy using Apple Pay, you agree to %2$s and %3$s's Terms of Service."
+msgstr "支払いリクエストボタンを有効にする（Apple Pay、Google Pay など）。%1$s Apple Pay を利用することで、%2$sと%3$sの利用規約に同意したことになります。"
+
+#: includes/class-wc-payment-gateway-wcpay.php:448
+msgid "Payment request buttons"
+msgstr "支払い依頼ボタン"
+
+#: includes/class-wc-payments-captured-event-note.php:391
+#: includes/express-checkout/class-wc-payments-express-checkout-button-helper.php:129
+#: includes/in-person-payments/templates/html-in-person-payment-receipt.php:160
+#: dist/blocks-checkout.js:2 dist/express-checkout.js:1 dist/index.js:2
+msgid "Discount"
+msgstr "割引"
+
+#: includes/express-checkout/class-wc-payments-express-checkout-button-display-handler.php:114
+msgid "OR"
+msgstr "または"
+
+#: includes/express-checkout/class-wc-payments-express-checkout-button-helper.php:121
+#: includes/express-checkout/class-wc-payments-express-checkout-button-helper.php:607
+#: dist/blocks-checkout.js:2 dist/express-checkout.js:1
+msgid "Shipping"
+msgstr "配送"
+
+#: includes/class-wc-payments-captured-event-note.php:572
+#: includes/express-checkout/class-wc-payments-express-checkout-button-helper.php:112
+#: includes/express-checkout/class-wc-payments-express-checkout-button-helper.php:599
+#: includes/in-person-payments/templates/html-in-person-payment-receipt.php:185
+#: dist/blocks-checkout.js:2 dist/express-checkout.js:1 dist/index.js:2
+msgid "Tax"
+msgstr "税"
+
+#: includes/class-wc-payment-gateway-wcpay.php:502
+msgid "Buy now"
+msgstr "今すぐ購入"
+
+#. translators: %1: the last 4 digit of the credit card
+#: includes/class-wc-payment-gateway-wcpay.php:1463
+msgid "Payment method is changed to: <strong>Credit card ending in %1$s</strong>."
+msgstr "支払い方法が変更されました: <strong>クレジットカードの末尾が%1$s</strong> に変更されました。"
+
+#: includes/class-wc-payments-utils.php:668
+msgid "There was an error while processing this request. If you continue to see this notice, please contact the admin."
+msgstr "このリクエストの処理中にエラーが発生しました。この通知が表示され続ける場合は、管理者にお問い合わせください。"
+
+#. translators: an error message which will appear if a user tries to refund an
+#. order which is has been authorized but not yet charged.
+#: includes/class-wc-payment-gateway-wcpay.php:2277
+msgid "This payment is not captured yet. To cancel this order, please go to 'Order Actions' > 'Cancel authorization'. To proceed with a refund, please go to 'Order Actions' > 'Capture charge' to charge the payment card, and then trigger a refund via the 'Refund' button."
+msgstr "この支払いはまだキャプチャされていません。この注文をキャンセルするには、'Order Actions' > 'Cancel authorization' に進んでください。返金を行うには、'Order Actions' > 'Capture charge' で支払いカードにチャージし、'Refund' ボタンで返金手続きを行ってください。"
+
+#: includes/class-wc-payment-gateway-wcpay.php:428
+msgid "If enabled, users will be able to pay with a saved card during checkout. Card details are saved on our platform, not on your store."
+msgstr "有効にすると、ユーザーは購入手続き時に保存したカードで支払うことができます。カード情報は、ストアではなく、当社のプラットフォームに保存されます。"
+
+#: includes/class-wc-payment-gateway-wcpay.php:426
+msgid "Enable payment via saved cards"
+msgstr "保存されたカードによる支払いを可能にする"
+
+#: includes/class-wc-payment-gateway-wcpay.php:425
+msgid "Saved cards"
+msgstr "保存されたカード"
+
+#: includes/class-wc-payments-account.php:239
+msgid "Failed to detect connection status"
+msgstr "接続状態の検出に失敗"
+
+#. translators: %1: the failed payment amount, %2: error message
+#: includes/class-wc-payment-gateway-wcpay.php:1169
+#: includes/compat/subscriptions/trait-wc-payment-gateway-wcpay-subscriptions.php:388
+msgid "A payment of %1$s <strong>failed</strong> to complete with the following message: <code>%2$s</code>."
+msgstr "次のメッセージが表示され、%1$sの支払いが<strong>失敗</strong>しました。<code>%2$s</code>と表示されます。"
+
+#: includes/fraud-prevention/class-order-fraud-and-risk-meta-box.php:149
+#: dist/index.js:2 dist/index.js:9 dist/multi-currency.js:2 dist/settings.js:2
+msgid "Learn more"
+msgstr "さらに詳しく"
+
+#: includes/admin/class-wc-rest-payments-tos-controller.php:109
+msgid "ToS accept parameter is missing"
+msgstr "ToS accept パラメータがありません"
+
+#: includes/notes/class-wc-payments-notes-set-https-for-checkout.php:59
+#: dist/settings.js:2
+msgid "Read more"
+msgstr "続きを読む"
+
+#. translators: %1: error message
+#: includes/class-wc-payment-gateway-wcpay.php:3423
+msgid "Canceling authorization <strong>failed</strong> to complete with the following message: <code>%1$s</code>."
+msgstr "認証のキャンセルが<strong>失敗</strong>して、次のようなメッセージが出て完了しませんでした。<code>%1$s</code>と表示されました。"
+
+#: includes/class-wc-payments-captured-event-note.php:125 dist/index.js:2
+#: dist/settings.js:2
+msgid "Base fee"
+msgstr "基本料金"
+
+#: includes/class-wc-payment-gateway-wcpay.php:413
+msgid "Edit the way your store name appears on your customers’ bank statements (read more about requirements <a>here</a>)."
+msgstr "顧客の銀行口座明細書に表示される<a>店舗名を編集</a>することができます。"
+
+#: includes/compat/subscriptions/trait-wc-payment-gateway-wcpay-subscriptions.php:592
+#: includes/compat/subscriptions/trait-wc-payment-gateway-wcpay-subscriptions.php:646
+msgid "Please select a payment method"
+msgstr "決済方法を選択"
+
+#: includes/compat/subscriptions/trait-wc-payment-gateway-wcpay-subscriptions.php:523
+msgid "The saved payment method selected does not belong to this order's customer."
+msgstr "選択された保存された支払い方法は、この注文の顧客のものではありません。"
+
+#: includes/compat/subscriptions/trait-wc-payment-gateway-wcpay-subscriptions.php:516
+msgid "The saved payment method selected is invalid or does not exist."
+msgstr "選択された保存された支払い方法が無効であるか、存在しません。"
+
+#: includes/compat/subscriptions/trait-wc-payment-gateway-wcpay-subscriptions.php:507
+msgid "A customer saved payment method was not selected for this order."
+msgstr "この注文では、顧客が保存した支払い方法が選択されていません。"
+
+#: includes/compat/subscriptions/trait-wc-payment-gateway-wcpay-subscriptions.php:436
+msgid "Saved payment method"
+msgstr "保存された支払い方法"
+
+#: includes/class-wc-payments-utils.php:320
+#: includes/wc-payment-api/class-wc-payments-api-client.php:393
+#: includes/wc-payment-api/class-wc-payments-api-client.php:598 dist/index.js:2
+msgid "Subscription #"
+msgstr "定期購入 #"
+
+#: includes/class-wc-payment-gateway-wcpay.php:3231
+msgid "Customer bank statement is invalid. Statement should be between 5 and 22 characters long, contain at least single Latin character and does not contain special characters: ' \" * &lt; &gt;"
+msgstr "顧客の銀行取引明細書が無効です。明細書の長さは5文字以上22文字以下で、少なくともラテン文字を1文字含み、特殊文字を含んでいない必要があります。 * &lt; &gt；"
+
+#: includes/class-wc-payment-gateway-wcpay.php:411 dist/settings.js:2
+msgid "Customer bank statement"
+msgstr "顧客銀行取引明細書"
+
+#: includes/class-wc-payment-gateway-wcpay.php:3843
+msgid "We're not able to add this payment method. Please refresh the page and try again."
+msgstr "この支払い方法を追加できません。ページを更新して再度お試しください。"
+
+#: includes/class-wc-payment-gateway-wcpay.php:3684
+msgid "Failed to add the provided payment method. Please try again later"
+msgstr "提供された支払い方法を追加できませんでした。後でもう一度お試しください"
+
+#: includes/class-wc-payment-gateway-wcpay.php:3673
+msgid "We're not able to add this payment method. Please try again later"
+msgstr "この支払い方法を追加できません。後でもう一度お試しください"
+
+#: includes/class-wc-payment-gateway-wcpay.php:1047
+msgid "Save payment information to my account for future purchases."
+msgstr "今後の購入に使用するため、アカウントに支払い情報を保存します。"
+
+#: includes/class-wc-payments-dependency-service.php:219
+msgid "Activate WooCommerce"
+msgstr "WooCommerce を有効化"
+
+#: includes/class-wc-payments-dependency-service.php:215
+msgid "Install WooCommerce"
+msgstr "WooCommerce をインストール"
+
+#. translators: %1: transaction ID of the payment or a translated string
+#. indicating an unknown ID.
+#: includes/class-wc-payment-gateway-wcpay.php:3613
+msgid "A payment with ID <code>%1$s</code> was used in an attempt to pay for this order. This payment intent ID does not match any payments for this order, so it was ignored and the order was not updated."
+msgstr "ID <code>%1$s</code>の支払いが、この注文の支払いをしようとして使用されました。この支払い意図のIDは、この注文のどの支払いとも一致しないため、無視され、注文は更新されませんでした。"
+
+#: includes/class-wc-payment-gateway-wcpay.php:421
+msgid "Charge must be captured within 7 days of authorization, otherwise the authorization and order will be canceled."
+msgstr "チャージは承認後7日以内に行わなければなりません。そうでない場合、承認および注文はキャンセルされます。"
+
+#. translators: %1: the authorized amount, %2: transaction ID of the payment
+#: includes/class-wc-payments-order-service.php:1754
+msgid "Payment authorization has <strong>expired</strong> (<a>%1$s</a>)."
+msgstr "支払い承認の<strong>有効期限が切れて</strong>います (<a>%1$s</a>)。"
+
+#. translators: %s: error message.
+#: includes/class-wc-payments-account.php:1626
+msgid "There was a problem connecting your store to WordPress.com: \"%s\""
+msgstr "ストアを WordPress.com に接続する際に問題が発生しました: “%s”"
+
+#. translators: %s: WooPayments
+#: includes/class-wc-payments-account.php:1509
+msgid "Connection to WordPress.com failed. Please connect to WordPress.com to start using %s."
+msgstr "WordPress.com への接続に失敗しました。WordPress.com に接続して%sを使用して開始してください。"
+
+#: includes/wc-payment-api/class-wc-payments-http.php:62
+msgid "Site is not connected to WordPress.com"
+msgstr "サイトが WordPress.com に接続されていません"
+
+#: includes/class-payment-information.php:281
+#: includes/class-wc-payment-gateway-wcpay.php:1624
+#: includes/class-wc-payment-gateway-wcpay.php:1966
+#: includes/class-wc-payment-gateway-wcpay.php:3495
+#: includes/class-wc-payment-gateway-wcpay.php:3508
+#: includes/class-wc-payment-gateway-wcpay.php:3520
+msgid "We're not able to process this payment. Please try again later."
+msgstr "この支払いは処理できません。後でもう一度お試しください。"
+
+#: includes/class-wc-payment-gateway-wcpay.php:1103
+#: includes/class-wc-payment-gateway-wcpay.php:3486
+msgid "We're not able to process this payment. Please refresh the page and try again."
+msgstr "この支払いは処理できません。ページを更新して再度お試しください。"
+
+#: includes/class-wc-payments-checkout.php:194
+msgid "There was a problem processing the payment. Please check your email inbox and refresh the page to try again."
+msgstr "支払の処理中に問題が発生しました。メールの受信トレイを確認し、ページを更新して、もう一度やり直してください。"
+
+#. Plugin URI of the plugin
+#: woocommerce-payments.php
+msgid "https://woocommerce.com/payments/"
+msgstr "https://woocommerce.com/payments/"
+
+#: includes/wc-payment-api/class-wc-payments-api-client.php:1278
+msgid "Customer ID is required"
+msgstr "顧客 ID が必要"
+
+#. translators: %1: ID being fetched
+#: includes/class-wc-payments-webhook-processing-service.php:691
+msgid "%1$s not found in array"
+msgstr "配列に%1$sが見つからない"
+
+#. translators: %1: charge ID
+#: includes/class-wc-payments-webhook-processing-service.php:276
+#: includes/class-wc-payments-webhook-processing-service.php:342
+#: includes/class-wc-payments-webhook-processing-service.php:556
+#: includes/class-wc-payments-webhook-processing-service.php:587
+#: includes/class-wc-payments-webhook-processing-service.php:618
+#: includes/class-wc-payments-webhook-processing-service.php:840
+msgid "Could not find order via charge ID: %1$s"
+msgstr "チャージ ID: %1$s経由での注文が見つかりませんでした"
+
+#. translators: %1$s Name.
+#: includes/class-wc-payments-customer-service.php:355
+msgid "Name: %1$s, Guest"
+msgstr "名前%1$s、ゲスト"
+
+#. translators: %1$s Name, %2$s Username.
+#: includes/class-wc-payments-customer-service.php:351
+msgid "Name: %1$s, Username: %2$s"
+msgstr "名前%1$s、ユーザー名: %2$s"
+
+#: includes/class-wc-payments-status.php:135
+#: includes/class-wc-payments-status.php:140
+#: includes/class-wc-payments-status.php:167
+#: includes/class-wc-payments-status.php:186
+#: includes/class-wc-payments-status.php:241
+#: includes/class-wc-payments-status.php:249
+#: includes/class-wc-payments-status.php:256
+#: includes/class-wc-payments-status.php:263 dist/index.js:9
+msgid "Disabled"
+msgstr "無効"
+
+#: includes/class-wc-payments-status.php:135
+#: includes/class-wc-payments-status.php:140
+#: includes/class-wc-payments-status.php:167
+#: includes/class-wc-payments-status.php:186
+#: includes/class-wc-payments-status.php:241
+#: includes/class-wc-payments-status.php:249
+#: includes/class-wc-payments-status.php:256
+#: includes/class-wc-payments-status.php:263 dist/index.js:9
+msgid "Enabled"
+msgstr "有効化"
+
+#: includes/in-person-payments/templates/html-in-person-payment-receipt.php:132
+#: dist/index.js:2 dist/index.js:9
+msgid "Order"
+msgstr "注文"
+
+#: includes/class-wc-payments-utils.php:1234 dist/index.js:2
+#: dist/multi-currency-switcher-block.js:2 dist/multi-currency.js:2
+#: dist/order.js:2 dist/payment-gateways.js:2 dist/settings.js:2
+msgid "Unrecognized"
+msgstr "未認識"
+
+#: includes/class-wc-payments-utils.php:1232 dist/index.js:2
+#: dist/multi-currency-switcher-block.js:2 dist/multi-currency.js:2
+#: dist/order.js:2 dist/payment-gateways.js:2 dist/settings.js:2
+msgid "Subscription canceled"
+msgstr "定期購入中止"
+
+#: includes/class-wc-payments-utils.php:1230 dist/index.js:2
+#: dist/multi-currency-switcher-block.js:2 dist/multi-currency.js:2
+#: dist/order.js:2 dist/payment-gateways.js:2 dist/settings.js:2
+msgid "Product unacceptable"
+msgstr "受け入れ不可の商品"
+
+#: includes/class-wc-payments-utils.php:1228 dist/index.js:2
+#: dist/multi-currency-switcher-block.js:2 dist/multi-currency.js:2
+#: dist/order.js:2 dist/payment-gateways.js:2 dist/settings.js:2
+msgid "Product not received"
+msgstr "受け取っていない商品"
+
+#: includes/class-wc-payments-utils.php:1226 dist/index.js:2
+#: dist/multi-currency-switcher-block.js:2 dist/multi-currency.js:2
+#: dist/order.js:2 dist/payment-gateways.js:2 dist/settings.js:2
+msgid "Insufficient funds"
+msgstr "残高が不足している"
+
+#: includes/class-wc-payments-utils.php:1224 dist/index.js:2
+#: dist/multi-currency-switcher-block.js:2 dist/multi-currency.js:2
+#: dist/order.js:2 dist/payment-gateways.js:2 dist/settings.js:2
+msgid "Incorrect account details"
+msgstr "口座情報の誤り"
+
+#: includes/class-wc-payments-utils.php:1237 dist/index.js:2
+#: dist/multi-currency-switcher-block.js:2 dist/multi-currency.js:2
+#: dist/order.js:2 dist/payment-gateways.js:2 dist/settings.js:2
+msgid "General"
+msgstr "全般"
+
+#: includes/class-wc-payments-utils.php:1220 dist/index.js:2
+#: dist/multi-currency-switcher-block.js:2 dist/multi-currency.js:2
+#: dist/order.js:2 dist/payment-gateways.js:2 dist/settings.js:2
+msgid "Duplicate"
+msgstr "複製"
+
+#: includes/class-wc-payments-utils.php:1218 dist/index.js:2
+#: dist/multi-currency-switcher-block.js:2 dist/multi-currency.js:2
+#: dist/order.js:2 dist/payment-gateways.js:2 dist/settings.js:2
+msgid "Debit not authorized"
+msgstr "承認されていない引き落とし"
+
+#: includes/class-wc-payments-utils.php:1216 dist/index.js:2
+#: dist/multi-currency-switcher-block.js:2 dist/multi-currency.js:2
+#: dist/order.js:2 dist/payment-gateways.js:2 dist/settings.js:2
+msgid "Customer initiated"
+msgstr "顧客による開始"
+
+#: includes/class-wc-payments-utils.php:1214 dist/index.js:2
+#: dist/multi-currency-switcher-block.js:2 dist/multi-currency.js:2
+#: dist/order.js:2 dist/payment-gateways.js:2 dist/settings.js:2
+msgid "Credit not processed"
+msgstr "クレジットが処理されない"
+
+#: includes/class-wc-payments-utils.php:1212 dist/index.js:2
+#: dist/multi-currency-switcher-block.js:2 dist/multi-currency.js:2
+#: dist/order.js:2 dist/payment-gateways.js:2 dist/settings.js:2
+msgid "Check returned"
+msgstr "返却されたチェック"
+
+#: includes/class-wc-payments-utils.php:1210 dist/index.js:2
+#: dist/multi-currency-switcher-block.js:2 dist/multi-currency.js:2
+#: dist/order.js:2 dist/payment-gateways.js:2 dist/settings.js:2
+msgid "Bank cannot process"
+msgstr "銀行は処理できません"
+
+#. Translators: %1$s card brand, %2$s card funding (prepaid, credit, etc.).
+#: includes/payment-methods/class-cc-payment-method.php:59 dist/index.js:2
+msgid "%1$s %2$s card"
+msgstr "%1$s %2$s カード"
+
+#. translators: This will be used to indicate an unknown value for an ID.
+#: includes/class-wc-payment-gateway-wcpay.php:3504
+#: includes/payment-methods/class-cc-payment-method.php:50 dist/index.js:2
+msgid "unknown"
+msgstr "不明"
+
+#: includes/payment-methods/class-cc-payment-method.php:49 dist/index.js:2
+msgid "prepaid"
+msgstr "プリペイド"
+
+#: includes/payment-methods/class-cc-payment-method.php:48 dist/index.js:2
+msgid "debit"
+msgstr "デビッド"
+
+#: includes/payment-methods/class-cc-payment-method.php:47 dist/index.js:2
+msgid "credit"
+msgstr "クレジット"
+
+#: includes/class-wc-payments-captured-event-note.php:126 dist/index.js:2
+msgid "Fee"
+msgstr "手数料"
+
+#: includes/class-wc-payments-utils.php:310
+#: includes/wc-payment-api/class-wc-payments-api-client.php:395
+#: includes/wc-payment-api/class-wc-payments-api-client.php:600 dist/index.js:2
+msgid "Order #"
+msgstr "注文番号"
+
+#: includes/fraud-prevention/class-order-fraud-and-risk-meta-box.php:231
+#: dist/index.js:2
+msgid "Elevated"
+msgstr "昇格"
+
+#: includes/fraud-prevention/class-order-fraud-and-risk-meta-box.php:230
+#: dist/index.js:2
+msgid "Normal"
+msgstr "通常"
+
+#: includes/class-wc-payments-order-success-page.php:140
+#: includes/class-wc-payments-order-success-page.php:531
+#: includes/class-wc-payments-order-success-page.php:593 dist/index.js:2
+#: dist/index.js:9
+msgid "Amount"
+msgstr "金額"
+
+#: includes/express-checkout/class-wc-payments-express-checkout-button-helper.php:614
+#: dist/blocks-checkout.js:2 dist/express-checkout.js:1 dist/index.js:2
+#: dist/index.js:9
+msgid "Pending"
+msgstr "保留中"
+
+#: includes/admin/class-wc-payments-admin.php:557 dist/index.js:2
+#: dist/index.js:9
+msgid "Challenge dispute"
+msgstr "異議申し立て"
+
+#: includes/admin/class-wc-payments-admin.php:548 dist/index.js:2
+#: dist/index.js:9
+msgid "Dispute details"
+msgstr "紛争の詳細"
+
+#: includes/admin/class-wc-payments-admin.php:539 dist/index.js:9
+msgid "Payment details"
+msgstr "支払いの詳細"
+
+#: includes/admin/class-wc-payments-admin.php:346 dist/index.js:2
+#: dist/index.js:9
+msgid "Disputes"
+msgstr "係争中"
+
+#: includes/admin/class-wc-payments-admin.php:336 dist/index.js:2
+#: dist/index.js:9 dist/settings.js:2
+msgid "Transactions"
+msgstr "トランザクション"
+
+#: includes/admin/class-wc-payments-admin.php:373 dist/index.js:9
+msgid "Payments"
+msgstr "決済方法"
+
+#. translators: %1: original error message.
+#: includes/wc-payment-api/class-wc-payments-api-client.php:534
+#: includes/wc-payment-api/class-wc-payments-http.php:121
+msgid "Http request failed. Reason: %1$s"
+msgstr "Http リクエストに失敗しました。理由: %1$s"
+
+#. translators: This is an error API response.
+#: includes/wc-payment-api/class-wc-payments-api-client.php:2689
+msgctxt "API error message to throw as Exception"
+msgid "Error: %1$s"
+msgstr "エラー: %1$s"
+
+#: includes/wc-payment-api/class-wc-payments-api-client.php:2684
+msgid "Server error. Please try again."
+msgstr "サーバーエラーが発生しました。 もう一度お試しください。"
+
+#: includes/wc-payment-api/class-wc-payments-api-client.php:2616
+msgid "Unable to decode response from WooCommerce Payments API"
+msgstr "WooCommerce Payments API からの応答をデコードできません"
+
+#: includes/wc-payment-api/class-wc-payments-api-client.php:2500
+msgid "Unable to encode body for request to WooCommerce Payments API."
+msgstr "WooCommerce Payments API へのリクエストの本文をエンコードできません。"
+
+#: includes/wc-payment-api/class-wc-payments-api-client.php:791
+msgid "Max file size exceeded."
+msgstr "ファイルの最大サイズを超過しました。"
+
+#: includes/class-wc-payments-account.php:2254
+msgid "There was a problem processing your account data. Please try again."
+msgstr "アカウントデータの処理に問題が発生しました。もう一度お試しください。"
+
+#: includes/class-wc-payment-gateway-wcpay.php:3438
+#: includes/class-wc-payments-order-service.php:1350
+msgid "Canceling authorization <strong>failed</strong> to complete."
+msgstr "認証のキャンセルに<strong>失敗</strong>しました。"
+
+#: includes/class-wc-payments-order-service.php:1771
+msgid "Payment authorization was successfully <strong>cancelled</strong>."
+msgstr "支払い承認は正常に<strong>キャンセルさ</strong>れました。"
+
+#: includes/class-wc-payment-gateway-wcpay.php:3264
+msgid "Cancel authorization"
+msgstr "承認取り消し"
+
+#: includes/class-wc-payment-gateway-wcpay.php:3263
+msgid "Capture charge"
+msgstr "支払いを取得する"
+
+#. translators: %1: the successfully charged amount, %2: error message
+#: includes/class-wc-payment-gateway-wcpay.php:2345
+msgid "A refund of %1$s failed to complete: %2$s"
+msgstr "%1$s の払い戻しが完了しなかった : %2$s"
+
+#: includes/class-wc-payments-checkout.php:521 dist/blocks-checkout.js:2
+#: dist/checkout.js:1
+msgid "An error was encountered when preparing the payment form. Please try again later."
+msgstr "支払いフォームの作成時にエラーが発生しました。後でもう一度お試しください。"
+
+#: includes/admin/class-wc-payments-admin-settings.php:58
+msgid "Test mode active: "
+msgstr "テスト モードがアクティブです: "
+
+#: includes/class-wc-payment-gateway-wcpay.php:442
+msgid "When enabled debug notes will be added to the log."
+msgstr "有効にすると、デバッグノートがログに追加される。"
+
+#: includes/class-wc-payment-gateway-wcpay.php:441
+msgid "Debug log"
+msgstr "デバッグログ"
+
+#: includes/class-wc-payment-gateway-wcpay.php:436
+msgid "Simulate transactions using test card numbers."
+msgstr "テスト用のカード番号を使って取引のシミュレーションを行う。"
+
+#: includes/class-wc-payment-gateway-wcpay.php:434 dist/settings.js:2
+msgid "Enable test mode"
+msgstr "テストモードを有効化"
+
+#: includes/class-wc-payment-gateway-wcpay.php:433 dist/settings.js:2
+msgid "Test mode"
+msgstr "テストモード"
+
+#: includes/class-wc-payment-gateway-wcpay.php:419
+msgid "Issue an authorization on checkout, and capture later."
+msgstr "購入手続き時に承認を発行し、後でキャプチャする。"
+
+#: includes/class-wc-payment-gateway-wcpay.php:418
+msgid "Manual capture"
+msgstr "手動キャプチャ"
+
+#: includes/class-wc-payment-gateway-wcpay.php:399
+#: includes/class-wc-payment-gateway-wcpay.php:453
+msgid "Enable/disable"
+msgstr "有効／無効"
+
+#: includes/admin/class-wc-payments-admin-settings.php:81
+#: includes/admin/class-wc-payments-admin.php:511
+#: includes/admin/class-wc-payments-admin.php:1225 dist/settings.js:2
+msgid "Settings"
+msgstr "設定"
+
+#: includes/class-wc-payments-dependency-service.php:305
+msgid "Update WordPress"
+msgstr "WordPress を更新"
+
+#: includes/class-wc-payments-dependency-service.php:289
+msgid "Use the bundled version of WooCommerce Admin"
+msgstr "WooCommerce Admin の同梱版を使用"
+
+#: includes/class-wc-payments-dependency-service.php:285
+msgid "There is a newer version of WooCommerce Admin bundled with WooCommerce."
+msgstr "WooCommerce にバンドルされている WooCommerce Admin の新しいバージョンがあります。"
+
+#. Author URI of the plugin
+#: woocommerce-payments.php
+msgid "https://woocommerce.com/"
+msgstr "https://woocommerce.com/"
+
+#. Description of the plugin
+#: woocommerce-payments.php
+msgid "Accept payments via credit card. Manage transactions within WordPress."
+msgstr "クレジットカードでのお支払いが可能です。WordPress 内でトランザクションを管理。"

@@ -1,0 +1,3116 @@
+# Translation of Plugins - WooCommerce PayPal Payments - Stable (latest release) in Japanese
+# This file is distributed under the same license as the Plugins - WooCommerce PayPal Payments - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-11-14 02:10:30+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/4.0.1\n"
+"Language: ja_JP\n"
+"Project-Id-Version: Plugins - WooCommerce PayPal Payments - Stable (latest release)\n"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/connection-tab-fields.php:115
+msgid "Add another line item"
+msgstr "別の品目を追加"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/connection-tab-fields.php:115
+msgid "Do not send line items to PayPal"
+msgstr "PayPal に品目を送信しない"
+
+#: modules/ppcp-wc-gateway/services.php:457
+msgctxt "Name of payment method"
+msgid "Apple Pay"
+msgstr "Apple Pay"
+
+#: modules/ppcp-wc-gateway/services.php:457
+msgctxt "Name of payment method"
+msgid "Google Pay"
+msgstr "Google Pay"
+
+#: modules/ppcp-order-tracking/src/Shipment/Shipment.php:227
+msgid "Update Status"
+msgstr "ステータスを更新"
+
+#: modules/ppcp-order-tracking/src/Shipment/Shipment.php:189
+msgid "Carrier Name:"
+msgstr "配送業者名:"
+
+#: modules/ppcp-order-tracking/src/Shipment/Shipment.php:181
+msgid "Carrier:"
+msgstr "配送業者:"
+
+#: modules/ppcp-order-tracking/src/MetaBoxRenderer.php:200
+msgid "Carrier Name*"
+msgstr "配送業者名*"
+
+#: modules/ppcp-order-tracking/src/Endpoint/OrderTrackingEndpoint.php:316
+msgid "Missing required information: "
+msgstr "Missing required information: "
+
+#: modules/ppcp-googlepay/src/Helper/PropertiesDictionary.php:41
+msgid "Spanish"
+msgstr "スペイン語"
+
+#: modules/ppcp-googlepay/src/Helper/PropertiesDictionary.php:41
+msgid "Slovenian"
+msgstr "スロベニア語"
+
+#: modules/ppcp-googlepay/src/Helper/PropertiesDictionary.php:41
+msgid "Serbian"
+msgstr "セルビア語"
+
+#: modules/ppcp-googlepay/src/Helper/PropertiesDictionary.php:41
+msgid "Portuguese"
+msgstr "ポルトガル語"
+
+#: modules/ppcp-googlepay/src/Helper/PropertiesDictionary.php:41
+msgid "French"
+msgstr "フランス語"
+
+#: modules/ppcp-googlepay/src/Helper/PropertiesDictionary.php:41
+msgid "Estonian"
+msgstr "エストニア語"
+
+#: modules/ppcp-googlepay/src/Helper/PropertiesDictionary.php:41
+msgid "English"
+msgstr "英語"
+
+#: modules/ppcp-googlepay/src/Helper/PropertiesDictionary.php:41
+msgid "Chinese"
+msgstr "中国語"
+
+#: modules/ppcp-googlepay/src/Helper/PropertiesDictionary.php:41
+msgid "Bulgarian"
+msgstr "ブルガリア語"
+
+#: modules/ppcp-googlepay/src/Helper/PropertiesDictionary.php:32
+msgid "Subscribe"
+msgstr "購読"
+
+#: modules/ppcp-applepay/src/Assets/PropertiesDictionary.php:84
+#: modules/ppcp-wc-gateway/services.php:831
+msgid "Chinese (Traditional)"
+msgstr "中国語 (繁体字)"
+
+#: modules/ppcp-applepay/src/Assets/PropertiesDictionary.php:84
+#: modules/ppcp-wc-gateway/services.php:831
+msgid "Chinese (Hong Kong)"
+msgstr "中国語 (香港)"
+
+#: modules/ppcp-applepay/src/Assets/PropertiesDictionary.php:84
+#: modules/ppcp-wc-gateway/services.php:831
+msgid "Chinese (Simplified)"
+msgstr "中国語 (簡体字)"
+
+#: modules/ppcp-applepay/src/Assets/PropertiesDictionary.php:84
+msgid "Vietnamese"
+msgstr "ベトナム語"
+
+#: modules/ppcp-applepay/src/Assets/PropertiesDictionary.php:84
+#: modules/ppcp-googlepay/src/Helper/PropertiesDictionary.php:41
+msgid "Ukrainian"
+msgstr "ウクライナ語"
+
+#: modules/ppcp-applepay/src/Assets/PropertiesDictionary.php:84
+#: modules/ppcp-googlepay/src/Helper/PropertiesDictionary.php:41
+msgid "Turkish"
+msgstr "トルコ語"
+
+#: modules/ppcp-applepay/src/Assets/PropertiesDictionary.php:84
+#: modules/ppcp-googlepay/src/Helper/PropertiesDictionary.php:41
+#: modules/ppcp-wc-gateway/services.php:831
+msgid "Thai"
+msgstr "タイ"
+
+#: modules/ppcp-applepay/src/Assets/PropertiesDictionary.php:84
+#: modules/ppcp-googlepay/src/Helper/PropertiesDictionary.php:41
+#: modules/ppcp-wc-gateway/services.php:831
+msgid "Swedish"
+msgstr "スウェーデン語"
+
+#: modules/ppcp-applepay/src/Assets/PropertiesDictionary.php:84
+#: modules/ppcp-googlepay/src/Helper/PropertiesDictionary.php:41
+#: modules/ppcp-wc-gateway/services.php:831
+msgid "Slovak"
+msgstr "スロバキア語"
+
+#: modules/ppcp-applepay/src/Assets/PropertiesDictionary.php:84
+#: modules/ppcp-googlepay/src/Helper/PropertiesDictionary.php:41
+#: modules/ppcp-wc-gateway/services.php:831
+msgid "Russian"
+msgstr "ロシア語"
+
+#: modules/ppcp-applepay/src/Assets/PropertiesDictionary.php:84
+msgid "Romanian"
+msgstr "ルーマニア語"
+
+#: modules/ppcp-applepay/src/Assets/PropertiesDictionary.php:84
+#: modules/ppcp-wc-gateway/services.php:831
+msgid "Portuguese (Portugal)"
+msgstr "ポルトガル語 (ポルトガル)"
+
+#: modules/ppcp-applepay/src/Assets/PropertiesDictionary.php:84
+#: modules/ppcp-wc-gateway/services.php:831
+msgid "Portuguese (Brazil)"
+msgstr "ポルトガル語 (ブラジル)"
+
+#: modules/ppcp-applepay/src/Assets/PropertiesDictionary.php:84
+#: modules/ppcp-googlepay/src/Helper/PropertiesDictionary.php:41
+#: modules/ppcp-wc-gateway/services.php:831
+msgid "Polish"
+msgstr "ポーランド語"
+
+#: modules/ppcp-applepay/src/Assets/PropertiesDictionary.php:84
+#: modules/ppcp-googlepay/src/Helper/PropertiesDictionary.php:41
+#: modules/ppcp-wc-gateway/services.php:831
+msgid "Dutch"
+msgstr "オランダ語"
+
+#: modules/ppcp-applepay/src/Assets/PropertiesDictionary.php:84
+#: modules/ppcp-googlepay/src/Helper/PropertiesDictionary.php:41
+#: modules/ppcp-wc-gateway/services.php:831
+msgid "Norwegian"
+msgstr "ノルウェー語"
+
+#: modules/ppcp-applepay/src/Assets/PropertiesDictionary.php:84
+#: modules/ppcp-googlepay/src/Helper/PropertiesDictionary.php:41
+msgid "Malay"
+msgstr "マレー語"
+
+#: modules/ppcp-applepay/src/Assets/PropertiesDictionary.php:84
+#: modules/ppcp-googlepay/src/Helper/PropertiesDictionary.php:41
+#: modules/ppcp-wc-gateway/services.php:831
+msgid "Korean"
+msgstr "韓国語"
+
+#: modules/ppcp-applepay/src/Assets/PropertiesDictionary.php:84
+#: modules/ppcp-googlepay/src/Helper/PropertiesDictionary.php:41
+#: modules/ppcp-wc-gateway/services.php:831
+msgid "Japanese"
+msgstr "日本語"
+
+#: modules/ppcp-applepay/src/Assets/PropertiesDictionary.php:84
+#: modules/ppcp-googlepay/src/Helper/PropertiesDictionary.php:41
+#: modules/ppcp-wc-gateway/services.php:831
+msgid "Italian"
+msgstr "イタリア語"
+
+#: modules/ppcp-applepay/src/Assets/PropertiesDictionary.php:84
+#: modules/ppcp-googlepay/src/Helper/PropertiesDictionary.php:41
+#: modules/ppcp-wc-gateway/services.php:831
+msgid "Indonesian"
+msgstr "インドネシア語"
+
+#: modules/ppcp-applepay/src/Assets/PropertiesDictionary.php:84
+#: modules/ppcp-wc-gateway/services.php:831
+msgid "Hungarian"
+msgstr "ハンガリー語"
+
+#: modules/ppcp-applepay/src/Assets/PropertiesDictionary.php:84
+#: modules/ppcp-googlepay/src/Helper/PropertiesDictionary.php:41
+msgid "Croatian"
+msgstr "クロアチア語"
+
+#: modules/ppcp-applepay/src/Assets/PropertiesDictionary.php:84
+msgid "Hindi"
+msgstr "ヒンディー語"
+
+#: modules/ppcp-applepay/src/Assets/PropertiesDictionary.php:84
+#: modules/ppcp-wc-gateway/services.php:831
+msgid "Hebrew"
+msgstr "ヘブライ語"
+
+#: modules/ppcp-applepay/src/Assets/PropertiesDictionary.php:84
+#: modules/ppcp-wc-gateway/services.php:831
+msgid "French (France)"
+msgstr "フランス語 (フランス)"
+
+#: modules/ppcp-applepay/src/Assets/PropertiesDictionary.php:84
+#: modules/ppcp-wc-gateway/services.php:831
+msgid "French (Canada)"
+msgstr "フランス語 (カナダ)"
+
+#: modules/ppcp-applepay/src/Assets/PropertiesDictionary.php:84
+#: modules/ppcp-googlepay/src/Helper/PropertiesDictionary.php:41
+#: modules/ppcp-wc-gateway/services.php:831
+msgid "Finnish"
+msgstr "フィンランド語"
+
+#: modules/ppcp-applepay/src/Assets/PropertiesDictionary.php:84
+#: modules/ppcp-wc-gateway/services.php:831
+msgid "Spanish (Mexico)"
+msgstr "スペイン語 (メキシコ)"
+
+#: modules/ppcp-applepay/src/Assets/PropertiesDictionary.php:84
+#: modules/ppcp-wc-gateway/services.php:831
+msgid "Spanish (Spain)"
+msgstr "スペイン語 (スペイン)"
+
+#: modules/ppcp-applepay/src/Assets/PropertiesDictionary.php:84
+#: modules/ppcp-wc-gateway/services.php:831
+msgid "English (United States)"
+msgstr "英語 (アメリカ)"
+
+#: modules/ppcp-applepay/src/Assets/PropertiesDictionary.php:84
+#: modules/ppcp-wc-gateway/services.php:831
+msgid "English (United Kingdom)"
+msgstr "英語 (イギリス)"
+
+#: modules/ppcp-applepay/src/Assets/PropertiesDictionary.php:84
+#: modules/ppcp-wc-gateway/services.php:831
+msgid "English (Australia)"
+msgstr "英語 (オーストラリア)"
+
+#: modules/ppcp-applepay/src/Assets/PropertiesDictionary.php:84
+#: modules/ppcp-googlepay/src/Helper/PropertiesDictionary.php:41
+#: modules/ppcp-wc-gateway/services.php:831
+msgid "Greek"
+msgstr "ギリシャ語"
+
+#: modules/ppcp-applepay/src/Assets/PropertiesDictionary.php:84
+#: modules/ppcp-googlepay/src/Helper/PropertiesDictionary.php:41
+msgid "German"
+msgstr "ドイツ語"
+
+#: modules/ppcp-applepay/src/Assets/PropertiesDictionary.php:84
+#: modules/ppcp-googlepay/src/Helper/PropertiesDictionary.php:41
+#: modules/ppcp-wc-gateway/services.php:831
+msgid "Danish"
+msgstr "デンマーク語"
+
+#: modules/ppcp-applepay/src/Assets/PropertiesDictionary.php:84
+#: modules/ppcp-googlepay/src/Helper/PropertiesDictionary.php:41
+#: modules/ppcp-wc-gateway/services.php:831
+msgid "Czech"
+msgstr "チェコ語"
+
+#: modules/ppcp-applepay/src/Assets/PropertiesDictionary.php:84
+#: modules/ppcp-googlepay/src/Helper/PropertiesDictionary.php:41
+msgid "Catalan"
+msgstr "カタロニア語"
+
+#: modules/ppcp-applepay/src/Assets/PropertiesDictionary.php:84
+#: modules/ppcp-googlepay/src/Helper/PropertiesDictionary.php:41
+msgid "Arabic"
+msgstr "アラビア語"
+
+#: modules/ppcp-applepay/src/Assets/PropertiesDictionary.php:84
+#: modules/ppcp-googlepay/src/Helper/PropertiesDictionary.php:41
+#: modules/ppcp-wc-gateway/services.php:831
+#: modules/ppcp-settings/assets/index.js:16
+msgid "Browser language"
+msgstr "ブラウザー言語"
+
+#: modules/ppcp-applepay/src/Assets/PropertiesDictionary.php:75
+msgid "Top up"
+msgstr "補充"
+
+#: modules/ppcp-applepay/src/Assets/PropertiesDictionary.php:75
+msgid "Tip"
+msgstr "ヒント"
+
+#: modules/ppcp-applepay/src/Assets/PropertiesDictionary.php:75
+#: modules/ppcp-settings/assets/index.js:10
+msgid "Support"
+msgstr "サポート"
+
+#: modules/ppcp-applepay/src/Assets/PropertiesDictionary.php:75
+msgid "Setup"
+msgstr "設定"
+
+#: modules/ppcp-applepay/src/Assets/PropertiesDictionary.php:75
+msgid "Reload"
+msgstr "再読み込み"
+
+#: modules/ppcp-applepay/src/Assets/PropertiesDictionary.php:75
+#: modules/ppcp-axo/src/Assets/AxoManager.php:161
+#: modules/ppcp-axo-block/assets/js/index.js:2
+#: modules/ppcp-settings/assets/index.js:9
+#: modules/ppcp-axo-block/assets/js/index.js:7887
+msgid "Continue"
+msgstr "次へ"
+
+#: modules/ppcp-applepay/src/Assets/PropertiesDictionary.php:75
+#: modules/ppcp-googlepay/src/Helper/PropertiesDictionary.php:32
+msgid "Plain"
+msgstr "基本"
+
+#: modules/ppcp-applepay/src/Assets/PropertiesDictionary.php:75
+#: modules/ppcp-googlepay/src/Helper/PropertiesDictionary.php:32
+msgid "Pay"
+msgstr "支払い"
+
+#: modules/ppcp-applepay/src/Assets/PropertiesDictionary.php:75
+#: modules/ppcp-googlepay/src/Helper/PropertiesDictionary.php:32
+msgid "Donate"
+msgstr "寄付"
+
+#: modules/ppcp-applepay/src/Assets/PropertiesDictionary.php:75
+#: modules/ppcp-googlepay/src/Helper/PropertiesDictionary.php:32
+msgid "Buy"
+msgstr "購入"
+
+#: modules/ppcp-applepay/src/Assets/PropertiesDictionary.php:75
+#: modules/ppcp-googlepay/src/Helper/PropertiesDictionary.php:32
+msgid "Book"
+msgstr "予約"
+
+#: modules/ppcp-applepay/src/Assets/PropertiesDictionary.php:66
+msgid "White with outline"
+msgstr "アウトライン付き白"
+
+#: modules/ppcp-applepay/src/Assets/ApplePayButton.php:260
+#: modules/ppcp-applepay/src/Assets/ApplePayButton.php:288
+msgid "Error processing cart"
+msgstr "お買い物カゴ処理エラー"
+
+#: modules/ppcp-applepay/extensions.php:66
+#: modules/ppcp-applepay/extensions.php:73
+#: modules/ppcp-applepay/src/ApplePayGateway.php:93
+#: modules/ppcp-applepay/src/Assets/ApplePayButton.php:126
+#: modules/ppcp-settings/src/Data/Definition/FeaturesDefinition.php:89
+#: modules/ppcp-settings/src/Data/Definition/PaymentMethodsDefinition.php:143
+#: modules/ppcp-status-report/src/StatusReportModule.php:73
+#: modules/ppcp-settings/assets/index.js:1
+msgid "Apple Pay"
+msgstr "Apple Pay"
+
+#: modules/ppcp-applepay/extensions.php:83
+#: modules/ppcp-googlepay/extensions.php:52
+#: modules/ppcp-settings/assets/index.js:16
+msgid "Button Language"
+msgstr "ボタン言語"
+
+#: modules/ppcp-applepay/extensions.php:83
+#: modules/ppcp-googlepay/extensions.php:52
+#: modules/ppcp-settings/assets/index.js:16
+msgid "Button Color"
+msgstr "ボタンの色"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/connection-tab-fields.php:83
+msgid "documentation"
+msgstr "ドキュメンテーション"
+
+#: modules/ppcp-paypal-subscriptions/src/PayPalSubscriptionsModule.php:457
+msgid "Subscription:"
+msgstr "サブスクリプション:"
+
+#: modules/ppcp-applepay/extensions.php:83
+#: modules/ppcp-googlepay/extensions.php:52
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:23
+#: modules/ppcp-wc-gateway/src/Settings/SettingsRenderer.php:447
+msgid "Button Styling Preview"
+msgstr "ボタンスタイルのプレビュー"
+
+#: modules/ppcp-status-report/src/StatusReportModule.php:73
+#: modules/ppcp-wc-gateway/services.php:332
+msgid "Subscriptions Mode"
+msgstr "サブスクリプションモード"
+
+#: modules/ppcp-vaulting/src/VaultingModule.php:177
+msgid "Invalid payment method."
+msgstr "無効な決済方法です。"
+
+#: modules/ppcp-paypal-subscriptions/src/PayPalSubscriptionsModule.php:261
+#: modules/ppcp-paypal-subscriptions/src/PayPalSubscriptionsModule.php:454
+msgid "PayPal Subscription"
+msgstr "PayPal サブスクリプション"
+
+#. translators: %s - BLIK, iDeal, Mercado Pago, etc.
+#: modules/ppcp-wc-gateway/src/FundingSource/FundingSourceRenderer.php:77
+msgid "Pay via %s."
+msgstr "%sで支払う。"
+
+#. translators: %s - BLIK, iDeal, Mercado Pago, etc.
+#: modules/ppcp-wc-gateway/src/FundingSource/FundingSourceRenderer.php:60
+msgid "%s (via PayPal)"
+msgstr "%s (ペイパル経由)"
+
+#: modules/ppcp-applepay/services.php:289
+#: modules/ppcp-googlepay/services.php:247
+#: modules/ppcp-wc-gateway/services.php:715
+#: modules/ppcp-wc-gateway/services.php:728
+#: modules/ppcp-wc-gateway/services.php:745
+msgid "Status: Available"
+msgstr "ステータス: 利用可能"
+
+#. translators: %1$s and %2$s are the opening and closing of HTML <a> tag.
+#: modules/ppcp-wc-gateway/services.php:680
+msgid "Required when %1$sPay upon Invoice%2$s is used."
+msgstr "%1$s請求書払い%2$sを使用する場合は必須です。"
+
+#: modules/ppcp-wc-gateway/services.php:454
+msgctxt "Name of payment method"
+msgid "Trustly"
+msgstr "信頼できる"
+
+#: modules/ppcp-wc-gateway/services.php:350
+msgid "The transaction will be captured automatically when the order status changes to Processing or Completed."
+msgstr "注文のステータスが「処理中」または「完了」に変わると、自動的にトランザクションが取得されます。"
+
+#: modules/ppcp-wc-gateway/services.php:350
+msgid "Capture On Status Change"
+msgstr "承認のステータス変更"
+
+#: modules/ppcp-button/src/Validation/CheckoutFormValidator.php:76
+msgid "An account is already registered with that username. Please choose another."
+msgstr "そのユーザー名はすでに登録されています。別のユーザー名にしてください。"
+
+#: modules/ppcp-button/src/Validation/CheckoutFormValidator.php:69
+msgid "Please enter a valid account username."
+msgstr "有効なアカウントユーザー名を入力してください。"
+
+#: modules/ppcp-button/src/Validation/CheckoutFormValidator.php:58
+msgid "An account is already registered with your email address. <a href=\"#\" class=\"showlogin\">Please log in.</a>"
+msgstr "アカウント登録済みのメールアドレスです。<a href=\"#\" class=\"showlogin\">ログインしてください。</a>"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:38
+msgid "Customize smart button style per location"
+msgstr "スマートボタンのスタイルを場所ごとにカスタマイズ"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:38
+msgid "Customize Smart Buttons Per Location"
+msgstr "場所ごとにスマートボタンをカスタマイズ"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:36
+msgid "Select where the PayPal smart buttons should be displayed."
+msgstr "PayPal スマートボタンを表示する場所を選択します。"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:36
+msgid "Smart Button Locations"
+msgstr "スマートボタン設置場所"
+
+#. translators: %1$s and %2$s are the opening and closing of HTML <a> tag.
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:28
+msgid ""
+"Customize the appearance of the PayPal smart buttons on the\n"
+"\t\t\t\t\t%1$sCheckout page%5$s, %2$sSingle Product Page%5$s, %3$sCart page%5$s or on %4$sMini Cart%5$s."
+msgstr ""
+"PayPalスマートボタンの外観をカスタマイズできます。\n"
+"\t\t\t\t\t%1$s購入手続きページ%5$s、%2$s単品ページ%5$s、%3$sお買い物カゴページ%5$s、%4$sミニカート%5$sのいずれかでカスタマイズできます。"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:26
+msgid "PayPal Smart Buttons"
+msgstr "PayPal スマートボタン"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/connection-tab-fields.php:104
+msgid "FraudNet is a JavaScript library developed by PayPal and embedded into a merchant’s web page to collect browser-based data to help reduce fraud."
+msgstr "FraudNet は、PayPal が開発した JavaScript ライブラリで、加盟店のウェブページに組み込むことで、ブラウザベースのデータを収集し、不正行為の削減に役立てるものです。"
+
+#. translators: %1$s and %2$s are the opening and closing of HTML <a> tag.
+#: modules/ppcp-wc-gateway/services.php:673
+msgid "Manage online risk with %1$sFraudNet%2$s."
+msgstr "%1$sFraudNet%2$s でオンラインリスクを管理する。"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/connection-tab-fields.php:104
+msgid "FraudNet"
+msgstr "FraudNet"
+
+#: modules/ppcp-wc-gateway/src/Processor/OrderProcessor.php:187
+msgid "Could not retrieve PayPal order."
+msgstr "PayPal の注文を取得できませんでした。"
+
+#: modules/ppcp-uninstall/services.php:31
+msgid "The plugin data is successfully cleared."
+msgstr "プラグインデータのクリアに成功しました。"
+
+#: modules/ppcp-uninstall/services.php:31
+msgid "Are you sure? the operation will remove all plugin data."
+msgstr "この操作により、プラグインデータはすべて削除されます。"
+
+#: modules/ppcp-uninstall/extensions.php:15
+msgid "Click to remove options and scheduled actions from database now."
+msgstr "今すぐデータベースからオプションとスケジュールされたアクションを削除するをクリックします。"
+
+#: modules/ppcp-uninstall/extensions.php:15
+msgid "Clear now"
+msgstr "今すぐクリア"
+
+#: modules/ppcp-uninstall/extensions.php:15
+msgid "Remove PayPal Payments data from Database."
+msgstr "データベースから PayPal Payments のデータを削除する。"
+
+#: modules/ppcp-uninstall/extensions.php:15
+msgid "Remove options and scheduled actions from database when uninstalling the plugin."
+msgstr "プラグインのアンインストール時に、オプションとスケジュールされたアクションをデータベースから削除する。"
+
+#: modules/ppcp-uninstall/extensions.php:15
+msgid "Remove PayPal Payments data from Database on uninstall"
+msgstr "アンインストール時にデータベースから PayPal Payments のデータを削除する。"
+
+#: modules/ppcp-uninstall/extensions.php:15
+msgid "Manage plugin data and scheduled actions stored in database."
+msgstr "データベースに保存されたプラグインデータとスケジュールされたアクションを管理します。"
+
+#: modules/ppcp-uninstall/extensions.php:15
+msgid "Uninstall/Clear Database"
+msgstr "データベースのアンインストール/クリア"
+
+#: modules/ppcp-wc-gateway/src/Gateway/PayUponInvoice/PayUponInvoice.php:343
+msgid "Could not enable gateway because \"Brand name\" field is empty."
+msgstr "「ブランド名」フィールドが空であるため、ゲートウェイを有効にできませんでした。"
+
+#: modules/ppcp-wc-gateway/src/Gateway/PayPalGateway.php:315
+msgid "PayPal Pay Later"
+msgstr "PayPal ペイレイター"
+
+#: modules/ppcp-wc-gateway/src/Gateway/OXXO/OXXOGateway.php:93
+msgid "OXXO is a Mexican chain of convenience stores.<br />*Get PayPal account permission to use OXXO payment functionality by contacting us at (+52) 800-925-0304"
+msgstr "OXXO はメキシコのコンビニエンスストアチェーンです。<br /> ※OXXO の決済機能を利用するための PayPal アカウントの許可は、弊社（+52）800-925-0304までお問い合わせください。"
+
+#: modules/ppcp-wc-gateway/src/Gateway/CardButtonGateway.php:170
+msgid "Enable Standard Card Button gateway"
+msgstr "標準カードボタンのゲートウェイを有効にする"
+
+#: modules/ppcp-settings/src/Data/Definition/PaymentMethodsDefinition.php:126
+#: modules/ppcp-wc-gateway/services.php:318
+#: modules/ppcp-wc-gateway/src/Settings/SectionsRenderer.php:121
+#: modules/ppcp-settings/assets/index.js:1
+#: modules/ppcp-settings/assets/index.js:5
+msgid "Pay Later"
+msgstr "後払い"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:65
+msgid "Checkout Messaging Ratio"
+msgstr "支払いメッセージの比率"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:64
+msgid "Checkout Messaging Color"
+msgstr "支払いメッセージの色"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:63
+msgid "Checkout Messaging Text Color"
+msgstr "支払いメッセージの文字色"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:62
+msgid "Checkout Messaging Logo Position"
+msgstr "支払いメッセージロゴの位置"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:61
+msgid "Checkout Messaging Logo"
+msgstr "支払いメッセージングロゴ"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:60
+msgid "Checkout Messaging Layout"
+msgstr "支払いメッセージレイアウト"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:56
+msgid "Cart Messaging Ratio"
+msgstr "お買い物カゴメッセージング比率"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:55
+msgid "Cart Messaging Color"
+msgstr "お買い物カゴメッセージカラー"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:54
+msgid "Cart Messaging Text Color"
+msgstr "お買い物カゴメッセージテキストカラー"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:52
+msgid "Cart Messaging Logo"
+msgstr "お買い物カゴメッセージングロゴ"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:51
+msgid "Cart Messaging Layout"
+msgstr "お買い物カゴメッセージレイアウト"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:47
+msgid "Single Product Messaging Ratio"
+msgstr "商品メッセージング比率"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:46
+msgid "Single Product Messaging Color"
+msgstr "商品メッセージングカラー"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:45
+msgid "Single Product Messaging Text Color"
+msgstr "商品メッセージの文字色"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:44
+msgid "Single Product Messaging Logo Position"
+msgstr "商品メッセージロゴの位置"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:43
+msgid "Single Product Messaging Logo"
+msgstr "商品メッセージングロゴ"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:42
+msgid "Single Product Messaging Layout"
+msgstr "商品メッセージのレイアウト"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:38
+msgid "Messaging Ratio"
+msgstr "メッセージング比率"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:37
+msgid "Messaging Color"
+msgstr "メッセージングカラー"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:36
+msgid "Messaging Text Color"
+msgstr "メッセージングテキストカラー"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:35
+msgid "Messaging Logo Position"
+msgstr "メッセージングロゴの位置"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:34
+msgid "Messaging Logo"
+msgstr "メッセージングロゴ"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:33
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:42
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:51
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:60
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:69
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:78
+#: modules/ppcp-paylater-block/assets/js/paylater-block.js:2
+#: modules/ppcp-paylater-block/assets/js/paylater-block.js:6868
+msgid "Banner"
+msgstr "バナー"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:33
+msgid "Messaging Layout"
+msgstr "メッセージングレイアウト"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:32
+msgid "Customize Pay Later messaging style per location"
+msgstr "Pay Later のメッセージスタイルを場所ごとにカスタマイズ"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:32
+msgid "Customize Messaging Per Location"
+msgstr "場所ごとにメッセージをカスタマイズ"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:31
+msgid "Select where the Pay Later messaging should be displayed."
+msgstr "Pay Later メッセージの表示場所を選択します。"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:93
+msgid "Select where the Pay Later button should be displayed."
+msgstr "「後払い」ボタンを表示する場所を選択します。"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:93
+msgid "Pay Later Button Locations"
+msgstr "「後払い」ボタン設置場所"
+
+#. translators: %1$s and %2$s are the opening and closing of HTML <a> tag.
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:87
+msgid "When enabled, a %1$sPay Later button%2$s is displayed for eligible customers.%3$sPayPal buttons must be enabled to display the Pay Later button."
+msgstr "有効にすると、対象となる顧客に対して%1$s [後払い] %2$sボタンが表示されます。%3$sPayLater ボタンを表示するには、PayPal ボタンが有効であることが必要です（2）。"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:85
+msgid "Pay Later Button"
+msgstr "後払いボタン"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:22
+msgid "Enabled"
+msgstr "有効"
+
+#: lib/packages/Dhii/Container/ProxyContainer.php:36
+#: lib/packages/Dhii/Container/ProxyContainer.php:47
+msgid "Inner container not set"
+msgstr "インナーコンテナ未設定"
+
+#: lib/packages/Dhii/Container/MaskingContainer.php:58
+msgid "Inner key \"%1$s\" is not exposed"
+msgstr "インナーキー「%1$s」が公開されていない"
+
+#: lib/packages/Dhii/Container/Dictionary.php:98
+msgid "Key at index %1$d is not a string"
+msgstr "インデックス %1$d のキーが文字列ではありません"
+
+#: lib/packages/Dhii/Container/Dictionary.php:35
+msgid "Dictionary does not have key \"%1$s\""
+msgstr "辞書にキー「%1$s」がない。"
+
+#: lib/packages/Dhii/Container/DelegatingContainer.php:80
+#: lib/packages/Dhii/Container/DelegatingContainer.php:100
+msgid "Factory could not be invoked"
+msgstr "ファクトリーを呼び出すことができなかった"
+
+#: lib/packages/Dhii/Container/DelegatingContainer.php:55
+msgid "Could not extend service \"%1$s\""
+msgstr "サービス\"%1$s\"を拡張できませんでした。"
+
+#: lib/packages/Dhii/Container/DelegatingContainer.php:45
+msgid "Could not create service \"%1$s\""
+msgstr "サービス\"%1$s\"を作成できませんでした。"
+
+#: lib/packages/Dhii/Container/DelegatingContainer.php:39
+msgid "Service not found for key \"%1$s\""
+msgstr "キー\"%1$s\"のサービスが見つかりませんでした。"
+
+#: lib/packages/Dhii/Container/CompositeContainer.php:55
+msgid "Key \"%1$s\" not found in any of the containers"
+msgstr "キー”%1$s”がどのコンテナにも存在しない。"
+
+#: lib/packages/Dhii/Container/CompositeContainer.php:52
+#: lib/packages/Dhii/Container/CompositeContainer.php:72
+msgid "Failed check for key \"%1$s\" on container at index \"%2$s\""
+msgstr "インデックス\"%2$s\"のコンテナでキー\"%1$s\"のチェックに失敗しました。"
+
+#: lib/packages/Dhii/Container/CompositeContainer.php:50
+msgid "Failed to retrieve value for key \"%1$s\" from container at index \"%2$s\""
+msgstr "インデックス\"%2$s\"のコンテナからキー\"%1$s\"の値を取得するのに失敗しました。"
+
+#: lib/packages/Dhii/Container/CachingContainer.php:89
+msgid "Could not check inner container for key \"%1$s\""
+msgstr "キー\"%1$s\"の内部コンテナをチェックできませんでした。"
+
+#: lib/packages/Dhii/Container/CachingContainer.php:82
+msgid "Could not check cache for key \"%1$s\""
+msgstr "キー \"%1$s\" のキャッシュをチェックできませんでした。"
+
+#: lib/packages/Dhii/Container/CachingContainer.php:59
+msgid "Could not retrieve value for key \"%1$s from inner container"
+msgstr "内側コンテナからキー\"%1$sの値を取得できませんでした。"
+
+#: lib/packages/Dhii/Container/CachingContainer.php:57
+msgid "Key \"%1$s\" not found in inner container"
+msgstr "キー \"%1$s\" が内部コンテナ内に存在しません"
+
+#. translators: %1$s and %2$s are the opening and closing of HTML <a> tag.
+#: modules/ppcp-webhooks/extensions.php:17
+msgid "Status of the webhooks subscription. More information about the webhooks is available in the %1$sWebhook Status documentation%2$s."
+msgstr "Webhooks の購読状況です。Webhook の詳細については、%1$sWebhook Statusのドキュメント%2$sに記載されています。"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:146
+msgid "Mini Cart Buttons"
+msgstr "ミニカートボタン"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:202
+msgid "Cart Buttons"
+msgstr "「お買い物カゴ」ボタン"
+
+#. translators: %1$s and %2$s are the opening and closing of HTML <a> tag.
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:92
+msgid "Customize the appearance of the PayPal smart buttons on the %1$sSingle Product Page%2$s."
+msgstr "%1$sシングル商品ページ%2$sの PayPal スマートボタンの外観をカスタマイズします。"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:90
+msgid "Single Product Page Buttons"
+msgstr "商品ページボタン"
+
+#. translators: %1$s and %2$s are the opening and closing of HTML <a> tag.
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:148
+msgid "Customize the appearance of the PayPal smart buttons on the %1$sMini Cart%2$s."
+msgstr "%1$sミニカート%2$sの PayPal スマートボタンの外観をカスタマイズする。"
+
+#: modules/ppcp-settings/src/SettingsModule.php:329
+#: modules/ppcp-wc-gateway/services.php:350
+msgid "Enable Advanced Card Processing"
+msgstr "高度なカード決済を可能にする"
+
+#: modules/ppcp-wc-gateway/services.php:350
+msgid "Standard Payments Settings"
+msgstr "標準的なペイメント設定"
+
+#: modules/ppcp-wc-gateway/services.php:318
+#: modules/ppcp-wc-gateway/src/Gateway/CardButtonGateway.php:148
+#: modules/ppcp-wc-gateway/src/Settings/SectionsRenderer.php:121
+msgid "Standard Card Button"
+msgstr "標準カードボタン"
+
+#: modules/ppcp-wc-gateway/services.php:318
+#: modules/ppcp-wc-gateway/src/Gateway/PayPalGateway.php:318
+#: modules/ppcp-wc-gateway/src/Settings/SectionsRenderer.php:121
+msgid "Standard Payments"
+msgstr "標準支払い"
+
+#. translators: %1$s and %2$s are the opening and closing of HTML <a> tag.
+#: modules/ppcp-wc-gateway/src/Settings/Fields/connection-tab-fields.php:107
+msgid "Configure integration specific settings such as a unique invoice prefix, or logging for potential %1$stroubleshooting%2$s."
+msgstr "固有の請求書プレフィックスや、潜在的な%1$sトラブルシューティング%2$sのロギングなど、統合特有の設定を行うことができます。"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/connection-tab-fields.php:105
+msgid "General integration configuration"
+msgstr "一般的な統合構成"
+
+#. translators: %1$s and %2$s are the opening and closing of HTML <a> tag.
+#: modules/ppcp-wc-gateway/src/Settings/Fields/connection-tab-fields.php:96
+msgid "Displays whether available advanced features are enabled for the connected PayPal account. More information about advanced features is available in the %1$sFeature sign-up documentation%2$s."
+msgstr "接続されている PayPal アカウントで、利用可能な高度な機能が有効かどうかが表示されます。高度な機能の詳細については、%1$s機能サインアップのドキュメント%2$sでご確認いただけます。"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/connection-tab-fields.php:94
+msgid "Advanced feature availability & sign-up"
+msgstr "機能の先行公開＆サインアップ"
+
+#: modules/ppcp-wc-gateway/src/Gateway/PayPalGateway.php:309
+msgid "Account Setup"
+msgstr "アカウントセットアップ"
+
+#: modules/ppcp-wc-gateway/services.php:749
+msgid "Enable Pay upon Invoice"
+msgstr "請求書発行時に支払うを有効にする"
+
+#: modules/ppcp-wc-gateway/services.php:717
+msgid "Enable Advanced Card Payments"
+msgstr "アドバンストカード決済を有効にする"
+
+#: modules/ppcp-applepay/services.php:290
+#: modules/ppcp-googlepay/services.php:248
+#: modules/ppcp-wc-gateway/services.php:716
+#: modules/ppcp-wc-gateway/services.php:729
+#: modules/ppcp-wc-gateway/services.php:746
+msgid "Status: Not yet enabled"
+msgstr "ステータスまだ有効ではありません"
+
+#. translators: %1$s, %2$s, %3$s and %4$s are the opening and closing of HTML
+#. <a> tag.
+#: modules/ppcp-wc-gateway/services.php:625
+msgid "This will disable all %1$sPay Later%2$s features and %3$sAlternative Payment Methods%4$s on your site."
+msgstr "これにより、サイト上のすべての%1$s後払い%2$s機能と%3$s代替支払方法%4$sが無効になります。"
+
+#: modules/ppcp-saved-payment-checker/extensions.php:23
+msgid "Capture authorized payment & disregard missing payment method"
+msgstr "承認された支払いをキャプチャし、不足している支払い方法を無視します。"
+
+#: modules/ppcp-saved-payment-checker/extensions.php:23
+msgid "Capture authorized payment & set subscription to Manual Renewal"
+msgstr "承認された支払いをキャプチャし、定期購入を手動更新に設定します。"
+
+#: modules/ppcp-saved-payment-checker/extensions.php:23
+msgid "Void authorization & fail the order/subscription"
+msgstr "オーサリングを無効にし、注文/定期購入を失敗させる。"
+
+#: modules/ppcp-saved-payment-checker/extensions.php:23
+msgid "Determines whether authorized payments for subscription orders are captured or voided if there is no saved payment method. This only applies when the intent Capture is used for the subscription order."
+msgstr "保存された支払い方法がない場合に、定期購入注文の承認された支払いを取り込むか、無効にするかを決定します。これは、定期購入注文にキャプチャの意図が使用されている場合にのみ適用されます。"
+
+#: modules/ppcp-saved-payment-checker/extensions.php:23
+msgid "By default, subscription payments are captured only when saving the payment method was successful. Without a saved payment method, automatic renewal payments are not possible."
+msgstr "デフォルトでは、支払い方法の保存に成功した場合のみ、定期購入の支払いが取り込まれます。支払い方法が保存されていない場合、自動更新の支払いはできません。"
+
+#: modules/ppcp-saved-payment-checker/extensions.php:23
+msgid "Subscription capture behavior if Vault fails"
+msgstr "Vaultが失敗した場合の定期購入認証の動作"
+
+#: modules/ppcp-wc-gateway/services.php:318
+#: modules/ppcp-wc-gateway/src/Settings/SectionsRenderer.php:121
+msgid "Connection"
+msgstr "接続"
+
+#: modules/ppcp-settings/src/Data/Definition/PaymentMethodsDefinition.php:141
+#: modules/ppcp-wc-gateway/src/Settings/Fields/connection-tab-fields.php:101
+msgid "Advanced Credit and Debit Card Payments"
+msgstr "高度なクレジット・デビットカード決済"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/connection-tab-fields.php:81
+#: modules/ppcp-wc-gateway/src/Settings/Fields/connection-tab-fields.php:82
+msgid "Disconnect Account"
+msgstr "アカウントを解除"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/connection-tab-fields.php:81
+#: modules/ppcp-wc-gateway/src/Settings/Fields/connection-tab-fields.php:82
+msgid "Status: Connected"
+msgstr "ステータス: 接続済み"
+
+#: modules/ppcp-saved-payment-checker/src/SavedPaymentCheckerModule.php:90
+msgid "The subscription has been activated, but the payment method could not be saved. Please contact the merchant to save a payment method for automatic subscription renewal payments."
+msgstr "定期購入は有効化されましたが、支払い方法を保存することができませんでした。定期購入の自動更新の支払い方法を保存するには、加盟店にお問い合わせください。"
+
+#: modules/ppcp-saved-payment-checker/src/SavedPaymentCheckerModule.php:87
+msgid "The subscription payment failed because the payment method could not be saved. Please try again with a different payment method."
+msgstr "支払い方法を保存できなかったため、定期購入の支払いに失敗しました。別の支払い方法で再度お試しください。"
+
+#: modules/ppcp-saved-payment-checker/src/PaymentTokenChecker.php:211
+msgid "Subscription payment failed. Payment method was not saved at PayPal."
+msgstr "定期購入の支払いに失敗しました。PayPal で支払い方法が保存されていませんでした。"
+
+#: modules/ppcp-saved-payment-checker/src/PaymentTokenChecker.php:159
+msgid "Subscription set to Manual Renewal because payment method was not saved at PayPal."
+msgstr "PayPal で支払い方法が保存されていないため、定期購入が手動更新に設定されました。"
+
+#: woocommerce-paypal-payments.php:135
+msgid "Get help"
+msgstr "ヘルプ"
+
+#: modules/ppcp-wc-gateway/src/Settings/HeaderRenderer.php:65
+#: woocommerce-paypal-payments.php:135
+msgid "Submit a bug"
+msgstr "バグを送信"
+
+#: modules/ppcp-wc-gateway/src/Settings/HeaderRenderer.php:64
+#: woocommerce-paypal-payments.php:135
+msgid "Request a feature"
+msgstr "機能をリクエストする"
+
+#: modules/ppcp-wc-gateway/src/Settings/HeaderRenderer.php:62
+msgid "Get Help"
+msgstr "ヘルプ"
+
+#: modules/ppcp-wc-gateway/src/Settings/HeaderRenderer.php:61
+#: woocommerce-paypal-payments.php:135 modules/ppcp-settings/assets/index.js:10
+msgid "Documentation"
+msgstr "ドキュメント"
+
+#: modules/ppcp-wc-gateway/src/Settings/HeaderRenderer.php:60
+msgid "The all-in-one checkout solution for WooCommerce"
+msgstr "WooCommerce のためのオールインワン・チェックアウト・ソリューション"
+
+#: modules/ppcp-wc-gateway/src/Gateway/PayUponInvoice/PayUponInvoice.php:300
+msgid "Phone field cannot be empty."
+msgstr "電話番号欄は空欄にはできません。"
+
+#: modules/ppcp-wc-gateway/src/Gateway/PayUponInvoice/PayUponInvoice.php:249
+#: modules/ppcp-wc-gateway/src/WCGatewayModule.php:766
+msgid "Phone"
+msgstr "電話"
+
+#: modules/ppcp-order-tracking/src/MetaBoxRenderer.php:167
+msgid "Carrier"
+msgstr "キャリア"
+
+#: modules/ppcp-order-tracking/src/MetaBoxRenderer.php:149
+#: modules/ppcp-order-tracking/src/Shipment/Shipment.php:200
+msgid "Status"
+msgstr "ステータス"
+
+#: modules/ppcp-order-tracking/src/Shipment/Shipment.php:176
+msgid "Tracking Number:"
+msgstr "追跡番号:"
+
+#: modules/ppcp-order-tracking/src/Endpoint/OrderTrackingEndpoint.php:123
+msgctxt "tracking info success message"
+msgid "successfully created"
+msgstr "問題なく作成されました"
+
+#: modules/ppcp-order-tracking/services.php:53
+msgctxt "Name of carrier"
+msgid "Other"
+msgstr "その他"
+
+#: modules/ppcp-webhooks/src/Handler/PaymentCapturePending.php:80
+msgid "Payment initiation was successful, and is waiting for the buyer to complete the payment."
+msgstr "支払い開始は成功し、購入者の支払い完了を待っています。"
+
+#. translators: %1$s the gateway name, %2$s URL.
+#: modules/ppcp-wc-gateway/src/Notice/GatewayWithoutPayPalAdminNotice.php:101
+msgid "%1$s cannot be used without the PayPal gateway. <a href=\"%2$s\">Enable the PayPal gateway</a>."
+msgstr "%1$s は、PayPal ゲートウェイを使用しないと使用できません。<a href=\"%2$s\">PayPalゲートウェイを有効化</a>します。"
+
+#: modules/ppcp-wc-gateway/src/Gateway/PayPalGateway.php:500
+msgid "Payer action required, possibly overcharge."
+msgstr "支払い者アクションが必要、過大請求の可能性あり。"
+
+#: modules/ppcp-wc-gateway/src/Gateway/OXXO/OXXOGateway.php:114
+msgid "Enable/Disable OXXO payment gateway."
+msgstr "OXXO ペイメントゲートウェイを有効/無効にする。"
+
+#: modules/ppcp-wc-gateway/src/Gateway/OXXO/OXXOGateway.php:95
+msgid "OXXO allows you to pay bills and online purchases in-store with cash."
+msgstr "OXXO では、請求書やオンラインショッピングの支払いを、店頭で現金で行うことができます。"
+
+#: modules/ppcp-wc-gateway/src/Gateway/OXXO/OXXO.php:166
+msgid "OXXO Voucher/Ticket"
+msgstr "OXXO バウチャー/チケット"
+
+#: modules/ppcp-wc-gateway/src/Gateway/OXXO/OXXO.php:147
+msgid "OXXO voucher has expired or the buyer didn't complete the payment successfully."
+msgstr "OXXO バウチャーの有効期限が切れているか、購入者が決済を正常に完了しなかった。"
+
+#: modules/ppcp-wc-gateway/src/Gateway/OXXO/OXXO.php:117
+#: modules/ppcp-wc-gateway/src/Gateway/OXXO/OXXO.php:138
+#: modules/ppcp-wc-gateway/src/Gateway/OXXO/OXXO.php:167
+#: modules/ppcp-wc-gateway/src/Gateway/OXXO/OXXO.php:177
+msgid "See OXXO voucher"
+msgstr "OXXO のバウチャーを見る"
+
+#: modules/ppcp-wc-gateway/src/Gateway/Messages.php:23
+msgid "Failed to process the payment. Please try again or contact the shop admin."
+msgstr "支払い処理に失敗しました。再度お試しいただくか、ショップの管理者にご連絡ください。"
+
+#: modules/ppcp-wc-gateway/src/Gateway/CardButtonGateway.php:170
+msgid "Enable/Disable the separate payment gateway with the card button."
+msgstr "カードボタンで分割払い決済ゲートウェイを有効/無効にする。"
+
+#: modules/ppcp-wc-gateway/services.php:641
+#: modules/ppcp-wc-gateway/src/Gateway/CardButtonGateway.php:150
+msgid "Debit & Credit Cards"
+msgstr "デビットカード、クレジットカード"
+
+#: modules/ppcp-wc-gateway/src/Gateway/CardButtonGateway.php:149
+msgid "The separate payment gateway with the card button. If disabled, the button is included in the PayPal gateway."
+msgstr "カードボタンを持つ分割払い決済ゲートウェイです。無効にすると、ボタンは PayPal ゲートウェイに含まれます。"
+
+#: modules/ppcp-wc-gateway/services.php:363
+msgid "By default, the Debit or Credit Card button is displayed in the Standard Payments payment gateway. This setting creates a second gateway for the Card button."
+msgstr "デフォルトでは、デビットカードまたはクレジットカードのボタンは、Standard Payments の支払いゲートウェイに表示されます。この設定により、Card ボタンのための第2のゲートウェイが作成されます。"
+
+#: modules/ppcp-wc-gateway/services.php:363
+msgid "Do not use WC checkout form data (request all address fields)"
+msgstr "WC の購入フォームデータを使用しない（すべてのアドレスフィールドを要求する）"
+
+#: modules/ppcp-wc-gateway/services.php:363
+msgid "Request only name and postal code"
+msgstr "氏名、郵便番号のみ依頼"
+
+#: modules/ppcp-wc-gateway/services.php:363
+msgid "Use WC checkout form data (do not show any address fields)"
+msgstr "WC の購入フォームデータを使用する（住所欄は表示しない）"
+
+#: modules/ppcp-wc-gateway/services.php:363
+msgid "Using the WC form data increases convenience for the customers, but can cause issues if card details do not match the billing data in the checkout form."
+msgstr "WC フォームのデータを使用することで、お客様の利便性は向上しますが、カード情報が購入フォームの請求データと一致しない場合、問題が発生する可能性があります。"
+
+#: modules/ppcp-settings/src/Data/Definition/PaymentMethodsDefinition.php:156
+#: modules/ppcp-wc-gateway/src/Gateway/OXXO/OXXOGateway.php:92
+#: modules/ppcp-wc-gateway/src/Gateway/OXXO/OXXOGateway.php:114
+#: modules/ppcp-wc-gateway/src/Settings/SectionsRenderer.php:121
+msgid "OXXO"
+msgstr "OXXO"
+
+#: modules/ppcp-button/src/Assets/SmartButton.php:856
+msgctxt "checkout-validation"
+msgid "Shipping %s"
+msgstr "配送先欄の %s "
+
+#: modules/ppcp-button/src/Assets/SmartButton.php:854
+msgctxt "checkout-validation"
+msgid "Billing %s"
+msgstr "請求先欄の %s"
+
+#: modules/ppcp-button/src/Assets/SmartButton.php:843
+msgid "%s is a required field."
+msgstr "%s は必須項目です。"
+
+#: modules/ppcp-button/src/Assets/SmartButton.php:841
+msgid "Required form fields are not filled."
+msgstr "フォームの必須項目が埋まっていない。"
+
+#: modules/ppcp-wc-gateway/src/WCGatewayModule.php:279
+msgid "Could not process WC order because PAYMENT.CAPTURE.COMPLETED webhook not received."
+msgstr "PAYMENT.CAPTURE.COMPLETED webhook を受信していないため、WC 注文を処理できませんでした。"
+
+#: modules/ppcp-wc-gateway/src/Processor/OrderProcessor.php:202
+msgid "The payment is not ready for processing yet."
+msgstr "決済の準備がまだできていません。"
+
+#: modules/ppcp-wc-gateway/src/Gateway/PayUponInvoice/PayUponInvoiceGateway.php:169
+msgid "Awaiting Pay upon Invoice payment."
+msgstr "インボイスの支払いに応じて支払いを待っている。"
+
+#: modules/ppcp-wc-gateway/src/Gateway/PayUponInvoice/PayUponInvoiceGateway.php:137
+msgid "Customer service instructions to be presented on Ratepay's payment instructions."
+msgstr "Ratepay の支払い方法について提示される顧客サービスの指示。"
+
+#: modules/ppcp-wc-gateway/src/Gateway/PayUponInvoice/PayUponInvoiceGateway.php:137
+msgid "Customer service instructions"
+msgstr "お客様相談室のご案内"
+
+#: modules/ppcp-wc-gateway/src/Gateway/PayUponInvoice/PayUponInvoiceGateway.php:137
+msgid "Logo to be presented on Ratepay's payment instructions."
+msgstr "Ratepay の支払い指示書に提示されるロゴマーク。"
+
+#: modules/ppcp-wc-gateway/src/Gateway/PayUponInvoice/PayUponInvoiceGateway.php:137
+msgid "Logo URL"
+msgstr "ロゴ URL"
+
+#: modules/ppcp-wc-gateway/src/Gateway/PayUponInvoice/PayUponInvoiceGateway.php:137
+#: modules/ppcp-settings/assets/index.js:16
+msgid "Brand name"
+msgstr "ブランド名"
+
+#: modules/ppcp-wc-gateway/src/Gateway/PayUponInvoice/PayUponInvoiceGateway.php:137
+msgid "Specify brand name, logo and customer service instructions to be presented on Ratepay's payment instructions."
+msgstr "Ratepay の支払い指示書に提示するブランド名、ロゴ、顧客サービスの指示を指定する。"
+
+#: modules/ppcp-wc-gateway/src/Gateway/PayUponInvoice/PayUponInvoiceGateway.php:137
+msgid "Experience Context"
+msgstr "エクスペリエンスコンテキスト"
+
+#: modules/ppcp-wc-gateway/src/Gateway/PayUponInvoice/PayUponInvoiceGateway.php:137
+msgid "Enable/Disable Pay upon Invoice payment gateway."
+msgstr "請求書払い決済の有効・無効を設定します。"
+
+#: modules/ppcp-settings/src/Data/Definition/PaymentMethodsDefinition.php:156
+#: modules/ppcp-wc-gateway/src/Gateway/PayPalGateway.php:321
+#: modules/ppcp-wc-gateway/src/Gateway/PayUponInvoice/PayUponInvoiceGateway.php:109
+#: modules/ppcp-wc-gateway/src/Gateway/PayUponInvoice/PayUponInvoiceGateway.php:137
+#: modules/ppcp-wc-gateway/src/Settings/Fields/connection-tab-fields.php:103
+#: modules/ppcp-wc-gateway/src/Settings/SectionsRenderer.php:121
+msgid "Pay upon Invoice"
+msgstr "請求書発行時に支払うを有効にする"
+
+#: modules/ppcp-wc-gateway/src/Gateway/PayUponInvoice/PayUponInvoiceGateway.php:113
+msgid "Once you place an order, pay within 30 days. Our payment partner Ratepay will send you payment instructions."
+msgstr "ご注文後、30日以内にお支払いください。決済パートナーであるRatepayより、お支払い方法をご案内いたします。"
+
+#: modules/ppcp-settings/src/Data/Definition/PaymentMethodsDefinition.php:156
+#: modules/ppcp-wc-gateway/src/Gateway/PayUponInvoice/PayUponInvoiceGateway.php:110
+msgid "Pay upon Invoice is an invoice payment method in Germany. It is a local buy now, pay later payment method that allows the buyer to place an order, receive the goods, try them, verify they are in good order, and then pay the invoice within 30 days."
+msgstr "Pay upon Invoiceは、ドイツにおけるインボイスの支払い方法である。現地ではbuy now, pay laterと呼ばれる支払い方法で、買い手は注文をして商品を受け取り、試用して問題がないことを確認した後、30日以内に請求書を支払うことができます。"
+
+#: modules/ppcp-wc-gateway/src/Gateway/PayUponInvoice/PayUponInvoice.php:390
+msgid "RatePay payment instructions"
+msgstr "RatePay の支払い方法について"
+
+#: modules/ppcp-wc-gateway/src/Gateway/PayUponInvoice/PayUponInvoice.php:349
+msgid "Could not enable gateway because \"Customer service instructions\" field is empty."
+msgstr "「顧客サービスの指示]」フィールドが空であるため、ゲートウェイを有効にできませんでした。"
+
+#: modules/ppcp-wc-gateway/src/Gateway/PayUponInvoice/PayUponInvoice.php:346
+msgid "Could not enable gateway because \"Logo URL\" field is empty."
+msgstr "「ロゴ URL」フィールドが空であるため、ゲートウェイを有効にできませんでした。"
+
+#: modules/ppcp-wc-gateway/src/Gateway/PayUponInvoice/PayUponInvoice.php:372
+msgid "Could not enable gateway because the connected PayPal account is not activated for Pay upon Invoice. Reconnect your account while Onboard with Pay upon Invoice is selected to try again."
+msgstr "接続されている PayPal アカウントが Pay upon Invoice 用に有効化されていないため、ゲートウェイを有効にできませんでした。Onboard with Pay upon Invoice が選択された状態でアカウントを再接続して、再度お試しください。"
+
+#: modules/ppcp-wc-gateway/src/Gateway/PayUponInvoice/PayUponInvoice.php:305
+msgid "Phone number size must be between 1 and 14"
+msgstr "電話番号のサイズは1～14の間であること"
+
+#: modules/ppcp-wc-gateway/src/Gateway/PayUponInvoice/PayUponInvoice.php:295
+msgid "Invalid birth date."
+msgstr "生年月日が無効です。"
+
+#: modules/ppcp-wc-gateway/src/Gateway/PayUponInvoice/PayUponInvoice.php:290
+msgid "Billing country not available."
+msgstr "課金国は利用できません。"
+
+#: modules/ppcp-onboarding/src/Render/OnboardingOptionsRenderer.php:87
+msgid "Onboard with Pay upon Invoice"
+msgstr "Pay upon Invoice でオンボード"
+
+#. translators: %s is the id of the order.
+#: modules/ppcp-button/src/Endpoint/ApproveOrderEndpoint.php:176
+msgid "Order %s is not ready for processing yet."
+msgstr "注文%sはまだ処理する準備ができていません。"
+
+#: modules/ppcp-api-client/src/Factory/PayerFactory.php:139
+msgid "%s is not a valid email address."
+msgstr "%s は有効なメールアドレスではありません。"
+
+#. translators: %s is fraud AVS message
+#: modules/ppcp-wc-gateway/src/Processor/CreditCardOrderInfoHandlingTrait.php:98
+msgid "AVS: %s"
+msgstr "AVS: %s"
+
+#. translators: %1$s is 3DS order note title, %2$s is 3DS order note result
+#. markup
+#. translators: %1$s is AVS order note title, %2$s is AVS order note result
+#. markup
+#. translators: %s: payment method group name
+#. translators: %1$s: action (Enable/Disable), %2$s: formatted string with
+#. payment method group name
+#: modules/ppcp-wc-gateway/src/Processor/CreditCardOrderInfoHandlingTrait.php:42
+#: modules/ppcp-wc-gateway/src/Processor/CreditCardOrderInfoHandlingTrait.php:87
+#: modules/ppcp-settings/assets/index.js:14
+msgid "%1$s %2$s"
+msgstr "%1$s: %2$s"
+
+#: modules/ppcp-wc-gateway/services.php:363
+msgctxt "Name of credit card"
+msgid "Mastercard (dark)"
+msgstr "マスターカード（ダーク）"
+
+#: modules/ppcp-wc-gateway/services.php:363
+msgctxt "Name of credit card"
+msgid "Mastercard (light)"
+msgstr "フィルライト"
+
+#: modules/ppcp-wc-gateway/services.php:363
+msgctxt "Name of credit card"
+msgid "Visa (dark)"
+msgstr "Visa (ダーク)"
+
+#: modules/ppcp-wc-gateway/services.php:363
+msgctxt "Name of credit card"
+msgid "Visa (light)"
+msgstr "Visa (ライト)"
+
+#: modules/ppcp-vaulting/src/CustomerApprovalListener.php:69
+msgid "This PayPal account is already saved on this site. Please check that you are logged in correctly."
+msgstr "この PayPal アカウントは、すでにこのサイトに保存されています。正しくログインしていることを確認してください。"
+
+#: modules/ppcp-onboarding/src/Render/OnboardingRenderer.php:119
+msgid "We could not properly connect to PayPal. Try reloading the page."
+msgstr "PayPal に正しく接続できませんでした。ページを再読み込みしてみてください。"
+
+#. translators: %1$s - email, %2$s, %3$s - HTML tags for a link.
+#: modules/ppcp-button/src/Assets/SmartButton.php:317
+msgid "Using %2$s%1$s%3$s PayPal."
+msgstr "%2$s%1$s%3$s PayPalを使用する"
+
+#. translators: %s is the PayPal transaction ID
+#: modules/ppcp-wc-gateway/src/Processor/TransactionIdHandlingTrait.php:36
+msgid "PayPal transaction ID: %s"
+msgstr "ペイパルのトランザクションID: %s"
+
+#: modules/ppcp-wc-gateway/src/Admin/FeesRenderer.php:49
+msgid "The net total that will be credited to your PayPal account."
+msgstr "お客様の PayPal アカウントに入金される合計金額です。"
+
+#: modules/ppcp-wc-gateway/src/Admin/FeesRenderer.php:49
+msgid "PayPal Payout:"
+msgstr "PayPal ペイアウト:"
+
+#: modules/ppcp-wc-gateway/src/Admin/FeesRenderer.php:39
+msgid "The fee PayPal collects for the transaction."
+msgstr "PayPal が取引のために徴収する手数料です。"
+
+#: modules/ppcp-wc-gateway/src/Admin/FeesRenderer.php:39
+msgid "PayPal Fee:"
+msgstr "PayPal 手数料:"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/connection-tab-fields.php:79
+#: modules/ppcp-wc-gateway/src/Settings/Fields/connection-tab-fields.php:80
+msgid "Prior to accepting live payments, you can test payments on your WooCommerce platform in a safe PayPal sandbox environment."
+msgstr "本番の決済を受け入れる前に、安全な PayPal サンドボックス環境で WooCommerce プラットフォームでの決済をテストすることができます。"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/connection-tab-fields.php:71
+msgid "Your account is connected to sandbox, no real charging takes place. To accept live payments, turn off sandbox mode and connect your live PayPal account."
+msgstr "アカウントはサンドボックス（試験環境）に接続されており、実際の充電は行われません。本番環境の支払いを受け入れるには、サンドボックスモードをオフにして、実際の PayPal アカウントに接続してください。"
+
+#: modules/ppcp-onboarding/src/Render/OnboardingRenderer.php:117
+msgid "Test payments with PayPal sandbox"
+msgstr "PayPal サンドボックスで決済をテストする"
+
+#: modules/ppcp-onboarding/src/Render/OnboardingRenderer.php:117
+msgid "Activate PayPal"
+msgstr "PayPal を有効化"
+
+#: modules/ppcp-onboarding/src/Render/OnboardingOptionsRenderer.php:109
+msgid "Card transactions are managed by PayPal, which simplifies compliance requirements for you."
+msgstr "カード取引は PayPal によって管理されるため、コンプライアンス要件を簡素化することができます。"
+
+#: modules/ppcp-onboarding/src/Render/OnboardingOptionsRenderer.php:107
+msgid "Standard Card Processing"
+msgstr "標準カード決済"
+
+#: modules/ppcp-onboarding/src/Render/OnboardingOptionsRenderer.php:102
+msgid "Business or Casual"
+msgstr "ビジネスもしくはカジュアル"
+
+#: modules/ppcp-onboarding/src/Render/OnboardingOptionsRenderer.php:102
+msgid "3.49% + $0.49"
+msgstr "3.49% + $0.49"
+
+#: modules/ppcp-onboarding/src/Render/OnboardingOptionsRenderer.php:102
+msgid "Prebuilt user experience"
+msgstr "あらかじめ用意された顧客体験"
+
+#: modules/ppcp-onboarding/src/Render/OnboardingOptionsRenderer.php:122
+msgid "PayPal acts as the payment processor for card transactions. You can add optional features like Chargeback Protection for more security."
+msgstr "PayPal は、カード決済の決済代行会社として機能します。チャージバックプロテクションなどのオプション機能を追加することで、より安全性を高めることができます。"
+
+#: modules/ppcp-onboarding/src/Render/OnboardingOptionsRenderer.php:120
+#: modules/ppcp-wc-gateway/services.php:318
+#: modules/ppcp-wc-gateway/src/Gateway/CreditCardGateway.php:211
+#: modules/ppcp-wc-gateway/src/Gateway/PayPalGateway.php:312
+#: modules/ppcp-wc-gateway/src/Helper/CardPaymentsConfiguration.php:317
+#: modules/ppcp-wc-gateway/src/Settings/SectionsRenderer.php:121
+msgid "Advanced Card Processing"
+msgstr "高度なカード処理"
+
+#: modules/ppcp-onboarding/src/Render/OnboardingOptionsRenderer.php:102
+#: modules/ppcp-onboarding/src/Render/OnboardingOptionsRenderer.php:115
+msgid "For Standard payments, Casual sellers may connect their Personal PayPal account in eligible countries to sell on WooCommerce. For Advanced payments, a Business PayPal account is required."
+msgstr "標準的な支払いでは、カジュアルセラーは、WooCommerce で販売するために、対象国の個人的な PayPal アカウントを接続することができます。アドバンスドペイメントでは、ビジネス PayPal アカウントが必要です。"
+
+#: modules/ppcp-onboarding/src/Render/OnboardingOptionsRenderer.php:115
+#: modules/ppcp-settings/assets/index.js:9
+msgid "Business"
+msgstr "ビジネス"
+
+#: modules/ppcp-onboarding/src/Render/OnboardingOptionsRenderer.php:102
+#: modules/ppcp-onboarding/src/Render/OnboardingOptionsRenderer.php:115
+msgid "Seller Account Type"
+msgstr "販売者アカウントタイプ"
+
+#: modules/ppcp-onboarding/src/Render/OnboardingOptionsRenderer.php:115
+msgid "Business Ownership and other business information will be required during the application for Advanced Card Processing."
+msgstr "アドバンスト・カード・プロセッシングのお申し込みの際には、ビジネスオーナーなどの事業情報が必要となります。"
+
+#: modules/ppcp-onboarding/src/Render/OnboardingOptionsRenderer.php:115
+msgid "Additional Vetting and Underwriting Required"
+msgstr "追加の審査と引受が必要"
+
+#: modules/ppcp-onboarding/src/Render/OnboardingOptionsRenderer.php:115
+msgid "extra 0.4% per transaction"
+msgstr "トランザクションごとに0.4% の追加費用"
+
+#: modules/ppcp-onboarding/src/Render/OnboardingOptionsRenderer.php:115
+msgid "If you choose this optional, fee-based alternative to Fraud Protection, PayPal will manage chargebacks for eligible credit and debit card transactions — so you won’t have to worry about unexpected costs."
+msgstr "不正防止対策の代わりにこのオプション（有料）を選択すると、PayPal が対象となるクレジットカードおよびデビットカード取引のチャージバックを管理するので、予期せぬコストを心配する必要はありません。"
+
+#: modules/ppcp-onboarding/src/Render/OnboardingOptionsRenderer.php:115
+msgid "Optional"
+msgstr "オプション"
+
+#: modules/ppcp-onboarding/src/Render/OnboardingOptionsRenderer.php:115
+msgid "Chargeback Protection"
+msgstr "チャージバックプロテクション"
+
+#: modules/ppcp-onboarding/src/Render/OnboardingOptionsRenderer.php:115
+msgid "Included with Advanced Checkout at no extra cost, Fraud Protection gives you the insight and control you need to better balance chargebacks and declines."
+msgstr "Advanced Checkout に追加費用なしで含まれる不正防止機能は、チャージバックと辞退のバランスをより良くするために必要な洞察力と制御を提供します。"
+
+#: modules/ppcp-onboarding/src/Render/OnboardingOptionsRenderer.php:115
+msgid "Fraud Protection"
+msgstr "不正行為防止"
+
+#: modules/ppcp-onboarding/src/Render/OnboardingOptionsRenderer.php:102
+#: modules/ppcp-onboarding/src/Render/OnboardingOptionsRenderer.php:115
+msgid "for eligible PayPal transactions"
+msgstr "PayPal の対象取引について"
+
+#: modules/ppcp-onboarding/src/Render/OnboardingOptionsRenderer.php:102
+#: modules/ppcp-onboarding/src/Render/OnboardingOptionsRenderer.php:115
+msgid "No matter what you sell, Seller Protection can help you avoid chargebacks, reversals, and fees on eligible PayPal payment transactions — even when a customer has filed a dispute."
+msgstr "販売する商品に関わらず、売主の保護は、対象となる PayPal 決済のチャージバック、取り消し、手数料を回避することができます（顧客が異議を申し立てた場合も同様）。"
+
+#: modules/ppcp-onboarding/src/Render/OnboardingOptionsRenderer.php:102
+#: modules/ppcp-onboarding/src/Render/OnboardingOptionsRenderer.php:115
+msgid "Seller Protection"
+msgstr "販売者保護"
+
+#: modules/ppcp-onboarding/src/Render/OnboardingOptionsRenderer.php:102
+#: modules/ppcp-onboarding/src/Render/OnboardingOptionsRenderer.php:115
+msgid "for US domestic transactions"
+msgstr "米国内取引の場合"
+
+#: modules/ppcp-onboarding/src/Render/OnboardingOptionsRenderer.php:115
+msgid "2.59% + $0.49"
+msgstr "2.59% + $0.49"
+
+#: modules/ppcp-onboarding/src/Render/OnboardingOptionsRenderer.php:102
+#: modules/ppcp-onboarding/src/Render/OnboardingOptionsRenderer.php:115
+msgid "Credit & Debit Card pricing"
+msgstr "クレジットとデビットカード価格"
+
+#: modules/ppcp-onboarding/src/Render/OnboardingOptionsRenderer.php:115
+msgid "Customizable user experience"
+msgstr "カスタマイズ可能な顧客体験"
+
+#: modules/ppcp-onboarding/src/Render/OnboardingOptionsRenderer.php:102
+#: modules/ppcp-onboarding/src/Render/OnboardingOptionsRenderer.php:115
+msgid "Credit & Debit Card form fields"
+msgstr "クレジットカード・デビットカードのフォームフィールド"
+
+#: modules/ppcp-onboarding/src/Render/OnboardingOptionsRenderer.php:64
+msgid "Securely accept all major credit & debit cards on the strength of the PayPal network"
+msgstr "PayPal ネットワークの強みを生かし、主要なクレジットカードやデビットカードを安全に受け入れることができます。"
+
+#: modules/ppcp-onboarding/src/Render/OnboardingOptionsRenderer.php:60
+msgid "Enable PayPal Payments — includes PayPal, Venmo, Pay Later — with fraud protection"
+msgstr "PayPal、Venmo、Pay Later を含む PayPal 決済を可能にし、詐欺被害から保護します。"
+
+#: modules/ppcp-onboarding/src/Assets/OnboardingAssets.php:97
+msgid "API credentials must be entered to save the settings."
+msgstr "設定を保存するためには、API の認証情報の入力が必要です。"
+
+#: modules/ppcp-wc-gateway/src/Settings/SettingsRenderer.php:543
+msgid "Advanced credit and debit country and currency availability."
+msgstr "クレジットとデビットカードの国や通貨を利用できる。"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/connection-tab-fields.php:113
+msgid "View logs"
+msgstr "ログの表示"
+
+#: modules/ppcp-wc-gateway/services.php:454
+msgctxt "Name of payment method"
+msgid "BLIK"
+msgstr "BLIK"
+
+#: modules/ppcp-status-report/src/StatusReportModule.php:73
+msgid "Whether the PayPal Checkout Gateway plugin was configured previously or not"
+msgstr "PayPal Checkout Gateway プラグインが以前に設定されていたかどうか"
+
+#: modules/ppcp-status-report/src/StatusReportModule.php:73
+msgid "Used PayPal Checkout plugin"
+msgstr "PayPal Checkout プラグインを使用"
+
+#: modules/ppcp-status-report/src/StatusReportModule.php:73
+msgid "Whether Reference Transactions are enabled for the connected account"
+msgstr "接続されたアカウントでリファレンス・トランザクションが有効かどうか"
+
+#: modules/ppcp-status-report/src/StatusReportModule.php:73
+msgid "Reference Transactions"
+msgstr "参照取引"
+
+#: modules/ppcp-status-report/src/StatusReportModule.php:73
+msgid "Whether logging of plugin events and errors is enabled."
+msgstr "プラグインのイベントやエラーのロギングを有効にするかどうか。"
+
+#: modules/ppcp-status-report/src/StatusReportModule.php:73
+msgid "Logging enabled"
+msgstr "ロギングが可能"
+
+#: modules/ppcp-status-report/src/StatusReportModule.php:73
+msgid "Whether we received webhooks successfully."
+msgstr "Webhook を正常に受信できたかどうか。"
+
+#: modules/ppcp-status-report/src/StatusReportModule.php:73
+msgid "Webhook status"
+msgstr "Webhook の状態"
+
+#: modules/ppcp-status-report/src/StatusReportModule.php:73
+msgid "Whether PayPal supports the default store currency or not."
+msgstr "PayPal がデフォルトの店舗通貨をサポートしているかどうか。"
+
+#: modules/ppcp-status-report/src/StatusReportModule.php:73
+msgid "WooCommerce currency supported"
+msgstr "WooCommerce の通貨に対応"
+
+#: modules/ppcp-button/src/Assets/SmartButton.php:839
+msgid "Cardholder's first and last name are required, please fill the checkout form required fields."
+msgstr "カード名義人の姓と名は必須です。チェックアウトフォームの必須項目にご記入ください。"
+
+#. translators: %1$s - PENDING, DENIED, ... %2$s - text explaining the reason,
+#. ...
+#: modules/ppcp-wc-gateway/src/Processor/PaymentsStatusHandlingTrait.php:125
+msgid "PayPal order payment is set to %1$s status, details: %2$s"
+msgstr "PayPal 注文の支払いは、%1$sステータス、詳細に設定: %2$s"
+
+#: modules/ppcp-wc-gateway/src/Processor/PaymentsStatusHandlingTrait.php:110
+msgid "Could not get the payment authorization."
+msgstr "支払い承認が得られなかった。"
+
+#: modules/ppcp-wc-gateway/src/Processor/PaymentsStatusHandlingTrait.php:77
+#: modules/ppcp-wc-gateway/src/WCGatewayModule.php:323
+msgid "Could not capture the payment."
+msgstr "即時売上"
+
+#: modules/ppcp-wc-gateway/src/Notice/AuthorizeOrderActionNotice.php:47
+msgid "Cannot capture, no valid payment authorization."
+msgstr "承認できません、有効な支払い承認がありません。"
+
+#: modules/ppcp-wc-gateway/src/Notice/AuthorizeOrderActionNotice.php:46
+msgid "Failed to capture. Try again later or checks the logs."
+msgstr "承認に失敗しました。後で再試行するか、ログを確認してください。"
+
+#. translators: %1$d - HTTP status code number (404, 500, ...)
+#: modules/ppcp-api-client/src/Exception/PayPalApiException.php:43
+msgid "Unknown error while connecting to PayPal. Status code: %1$d."
+msgstr "PayPal への接続中に不明なエラーが発生しました。ステータスコードです。%1$d."
+
+#: modules/ppcp-api-client/src/Entity/CaptureStatusDetails.php:94
+msgid "The payee's PayPal account is not verified."
+msgstr "受取人の PayPal アカウントが認証されていません。"
+
+#: modules/ppcp-api-client/src/Entity/CaptureStatusDetails.php:92
+msgid "The payee does not have a PayPal account."
+msgstr "受取人が PayPal アカウントをお持ちでない場合。"
+
+#: modules/ppcp-api-client/src/Entity/CaptureStatusDetails.php:90
+msgid "The payer must send the funds for this captured payment. This code generally appears for manual EFTs."
+msgstr "支払人は、この捕捉された支払のための資金を送らなければならない。このコードは、一般的に手動 EFT に表示されます。"
+
+#: modules/ppcp-api-client/src/Entity/CaptureStatusDetails.php:88
+msgid "The captured funds were refunded."
+msgstr "支払われた資金は返金された。"
+
+#: modules/ppcp-api-client/src/Entity/CaptureStatusDetails.php:86
+msgid "The payee has not yet set up appropriate receiving preferences for their account. For more information about how to accept or deny this payment, visit your account online. This reason is typically offered in scenarios such as when the currency of the captured payment is different from the primary holding currency of the payee."
+msgstr "受取人は、自分のアカウントで適切な受信設定をまだしていません。この支払いを受け入れるか拒否するかの詳細については、アカウント・オンラインをご覧ください。この理由は、通常、取り込まれた支払いの通貨が受取人の主要な保有通貨と異なる場合などに提示されます。"
+
+#: modules/ppcp-api-client/src/Entity/CaptureStatusDetails.php:84
+msgid "The captured payment is pending manual review."
+msgstr "取り込まれた支払いは、手動による審査が保留されています。"
+
+#: modules/ppcp-api-client/src/Entity/CaptureStatusDetails.php:82
+msgid "No additional specific reason can be provided. For more information about this captured payment, visit your account online or contact PayPal."
+msgstr "追加の具体的な理由を説明することはできません。このキャプチャされた支払いに関する詳細については、オンラインでお客様のアカウントにアクセスするか、PayPal にお問い合わせください。"
+
+#: modules/ppcp-api-client/src/Entity/CaptureStatusDetails.php:80
+msgid "Visit your online account. In your Account Overview, accept and deny this payment."
+msgstr "オンラインアカウントにアクセスします。アカウント概要で、この支払いに同意するか否かを選択します。"
+
+#: modules/ppcp-api-client/src/Entity/CaptureStatusDetails.php:78
+#: modules/ppcp-api-client/src/Entity/RefundStatusDetails.php:64
+msgid "The payer paid by an eCheck that has not yet cleared."
+msgstr "支払者が、まだ決済されていない eCheck で支払った。"
+
+#: modules/ppcp-api-client/src/Entity/CaptureStatusDetails.php:76
+msgid "The captured funds were reversed in response to the payer disputing this captured payment with the issuer of the financial instrument used to pay for this captured payment."
+msgstr "支払者が、この取り込まれた支払いに使用された商品の発行者に異議を唱えたため、取り込まれた資金を取り崩すことになりました。"
+
+#: modules/ppcp-api-client/src/Entity/CaptureStatusDetails.php:74
+msgid "The payer initiated a dispute for this captured payment with PayPal."
+msgstr "支払者は、この承認された支払いについて PayPal と論争を開始しました。"
+
+#: modules/ppcp-api-client/src/Entity/AuthorizationStatusDetails.php:64
+msgid "Authorization is pending manual review."
+msgstr "認可は手動審査中です。"
+
+#: modules/ppcp-webhooks/src/Status/Assets/WebhooksStatusPageAssets.php:70
+#: modules/ppcp-settings/assets/index.js:16
+msgid "Looks like the webhook cannot be received. Check that your website is accessible from the internet."
+msgstr "Webhook を受信できないようです。インターネットからアクセスできることを確認してください。"
+
+#: modules/ppcp-webhooks/src/Status/Assets/WebhooksStatusPageAssets.php:70
+#: modules/ppcp-settings/assets/index.js:16
+msgid "The webhook was received successfully."
+msgstr "Webhook の受信に成功しました。"
+
+#: modules/ppcp-webhooks/src/Status/Assets/WebhooksStatusPageAssets.php:70
+msgid "Waiting for the webhook to arrive..."
+msgstr "Webhook の到着を待っているところ...。"
+
+#: modules/ppcp-uninstall/services.php:31
+#: modules/ppcp-webhooks/src/Status/Assets/WebhooksStatusPageAssets.php:70
+#: modules/ppcp-settings/assets/index.js:16
+msgid "Operation failed. Check WooCommerce logs for more details."
+msgstr "操作に失敗しました。詳しくは WooCommerce のログをご確認ください。"
+
+#: modules/ppcp-webhooks/services.php:87
+msgid "Tracked events"
+msgstr "追跡されたイベント"
+
+#: modules/ppcp-webhooks/services.php:87
+msgid "URL"
+msgstr "URL"
+
+#: modules/ppcp-webhooks/services.php:85
+msgid "Failed to load webhooks."
+msgstr "Webhooks の読み込みに失敗しました。"
+
+#: modules/ppcp-webhooks/services.php:80
+msgid "No webhooks found."
+msgstr "webhook が見つかりません。"
+
+#: modules/ppcp-webhooks/extensions.php:25
+msgid "Click to request a sample webhook payload from PayPal, allowing to check that your server can successfully receive webhooks."
+msgstr "クリックすると、PayPal からサンプルウェブフックペイロードを要求し、サーバーが正常にウェブフックを受信できることを確認することができます。"
+
+#: modules/ppcp-webhooks/extensions.php:25
+msgid "Simulate"
+msgstr "シミュレート"
+
+#: modules/ppcp-webhooks/extensions.php:25
+msgid "Webhook simulation"
+msgstr "Webhook シミュレーション"
+
+#: modules/ppcp-webhooks/extensions.php:22
+#: modules/ppcp-settings/assets/index.js:16
+msgid "Click to remove the current webhook subscription and subscribe again, for example, if the website domain or URL structure changed."
+msgstr "Web サイトのドメインや URL 構造が変更された場合など、現在の Webhook の登録を削除して、再度登録する場合はクリックしてください。"
+
+#: modules/ppcp-webhooks/extensions.php:22
+msgid "Resubscribe"
+msgstr "再購入"
+
+#: modules/ppcp-webhooks/extensions.php:22
+#: modules/ppcp-settings/assets/index.js:16
+msgid "Resubscribe webhooks"
+msgstr "再定期購入 webhooks"
+
+#: modules/ppcp-webhooks/extensions.php:20
+msgid "Subscribed webhooks"
+msgstr "定期購入 webhooks"
+
+#: modules/ppcp-webhooks/extensions.php:15
+msgid "Webhook Status"
+msgstr "Webhook ステータス"
+
+#: modules/ppcp-wc-gateway/services.php:381
+msgid "Always trigger 3D Secure"
+msgstr "常に 3D セキュアを起動"
+
+#: modules/ppcp-wc-gateway/services.php:381
+msgid "3D Secure when required"
+msgstr "必要な場合は 3D セキュア"
+
+#: modules/ppcp-wc-gateway/services.php:381
+msgid "No 3D Secure (transaction will be denied if 3D Secure is required)"
+msgstr "3D セキュアなし（3D セキュアが必要な場合、取引は拒否されます。）"
+
+#. translators: %1$s and %2$s opening and closing ul tag, %3$s and %4$s opening
+#. and closing li tag.
+#: modules/ppcp-wc-gateway/services.php:376
+msgid "%1$s%3$sNo 3D Secure will cause transactions to be denied if 3D Secure is required by the bank of the cardholder.%4$s%3$sSCA_WHEN_REQUIRED returns a 3D Secure contingency when it is a mandate in the region where you operate.%4$s%3$sSCA_ALWAYS triggers 3D Secure for every transaction, regardless of SCA requirements.%4$s%2$s"
+msgstr "%1$s%3$sカード所有者の銀行で3D セキュアが要求されている場合、3D セキュアは発生しません。%4$s%3$sSCA_WHEN_REQUIRED は、運用する地域で義務付けられている場合、3D セキュアの不測事態を返します。%4$s%3$sSCA_ALWAYSはSCA 要件と無関係にすべての取引に対して3D セキュアを発動します。%4$s%2$s"
+
+#: modules/ppcp-wc-gateway/services.php:374
+msgid "Contingency for 3D Secure"
+msgstr "3D セキュアのコンティンジェンシー"
+
+#: modules/ppcp-api-client/src/Factory/WebhookEventFactory.php:45
+msgid "Event type for webhook event not found."
+msgstr "Webhook イベントのイベントタイプが見つかりませんでした。"
+
+#: modules/ppcp-api-client/src/Factory/WebhookEventFactory.php:42
+msgid "ID for webhook event not found."
+msgstr "webhook イベントの ID が見つかりません。"
+
+#: modules/ppcp-api-client/src/Endpoint/WebhookEndpoint.php:182
+msgid "Not able to simulate webhook."
+msgstr "Webhook のシミュレーションができない。"
+
+#: modules/ppcp-api-client/src/Endpoint/WebhookEndpoint.php:117
+msgid "Not able to load webhooks list."
+msgstr "Webhooks のリストを読み込むことができません。"
+
+#: modules/ppcp-wc-gateway/src/WCGatewayModule.php:480
+msgid "Please verify your API Credentials and try again to connect your PayPal business account. Visit the <a href=\"https://docs.woocommerce.com/document/woocommerce-paypal-payments/\" target=\"_blank\">plugin documentation</a> for more information about the setup."
+msgstr "API 認証情報を確認し、PayPal ビジネスアカウントに接続するためにもう一度やり直してください。セットアップの詳細については、<a href=\"https://docs.woocommerce.com/document/woocommerce-paypal-payments/\" target=\"_blank\">プラグインのドキュメント</a>をご覧ください。"
+
+#: modules/ppcp-wc-gateway/src/WCGatewayModule.php:480
+msgid "Authentication with PayPal failed: "
+msgstr "PayPal との認証に失敗しました: "
+
+#: modules/ppcp-wc-gateway/src/Gateway/PayPalGateway.php:500
+msgid "Instrument declined."
+msgstr "Instrument declined."
+
+#: modules/ppcp-status-report/src/StatusReportModule.php:73
+msgid "Whether Pay Later is available in country or not."
+msgstr "Pay Later が国内で利用可能かどうか。"
+
+#: modules/ppcp-status-report/src/StatusReportModule.php:73
+msgid "Pay Later messaging available in country"
+msgstr "国内でも Pay Later メッセージの利用が可能"
+
+#: modules/ppcp-axo/src/AxoModule.php:227
+#: modules/ppcp-axo/src/Helper/PropertiesDictionary.php:23
+#: modules/ppcp-onboarding/src/Render/OnboardingOptionsRenderer.php:102
+#: modules/ppcp-onboarding/src/Render/OnboardingOptionsRenderer.php:115
+msgid "Yes"
+msgstr "はい"
+
+#: modules/ppcp-status-report/src/StatusReportModule.php:73
+msgid "Whether Advanced Card Processing is available in country or not."
+msgstr "アドバンスト・カード・プロセッシングが国内で利用可能かどうか。"
+
+#: modules/ppcp-status-report/src/StatusReportModule.php:73
+msgid "Advanced Card Processing available in country"
+msgstr "国内で利用できるアドバンスト・カード・プロセッシング"
+
+#: modules/ppcp-status-report/src/StatusReportModule.php:73
+msgid "Country / State value on Settings / General / Store Address."
+msgstr "設定／一般／ストアアドレスで国／州の値を設定します。"
+
+#: modules/ppcp-status-report/src/StatusReportModule.php:73
+msgid "Shop country code"
+msgstr "ショップの国番号"
+
+#: modules/ppcp-status-report/src/StatusReportModule.php:73
+msgid "Whether PayPal account is correctly configured or not."
+msgstr "PayPal アカウントが正しく設定されているかどうか。"
+
+#: modules/ppcp-status-report/src/StatusReportModule.php:73
+msgid "Onboarded"
+msgstr "オンボード"
+
+#: modules/ppcp-compat/src/PPEC/DeactivateNote.php:63
+msgid "Learn More"
+msgstr "さらに詳しく"
+
+#: modules/ppcp-compat/src/PPEC/DeactivateNote.php:62
+msgid "Deactivate PayPal Checkout"
+msgstr "PayPal Checkout を無効化する"
+
+#: modules/ppcp-compat/src/PPEC/DeactivateNote.php:60
+msgid "Action Required: Deactivate PayPal Checkout"
+msgstr "操作が必要です: PayPal Checkout を無効化する"
+
+#: modules/ppcp-compat/src/PPEC/DeactivateNote.php:54
+msgid "As of 1 Sept 2021, PayPal Checkout will be officially retired from WooCommerce.com, and support for this product will end as of 1 March 2022. To fully switch over, all you need to do is deactivate and/or remove the PayPal Checkout plugin from your store."
+msgstr "2021年9月1日をもって、PayPal Checkout は WooCommerce.com から正式に撤退し、この製品のサポートは2022年3月1日をもって終了します。完全に移行するには、あなたのストアから PayPal Checkout プラグインを無効化および/または削除する必要があります。"
+
+#: modules/ppcp-compat/src/PPEC/DeactivateNote.php:52
+msgid "As of 1 Sept 2021, PayPal Checkout will be officially retired from WooCommerce.com, and support for this product will end as of 1 March 2022. PayPal Payments can now handle all your subscription renewals even if they were first created using PayPal Checkout. To fully switch over, all you need to do is deactivate and/or remove the PayPal Checkout plugin from your store."
+msgstr "2021年9月1日をもって、PayPal Checkout は WooCommerce.com から正式に終了し、この製品のサポートは2022年3月1日をもって終了となります。PayPal Payments は、最初に PayPal Checkout を使用して作成された場合でも、すべての購読の更新を処理できるようになりました。完全に切り替えるには、あなたのストアから PayPal Checkout プラグインを非アクティブ化および/または削除する必要があります。"
+
+#. Translators: placeholder is the gateway name.
+#: modules/ppcp-compat/services.php:26
+msgid "%s (Legacy)"
+msgstr "%s (Legacy)"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:172
+msgid "Add a value from 25 to 55."
+msgstr "25から55までの値を追加します。"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:172
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:199
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:226
+msgid "Button Height"
+msgstr "ボタンの高さ"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:22
+msgid "You have PayPal vaulting enabled, that's why Pay Later options are unavailable now. You cannot use both features at the same time."
+msgstr "PayPal の Vaulting が有効になっているため、後払いのオプションが使用できない状態になっています。両方の機能を同時に使用することはできません。"
+
+#: modules/ppcp-wc-subscriptions/src/WcSubscriptionsModule.php:291
+msgid "Select a saved Credit Card payment"
+msgstr "保存したクレジットカード決済を選択する"
+
+#. translators: %1$s is the payment token Id, %2$s is the error message.
+#: modules/ppcp-wc-subscriptions/src/WcSubscriptionsModule.php:243
+msgid "Could not add token Id to subscription %1$s: %2$s"
+msgstr "トークン ID を定期購入 %1$s に追加できませんでした: %2$s"
+
+#: modules/ppcp-button/src/Assets/SmartButton.php:839
+msgid "MM/YY"
+msgstr "MM/YY"
+
+#. translators: %1$s and %2$s are the opening and closing of HTML <a> tag.
+#: modules/ppcp-wc-gateway/services.php:614
+msgid " To use vaulting features, you must %1$senable vaulting on your account%2$s."
+msgstr " Vaulting 機能を利用するには、%1$sアカウントで vaulting を有効にする%2$s必要があります。"
+
+#: modules/ppcp-wc-gateway/services.php:454
+msgctxt "Name of payment method"
+msgid "Venmo"
+msgstr "Venmo"
+
+#: modules/ppcp-settings/src/Data/Definition/FeaturesDefinition.php:89
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:29
+#: modules/ppcp-settings/assets/index.js:16
+msgid "Pay Later Messaging"
+msgstr "後払いメッセージング"
+
+#: modules/ppcp-button/src/Assets/SmartButton.php:348
+msgid "Choose a saved payment"
+msgstr "保存された支払い方法を選択する"
+
+#: modules/ppcp-button/src/Assets/SmartButton.php:348
+msgid "Or select a saved Credit Card payment"
+msgstr "または、保存されたクレジットカード決済を選択"
+
+#: modules/ppcp-button/src/Assets/SmartButton.php:342
+msgid "Save your Credit Card"
+msgstr "クレジットカードを保存"
+
+#: modules/ppcp-onboarding/src/OnboardingRESTController.php:164
+msgid "An error occurred while saving the credentials."
+msgstr "認証情報を保存する際にエラーが発生しました。"
+
+#. translators: placeholder is a comma-separated list of fields.
+#: modules/ppcp-onboarding/src/OnboardingRESTController.php:125
+msgid "Credentials are incomplete. Missing fields: %s."
+msgstr "認証情報に不備があります。フィールドがありません: %s."
+
+#. translators: placeholder is an arbitrary string.
+#: modules/ppcp-onboarding/src/OnboardingRESTController.php:116
+msgid "Environment \"%s\" is invalid. Use \"sandbox\" or \"production\"."
+msgstr "環境変数\"%s\"が無効です。”試験環境”または “本番環境”を使用してください。"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:31
+msgid "Pay Later Messaging Locations"
+msgstr "後払いメッセージの場所"
+
+#. translators: 1. URL link.
+#: woocommerce-paypal-payments.php:50
+msgid "WooCommerce PayPal Payments requires WooCommerce to be installed and active. You can download %s here."
+msgstr "WooCommerce PayPal Payments を使用するには、WooCommerce がインストールされ、有効化である必要があります。%s はこちらからダウンロードできます。"
+
+#: modules/ppcp-api-client/src/Endpoint/OrderEndpoint.php:239
+#: modules/ppcp-api-client/src/Endpoint/OrderEndpoint.php:278
+#: modules/ppcp-wc-gateway/src/Processor/PaymentsStatusHandlingTrait.php:78
+#: modules/ppcp-wc-gateway/src/Processor/PaymentsStatusHandlingTrait.php:111
+msgid "Payment provider declined the payment, please use a different payment method."
+msgstr "決済事業者が決済を拒否したため、別の決済方法をご利用ください。"
+
+#: modules/ppcp-wc-gateway/src/Notice/AuthorizeOrderActionNotice.php:48
+msgid "Could not find payment to process."
+msgstr "処理するための支払いが見つかりませんでした。"
+
+#: modules/ppcp-wc-gateway/src/Notice/AuthorizeOrderActionNotice.php:45
+msgid "Payment already captured."
+msgstr "支払いはすでに売上処理されています。"
+
+#: modules/ppcp-wc-gateway/src/Notice/AuthorizeOrderActionNotice.php:44
+msgid "Could not retrieve information. Try again later."
+msgstr "情報を取得できませんでした。後でもう一度試してみてください。"
+
+#: modules/ppcp-wc-gateway/src/Processor/PaymentsStatusHandlingTrait.php:81
+#: modules/ppcp-wc-gateway/src/Processor/PaymentsStatusHandlingTrait.php:103
+msgid "Awaiting payment."
+msgstr "支払いを待っている。"
+
+#: modules/ppcp-wc-gateway/src/Admin/OrderTablePaymentStatusColumn.php:113
+msgid "Payment captured"
+msgstr "支払い売上"
+
+#: modules/ppcp-wc-gateway/src/Admin/OrderTablePaymentStatusColumn.php:52
+msgid "Payment Captured"
+msgstr "支払い承認"
+
+#: modules/ppcp-wc-gateway/src/Admin/PaymentStatusOrderDetail.php:51
+msgid "To capture the payment select capture action from the list below."
+msgstr "支払いを売上処理するには、以下のリストから売上処理アクションを選択します。"
+
+#: modules/ppcp-wc-gateway/src/Admin/OrderTablePaymentStatusColumn.php:120
+#: modules/ppcp-wc-gateway/src/Admin/PaymentStatusOrderDetail.php:50
+msgid "Not captured"
+msgstr "売上処理されていません"
+
+#: modules/ppcp-wc-gateway/src/Admin/RenderAuthorizeAction.php:44
+msgid "Capture authorized PayPal payment"
+msgstr "PayPal決済の承認取得"
+
+#: modules/ppcp-wc-gateway/src/Settings/SettingsRenderer.php:539
+msgid "Unfortunately, the card processing option is not yet available in your country."
+msgstr "残念ながら、カード決済のオプションは、あなたの国ではまだ利用できません。"
+
+#: modules/ppcp-wc-gateway/src/Settings/SettingsRenderer.php:534
+msgid "Card Processing not available"
+msgstr "カード決済はできません"
+
+#: modules/ppcp-wc-gateway/src/Settings/SettingsRenderer.php:518
+msgid "Click here to complete your onboarding."
+msgstr "こちらをクリックすると、オンボードが完了します。"
+
+#: modules/ppcp-wc-gateway/src/Settings/SettingsRenderer.php:509
+msgid "You need to complete your onboarding, before you can use the Advanced Card Processing option."
+msgstr "Advanced Card Processing オプションを使用する前に、オンボーディングを完了する必要があります。"
+
+#. translators: %1$s and %2$s is a link tag.
+#: modules/ppcp-wc-gateway/services.php:365
+msgid ""
+"3D Secure benefits cardholders and merchants by providing\n"
+"                                  an additional layer of verification using Verified by Visa,\n"
+"                                  MasterCard SecureCode and American Express SafeKey.\n"
+"                                  %1$sLearn more about 3D Secure.%2$s"
+msgstr ""
+"3D セキュアは、カード会員と加盟店に次のようなメリットをもたらします。\n"
+"                                  Verified by Visa を使用した追加的な検証レイヤーを提供することで、カード会員にメリットをもたらします。\n"
+"                                  MasterCard SecureCode および American Express SafeKey を使用した追加的な検証を提供することで、カード会員にメリットをもたらします。\n"
+"                                  %1$s3Dセキュアについて詳しくはこちら%2$s。"
+
+#: modules/ppcp-wc-gateway/services.php:363
+#: modules/ppcp-settings/assets/index.js:16
+msgid "3D Secure"
+msgstr "3D セキュア"
+
+#: modules/ppcp-wc-gateway/src/Settings/SettingsRenderer.php:489
+msgid "Credit Card processing for your account has not yet been activated by PayPal. If your account is new, this can take some days. Otherwise, please get in contact with PayPal."
+msgstr "アカウントのクレジットカード処理は、まだ PayPal によって有効化されていません。お客様のアカウントが新しい場合、これは数日かかることがあります。それ以外の場合は、PayPal と連絡を取ってください。"
+
+#: modules/ppcp-wc-gateway/src/Settings/SettingsRenderer.php:484
+#: modules/ppcp-wc-gateway/src/Settings/SettingsRenderer.php:504
+msgid "Onboarding"
+msgstr "オンボーディング"
+
+#: modules/ppcp-wc-gateway/src/Settings/SettingsRenderer.php:121
+msgid "We could not complete the onboarding process. Some features, such as card processing, will not be available. To fix this, please try again."
+msgstr "オンボーディングプロセスを完了することができませんでした。カード処理など、一部の機能が利用できません。これを修正するために、もう一度お試しください。"
+
+#: modules/ppcp-wc-gateway/src/Settings/Settings.php:141
+msgid "Pay with your credit card."
+msgstr "クレジットカードでお支払いください。"
+
+#: modules/ppcp-wc-gateway/src/FundingSource/FundingSourceRenderer.php:81
+#: modules/ppcp-wc-gateway/src/Gateway/PayPalGateway.php:344
+#: modules/ppcp-wc-gateway/src/Settings/Settings.php:141
+msgid "Pay via PayPal."
+msgstr "PayPal でお支払いください。"
+
+#: modules/ppcp-wc-gateway/src/Gateway/PayPalGateway.php:342
+msgid "Accept PayPal, Pay Later and alternative payment types."
+msgstr "PayPal、Pay Later、その他の支払い方法に対応しています。"
+
+#: modules/ppcp-wc-gateway/src/Gateway/PayPalGateway.php:336
+msgid "Accept debit and credit cards, and local payment methods."
+msgstr "デビットカード、クレジットカード、現地での支払い方法に対応しています。"
+
+#: modules/ppcp-wc-gateway/src/Gateway/PayPalGateway.php:295
+msgid "In order to use PayPal or Advanced Card Processing, you need to enable the Gateway."
+msgstr "PayPal や Advanced Card Processing を利用するためには、ゲートウェイを有効にする必要があります。"
+
+#: modules/ppcp-wc-gateway/src/Gateway/CreditCardGateway.php:212
+#: modules/ppcp-wc-gateway/src/Helper/CardPaymentsConfiguration.php:332
+msgid "Accept debit and credit cards, and local payment methods with PayPal’s latest solution."
+msgstr "PayPal の最新ソリューションで、デビットカード、クレジットカード、ローカル決済に対応。"
+
+#: modules/ppcp-wc-gateway/src/Gateway/PayPalGateway.php:509
+msgid "Please use a different payment method."
+msgstr "別のお支払い方法をご利用ください。"
+
+#: modules/ppcp-wc-gateway/services.php:363
+msgid "Define which cards you want to display in your checkout."
+msgstr "購入支払い時に表示するカードを定義します。"
+
+#: modules/ppcp-wc-gateway/services.php:363
+msgid "Show logo of the following credit cards"
+msgstr "以下のクレジットカードのロゴを表示します。"
+
+#: modules/ppcp-settings/src/Service/ScriptDataHandler.php:116
+#: modules/ppcp-wc-gateway/services.php:103
+#: modules/ppcp-wc-gateway/services.php:363
+msgctxt "Name of credit card"
+msgid "Hiper"
+msgstr "Hiper"
+
+#: modules/ppcp-settings/src/Service/ScriptDataHandler.php:116
+#: modules/ppcp-wc-gateway/services.php:103
+#: modules/ppcp-wc-gateway/services.php:363
+msgctxt "Name of credit card"
+msgid "Elo"
+msgstr "Elo"
+
+#: modules/ppcp-settings/src/Service/ScriptDataHandler.php:116
+#: modules/ppcp-wc-gateway/services.php:103
+#: modules/ppcp-wc-gateway/services.php:363
+msgctxt "Name of credit card"
+msgid "JCB"
+msgstr "JCB"
+
+#: modules/ppcp-settings/src/Service/ScriptDataHandler.php:116
+#: modules/ppcp-wc-gateway/services.php:103
+#: modules/ppcp-wc-gateway/services.php:363
+msgctxt "Name of credit card"
+msgid "Discover"
+msgstr "ディスカバー"
+
+#: modules/ppcp-settings/src/Service/ScriptDataHandler.php:116
+#: modules/ppcp-wc-gateway/services.php:103
+#: modules/ppcp-wc-gateway/services.php:363
+msgctxt "Name of credit card"
+msgid "American Express"
+msgstr "American Express"
+
+#: modules/ppcp-settings/src/Service/ScriptDataHandler.php:116
+#: modules/ppcp-wc-gateway/services.php:103
+#: modules/ppcp-wc-gateway/services.php:363
+msgctxt "Name of credit card"
+msgid "Mastercard"
+msgstr "マスターカード"
+
+#: modules/ppcp-settings/src/Service/ScriptDataHandler.php:116
+#: modules/ppcp-wc-gateway/services.php:103
+#: modules/ppcp-wc-gateway/services.php:363
+msgctxt "Name of credit card"
+msgid "Visa"
+msgstr "Visa"
+
+#: modules/ppcp-wc-gateway/services.php:363
+msgid "By default all possible credit cards will be accepted. You can disable some cards, if you wish."
+msgstr "デフォルトでは、使用可能なすべてのクレジットカードが使用可能です。希望により、一部のカードを無効にすることができます。"
+
+#: modules/ppcp-wc-gateway/services.php:363
+#: modules/ppcp-settings/assets/index.js:16
+msgid "Disable specific credit cards"
+msgstr "特定のクレジットカードを使用不可にする"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:41
+msgid "Pay Later Messaging on Single Product"
+msgstr "単品での後払いメッセージ"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:96
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:124
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:152
+msgid "If additional funding sources are available to the buyer through PayPal, such as Venmo, then multiple buttons are displayed in the space provided. Choose \"vertical\" for a dynamic list of alternative and local payment options, or \"horizontal\" when space is limited."
+msgstr "Venmo など、PayPal を通じて買い手が追加の資金調達手段を利用できる場合は、提供されるスペースに複数のボタンが表示されます。代替案や現地での支払い方法をダイナミックに一覧表示したい場合は「縦型」、スペースが限られている場合は「横型」を選択します。"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:38
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:47
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:56
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:65
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:74
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:83
+#: modules/ppcp-paylater-block/assets/js/paylater-block.js:2
+#: modules/ppcp-paylater-block/assets/js/paylater-block.js:7091
+msgid "20x1"
+msgstr "20x1"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:38
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:47
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:56
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:65
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:74
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:83
+#: modules/ppcp-paylater-block/assets/js/paylater-block.js:2
+#: modules/ppcp-paylater-block/assets/js/paylater-block.js:7084
+msgid "8x1"
+msgstr "8x1"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:38
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:47
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:56
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:65
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:74
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:83
+msgid "1x4"
+msgstr "1x4"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:38
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:47
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:56
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:65
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:74
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:83
+msgid "1x1"
+msgstr "1x1"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:38
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:47
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:56
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:65
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:74
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:83
+msgid "The width/height ratio of the banner. Only applicable, when the layout style Banner is used."
+msgstr "バナーの幅と高さの比率を指定します。レイアウトスタイル「バナー」を使用した場合のみ適用されます。"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:37
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:46
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:55
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:64
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:73
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:82
+msgid "Gray"
+msgstr "グレー"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:37
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:46
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:55
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:64
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:73
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:82
+msgid "White no border"
+msgstr "白、枠線なし"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:37
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:46
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:55
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:64
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:73
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:82
+msgid "The color of the text. Only applicable, when the layout style Banner is used."
+msgstr "テキストの色。レイアウトスタイル「バナー」を使用する場合のみ適用されます。"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:36
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:37
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:45
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:46
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:54
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:55
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:63
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:64
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:72
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:73
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:81
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:82
+msgid "Grayscale"
+msgstr "グレースケール"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:36
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:37
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:45
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:46
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:54
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:55
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:63
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:64
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:72
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:73
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:81
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:82
+#: modules/ppcp-paylater-block/assets/js/paylater-block.js:2
+#: modules/ppcp-paylater-block/assets/js/paylater-block.js:6979
+msgid "Monochrome"
+msgstr "白黒"
+
+#: modules/ppcp-applepay/src/Assets/PropertiesDictionary.php:66
+#: modules/ppcp-googlepay/src/Helper/PropertiesDictionary.php:23
+#: modules/ppcp-wc-gateway/src/Settings/Fields/card-button-fields.php:25
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:36
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:37
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:45
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:46
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:54
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:55
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:63
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:64
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:72
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:73
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:81
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:82
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:58
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:86
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:114
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:142
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:170
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:197
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:224
+#: modules/ppcp-paylater-block/assets/js/paylater-block.js:2
+#: modules/ppcp-settings/assets/index.js:1
+#: modules/ppcp-paylater-block/assets/js/paylater-block.js:7056
+msgid "White"
+msgstr "白"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:36
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:45
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:54
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:63
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:72
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:81
+msgid "The color of the text. Only applicable, when the layout style Text is used."
+msgstr "テキストの色。レイアウトスタイル「テキスト」を使用している場合のみ適用可能です。"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:35
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:44
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:53
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:62
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:71
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:80
+#: modules/ppcp-paylater-block/assets/js/paylater-block.js:2
+#: modules/ppcp-paylater-block/assets/js/paylater-block.js:6944
+msgid "Top"
+msgstr "上"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:35
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:44
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:53
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:62
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:71
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:80
+#: modules/ppcp-paylater-block/assets/js/paylater-block.js:2
+#: modules/ppcp-paylater-block/assets/js/paylater-block.js:6937
+msgid "Right"
+msgstr "右"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:35
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:44
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:53
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:62
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:71
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:80
+#: modules/ppcp-paylater-block/assets/js/paylater-block.js:2
+#: modules/ppcp-paylater-block/assets/js/paylater-block.js:6930
+msgid "Left"
+msgstr "左"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:35
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:44
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:53
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:62
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:71
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:80
+msgid "The position of the logo. Only applicable, when the layout style Text is used."
+msgstr "ロゴの位置を指定します。レイアウトスタイル「テキスト」を使用している場合のみ適用されます。"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:53
+msgid "Cart Messaging Logo Position"
+msgstr "カートメッセージロゴの位置"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:34
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:43
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:52
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:61
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:70
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:79
+msgid "None"
+msgstr "なし"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:34
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:43
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:52
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:61
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:70
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:79
+#: modules/ppcp-paylater-block/assets/js/paylater-block.js:2
+#: modules/ppcp-paylater-block/assets/js/paylater-block.js:6902
+msgid "Inline"
+msgstr "インライン"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:34
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:43
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:52
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:61
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:70
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:79
+msgid "Alternative"
+msgstr "オルターナティブ"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:34
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:43
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:52
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:61
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:70
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:79
+msgid "Primary"
+msgstr "メイン"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:34
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:43
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:52
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:61
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:70
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:79
+msgid "What logo the text message contains. Only applicable, when the layout style Text is used."
+msgstr "テキストメッセージに含まれるロゴを指定します。レイアウトスタイルが「テキスト」の場合のみ適用されます。"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:33
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:42
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:51
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:60
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:69
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:78
+#: modules/ppcp-paylater-block/assets/js/paylater-block.js:2
+#: modules/ppcp-paylater-block/assets/js/paylater-block.js:6861
+msgid "Text"
+msgstr "テキスト"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:33
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:42
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:51
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:60
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:69
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:78
+msgid "The layout of the message."
+msgstr "メッセージのレイアウト。"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/card-button-fields.php:25
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:59
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:87
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:115
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:143
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:171
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:198
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:225
+#: modules/ppcp-settings/assets/index.js:1
+msgid "Rectangle"
+msgstr "長方形"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/card-button-fields.php:25
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:59
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:87
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:115
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:143
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:171
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:198
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:225
+#: modules/ppcp-settings/assets/index.js:1
+msgid "Pill"
+msgstr "ピル"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/card-button-fields.php:25
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:59
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:87
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:115
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:143
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:171
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:198
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:225
+msgid "The pill-shaped button's unique and powerful shape signifies PayPal in people's minds. Use the rectangular button as an alternative when pill-shaped buttons might pose design challenges."
+msgstr "錠剤型ボタンのユニークでパワフルな形状は、PayPal を連想させます。長方形のボタンは、錠剤型のボタンがデザイン上の問題を引き起こす可能性がある場合に、代替版として使用してください。"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/card-button-fields.php:25
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:59
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:87
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:115
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:143
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:171
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:198
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:225
+#: modules/ppcp-settings/assets/index.js:16
+msgid "Shape"
+msgstr "形状"
+
+#: modules/ppcp-applepay/src/Assets/PropertiesDictionary.php:66
+#: modules/ppcp-googlepay/src/Helper/PropertiesDictionary.php:23
+#: modules/ppcp-wc-gateway/src/Settings/Fields/card-button-fields.php:25
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:36
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:37
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:45
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:46
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:54
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:55
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:63
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:64
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:72
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:73
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:81
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:82
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:58
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:86
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:114
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:142
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:170
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:197
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:224
+#: modules/ppcp-paylater-block/assets/js/paylater-block.js:2
+#: modules/ppcp-settings/assets/index.js:1
+#: modules/ppcp-paylater-block/assets/js/paylater-block.js:7049
+msgid "Black"
+msgstr "黒"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:58
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:86
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:114
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:142
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:170
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:197
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:224
+#: modules/ppcp-settings/assets/index.js:1
+msgid "Silver"
+msgstr "シルバー"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:37
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:46
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:55
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:64
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:73
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:82
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:58
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:86
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:114
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:142
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:170
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:197
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:224
+#: modules/ppcp-paylater-block/assets/js/paylater-block.js:2
+#: modules/ppcp-settings/assets/index.js:1
+#: modules/ppcp-paylater-block/assets/js/paylater-block.js:7042
+msgid "Blue"
+msgstr "青"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:58
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:86
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:114
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:142
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:170
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:197
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:224
+#: modules/ppcp-settings/assets/index.js:1
+msgid "Gold (Recommended)"
+msgstr "金 (推奨)"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:58
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:86
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:114
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:142
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:170
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:197
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:224
+msgid "Controls the background color of the primary button. Use \"Gold\" to leverage PayPal's recognition and preference, or change it to match your site design or aesthetic."
+msgstr "メインボタンの背景色をコントロールします。金色を使って、PayPal ブランド認識を活用したり、サイトのデザインやビジュアルに合わせて変更したりできます。"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/card-button-fields.php:25
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:58
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:86
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:114
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:142
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:170
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:197
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:224
+#: modules/ppcp-paylater-block/assets/js/paylater-block.js:2
+#: modules/ppcp-paylater-block/assets/js/paylater-block.js:7036
+msgid "Color"
+msgstr "色"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:53
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:81
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:109
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:137
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:165
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:192
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:219
+#: modules/ppcp-settings/assets/index.js:1
+#: modules/ppcp-settings/assets/index.js:5
+msgid "Pay with PayPal"
+msgstr "PayPal 決済"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:53
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:81
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:109
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:137
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:165
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:192
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:219
+#: modules/ppcp-settings/assets/index.js:1
+msgid "PayPal Buy Now"
+msgstr "今すぐ購入PayPal"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:52
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:80
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:108
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:136
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:164
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:191
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:218
+msgid "This controls the label on the primary button."
+msgstr "主ボタンのラベルを制御します。"
+
+#: modules/ppcp-applepay/extensions.php:83
+#: modules/ppcp-googlepay/extensions.php:52
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:43
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:71
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:99
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:127
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:155
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:182
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:209
+#: modules/ppcp-settings/assets/index.js:16
+msgid "Button Label"
+msgstr "ボタンのラベル"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:41
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:69
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:97
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:125
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:153
+msgid "Enable tagline"
+msgstr "タグラインの有効化"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/card-button-fields.php:25
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:41
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:69
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:97
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:125
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:153
+msgid "Tagline"
+msgstr "キャッチフレーズ"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:40
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:68
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:96
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:124
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:152
+#: modules/ppcp-settings/assets/index.js:1
+msgid "Horizontal"
+msgstr "水平"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:40
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:68
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:96
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:124
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:152
+#: modules/ppcp-settings/assets/index.js:1
+msgid "Vertical"
+msgstr "垂直"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:40
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:68
+msgid "If additional funding sources are available to the buyer through PayPal, then multiple buttons are displayed in the space provided. Choose \"vertical\" for a dynamic list of alternative and local payment options, or \"horizontal\" when space is limited."
+msgstr "PayPal を通じて買い手が追加の資金源を利用できる場合、提供されるスペースに複数のボタンが表示されます。代替案や現地の支払方法をダイナミックに表示したい場合は「縦型」を、スペースが限られている場合は「横型」を選択してください。"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:40
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:68
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:96
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:124
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:152
+#: modules/ppcp-settings/assets/index.js:16
+msgid "Button Layout"
+msgstr "ボタンレイアウト"
+
+#: modules/ppcp-applepay/src/Assets/PropertiesDictionary.php:75
+#: modules/ppcp-googlepay/src/Helper/PropertiesDictionary.php:32
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:53
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:81
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:109
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:137
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:165
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:192
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:219
+#: modules/ppcp-paylater-block/assets/js/paylater-block.js:2
+#: modules/ppcp-settings/assets/index.js:1
+#: modules/ppcp-paylater-block/assets/js/paylater-block.js:7136
+msgid "Checkout"
+msgstr "購入手続き"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/connection-tab-fields.php:112
+msgid "If you use your PayPal account with more than one installation, please use a distinct prefix to separate those installations. Please use only English letters and \"-\", \"_\" characters."
+msgstr "複数のインストールで PayPal アカウントを使用する場合は、それらのインストールを区別するために個別の接頭辞を使用してください。英字と\"-\", \"_\"文字のみを使用してください。"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/connection-tab-fields.php:112
+msgid "Invoice prefix"
+msgstr "請求書の接頭辞"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/connection-tab-fields.php:113
+msgid "Enable logging of unexpected behavior. This can also log private data and should only be enabled in a development or stage environment."
+msgstr "予期せぬ動作のロギングを有効にします。これはプライベートなデータも記録することができるので、開発またはステージ環境でのみ有効にする必要があります。"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/connection-tab-fields.php:113
+msgid "Enable logging. "
+msgstr "ロギングを有効にする。 "
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/connection-tab-fields.php:113
+#: modules/ppcp-settings/assets/index.js:16
+msgid "Logging"
+msgstr "ログ記録"
+
+#: modules/ppcp-wc-gateway/services.php:391
+#: modules/ppcp-wc-gateway/services.php:411
+msgid "Vaulting"
+msgstr "Vaulting"
+
+#: modules/ppcp-wc-gateway/services.php:454
+msgctxt "Name of payment method"
+msgid "Przelewy24"
+msgstr "Przelewy24"
+
+#: modules/ppcp-wc-gateway/services.php:454
+msgctxt "Name of payment method"
+msgid "MyBank"
+msgstr "MyBank"
+
+#: modules/ppcp-wc-gateway/services.php:454
+msgctxt "Name of payment method"
+msgid "iDEAL"
+msgstr "iDEAL"
+
+#: modules/ppcp-wc-gateway/services.php:454
+msgctxt "Name of payment method"
+msgid "eps"
+msgstr "eps"
+
+#: modules/ppcp-wc-gateway/services.php:454
+msgctxt "Name of payment method"
+msgid "Bancontact"
+msgstr "バンコンタクト"
+
+#: modules/ppcp-wc-gateway/services.php:454
+msgctxt "Name of payment method"
+msgid "SEPA-Lastschrift"
+msgstr "SEPA-Lastschrift"
+
+#: modules/ppcp-wc-gateway/services.php:454
+msgctxt "Name of payment method"
+msgid "Credit or debit cards"
+msgstr "クレジットまたはデビットカード"
+
+#: modules/ppcp-wc-gateway/services.php:350
+msgid "Billing (Non-PayPal account)"
+msgstr "課金( PayPal 以外のアカウント)"
+
+#: modules/ppcp-wc-gateway/services.php:350
+msgid "Login (PayPal account login)"
+msgstr "ログイン（PayPal アカウントログイン）"
+
+#: modules/ppcp-wc-gateway/services.php:350
+msgid "Type of PayPal page to display."
+msgstr "表示する PayPal ページの種類。"
+
+#: modules/ppcp-wc-gateway/services.php:350
+msgid "Landing Page"
+msgstr "ランディングページ"
+
+#: modules/ppcp-wc-gateway/services.php:350
+msgid "Control the name of your shop, customers will see in the PayPal process."
+msgstr "ショップの名前を制御し、顧客が PayPal のプロセスで表示されます。"
+
+#: modules/ppcp-wc-gateway/services.php:350
+msgid "Brand Name"
+msgstr "ブランド名"
+
+#: modules/ppcp-wc-gateway/services.php:350
+msgid "Require Instant Payment"
+msgstr "即時支払いを必須にする"
+
+#: modules/ppcp-wc-gateway/services.php:350
+msgid "If you enable this setting, PayPal will be instructed not to allow the buyer to use funding sources that take additional time to complete (for example, eChecks). Instead, the buyer will be required to use an instant funding source, such as an instant transfer, a credit/debit card, or Pay Later."
+msgstr "この設定を有効にすると、PayPal は、購入者が完了までにさらに時間がかかる資金源（たとえば、eCheck）を使用することを許可しないよう指示します。代わりに、購入者は即時送金、クレジットカード/デビットカード、Pay Later などの即時資金調達手段を使用することが要求されます。"
+
+#: modules/ppcp-wc-gateway/services.php:350
+msgid "Instant Payments "
+msgstr "即時支払い "
+
+#: modules/ppcp-wc-gateway/services.php:350
+#: modules/ppcp-settings/assets/index.js:15
+msgid "Capture Virtual-Only Orders"
+msgstr "バーチャル専用の注文を取り込む"
+
+#: modules/ppcp-wc-gateway/services.php:350
+msgid "If the order contains exclusively virtual items, enable this to immediately capture, rather than authorize, the transaction."
+msgstr "注文にバーチャル商品のみが含まれる場合、これを有効にすると、トランザクションを承認するのではなく、直ちに取り込むことができます。"
+
+#: modules/ppcp-wc-gateway/services.php:350
+msgid "Capture Virtual-Only Orders "
+msgstr "バーチャル専用の注文を取り込む "
+
+#: modules/ppcp-wc-gateway/services.php:350
+msgid "Authorize"
+msgstr "売上承認"
+
+#: modules/ppcp-wc-gateway/services.php:350
+msgid "Capture"
+msgstr "即時売上"
+
+#: modules/ppcp-wc-gateway/services.php:350
+msgid "The intent to either capture payment immediately or authorize a payment for an order after order creation."
+msgstr "注文の作成後、すぐに支払いを捕捉するか、注文の支払いを承認するかのどちらかの意図。"
+
+#: modules/ppcp-wc-gateway/services.php:350
+msgid "Intent"
+msgstr "インテント"
+
+#: modules/ppcp-wc-gateway/services.php:350
+msgid "Pay via PayPal; you can pay with your credit card if you don't have a PayPal account."
+msgstr "PayPal 経由での支払い。PayPal アカウントがない場合は、クレジットカードで支払い可能です。"
+
+#: modules/ppcp-applepay/src/ApplePayGateway.php:112
+#: modules/ppcp-googlepay/src/GooglePayGateway.php:109
+#: modules/ppcp-local-alternative-payment-methods/src/BancontactGateway.php:85
+#: modules/ppcp-local-alternative-payment-methods/src/BlikGateway.php:85
+#: modules/ppcp-local-alternative-payment-methods/src/EPSGateway.php:85
+#: modules/ppcp-local-alternative-payment-methods/src/IDealGateway.php:85
+#: modules/ppcp-local-alternative-payment-methods/src/MultibancoGateway.php:85
+#: modules/ppcp-local-alternative-payment-methods/src/MyBankGateway.php:85
+#: modules/ppcp-local-alternative-payment-methods/src/P24Gateway.php:85
+#: modules/ppcp-local-alternative-payment-methods/src/TrustlyGateway.php:85
+#: modules/ppcp-wc-gateway/services.php:350
+#: modules/ppcp-wc-gateway/src/Gateway/CardButtonGateway.php:170
+#: modules/ppcp-wc-gateway/src/Gateway/OXXO/OXXOGateway.php:114
+#: modules/ppcp-wc-gateway/src/Gateway/PayUponInvoice/PayUponInvoiceGateway.php:137
+msgid "This controls the description which the user sees during checkout."
+msgstr "購入手続き時にユーザーが目にする説明をここで設定します。"
+
+#: modules/ppcp-applepay/src/ApplePayGateway.php:112
+#: modules/ppcp-googlepay/src/GooglePayGateway.php:109
+#: modules/ppcp-local-alternative-payment-methods/src/BancontactGateway.php:85
+#: modules/ppcp-local-alternative-payment-methods/src/BlikGateway.php:85
+#: modules/ppcp-local-alternative-payment-methods/src/EPSGateway.php:85
+#: modules/ppcp-local-alternative-payment-methods/src/IDealGateway.php:85
+#: modules/ppcp-local-alternative-payment-methods/src/MultibancoGateway.php:85
+#: modules/ppcp-local-alternative-payment-methods/src/MyBankGateway.php:85
+#: modules/ppcp-local-alternative-payment-methods/src/P24Gateway.php:85
+#: modules/ppcp-local-alternative-payment-methods/src/TrustlyGateway.php:85
+#: modules/ppcp-wc-gateway/services.php:350
+#: modules/ppcp-wc-gateway/src/Gateway/CardButtonGateway.php:170
+#: modules/ppcp-wc-gateway/src/Gateway/OXXO/OXXOGateway.php:114
+#: modules/ppcp-wc-gateway/src/Gateway/PayUponInvoice/PayUponInvoiceGateway.php:137
+msgid "Description"
+msgstr "説明"
+
+#: modules/ppcp-settings/src/SettingsModule.php:329
+#: modules/ppcp-wc-gateway/services.php:350
+msgid "Once enabled, the Credit Card option will show up in the checkout."
+msgstr "有効化すると、チェックアウトの際にクレジットカードのオプションが表示されるようになります。"
+
+#: modules/ppcp-applepay/src/ApplePayGateway.php:112
+#: modules/ppcp-axo/src/Gateway/AxoGateway.php:166
+#: modules/ppcp-googlepay/src/GooglePayGateway.php:109
+#: modules/ppcp-local-alternative-payment-methods/src/BancontactGateway.php:85
+#: modules/ppcp-local-alternative-payment-methods/src/BlikGateway.php:85
+#: modules/ppcp-local-alternative-payment-methods/src/EPSGateway.php:85
+#: modules/ppcp-local-alternative-payment-methods/src/IDealGateway.php:85
+#: modules/ppcp-local-alternative-payment-methods/src/MultibancoGateway.php:85
+#: modules/ppcp-local-alternative-payment-methods/src/MyBankGateway.php:85
+#: modules/ppcp-local-alternative-payment-methods/src/P24Gateway.php:85
+#: modules/ppcp-local-alternative-payment-methods/src/TrustlyGateway.php:85
+#: modules/ppcp-settings/src/SettingsModule.php:329
+#: modules/ppcp-wc-gateway/services.php:350
+#: modules/ppcp-wc-gateway/src/Gateway/CardButtonGateway.php:170
+#: modules/ppcp-wc-gateway/src/Gateway/OXXO/OXXOGateway.php:114
+#: modules/ppcp-wc-gateway/src/Gateway/PayPalGateway.php:295
+#: modules/ppcp-wc-gateway/src/Gateway/PayUponInvoice/PayUponInvoiceGateway.php:137
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:30
+#: modules/ppcp-wc-gateway/src/Settings/Fields/pay-later-tab-fields.php:92
+msgid "Enable/Disable"
+msgstr "有効化/無効化"
+
+#. Author of the plugin
+#: woocommerce-paypal-payments.php modules/ppcp-compat/services.php:23
+#: modules/ppcp-session/src/Cancellation/CancelView.php:55
+#: modules/ppcp-settings/src/Data/Definition/PaymentMethodsDefinition.php:126
+#: modules/ppcp-settings/src/SettingsModule.php:482
+#: modules/ppcp-wc-gateway/services.php:350
+#: modules/ppcp-wc-gateway/src/FundingSource/FundingSourceRenderer.php:64
+#: modules/ppcp-wc-gateway/src/Gateway/PayPalGateway.php:323
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:53
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:81
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:109
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:137
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:165
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:192
+#: modules/ppcp-wc-gateway/src/Settings/Fields/paypal-smart-button-fields.php:219
+#: modules/ppcp-wc-gateway/src/Settings/Settings.php:141
+#: modules/ppcp-settings/assets/index.js:1
+msgid "PayPal"
+msgstr "PayPal"
+
+#: modules/ppcp-applepay/src/ApplePayGateway.php:112
+#: modules/ppcp-googlepay/src/GooglePayGateway.php:109
+#: modules/ppcp-local-alternative-payment-methods/src/BancontactGateway.php:85
+#: modules/ppcp-local-alternative-payment-methods/src/BlikGateway.php:85
+#: modules/ppcp-local-alternative-payment-methods/src/EPSGateway.php:85
+#: modules/ppcp-local-alternative-payment-methods/src/IDealGateway.php:85
+#: modules/ppcp-local-alternative-payment-methods/src/MultibancoGateway.php:85
+#: modules/ppcp-local-alternative-payment-methods/src/MyBankGateway.php:85
+#: modules/ppcp-local-alternative-payment-methods/src/P24Gateway.php:85
+#: modules/ppcp-local-alternative-payment-methods/src/TrustlyGateway.php:85
+#: modules/ppcp-wc-gateway/services.php:350
+#: modules/ppcp-wc-gateway/src/Gateway/CardButtonGateway.php:170
+#: modules/ppcp-wc-gateway/src/Gateway/OXXO/OXXOGateway.php:114
+#: modules/ppcp-wc-gateway/src/Gateway/PayUponInvoice/PayUponInvoiceGateway.php:137
+msgid "This controls the title which the user sees during checkout."
+msgstr "購入手続き時にユーザーに表示するタイトルをここで設定できます。"
+
+#: modules/ppcp-applepay/src/ApplePayGateway.php:112
+#: modules/ppcp-googlepay/src/GooglePayGateway.php:109
+#: modules/ppcp-local-alternative-payment-methods/src/BancontactGateway.php:85
+#: modules/ppcp-local-alternative-payment-methods/src/BlikGateway.php:85
+#: modules/ppcp-local-alternative-payment-methods/src/EPSGateway.php:85
+#: modules/ppcp-local-alternative-payment-methods/src/IDealGateway.php:85
+#: modules/ppcp-local-alternative-payment-methods/src/MultibancoGateway.php:85
+#: modules/ppcp-local-alternative-payment-methods/src/MyBankGateway.php:85
+#: modules/ppcp-local-alternative-payment-methods/src/P24Gateway.php:85
+#: modules/ppcp-local-alternative-payment-methods/src/TrustlyGateway.php:85
+#: modules/ppcp-wc-gateway/services.php:350
+#: modules/ppcp-wc-gateway/src/Gateway/CardButtonGateway.php:170
+#: modules/ppcp-wc-gateway/src/Gateway/OXXO/OXXOGateway.php:114
+#: modules/ppcp-wc-gateway/src/Gateway/PayUponInvoice/PayUponInvoiceGateway.php:137
+msgid "Title"
+msgstr "タイトル"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/connection-tab-fields.php:93
+#: modules/ppcp-settings/assets/index.js:5
+msgid "Sandbox Secret Key"
+msgstr "サンドボックスシークレットキー"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/connection-tab-fields.php:92
+msgid "Sandbox Client Id"
+msgstr "サンドボックスクライアントID"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/connection-tab-fields.php:91
+msgid "Sandbox Merchant Id"
+msgstr "サンドボックスマーチャントID"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/connection-tab-fields.php:90
+msgid "Sandbox Email address"
+msgstr "サンドボックスメールアドレス"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/connection-tab-fields.php:82
+msgid "Disconnect from PayPal Sandbox"
+msgstr "PayPal サンドボックスとの接続を解除する"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/connection-tab-fields.php:71
+msgid "Sandbox API Credentials"
+msgstr "サンドボックス API ログイン情報"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/connection-tab-fields.php:89
+#: modules/ppcp-wc-gateway/src/Settings/Fields/connection-tab-fields.php:93
+msgid "The secret key of your api"
+msgstr "アプリの秘密鍵"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/connection-tab-fields.php:89
+#: modules/ppcp-settings/assets/index.js:5
+msgid "Live Secret Key"
+msgstr "Live 秘密キー"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/connection-tab-fields.php:88
+#: modules/ppcp-wc-gateway/src/Settings/Fields/connection-tab-fields.php:92
+msgid "The client id of your api "
+msgstr "API のクライアント ID"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/connection-tab-fields.php:88
+msgid "Live Client Id"
+msgstr "ライブクライアントID"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/connection-tab-fields.php:87
+msgid "Live Merchant Id"
+msgstr "ライブマーチャントID"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/connection-tab-fields.php:86
+#: modules/ppcp-wc-gateway/src/Settings/Fields/connection-tab-fields.php:90
+msgid "The email address of your PayPal account."
+msgstr "PayPal アカウントのEメールアドレスです。"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/connection-tab-fields.php:86
+msgid "Live Email address"
+msgstr "ライブメールアドレス"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/connection-tab-fields.php:83
+msgid "Toggle to manual credential input"
+msgstr "認証情報の手動入力に切り替え"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/connection-tab-fields.php:81
+#: modules/ppcp-wc-gateway/src/Settings/Fields/connection-tab-fields.php:82
+msgid "Click to reset current credentials and use another account."
+msgstr "現在の認証情報をリセットし、別のアカウントを使用する場合はクリックしてください。"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/connection-tab-fields.php:81
+msgid "Disconnect from PayPal"
+msgstr "PayPal との接続を解除する"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/connection-tab-fields.php:70
+msgid "API Credentials"
+msgstr "API 認証情報"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/connection-tab-fields.php:85
+msgid "To test your WooCommerce installation, you can use the sandbox mode."
+msgstr "WooCommerce のインストールをテストするには、サンドボックスモードを使用することができます。"
+
+#: modules/ppcp-wc-gateway/src/Settings/Fields/connection-tab-fields.php:85
+#: modules/ppcp-settings/assets/index.js:15
+msgid "Sandbox"
+msgstr "サンドボックス"
+
+#: modules/ppcp-wc-gateway/src/Notice/AuthorizeOrderActionNotice.php:49
+#: modules/ppcp-wc-gateway/src/Processor/AuthorizedPaymentsProcessor.php:173
+#: modules/ppcp-wc-gateway/src/Processor/AuthorizedPaymentsProcessor.php:190
+#: modules/ppcp-webhooks/src/Handler/PaymentCaptureCompleted.php:100
+msgid "Payment successfully captured."
+msgstr "売上決済が正常に行われました。"
+
+#: modules/ppcp-button/src/Assets/SmartButton.php:846
+#: modules/ppcp-button/src/Endpoint/CreateOrderEndpoint.php:447
+msgid "Please read and accept the terms and conditions to proceed with your order."
+msgstr "注文手続きを進めるには、利用規約を読んで同意してください。"
+
+#: modules/ppcp-button/src/Endpoint/CreateOrderEndpoint.php:236
+msgid "Order not found"
+msgstr "注文が見つかりません"
+
+#: modules/ppcp-button/src/Endpoint/RequestData.php:46
+msgid "Could not validate nonce."
+msgstr "nonce の検証を行うことができませんでした。"
+
+#: modules/ppcp-button/src/Endpoint/ApproveOrderEndpoint.php:264
+msgid "Unfortunately, we can't accept your card. Please choose a different payment method."
+msgstr "残念ながら、カードはご利用いただけません。他のお支払い方法をお選びください。"
+
+#: modules/ppcp-button/src/Endpoint/ApproveOrderEndpoint.php:261
+msgid "Something went wrong. Please try again."
+msgstr "原因不明のエラー発生。もう一度お試し下さい."
+
+#: modules/ppcp-button/src/Endpoint/ApproveOrderEndpoint.php:161
+msgid "Unfortunately, we do not accept this card."
+msgstr "残念ながら、このカードはご利用いただけません。"
+
+#: modules/ppcp-button/src/Endpoint/ApproveOrderEndpoint.php:149
+#: modules/ppcp-button/src/Endpoint/ApproveSubscriptionEndpoint.php:98
+msgid "No order id given"
+msgstr "注文 ID が与えられていない"
+
+#: modules/ppcp-button/src/Endpoint/AbstractCartEndpoint.php:106
+msgid "Something went wrong. Action aborted"
+msgstr "何か問題が発生しました。アクションが中止された"
+
+#: modules/ppcp-button/src/Endpoint/AbstractCartEndpoint.php:128
+msgid "Necessary fields not defined. Action aborted."
+msgstr "必要なフィールドが定義されていません。アクションは中止されました。"
+
+#: modules/ppcp-button/src/Assets/SmartButton.php:840
+#: modules/ppcp-save-payment-methods/src/SavePaymentMethodsModule.php:205
+msgid "Something went wrong. Please try again or choose another payment source."
+msgstr "何か問題が発生しました。再度お試しいただくか、他の支払い方法をお選びください。"
+
+#: modules/ppcp-button/src/Assets/SmartButton.php:839
+msgid "Unfortunately, we do not support your credit card."
+msgstr "残念ながら、クレジットカードには対応しておりません。"
+
+#: modules/ppcp-button/src/Assets/SmartButton.php:839
+msgid "Unfortunately, your credit card details are not valid."
+msgstr "残念ながら、お客様のクレジットカード情報は有効ではありません。"
+
+#: modules/ppcp-wc-gateway/src/Gateway/CreditCardGateway.php:252
+#: modules/ppcp-wc-gateway/src/Gateway/CreditCardGateway.php:268
+#: modules/ppcp-blocks/assets/js/advanced-card-checkout-block.js:2
+#: modules/ppcp-blocks/assets/js/advanced-card-checkout-block.js:6505
+msgid "CVV"
+msgstr "CVV"
+
+#: modules/ppcp-button/src/Assets/SmartButton.php:730
+msgid "Pay for order"
+msgstr "注文の支払い"
+
+#: modules/ppcp-axo/src/Assets/AxoManager.php:186
+#: modules/ppcp-button/src/Assets/SmartButton.php:730
+#: modules/ppcp-wc-gateway/src/Gateway/PayUponInvoice/PayUponInvoice.php:259
+msgid "Place order"
+msgstr "注文する"
+
+#: modules/ppcp-api-client/src/Factory/ItemFactory.php:132
+msgid "No money values for item given"
+msgstr "与えられたアイテムの貨幣価値はない"
+
+#: modules/ppcp-api-client/src/Factory/ItemFactory.php:129
+msgid "No quantity for item given"
+msgstr "与えられたアイテムの数量がない"
+
+#: modules/ppcp-api-client/src/Factory/ItemFactory.php:126
+msgid "No name for item given"
+msgstr "項目名がない"
+
+#: modules/ppcp-api-client/src/Factory/PurchaseUnitFactory.php:166
+msgid "No reference ID given."
+msgstr "参考IDは記載されていません。"
+
+#: modules/ppcp-api-client/src/Factory/AuthorizationFactory.php:49
+msgid "Does not contain status."
+msgstr "ステータスを含んでいない。"
+
+#: modules/ppcp-api-client/src/Factory/AuthorizationFactory.php:46
+msgid "Does not contain an id."
+msgstr "id を含んでいない。"
+
+#: modules/ppcp-api-client/src/Factory/OrderFactory.php:77
+msgid "Order does not contain intent."
+msgstr "注文には意図が含まれていない。"
+
+#: modules/ppcp-api-client/src/Factory/OrderFactory.php:74
+msgid "Order does not contain status."
+msgstr "注文にステータスは含まれません。"
+
+#: modules/ppcp-api-client/src/Factory/OrderFactory.php:71
+msgid "Order does not contain items."
+msgstr "注文に項目が含まれていない。"
+
+#: modules/ppcp-api-client/src/Factory/OrderFactory.php:68
+msgid "Order does not contain an id."
+msgstr "注文に id が含まれていない。"
+
+#: modules/ppcp-api-client/src/Factory/PaymentTokenFactory.php:29
+msgid "No id for payment token given"
+msgstr "ペイメントトークンのIDが指定されていません"
+
+#: modules/ppcp-api-client/src/Factory/ShippingFactory.php:89
+msgid "No address was given for shipping."
+msgstr "発送の際の住所が記載されていない。"
+
+#: modules/ppcp-api-client/src/Factory/ShippingFactory.php:86
+msgid "No name was given for shipping."
+msgstr "出荷時の名前は出ていない。"
+
+#. translators: %1$s is the first name and %2$s is the second name. wc
+#. translation.
+#: modules/ppcp-api-client/src/Factory/ShippingFactory.php:55
+msgctxt "full name"
+msgid "%1$s %2$s"
+msgstr "%2$s %1$s"
+
+#: modules/ppcp-api-client/src/Factory/WebhookFactory.php:61
+msgid "No event types for webhook given."
+msgstr "指定された Webhook のイベントタイプがありません。"
+
+#: modules/ppcp-api-client/src/Factory/WebhookFactory.php:58
+msgid "No URL for webhook given."
+msgstr "Webhook の URL が指定されていません。"
+
+#: modules/ppcp-api-client/src/Factory/WebhookFactory.php:55
+msgid "No id for webhook given."
+msgstr "Webhook の id が指定されていません。"
+
+#. translators: %s is the current breakdown key.
+#: modules/ppcp-api-client/src/Factory/AmountFactory.php:187
+msgid "No currency given for breakdown %s"
+msgstr "breakdown %sに通貨があたえられていません。"
+
+#. translators: %s is the current breakdown key.
+#: modules/ppcp-api-client/src/Factory/AmountFactory.php:180
+msgid "No value given for breakdown %s"
+msgstr "breakdown %sに値が与えられていません。"
+
+#: modules/ppcp-api-client/src/Exception/PayPalApiException.php:48
+msgid "Error"
+msgstr "エラー"
+
+#: modules/ppcp-api-client/src/Repository/PartnerReferralsData.php:70
+msgid "Return to your shop."
+msgstr "ショップに戻る。"
+
+#: modules/ppcp-api-client/src/Endpoint/PaymentTokenEndpoint.php:162
+#: modules/ppcp-api-client/src/Endpoint/PaymentTokenEndpoint.php:183
+msgid "Could not delete payment token."
+msgstr "payment token を削除できませんでした。"
+
+#: modules/ppcp-api-client/src/Endpoint/OrderEndpoint.php:300
+#: modules/ppcp-api-client/src/Endpoint/OrderEndpoint.php:307
+msgid "Could not retrieve order."
+msgstr "注文を取得できませんでした。"
+
+#: modules/ppcp-api-client/src/Endpoint/OrderEndpoint.php:261
+msgid "Could not authorize order."
+msgstr "注文を許可することができませんでした。"
+
+#: modules/ppcp-api-client/src/Endpoint/OrderEndpoint.php:221
+msgid "Could not capture order."
+msgstr "注文を取り込めなかった。"
+
+#: modules/ppcp-api-client/src/Endpoint/PartnerReferrals.php:84
+msgid "Action URL not found."
+msgstr "アクションの URL が見つかりません。"
+
+#: modules/ppcp-api-client/src/Endpoint/PartnerReferrals.php:68
+msgid "Could not create referral."
+msgstr "リファラルを作成できませんでした。"
+
+#: modules/ppcp-api-client/src/Endpoint/IdentityToken.php:91
+msgid "Could not create identity token."
+msgstr "ID トークンを作成できませんでした。"
+
+#: modules/ppcp-api-client/src/Endpoint/PartnersEndpoint.php:100
+msgid "Could not fetch sellers status."
+msgstr "販売者ステータスを取得できませんでした。"
+
+#: modules/ppcp-api-client/src/Endpoint/PaymentsEndpoint.php:90
+msgid "Could not get authorized payment info."
+msgstr "決済情報を取得できなかった。"
+
+#: modules/ppcp-api-client/src/Endpoint/LoginSeller.php:107
+msgid "No token found."
+msgstr "トークンが見つかりません。"
+
+#: modules/ppcp-api-client/src/Authentication/PayPalBearer.php:135
+#: modules/ppcp-api-client/src/Endpoint/LoginSeller.php:100
+msgid "Could not create token."
+msgstr "トークンを作成できませんでした。"
+
+#: modules/ppcp-api-client/src/Endpoint/LoginSeller.php:75
+msgid "Credentials not found."
+msgstr "認証情報が見つかりませんでした。"
+
+#: modules/ppcp-api-client/src/Endpoint/LoginSeller.php:68
+msgid "Could not fetch credentials."
+msgstr "認証情報を取得できませんでした。"
+
+#. translators: %s is the headers key.
+#: modules/ppcp-api-client/src/Endpoint/WebhookEndpoint.php:248
+msgid "Not a valid webhook event. Header %s is missing"
+msgstr "有効な webhook イベントではありません。ヘッダ %s がありません"
+
+#: modules/ppcp-api-client/src/Endpoint/WebhookEndpoint.php:230
+msgid "Not a valid webhook to verify."
+msgstr "検証するための有効な Webhook ではありません。"
+
+#: modules/ppcp-api-client/src/Endpoint/WebhookEndpoint.php:212
+msgid "Not able to verify webhook event."
+msgstr "Webhook イベントを確認できません。"
+
+#: modules/ppcp-api-client/src/Endpoint/WebhookEndpoint.php:144
+msgid "Not able to delete the webhook."
+msgstr "Webhook を削除できない。"
+
+#: modules/ppcp-api-client/src/Endpoint/WebhookEndpoint.php:93
+msgid "Not able to create a webhook."
+msgstr "Webhook を作成できない。"
+
+#. translators: %s is the current status.
+#: modules/ppcp-api-client/src/Entity/AuthorizationStatus.php:51
+#: modules/ppcp-api-client/src/Entity/OrderStatus.php:43
+msgid "%s is not a valid status"
+msgstr "%sは有効なステータスではありません"
+
+#: modules/ppcp-api-client/src/Entity/PaymentToken.php:48
+msgid "Not a valid payment source type."
+msgstr "有効な支払元タイプではありません。"
+
+#. translators: %s is the current type.
+#: modules/ppcp-api-client/src/Entity/PayerTaxInfo.php:42
+msgid "%s is not a valid tax type."
+msgstr "%sは有効な税種ではありません。"
+
+#: modules/ppcp-applepay/services.php:291
+#: modules/ppcp-googlepay/services.php:249
+#: modules/ppcp-wc-gateway/services.php:717
+#: modules/ppcp-wc-gateway/services.php:730
+#: modules/ppcp-wc-gateway/services.php:749 woocommerce-paypal-payments.php:118
+#: modules/ppcp-paylater-block/assets/js/paylater-block.js:2
+#: modules/ppcp-settings/assets/index.js:16
+#: modules/ppcp-paylater-block/assets/js/paylater-block.js:6855
+msgid "Settings"
+msgstr "設定"
+
+#. Description of the plugin
+#: woocommerce-paypal-payments.php
+msgid "PayPal's latest complete payments processing solution. Accept PayPal, Pay Later, credit/debit cards, alternative digital wallets local payment types and bank accounts. Turn on only PayPal options or process a full suite of payment methods. Enable global transaction with extensive currency and country coverage."
+msgstr "PayPal の最新の完全な決済処理ソリューションです。PayPal、Pay Later、クレジットカード/デビットカード、代替デジタルウォレット、ローカル決済タイプ、銀行口座の利用が可能です。PayPal のオプションだけをオンにすることも、すべての支払い方法を処理することもできます。幅広い通貨と国をカバーし、グローバルな取引を可能にします。"
+
+#. Plugin URI of the plugin
+#: woocommerce-paypal-payments.php
+msgid "https://woocommerce.com/products/woocommerce-paypal-payments/"
+msgstr "https://woocommerce.com/products/woocommerce-paypal-payments/"
+
+#. Plugin Name of the plugin
+#: woocommerce-paypal-payments.php
+#: modules/ppcp-status-report/src/StatusReportModule.php:74
+msgid "WooCommerce PayPal Payments"
+msgstr "WooCommerce PayPal 決済"

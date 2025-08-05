@@ -1,0 +1,643 @@
+# Translation of Plugins - Custom Login Page Customizer - Stable (latest release) in Japanese
+# This file is distributed under the same license as the Plugins - Custom Login Page Customizer - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2024-03-22 13:34:47+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/4.0.1\n"
+"Language: ja_JP\n"
+"Project-Id-Version: Plugins - Custom Login Page Customizer - Stable (latest release)\n"
+
+#: src/Settings/Setup.php:352
+msgid "Download Log File"
+msgstr "ログファイルをダウンロード"
+
+#: src/Includes/Help.php:125
+msgid "Customization Detail:"
+msgstr "カスタマイズ詳細 :"
+
+#: src/Includes/Help.php:124
+msgid "Total Customized Fields:  "
+msgstr "カスタマイズされたフィールドの合計 :  "
+
+#: src/Settings/Setup.php:286
+msgid "Remove Language Switcher Dropdown On Login Page. "
+msgstr "ログインページから言語切替ドロップダウンを取り除く "
+
+#: src/Settings/Setup.php:285
+msgid "Language Switcher"
+msgstr "言語切り替え"
+
+#: src/Customizer/template-login-customizer.php:188
+msgid "Change"
+msgstr "変更"
+
+#: src/Customizer/template-login-customizer.php:153
+msgid "Language"
+msgstr "言語"
+
+#: src/Customizer/template-login-customizer.php:120
+msgid "Privacy Policy"
+msgstr "プライバシーポリシー"
+
+#: src/Settings/Setup.php:245
+msgid "Enable this option to delete every settings of this plugin on uninstall"
+msgstr "このオプションを有効にすると、このプラグインをアンインストールするときに設定が削除されます"
+
+#: src/Settings/Setup.php:244
+msgid "Delete All Settings"
+msgstr "すべての設定を削除"
+
+#: src/Customizer/Panel/Sections/Other.php:104
+msgid "Disable Privacy policy?"
+msgstr "プライバシーポリシーを無効にしますか ?"
+
+#: src/Customizer/Panel/Sections/Logo.php:214
+msgid "Login page title that is shown on WordPress login page."
+msgstr "WordPress ログインページに表示されるページタイトル。"
+
+#: src/Customizer/Panel/Sections/Logo.php:213
+msgid "Login Page title"
+msgstr "ログインページタイトル"
+
+#: src/Includes/Notification.php:150
+msgid "Never show again"
+msgstr "再度表示しない"
+
+#: src/Includes/Notification.php:144
+msgid "Maybe Later"
+msgstr "またあとで"
+
+#: src/Includes/Notification.php:138
+msgid "I've already left a review"
+msgstr "既にレビューしました"
+
+#: src/Includes/Notification.php:133
+msgid "Sure! I'd love to!"
+msgstr "はい、もちろん !"
+
+#: src/Includes/Notification.php:130
+msgid "We hope you've enjoyed using Login Customizer! Would you consider leaving us a review on WordPress.org?"
+msgstr "Login Customizer を楽しまれたことと思います。WordPress.org でレビューしていただけますか ?"
+
+#: src/Includes/Notification.php:129
+msgid "Leave A Review?"
+msgstr "レビューしますか ?"
+
+#: src/Includes/Plugin_Meta.php:111
+msgid " | %1$s Settings %2$s "
+msgstr " | %1$s 設定 %2$s "
+
+#: src/Includes/Plugin_Meta.php:104
+msgid "%1$s Customize %2$s"
+msgstr "%1$s カスタマイズ %2$s"
+
+#: src/Includes/Plugin_Meta.php:81
+msgid "Rate"
+msgstr "評価"
+
+#: src/Includes/Plugin_Meta.php:78
+msgid "Vote!"
+msgstr "投票する !"
+
+#: src/Includes/Plugin_Meta.php:76
+msgid "Support"
+msgstr "サポート"
+
+#: src/Includes/Disband.php:234
+msgid "Cancel"
+msgstr "キャンセル"
+
+#: src/Includes/Disband.php:233
+msgid "Submit & Deactivate"
+msgstr "送信して無効化する"
+
+#: src/Includes/Disband.php:230
+msgid "Skip & Deactivate"
+msgstr "スキップして無効化する"
+
+#: src/Includes/Disband.php:229
+msgid "Anonymous feedback"
+msgstr "匿名のフィードバック"
+
+#: src/Includes/Disband.php:224
+msgid "Kindly tell us the reason so we can improve."
+msgstr "改善のために、理由を教えてください。"
+
+#: src/Includes/Disband.php:212
+msgid "It's a temporary deactivation. I'm just debugging an issue."
+msgstr "一時的に無効にします。問題をデバッグ中です。"
+
+#: src/Includes/Disband.php:203
+msgid "I no longer need the plugin"
+msgstr "もうプラグインは不要です"
+
+#: src/Includes/Disband.php:194
+msgid "The plugin suddenly stopped working"
+msgstr "このプラグインは突然停止しました"
+
+#: src/Includes/Disband.php:185
+msgid "The plugin broke my site"
+msgstr "このプラグインを入れたらサイトが壊れました"
+
+#: src/Includes/Disband.php:178
+msgid "Kindly tell us the Plugin name."
+msgstr "プラグイン名を教えてください。"
+
+#: src/Includes/Disband.php:175
+msgid "I found a better plugin"
+msgstr "もっと良いプラグインを見つけました"
+
+#: src/Includes/Disband.php:166
+msgid "I only needed the plugin for a short period"
+msgstr "このプラグインは短期間だけ必要でした"
+
+#: src/Includes/Disband.php:159
+msgid "No need to deactivate this Login Customizer Core version. Pro version works as an add-on with Core version."
+msgstr "Login Customizer のコアバージョンを無効化する必要はありません。Pro バージョンはコアバージョンのアドオンとして働きます。"
+
+#: src/Includes/Disband.php:157
+msgid "I upgraded to Login Customizer Pro"
+msgstr "Login Customizer Pro にアップグレードしました"
+
+#: src/Includes/Disband.php:149
+msgid "If you have a moment, please let us know why you are deactivating:"
+msgstr "少し時間があれば、無効化する理由を教えてください :"
+
+#: src/Includes/Disband.php:146
+msgid "Quick feedback about Login Customizer"
+msgstr "Login Customizer にフィードバックする"
+
+#. translators: %s: site title
+#: src/Customizer/template-login-customizer.php:115
+msgctxt "site"
+msgid "&larr; Back to %s"
+msgstr "&larr; %sへ移動"
+
+#: src/Customizer/template-login-customizer.php:109
+msgid "Lost your password?"
+msgstr "パスワードをお忘れですか ?"
+
+#: src/Customizer/template-login-customizer.php:103
+msgid "Register"
+msgstr "登録する"
+
+#: src/Customizer/template-login-customizer.php:95
+msgid "Remember Me"
+msgstr "ログイン状態を保存"
+
+#: src/Customizer/template-login-customizer.php:54
+msgid "Powered by WordPress"
+msgstr "Powered by WordPress"
+
+#: src/Customizer/template-login-customizer.php:53
+msgid "https://wordpress.org/"
+msgstr "https://wordpress.org/"
+
+#: src/Customizer/template-login-customizer.php:29
+#: src/Customizer/template-login-customizer.php:97
+msgid "Log In"
+msgstr "ログイン"
+
+#: src/Customizer/template-login-customizer.php:28
+msgid "%1$s &lsaquo; %2$s &#8212; WordPress"
+msgstr "%1$s &lsaquo; %2$s &#8212; WordPress"
+
+#: src/Customizer/Include_Page_Template.php:96
+msgid "Login Customizer Template"
+msgstr "Login Customizer テンプレート"
+
+#: src/Customizer/Initial_Setup.php:107
+msgid "This page is used for Login Customizer plugin. It will not be visible to your readers. Do not delete it."
+msgstr "このページは Login Customizer プラグインによって使われます。読者には公開されません。削除しないでください。"
+
+#: src/Customizer/Panel/Controls/Padding.php:44
+msgid "Left"
+msgstr "左"
+
+#: src/Customizer/Panel/Controls/Padding.php:42
+msgid "Down"
+msgstr "下"
+
+#: src/Customizer/Panel/Controls/Padding.php:38
+msgid "Right"
+msgstr "右"
+
+#: src/Customizer/Panel/Controls/Padding.php:36
+msgid "Top"
+msgstr "上"
+
+#: src/Customizer/Panel/Controls/Range_Slider.php:83
+msgid "Reset"
+msgstr "リセット"
+
+#: src/Customizer/Panel/Controls/Range_Slider.php:69
+msgid "%"
+msgstr "%"
+
+#: src/Customizer/Panel/Controls/Range_Slider.php:67
+msgid "px"
+msgstr "px"
+
+#: src/Customizer/Panel/Sections/Logo.php:194
+msgid "The page where your logo will take you."
+msgstr "ロゴを選択したときの移動先ページ。"
+
+#: src/Customizer/Panel/Sections/Logo.php:193
+msgid "Logo URL"
+msgstr "ロゴ URL"
+
+#: src/Customizer/Panel/Sections/Logo.php:164
+msgid "Padding Bottom"
+msgstr "下パディング"
+
+#: src/Customizer/Panel/Sections/Logo.php:132
+msgid "Logo Height"
+msgstr "ロゴの高さ"
+
+#: src/Customizer/Panel/Sections/Logo.php:100
+msgid "Logo Width"
+msgstr "ロゴの幅"
+
+#: src/Customizer/Panel/Sections/Logo.php:53
+msgid "Disable Logo?"
+msgstr "ロゴを無効にしますか ?"
+
+#: src/Customizer/Panel/Sections/Logo.php:32
+#: src/Customizer/Panel/Sections/Logo.php:76
+msgid "Logo"
+msgstr "ロゴ"
+
+#: src/Customizer/Panel/Sections/Form.php:33
+msgid "Form"
+msgstr "フォーム"
+
+#: src/Customizer/Panel/Sections/Templates.php:34
+#: src/Customizer/Panel/Sections/Templates.php:72
+msgid "Templates"
+msgstr "テンプレート"
+
+#: src/Customizer/Panel/Sections/Background.php:183
+msgid "Background Position"
+msgstr "背景画像の位置"
+
+#: src/Customizer/Panel/Sections/Background.php:148
+msgid "Repeat Vertically"
+msgstr "縦方向に繰り返し"
+
+#: src/Customizer/Panel/Sections/Background.php:147
+msgid "Repeat Horizontally"
+msgstr "横方向に繰り返し"
+
+#: src/Customizer/Panel/Sections/Background.php:146
+msgid "Repeat"
+msgstr "繰り返し"
+
+#: src/Customizer/Panel/Sections/Background.php:145
+msgid "No Repeat"
+msgstr "繰り返しなし"
+
+#: src/Customizer/Panel/Sections/Background.php:141
+msgid "Background Repeat"
+msgstr "背景画像の繰り返し"
+
+#: src/Customizer/Panel/Sections/Background.php:121
+msgid "Custom Size"
+msgstr "カスタムサイズ"
+
+#: src/Customizer/Panel/Sections/Background.php:100
+msgid "Fill Screen"
+msgstr "画面全体を埋める"
+
+#: src/Customizer/Panel/Sections/Background.php:99
+msgid "Fit to Screen"
+msgstr "画面サイズに合わせる"
+
+#: src/Customizer/Panel/Sections/Background.php:98
+msgid "Original"
+msgstr "オリジナル"
+
+#: src/Customizer/Panel/Sections/Background.php:94
+msgid "Background Size"
+msgstr "背景画像のサイズ"
+
+#: src/Customizer/Panel/Sections/Background.php:73
+#: src/Customizer/Panel/Sections/Form.php:53
+msgid "Background Image"
+msgstr "背景画像"
+
+#: src/Customizer/Panel/Sections/Background.php:50
+#: src/Customizer/Panel/Sections/Form.php:77
+msgid "Background Color"
+msgstr "背景色"
+
+#: src/Customizer/Panel/Sections/Button.php:425
+msgid "Text Shadow"
+msgstr "テキストの影"
+
+#: src/Customizer/Panel/Sections/Button.php:401
+#: src/Customizer/Panel/Sections/Form.php:253
+msgid "Box Shadow"
+msgstr "ボックスの影"
+
+#: src/Customizer/Panel/Sections/Button.php:369
+#: src/Customizer/Panel/Sections/Form.php:221
+msgid "Shadow Spread"
+msgstr "影の広がり"
+
+#: src/Customizer/Panel/Sections/Button.php:345
+msgid "Border (Hover)"
+msgstr "罫線 (hover)"
+
+#: src/Customizer/Panel/Sections/Button.php:321
+msgid "Border"
+msgstr "罫線"
+
+#: src/Customizer/Panel/Sections/Button.php:177
+#: src/Customizer/Panel/Sections/Form.php:133
+msgid "Height"
+msgstr "高さ"
+
+#: src/Customizer/Panel/Sections/Background.php:101
+#: src/Customizer/Panel/Sections/Button.php:122
+msgid "Custom"
+msgstr "カスタム"
+
+#: src/Customizer/Panel/Sections/Button.php:121
+msgid "Auto"
+msgstr "自動"
+
+#: src/Customizer/Panel/Sections/Button.php:117
+msgid "Button Size"
+msgstr "ボタンのサイズ"
+
+#: src/Customizer/Panel/Sections/Button.php:81
+msgid "Background (Hover)"
+msgstr "背景 (hover)"
+
+#: src/Customizer/Panel/Sections/Button.php:36
+msgid "Button"
+msgstr "ボタン"
+
+#: src/Customizer/Panel/Sections/Fields.php:374
+msgid "Label Font Size"
+msgstr "ラベルのフォントサイズ"
+
+#: src/Customizer/Panel/Sections/Fields.php:350
+msgid "Label Color"
+msgstr "ラベルの色"
+
+#: src/Customizer/Panel/Sections/Background.php:33
+#: src/Customizer/Panel/Sections/Button.php:57
+#: src/Customizer/Panel/Sections/Fields.php:302
+msgid "Background"
+msgstr "背景"
+
+#: src/Customizer/Panel/Sections/Button.php:265
+#: src/Customizer/Panel/Sections/Fields.php:278
+#: src/Customizer/Panel/Sections/Form.php:165
+msgid "Padding"
+msgstr "パディング"
+
+#: src/Customizer/Panel/Sections/Fields.php:254
+msgid "Margin"
+msgstr "マージン"
+
+#: src/Customizer/Panel/Sections/Fields.php:230
+msgid "Disable Box Shadow?"
+msgstr "Box Shadow を無効にしますか ?"
+
+#: src/Customizer/Panel/Sections/Fields.php:198
+#: src/Customizer/Panel/Sections/Form.php:189
+msgid "Radius"
+msgstr "半径"
+
+#: src/Customizer/Panel/Sections/Fields.php:174
+msgid "Border Color"
+msgstr "罫線の色"
+
+#: src/Customizer/Panel/Sections/Button.php:289
+#: src/Customizer/Panel/Sections/Fields.php:142
+msgid "Border Width"
+msgstr "罫線の太さ"
+
+#: src/Customizer/Panel/Sections/Button.php:145
+#: src/Customizer/Panel/Sections/Fields.php:78
+#: src/Customizer/Panel/Sections/Form.php:101
+msgid "Width"
+msgstr "幅"
+
+#: src/Customizer/Panel/Sections/Fields.php:54
+msgid "Disable Remember Me?"
+msgstr "「ログイン状態を保存する」を無効にしますか ?"
+
+#: src/Customizer/Panel/Sections/Fields.php:33
+msgid "Fields"
+msgstr "フィールド"
+
+#: src/Customizer/Panel/Sections/Code.php:70
+msgid "Custom JavaScript"
+msgstr "追加 JavaScript"
+
+#: src/Customizer/Panel/Sections/Code.php:48
+msgid "Custom CSS"
+msgstr "追加 CSS"
+
+#: src/Customizer/Panel/Sections/Code.php:30
+msgid "Custom CSS & JavaScript"
+msgstr "追加 CSS & JavaScript"
+
+#: src/Customizer/Panel/Sections/Other.php:207
+msgid "Text Color (Hover)"
+msgstr "文字の色 (hover)"
+
+#: src/Customizer/Panel/Sections/Button.php:241
+#: src/Customizer/Panel/Sections/Fields.php:326
+#: src/Customizer/Panel/Sections/Other.php:183
+msgid "Text Color"
+msgstr "文字の色"
+
+#: src/Customizer/Panel/Sections/Button.php:209
+#: src/Customizer/Panel/Sections/Fields.php:110
+#: src/Customizer/Panel/Sections/Other.php:151
+msgid "Font Size"
+msgstr "フォントサイズ"
+
+#: src/Customizer/Panel/Sections/Other.php:127
+msgid "Disable \"Back to Website\"?"
+msgstr "「ウェブサイトに戻る」を無効にしますか ?"
+
+#: src/Customizer/Panel/Sections/Other.php:81
+msgid "Disable Lost Password?"
+msgstr "「パスワードをお忘れですか ?」を無効にしますか ?"
+
+#: src/Customizer/Panel/Sections/Other.php:55
+msgid "Disable Register Link?"
+msgstr "「登録する」を無効にしますか ?"
+
+#: src/Customizer/Panel/Sections/Other.php:32 src/Includes/Disband.php:221
+msgid "Other"
+msgstr "その他"
+
+#: src/Customizer/Panel/Functions.php:160
+#: src/Customizer/template-login-customizer.php:87
+msgid "Username or Email Address"
+msgstr "ユーザー名またはメールアドレス"
+
+#: src/Customizer/Panel/Functions.php:158
+msgid "Email Address"
+msgstr "メールアドレス"
+
+#: src/Customizer/Panel/Functions.php:156
+msgid "Username"
+msgstr "ユーザー名"
+
+#: src/Customizer/Panel/customizer.php:73
+msgid "This section allows you to customize the login page of your website. Made with ❤ by <a target=\"_blank\" rel=\"nofollow\" href=\"https://loginpress.pro/?utm_source=login-customizer-lite&utm_medium=customizer\">Hardeep Asrani</a> team."
+msgstr "このセクションでは、あなたのウェブサイトのログインページをカスタマイズできます。❤を込めて<a target=\"_blank\" rel=\"nofollow\" href=\"https://loginpress.pro/?utm_source=login-customizer-lite&utm_medium=customizer\">Hardeep Asrani</a>チームが開発しました。"
+
+#: src/Settings/Features/Login_Order.php:130
+msgid "%1$sError:%2$s Invalid Username."
+msgstr "%1$sエラー：%2$s ユーザー名が無効です。"
+
+#: src/Settings/Features/Login_Order.php:107
+msgid "%1$sError:%2$s Invalid Email Address"
+msgstr "%1$sエラー：%2$s メールアドレスが無効です"
+
+#: src/Settings/Features/Login_Order.php:86
+msgid "%1$sError:%2$s The password field is empty."
+msgstr "%1$sエラー：%2$s パスワードが入力されていません。"
+
+#: src/Settings/Features/Login_Order.php:84
+msgid "%1$sError:%2$s The username field is empty."
+msgstr "%1$sエラー：%2$s ユーザー名が入力されていません。"
+
+#: src/Settings/Features/Custom_Register_Password.php:135
+msgid "If you have already set your own password, you may disregard this email and use the password you have already set."
+msgstr "もし既に自分でパスワードを設定したのであれば、このメールを無視し、自分で設定したパスワードをご使用ください。"
+
+#: src/Settings/Features/Custom_Register_Password.php:82
+msgid "<strong>ERROR</strong>: Please enter the same password in the end password fields."
+msgstr "<strong>エラー</strong>: 同じパスワードを入力してください。"
+
+#: src/Settings/Features/Custom_Register_Password.php:78
+msgid "<strong>ERROR</strong>: Please enter your password twice."
+msgstr "<strong>エラー</strong>: パスワードを2回入力してください。"
+
+#: src/Settings/Features/Custom_Register_Password.php:57
+msgid "Confirm Password"
+msgstr "パスワード (確認)"
+
+#: src/Customizer/template-login-customizer.php:91
+#: src/Settings/Features/Custom_Register_Password.php:53
+msgid "Password"
+msgstr "パスワード"
+
+#: src/Settings/API.php:574
+msgid "Support Request"
+msgstr "サポートを依頼する"
+
+#: src/Settings/API.php:572
+msgid "Got a Question, Idea, Problem or Praise?"
+msgstr "質問、アイデア、問題、お褒めの言葉がありますか ?"
+
+#: src/Settings/API.php:569
+msgid "Plugin Support"
+msgstr "プラグインのサポート"
+
+#: src/Settings/API.php:409
+msgid "Choose File"
+msgstr "ファイルを選択"
+
+#: src/Settings/Setup.php:344
+msgid "Free plugin support is available on the %1$s plugin support forums%2$s."
+msgstr "無料のプラグインサポートが%1$sプラグインサポートフォーラム%2$sで可能です。"
+
+#: src/Settings/Setup.php:326
+msgid "Login Customizer - Design your boring WordPress Login page"
+msgstr "Login Customizer - 単調な WordPress ログインページをデザインする"
+
+#: src/Settings/Setup.php:307
+msgid "Enable custom password fields on registration form."
+msgstr "登録画面でパスワード欄を有効にする。"
+
+#: src/Settings/Setup.php:306
+msgid "Custom Password Fields"
+msgstr "パスワード欄をカスタム"
+
+#: src/Settings/Setup.php:205
+msgid "Only Email Address"
+msgstr "メールアドレスのみ"
+
+#: src/Settings/Setup.php:204
+msgid "Only Username"
+msgstr "ユーザー名のみ"
+
+#: src/Settings/Setup.php:203
+msgid "Both Username Or Email Address"
+msgstr "ユーザー名とメールアドレス"
+
+#: src/Settings/Setup.php:199
+msgid "Enable users to login using their username or email address."
+msgstr "ユーザー名またはメールアドレスでログイン可能にする。"
+
+#: src/Settings/Setup.php:198
+msgid "Login Order"
+msgstr "ログイン名"
+
+#: src/Settings/Setup.php:193
+msgid "Keep remember me option always checked on login page"
+msgstr "ログインページで常に「ログイン状態を保存する」をオンにする"
+
+#: src/Settings/Setup.php:192
+msgid "Auto Remember Me"
+msgstr "ログイン状態を保存"
+
+#: src/Settings/Setup.php:169
+msgid "Everything else is customizable through %1$sLogin Customizer%2$s."
+msgstr "%1$sLogin Customizer%2$s でその他のカスタマイズができます。"
+
+#: src/Settings/Setup.php:94
+msgid "Help"
+msgstr "ヘルプ"
+
+#: src/Settings/Setup.php:92
+msgid "Customizer"
+msgstr "Customizer"
+
+#: src/Settings/Setup.php:90 src/Settings/Setup.php:168
+msgid "Settings"
+msgstr "設定"
+
+#: src/Customizer/Initial_Setup.php:106 src/Customizer/Panel/customizer.php:72
+#: src/Settings/Setup.php:88
+msgid "Login Customizer"
+msgstr "Login Customizer"
+
+#. Author URI of the plugin
+#: login-customizer.php
+msgid "https://loginpress.pro/?utm_source=login-customizer-lite&utm_medium=author-url-link"
+msgstr "https://loginpress.pro/?utm_source=login-customizer-lite&utm_medium=author-url-link"
+
+#. Author of the plugin
+#: login-customizer.php
+msgid "Hardeep Asrani"
+msgstr "Hardeep Asrani"
+
+#. Description of the plugin
+#: login-customizer.php
+msgid "Custom Login Customizer plugin allows you to easily customize your login page straight from your WordPress Customizer! Awesome, right?"
+msgstr "Custom Login Customizer プラグインを使えば、WordPress カスタマイザーからログインページを簡単にカスタマイズできます。素晴らしいでしょう ?"
+
+#. Plugin URI of the plugin
+#: login-customizer.php
+msgid "https://loginpress.pro/?utm_source=login-customizer-lite&utm_medium=plugin-url-link"
+msgstr "https://loginpress.pro/?utm_source=login-customizer-lite&utm_medium=plugin-url-link"
+
+#. Plugin Name of the plugin
+#: login-customizer.php
+msgid "Custom Login Page Customizer"
+msgstr "Custom Login Page Customizer"

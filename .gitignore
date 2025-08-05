@@ -1,0 +1,21 @@
+# WordPress padrão
+wp-content/uploads/
+wp-content/upgrade/
+wp-content/cache/
+wp-content/backups/
+wp-content/aios_backups/
+wp-content/debug.log
+
+# Sistema
+node_modules/
+vendor/
+.env
+*.log
+*.sql
+.DS_Store
+.idea/
+.vscode/
+wp-content/aios_backups/
+wp-content/cache/
+wp-content/debug.log
+migracao-node/

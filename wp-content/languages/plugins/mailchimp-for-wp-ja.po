@@ -1,0 +1,1391 @@
+# Translation of Plugins - MC4WP: Mailchimp for WordPress - Stable (latest release) in Japanese
+# This file is distributed under the same license as the Plugins - MC4WP: Mailchimp for WordPress - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-03-01 01:21:07+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/4.0.1\n"
+"Language: ja_JP\n"
+"Project-Id-Version: Plugins - MC4WP: Mailchimp for WordPress - Stable (latest release)\n"
+
+#: includes/class-personal-data-exporter.php:17
+#: includes/class-personal-data-exporter.php:70
+msgid "Mailchimp Subscriptions"
+msgstr "Mailchimp 購読"
+
+#: includes/forms/class-admin.php:97
+msgid "Audience fields"
+msgstr "オーディエンスフィールド"
+
+#: includes/forms/class-admin.php:95
+msgid "Audience choice"
+msgstr "オーディエンスの選択"
+
+#: integrations/ninja-forms/class-action.php:69
+msgid "List Field Mapping"
+msgstr "リストフィールドのマッピング"
+
+#: integrations/prosopo-procaptcha/class-procaptcha.php:283
+msgid "Please verify that you are human."
+msgstr "人間であることを確認してください。"
+
+#: integrations/prosopo-procaptcha/admin-before.php:5
+msgid "%1$s Procaptcha (by Prosopo) %2$s is offering seamless bot protection without compromising user data. You can customize settings and algorithms, ensuring optimal defense against all types of malicious bots."
+msgstr "%1$s Procaptcha (by Prosopo) %2$s は、ユーザーデータを危険にさらすことなく、シームレスなボット保護を提供します。設定とアルゴリズムをカスタマイズして、あらゆる種類の悪意のあるボットに対する最適な防御を確保できます。"
+
+#: integrations/prosopo-procaptcha/admin-after.php:115
+msgid "Select \"yes\" to require the captcha even from authorized users."
+msgstr "「はい」を選択すると、認証されたユーザーに対してもキャプチャが要求されます。"
+
+#: integrations/prosopo-procaptcha/admin-after.php:105
+msgid "Display for authorized users"
+msgstr "許可されたユーザーの表示"
+
+#: integrations/prosopo-procaptcha/admin-after.php:75
+msgid "Theme"
+msgstr "テーマ"
+
+#: integrations/prosopo-procaptcha/admin-after.php:69
+msgid "Enter your secret key"
+msgstr "シークレットキーを入力"
+
+#: integrations/prosopo-procaptcha/admin-after.php:65
+msgid "Secret Key"
+msgstr "シークレットキー"
+
+#. translators: %1$s: opening anchor tag, %2$s: closing anchor tag
+#: integrations/prosopo-procaptcha/admin-after.php:56
+msgid "The API key for connecting with your Procaptcha account. %1$s Get your Site key here %2$s"
+msgstr "Procaptcha アカウントと接続するための API キーです。%1$s サイトキーを取得します %2$s"
+
+#: integrations/prosopo-procaptcha/admin-after.php:48
+msgid "Enter your site key"
+msgstr "サイトキーを入力"
+
+#: integrations/prosopo-procaptcha/admin-after.php:44
+msgid "Site Key"
+msgstr "サイトキー"
+
+#: integrations/prosopo-procaptcha/admin-after.php:31
+msgid "Preview: if the credentials are valid, you should be able to complete the captcha below:"
+msgstr "プレビュー: 認証情報が有効であれば、以下のキャプチャを完了できるはずです:"
+
+#: integrations/prosopo-procaptcha/admin-after.php:22
+msgid "Image Captcha"
+msgstr "画像 キャプチャ"
+
+#: integrations/prosopo-procaptcha/admin-after.php:21
+msgid "Proof of Work"
+msgstr "Proof of Work"
+
+#: integrations/prosopo-procaptcha/admin-after.php:20
+msgid "Frictionless"
+msgstr "摩擦のない"
+
+#: integrations/prosopo-procaptcha/admin-after.php:17
+msgid "Dark"
+msgstr "ダーク"
+
+#: integrations/prosopo-procaptcha/admin-after.php:16
+msgid "Light"
+msgstr "ライト"
+
+#: includes/views/parts/lists-overview.php:49
+msgid "Edit this audience in Mailchimp"
+msgstr "Mailchimpでこのオーディエンスを編集"
+
+#: includes/views/parts/lists-overview.php:26
+msgid "# of contacts"
+msgstr "# コンタクト数"
+
+#: includes/views/parts/lists-overview.php:25
+msgid "Audience ID"
+msgstr "オーディエンス ID"
+
+#: includes/views/parts/lists-overview.php:24
+msgid "Audience name"
+msgstr "オーディエンス名"
+
+#: includes/integrations/views/integration-settings.php:119
+msgid "Select the audiences to which people who check the checkbox should be subscribed."
+msgstr "チェックボックスにチェックを入れた人を購読させるオーディエンスを選択します。"
+
+#: includes/integrations/views/integration-settings.php:103
+msgid "Mailchimp audiences"
+msgstr "Mailchimp オーディエンス"
+
+#: includes/forms/views/tabs/form-settings.php:12
+msgid "Audiences this form subscribes to"
+msgstr "このフォームが購読するオーディエンス"
+
+#: includes/forms/views/tabs/form-messages.php:65
+msgid "When offering an audience choice, this is the text that shows when no Mailchimp audiences were selected."
+msgstr "オーディエンスの選択肢を提供する際に、Mailchimp オーディエンスが選択されなかった場合に表示されるテキストです。"
+
+#: includes/forms/views/tabs/form-messages.php:62
+msgid "No Mailchimp audiences selected"
+msgstr "Mailchimp オーディエンスが選択されていません"
+
+#: includes/forms/views/add-form.php:49
+msgid "No Mailchimp audiences found. Did you <a href=\"%s\">connect with Mailchimp</a>?"
+msgstr "Mailchimp オーディエンスが見つかりません。<a href=\"%s\">Mailchimp と接続</a>しましたか ?"
+
+#: includes/admin/class-admin.php:302
+msgid "Done! Mailchimp audiences renewed."
+msgstr "完了しました ! Mailchimp オーディエンスを更新しました。"
+
+#: includes/admin/class-admin.php:301
+msgid "Fetching Mailchimp audiences"
+msgstr "Mailchimp オーディエンスの取得"
+
+#: includes/admin/class-admin.php:300
+#: includes/forms/views/parts/add-fields-help.php:58
+#: includes/views/parts/lists-overview.php:8
+msgid "Renew Mailchimp audiences"
+msgstr "Mailchimp オーディエンスを更新"
+
+#: integrations/woocommerce/admin-after.php:48
+msgid "Select the location where you would like to show the sign-up checkbox. Note that only works if not using WooCommerce Checkout Block."
+msgstr "サインアップチェックボックスを表示する場所を選択します。WooCommerce Checkout Block を使用していない場合にのみ機能することに注意してください。"
+
+#: includes/forms/views/tabs/form-settings.php:54
+msgid "We strongly suggest keeping double opt-in enabled. Disabling double opt-in may affect your GDPR compliance."
+msgstr "ダブルオプトインを有効にしておくことを強くお勧めします。無効化すると、GDPR への準拠に影響する可能性があります。"
+
+#: includes/forms/class-form-amp.php:35
+msgid "Submitting..."
+msgstr "送信中…"
+
+#: includes/forms/class-form-manager.php:151
+msgid "Resource does not exist."
+msgstr "リソースが存在しません。"
+
+#: includes/forms/class-admin.php:166 includes/forms/class-admin.php:297
+msgid "Form saved."
+msgstr "フォームを保存しました。"
+
+#: integrations/woocommerce/admin-after.php:15
+msgid "Checkout for WooCommerce: After customer info"
+msgstr "WooCommerce 購入手続き: お客様情報の後"
+
+#: integrations/woocommerce/admin-after.php:14
+msgid "Checkout for WooCommerce: After account info"
+msgstr "WooCommerce 購入手続き: アカウント情報の後"
+
+#: integrations/woocommerce/admin-after.php:13
+msgid "Checkout for WooCommerce: Before complete order button"
+msgstr "WooCommerce 購入手続き: 注文確定ボタンの前"
+
+#: includes/views/parts/admin-sidebar.php:36
+msgid "Privacy-friendly analytics plugin that does not use any external services."
+msgstr "外部サービスを使用しない、プライバシーに優しい分析プラグイン。"
+
+#: integrations/woocommerce/admin-after.php:4
+msgid "After email field"
+msgstr "メールフィールドの後"
+
+#: includes/views/parts/lists-overview.php:50
+msgid "Loading... Please wait."
+msgstr "読み込み中…少々お待ちください。"
+
+#. Plugin Name of the plugin
+#: mailchimp-for-wp.php
+msgid "MC4WP: Mailchimp for WordPress"
+msgstr "MC4WP: Mailchimp for WordPress"
+
+#: includes/admin/class-admin.php:299
+msgid "This is a premium feature. Please upgrade to Mailchimp for WordPress Premium to be able to use it."
+msgstr "これはプレミアム機能です。 Mailchimp for WordPress Premium を使用できるようにするには、Mailchimp for WordPress Premium にアップグレードしてください。"
+
+#: includes/admin/class-admin.php:298
+msgid "The given value does not look like a valid Mailchimp API key."
+msgstr "指定された値は、有効な Mailchimp API キーではないようです。"
+
+#: includes/forms/views/tabs/form-settings.php:103
+msgid "Separate multiple values with a comma."
+msgstr "複数の値は半角コンマ (,) で区切ってください。"
+
+#: includes/forms/views/tabs/form-settings.php:102
+msgid "The listed tags will be applied to all subscribers added or updated by this form."
+msgstr "リストされたタグは、このフォームによって追加または更新されたすべての購読者に適用されます。"
+
+#: includes/forms/views/tabs/form-settings.php:100
+msgid "Example: My tag, another tag"
+msgstr "例: タグ, 他のタグ"
+
+#: includes/forms/views/tabs/form-settings.php:98
+msgid "Subscriber tags"
+msgstr "購読者タグ"
+
+#: includes/integrations/views/integrations.php:34
+msgid "Not installed"
+msgstr "未インストール"
+
+#: includes/integrations/views/integrations.php:32
+msgid "Inactive"
+msgstr "停止中"
+
+#: includes/integrations/views/integrations.php:30
+msgid "Active"
+msgstr "有効"
+
+#: integrations/woocommerce/admin-after.php:9
+msgid "After order notes"
+msgstr "注文メモの後"
+
+#: includes/views/general-settings.php:60
+msgid "You defined your Mailchimp API key using the <code>MC4WP_API_KEY</code> constant."
+msgstr "<code>MC4WP_API_KEY</code> 定数を使用して Mailchimp API キーを定義しました。"
+
+#: includes/forms/class-admin.php:76
+msgid "Link to your terms & conditions page"
+msgstr "利用規約ページへのリンク"
+
+#: includes/forms/class-admin.php:75
+msgid "Agree to terms"
+msgstr "利用規約に同意する"
+
+#: includes/forms/class-admin.php:74
+msgid "I have read and agree to the terms & conditions"
+msgstr "利用規約を読み、同意しました"
+
+#: includes/integrations/views/integration-settings.php:81
+#: includes/integrations/views/integration-settings.php:168
+#: integrations/gravity-forms/class-gravity-forms.php:134
+msgid "<strong>Warning: </strong> enabling this may affect your <a href=\"%s\">GDPR compliance</a>."
+msgstr "<strong>警告: </strong> これを有効すると、<a href=\"%s\">GDPR への準拠</a>に影響する可能性があります。"
+
+#: includes/integrations/views/integration-settings.php:76
+msgid "Select \"yes\" if you want to subscribe people without asking them explicitly."
+msgstr "明示的に質問せずに登録する場合は、「はい」を選択してください。"
+
+#: includes/integrations/views/integration-settings.php:72
+#: includes/integrations/views/integration-settings.php:161
+msgid "(recommended)"
+msgstr "(推奨)"
+
+#: includes/forms/views/tabs/form-fields.php:27
+msgid "The form may look slightly different than this when shown in a post, page or widget area."
+msgstr "投稿、ページ、またはウィジェット領域に表示されるフォームは、これとは若干異なる場合があります。"
+
+#: includes/forms/views/tabs/form-fields.php:20
+msgid "Form code"
+msgstr "フォームコード"
+
+#: includes/admin/class-ads.php:38 includes/admin/class-ads.php:39
+msgid "Add-ons"
+msgstr "アドオン"
+
+#: integrations/prosopo-procaptcha/admin-after.php:90
+msgid "Type"
+msgstr "種類"
+
+#: includes/forms/views/tabs/form-settings.php:144
+msgid "Your \"subscribed\" message will not show when redirecting to another page, so make sure to let your visitors know they were successfully subscribed."
+msgstr "別のページにリダイレクトすると「購読済み」メッセージが表示されないため、訪問者に購読が成功したことを必ず知らせてください。"
+
+#: includes/views/parts/admin-sidebar.php:42
+msgid "Pop-ups or boxes that slide-in with a newsletter sign-up form. A sure-fire way to grow your email lists."
+msgstr "メールマガジンの登録フォームにスライドインするポップアップまたはボックス。メールリストを増やす確実な方法。"
+
+#: includes/views/parts/admin-sidebar.php:30
+msgid "Other plugins by ibericode"
+msgstr "ibericode による他のプラグイン"
+
+#: integrations/gravity-forms/class-gravity-forms.php:99
+msgid "Select a Mailchimp list"
+msgstr "Mailchimp リストを選択"
+
+#. translators: %s links to the Gravity Forms overview page
+#: integrations/gravity-forms/admin-before.php:4
+msgid "To integrate with Gravity Forms, add the \"Mailchimp for WordPress\" field to <a href=\"%s\">one of your Gravity Forms forms</a>."
+msgstr "Gravity Forms と統合するには、「Mailchimp for WordPress」フィールドを<a href=\"%s\">one of your Gravity Forms forms</a>に追加します。"
+
+#: includes/forms/class-form-element.php:84
+msgid "Leave this field empty if you're human:"
+msgstr "ボットではない場合はこの欄を空のままにしてください:"
+
+#: integrations/wpforms/class-field.php:185
+msgid "Showing the first 20 choices.<br> All %d choices will be displayed when viewing the form."
+msgstr "最初の 20 個の選択肢を表示しています。<br> フォームを表示すると、%d 個の選択肢がすべて表示されます。"
+
+#: integrations/wpforms/class-field.php:169
+msgid "(empty)"
+msgstr "(空)"
+
+#: integrations/wpforms/class-field.php:125
+msgid "Sign-up checkbox"
+msgstr "登録チェックボックス"
+
+#: integrations/wpforms/class-field.php:114
+msgid "Set your sign-up label text and whether it should be pre-checked."
+msgstr "登録のラベルテキストと、事前にチェックする必要があるかどうかを設定します。"
+
+#: integrations/gravity-forms/class-gravity-forms.php:96
+#: integrations/wpforms/class-field.php:88
+msgid "Mailchimp list"
+msgstr "Mailchimp リスト"
+
+#: integrations/wpforms/class-field.php:82
+msgid "Select the Mailchimp list to subscribe to."
+msgstr "購読させる Mailchimp リストを選択してください。"
+
+#: integrations/wpforms/class-field.php:29
+msgid "Sign-up to our newsletter?"
+msgstr "メールマガジンに登録しますか ?"
+
+#: integrations/wpforms/admin-before.php:2
+msgid "Use this integration by adding the \"Mailchimp\" field to <a href=\"%s\">your WPForms forms</a>."
+msgstr "この統合を使用するには、「Mailchimp」フィールドを <a href=\"%s\">your WPForms forms</a> に追加します。"
+
+#: includes/admin/class-admin.php:421
+msgid "Looks like your server is blocked by Mailchimp's firewall. Please contact Mailchimp support and include the following reference number: %s"
+msgstr "サーバーが Mailchimp のファイアウォールによってブロックされているようです。 Mailchimp サポートに問い合わせて、次の参照番号を含めてください: %s"
+
+#: includes/admin/class-admin.php:303
+msgid "Failed to renew your audiences. An error occured."
+msgstr "オーディエンスの更新に失敗しました。エラーが発生しました。"
+
+#: integrations/ninja-forms/class-field.php:38
+msgid "Mailchimp opt-in"
+msgstr "Mailchimp オプトイン"
+
+#: integrations/ninja-forms/admin-before.php:2
+msgid "To integrate with Ninja Forms, add the \"Mailchimp\" action to <a href=\"%s\">one of your Ninja Forms forms</a>."
+msgstr "Ninja Form と連携するには、<a href=\"%s\">Ninja Form のフォームのいずれか</a>に \"Mailchimp\" アクションを追加してください。"
+
+#: includes/integrations/views/integrations.php:111
+msgid "Greyed out integrations will become available after installing & activating the corresponding plugin."
+msgstr "グレーになっている連携オプションは対応するプラグインをインストール ・有効化した後に利用可能になります。"
+
+#: includes/views/other-settings.php:45
+msgid "Determines what events should be written to <a href=\"%s\">the debug log</a> (see below)."
+msgstr "どのようなイベントが<a href=\"%s\">デバッグログ</a>(下記参照) に書き込まれる必要があるかを決定します。"
+
+#: includes/views/other-settings.php:42
+msgid "Everything"
+msgstr "すべて"
+
+#: includes/views/other-settings.php:41
+msgid "Errors & warnings only"
+msgstr "エラー・警告のみ"
+
+#: includes/views/other-settings.php:38
+msgid "Logging"
+msgstr "ロギング"
+
+#: includes/views/other-settings.php:35
+msgid "Miscellaneous settings"
+msgstr "その他の設定"
+
+#: includes/forms/class-admin.php:112
+msgid "Value"
+msgstr "値"
+
+#: includes/forms/class-admin.php:86
+msgid "Field type"
+msgstr "フィールドの種類"
+
+#: includes/forms/views/tabs/form-settings.php:51
+msgid "Are you sure you want to disable double opt-in?"
+msgstr "ダブルオプトインを無効化してもよいですか ?"
+
+#: includes/admin/class-review-notice.php:75
+msgid "Dismiss this notice."
+msgstr "この通知を非表示にする。"
+
+#: includes/admin/class-review-notice.php:73
+msgid "If you do, please <a href=\"%s\">leave us a 5★ rating on WordPress.org</a>. It would be of great help to us."
+msgstr "その場合は、<a href=\"%s\">WordPress.org 上で5つ星評価を残して</a>ください。大きな助けになります。"
+
+#: includes/admin/class-review-notice.php:72
+msgid "You've been using Mailchimp for WordPress for some time now; we hope you love it!"
+msgstr "MailChimp for WordPress をしばらくお使いのようです。気に入っていただけたのなら幸いです。"
+
+#: includes/admin/class-ads.php:154
+msgid "<a href=\"%1$s\">Upgrade to Mailchimp for WordPress Premium</a> or <a href=\"%2$s\">read more about Mailchimp's E-Commerce features</a>."
+msgstr "<a href=\"%1$s\">Mailchimp for WordPress プレミアム版</a>にアップグレードするか、<a href=\"%2$s\">Mailchimp の eコマース機能についての詳細をご覧ください</a>。"
+
+#: includes/admin/class-ads.php:151
+msgid "Do you want to track all WooCommerce orders in Mailchimp so you can send emails based on the purchase activity of your subscribers?"
+msgstr "Mailchimp ですべての WooCommerce 注文を追跡し、登録者の購入行動に基づいてメールを送信できるようにしますか ?"
+
+#: includes/admin/class-admin.php:429
+msgid "Mailchimp returned the following error:"
+msgstr "Mailchimp が次のエラーを返しました:"
+
+#: includes/admin/class-admin.php:424
+msgid "Here's some info on solving common connectivity issues."
+msgstr "一般的な接続の問題を解決するための情報があります。"
+
+#: includes/admin/class-admin.php:418
+msgid "Error connecting to Mailchimp:"
+msgstr "Mailchimp 接続エラー:"
+
+#: integrations/ninja-forms/class-field.php:80
+msgid "Checked"
+msgstr "チェック済み"
+
+#: integrations/ninja-forms/class-field.php:82
+msgid "Unchecked"
+msgstr "未チェック"
+
+#: includes/forms/views/tabs/form-messages.php:79
+msgid "The text that shows when an existing subscriber is updated."
+msgstr "既存の購読者が更新されたときに表示するテキスト。"
+
+#: includes/forms/views/tabs/form-messages.php:76
+msgid "Updated"
+msgstr "更新しました"
+
+#: includes/class-dynamic-content-tags.php:28
+msgid "Data from a cookie."
+msgstr "Cookie からのデータ。"
+
+#: includes/forms/class-admin.php:93
+msgid "Interest categories"
+msgstr "関心のあるカテゴリー"
+
+#: includes/forms/class-admin.php:90
+msgid "Form fields"
+msgstr "フォームフィールド"
+
+#: includes/forms/class-admin.php:81
+msgid "Choose a field to add to the form"
+msgstr "フォームに追加するフィールドを選択"
+
+#: config/default-form-messages.php:10
+msgid "Thank you, your records have been updated!"
+msgstr "ありがとうございます、あなたの記録が更新されました!"
+
+#: includes/views/other-settings.php:65
+msgid "Please ensure %1$s has the proper <a href=\"%2$s\">file permissions</a>."
+msgstr "%1$s に適切な<a href=\"%2$s\">ファイルパーミッション</a>があるかどうか確認してください。"
+
+#: includes/views/other-settings.php:64
+msgid "Log file is not writable."
+msgstr "ログファイルは書き込み可能ではありません。"
+
+#: includes/forms/class-admin.php:105
+msgid "Remove"
+msgstr "削除"
+
+#: includes/forms/class-admin.php:104
+msgid "Preselect"
+msgstr "事前選択"
+
+#: includes/forms/class-admin.php:101
+msgid "Optional"
+msgstr "オプション"
+
+#: includes/admin/class-admin.php:504
+msgid "To get started with Mailchimp for WordPress, please <a href=\"%s\">enter your Mailchimp API key on the settings page of the plugin</a>."
+msgstr "Mailchimp for WordPressを使い始めるには、<a href=\"%s\">プラグインの設定ページにMailchimp API を入力</a>してください。"
+
+#: integrations/woocommerce/admin-after.php:8
+msgid "Before submit button"
+msgstr "送信ボタンの前に"
+
+#: integrations/woocommerce/admin-after.php:36
+msgid "Position"
+msgstr "位置"
+
+#: integrations/woocommerce/admin-after.php:7
+msgid "After customer details"
+msgstr "アフターカスタマーの詳細"
+
+#: integrations/woocommerce/admin-after.php:6
+msgid "After shipping details"
+msgstr "出荷後の詳細"
+
+#: includes/class-dynamic-content-tags.php:75
+msgid "Property of the current page or post."
+msgstr "現在の固定ページまたは投稿のプロパティ。"
+
+#: includes/forms/class-admin.php:483
+msgid "Select the form to show"
+msgstr "表示するフォームを選択する"
+
+#: includes/views/other-settings.php:104
+msgid "Right now, the plugin is configured to only log errors and warnings."
+msgstr "現在、プラグインはエラーと警告のみをログに記録するように設定されています。"
+
+#: includes/forms/class-admin.php:113
+msgid "Text to prefill this field with."
+msgstr "このフィールドに事前に入力しておくテキスト。"
+
+#: includes/forms/class-admin.php:103
+msgid "Text to show when field has no value."
+msgstr "フィールドに値がない場合に表示するテキスト。"
+
+#: includes/views/other-settings.php:96
+msgid "Empty Log"
+msgstr "空のログ"
+
+#: includes/views/other-settings.php:86
+msgid "Nothing here. Which means there are no errors!"
+msgstr "ここには何もありません。これはエラーがないことを意味しています。"
+
+#: includes/views/other-settings.php:59
+msgid "Filter.."
+msgstr "フィルター…"
+
+#: includes/views/other-settings.php:59
+msgid "Debug Log"
+msgstr "デバッグログ"
+
+#: includes/forms/class-admin.php:91
+msgid "This field is marked as required in Mailchimp."
+msgstr "このフィールドは、Mailchimp で必須となっています。"
+
+#: includes/admin/class-admin.php:473
+msgid "Log successfully emptied."
+msgstr "ログ削除に成功しました。"
+
+#: includes/admin/class-admin.php:338
+msgid "Other"
+msgstr "その他"
+
+#: includes/admin/class-admin.php:337 includes/views/other-settings.php:14
+#: includes/views/other-settings.php:24
+msgid "Other Settings"
+msgstr "その他の設定"
+
+#: integrations/custom/admin-before.php:9
+msgid "Subscribe to our newsletter."
+msgstr "ニュースレターの購読"
+
+#: includes/views/parts/admin-sidebar.php:19
+msgid "Found a bug? Please <a href=\"%s\">open an issue on GitHub</a>."
+msgstr "バグを見つけましたか? <a href=\"%s\">GitHubにissueを立ててください。</a>お願いします。"
+
+#: includes/admin/class-ads.php:111
+msgid "Are you enjoying this plugin? The Premium add-on unlocks several powerful features. <a href=\"%s\">Find out about all benefits now</a>."
+msgstr "このプラグインを楽しんでいますか ? プレミアムアドオンはいくつかの強力な機能をアンロックします。<a href=\"%s\">すべての特典について今すぐご確認ください</a>。"
+
+#: includes/admin/class-ads.php:106
+msgid "Do you want to create more than one form? Our Premium add-on does just that! <a href=\"%s\">Have a look at all Premium benefits</a>."
+msgstr "複数のフォームを作成したいですか ? プレミアムアドオンならそれが可能です ! <a href=\"%s\">すべてのプレミアム特典</a>をご覧ください。"
+
+#: includes/admin/class-ads.php:101
+msgid "Do you want translated forms for all of your languages? <a href=\"%s\">Try Mailchimp for WordPress Premium</a>, which does just that plus more."
+msgstr "すべての言語の翻訳済みフォームが必要な場合は、<a href=\"%s\">Mailchimp for WordPress Premium</a> をお試しください。これだけでなく、さらに多くのことができます。"
+
+#: includes/admin/class-ads.php:89
+msgid "Upgrade to Premium"
+msgstr "プレミアム版へアップグレード"
+
+#: includes/admin/class-ads.php:74
+msgid "Increased conversions? <a href=\"%s\">Mailchimp for WordPress Premium</a> submits forms without reloading the entire page, resulting in a much better experience for your visitors."
+msgstr "コンバージョンが増加 ? <a href=\"%s\">Mailchimp for WordPress Premium</a> はページ全体をリロードすることなくフォームを送信するので、訪問者のエクスペリエンスが格段に向上します。"
+
+#: includes/admin/class-ads.php:72
+msgid "Be notified whenever someone subscribes? <a href=\"%s\">Mailchimp for WordPress Premium</a> allows you to set up email notifications for your forms."
+msgstr "フォームに登録されたことを通知しますか ? <a href=\"%s\">Mailchimp for WordPress Premium</a> では、フォームにメール通知を設定することができます。"
+
+#: includes/admin/class-ads.php:56
+msgid "Want to customize the style of your form? <a href=\"%s\">Try our Styles Builder</a> & edit the look of your forms with just a few clicks."
+msgstr "フォームのスタイルをカスタマイズしたいですか ? <a href=\"%s\">Styles Builder</a> を試して、数回クリックするだけでフォームの外観を編集しましょう。"
+
+#: includes/views/parts/admin-sidebar.php:18
+msgid "If your answer can not be found in the resources listed above, please use the <a href=\"%s\">support forums on WordPress.org</a>."
+msgstr "上記のリソースで回答が見つからない場合は、<a href=\"%s\">WordPress.org のサポートフォーラム</a>をお使いください。"
+
+#: includes/views/parts/admin-sidebar.php:16
+msgid "Frequently Asked Questions"
+msgstr "よくある質問"
+
+#: includes/views/parts/admin-sidebar.php:15
+msgid "Knowledge Base"
+msgstr "ナレッジベース"
+
+#: includes/views/parts/admin-sidebar.php:13
+msgid "We have some resources available to help you in the right direction."
+msgstr "正しい方向に進むために役立つリソースがいくつかあります。"
+
+#: includes/integrations/views/integrations.php:104
+msgid "Click on the name of an integration to edit all settings specific to that integration."
+msgstr "連携名をクリックして、その連携特有のすべての設定を編集してください。"
+
+#: includes/integrations/views/integrations.php:103
+msgid "The table below shows all available integrations."
+msgstr "下のテーブルには、すべての利用可能な連携オプションを表示しています。"
+
+#: includes/forms/class-admin.php:128 includes/forms/views/edit-form.php:25
+msgid "Form"
+msgstr "フォーム"
+
+#: includes/forms/class-admin.php:114
+msgid "ZIP"
+msgstr "郵便番号"
+
+#: includes/forms/class-admin.php:108
+msgid "State"
+msgstr "都道府県 (もしくは州)"
+
+#: includes/forms/class-admin.php:107
+msgid "Street Address"
+msgstr "住所"
+
+#: includes/forms/class-admin.php:106
+msgid "Radio buttons"
+msgstr "ラジオボタン"
+
+#: includes/forms/class-admin.php:100
+msgid "No available fields. Did you select a Mailchimp list in the form settings?"
+msgstr "使用可能なフィールドはありません。フォーム設定で Mailchimp リストを選択しましたか ?"
+
+#: includes/forms/class-admin.php:99
+msgid "Max"
+msgstr "最大"
+
+#: includes/forms/class-admin.php:98
+msgid "Min"
+msgstr "最小"
+
+#: includes/forms/class-admin.php:96
+msgid "This field will allow your visitors to choose an audience to subscribe to."
+msgstr "このフィールドは訪問者が購読するリストを選べるようにします。"
+
+#: includes/forms/class-admin.php:94
+msgid "Is this field required?"
+msgstr "これは必須フィールドですか ?"
+
+#: includes/forms/class-admin.php:89
+msgid "This field will allow your visitors to choose whether they would like to subscribe or unsubscribe"
+msgstr "このフィールドは、訪問者が購読または購読解除を選択できるようにします"
+
+#: includes/forms/class-admin.php:88
+msgid "Form action"
+msgstr "フォームアクション"
+
+#: includes/forms/class-admin.php:87
+msgid "Field label"
+msgstr "フィールドラベル"
+
+#: includes/forms/class-admin.php:84
+msgid "Dropdown"
+msgstr "ドロップダウン"
+
+#: includes/forms/class-admin.php:83
+msgid "Country"
+msgstr "国"
+
+#: includes/forms/class-admin.php:82
+msgid "Close"
+msgstr "閉じる"
+
+#: includes/forms/class-admin.php:80
+msgid "Choice type"
+msgstr "選択形式"
+
+#: includes/forms/class-admin.php:79
+msgid "Choices"
+msgstr "選択肢"
+
+#: includes/forms/class-admin.php:77
+msgid "City"
+msgstr "市区町村"
+
+#. Description of the plugin
+#: mailchimp-for-wp.php
+msgid "Mailchimp for WordPress by ibericode. Adds various highly effective sign-up methods to your site."
+msgstr "Mailchimp for WordPress by ibericode。非常に効果的な、さまざまな登録方法をサイトに追加します。"
+
+#: integrations/woocommerce/class-woocommerce.php:252
+msgid "Order #%d"
+msgstr "注文番号 #%d"
+
+#: integrations/custom/admin-before.php:2
+msgid "To get a custom integration to work, include the following HTML in the form you are trying to integrate with."
+msgstr "カスタム統合を機能させるには、統合しようとしているフォームに次の HTML を含めます。"
+
+#: integrations/contact-form-7/admin-before.php:2
+msgid "To integrate with Contact Form 7, configure the settings below and then add %s to your CF7 form mark-up."
+msgstr "Contact Form 7 と連携するには、以下で設定を行い、CF7 フォームのマークアップに %s を追加してください。"
+
+#: includes/views/parts/lists-overview.php:2
+msgid "The table below shows your Mailchimp audiences and their details. If you just applied changes to your Mailchimp account, please use the following button to renew the cache."
+msgstr "以下の表には、Mailchimp のオーディエンスとその詳細が表示されています。Mailchimp アカウントに変更を適用したばかりの場合は、次のボタンを使用してキャッシュを更新してください。。"
+
+#: includes/views/parts/lists-overview.php:1
+msgid "Your Mailchimp Account"
+msgstr "MailChimp アカウント"
+
+#: includes/integrations/views/integrations.php:15
+msgid "Configure this integration"
+msgstr "この連携を構成"
+
+#: includes/integrations/views/integrations.php:55
+msgid "Description"
+msgstr "説明"
+
+#: includes/integrations/views/integrations.php:54
+msgid "Name"
+msgstr "名前"
+
+#: includes/integrations/views/integration-settings.php:23
+msgid "Please ensure you <a href=\"%1$s\">configure the plugin to send all required fields</a> or <a href=\"%2$s\">log into your Mailchimp account</a> and make sure only the email & name fields are marked as required fields for the selected audiences."
+msgstr "<a href=\"%1$s\">すべての必須フィールドを送信するようにプラグインを設定</a>するか、<a href=\"%2$s\">Mailchimp アカウントにログイン</a>して、選択したオーディエンスに対してメールと名前のフィールドのみが必須フィールドとしてマークされていることを確認してください。"
+
+#: includes/integrations/views/integration-settings.php:22
+msgid "The selected Mailchimp audience requires custom fields, which may prevent this integration from working."
+msgstr "選択した Mailchimp オーディエンスにはカスタムフィールドが必要であるため、この統合が機能しない可能性があります。"
+
+#: includes/integrations/views/integration-settings.php:164
+#: integrations/gravity-forms/class-gravity-forms.php:132
+msgid "Select \"yes\" if the checkbox should be pre-checked."
+msgstr "「はい」を選ぶと、各リストの初期値がチェック済みになります。"
+
+#: includes/integrations/views/integration-settings.php:69
+msgid "Implicit?"
+msgstr "暗黙的 ?"
+
+#: includes/integrations/views/integration-settings.php:48
+msgid "Enable the %s integration? This will add a sign-up checkbox to the form."
+msgstr "%s 連携を有効にしますか ? フォームに登録チェックボックスが追加されます。"
+
+#: includes/integrations/views/integration-settings.php:44
+msgid "Enabled?"
+msgstr "有効にしますか?"
+
+#: includes/integrations/views/integration-settings.php:15
+msgid "%s integration"
+msgstr "%s 連携"
+
+#: includes/integrations/class-admin.php:76
+#: includes/integrations/class-admin.php:77
+#: includes/integrations/views/integration-settings.php:9
+#: includes/integrations/views/integrations.php:92
+#: includes/integrations/views/integrations.php:97
+#: includes/integrations/views/integrations.php:109
+msgid "Integrations"
+msgstr "連携"
+
+#: includes/forms/views/tabs/form-settings.php:114
+msgid "Form behaviour"
+msgstr "フォームの動作"
+
+#: includes/forms/views/tabs/form-settings.php:92
+#: includes/integrations/views/integration-settings.php:266
+msgid "What does this do?"
+msgstr "これは何をしますか ?"
+
+#: includes/forms/views/tabs/form-settings.php:91
+#: includes/integrations/views/integration-settings.php:265
+msgid "Select \"no\" if you want to add the selected interests to any previously selected interests when updating a subscriber."
+msgstr "購読者を更新する際に、選択した興味を以前に選択した興味に追加する場合は、「いいえ」を選択します。"
+
+#: includes/forms/views/tabs/form-settings.php:69
+#: includes/integrations/views/integration-settings.php:239
+msgid "Select \"yes\" if you want to update existing subscribers with the data that is sent."
+msgstr "送信されたデータで既存の購読者を更新したいときは「はい」を選択してください。"
+
+#: includes/forms/views/tabs/form-settings.php:44
+#: integrations/ninja-forms/class-action.php:65
+msgid "Use double opt-in?"
+msgstr "ダブルオプトインを使いますか ?"
+
+#: includes/forms/views/tabs/form-settings.php:5
+msgid "Mailchimp specific settings"
+msgstr "Mailchimp 特有の設定"
+
+#: includes/forms/views/tabs/form-messages.php:6
+msgid "Form Messages"
+msgstr "フォームのメッセージ"
+
+#: includes/forms/views/tabs/form-fields.php:22
+msgid "Enter the HTML code for your form fields.."
+msgstr "フォーム項目用の HTML コードを入力してください。"
+
+#: includes/forms/views/tabs/form-fields.php:13
+msgid "Form Fields"
+msgstr "フォームフィールド"
+
+#: includes/forms/views/tabs/form-fields.php:6
+msgid "Form variables"
+msgstr "フォーム変数"
+
+#: includes/forms/views/tabs/form-appearance.php:27
+msgid "Form Style"
+msgstr "フォームスタイル"
+
+#: includes/forms/views/tabs/form-appearance.php:23
+msgid "Form Appearance"
+msgstr "フォーム表示設定"
+
+#: includes/forms/views/tabs/form-appearance.php:7
+msgid "Form Themes"
+msgstr "フォームテーマ"
+
+#: includes/forms/views/tabs/form-appearance.php:6
+msgid "Basic"
+msgstr "基本"
+
+#: includes/forms/views/tabs/form-appearance.php:5
+msgid "Inherit from %s theme"
+msgstr "%s テーマから引き継ぐ"
+
+#: includes/forms/views/parts/dynamic-content-tags.php:6
+msgid "Add dynamic form variable"
+msgstr "動的フォーム変数を追加"
+
+#: includes/forms/views/parts/add-fields-help.php:42
+msgid "Click the following button to have Mailchimp for WordPress pick up on your changes."
+msgstr "Mailchimp for WordPress に変更を反映させるには、次のボタンをクリックしてください。"
+
+#: includes/forms/views/parts/add-fields-help.php:31
+msgid "Edit list fields for"
+msgstr "リスト項目を編集"
+
+#: includes/forms/views/parts/add-fields-help.php:23
+msgid "Clicking the following links will take you to the right screen."
+msgstr "以下のリンクをクリックすると、該当する画面に進みます。"
+
+#: includes/forms/views/parts/add-fields-help.php:22
+msgid "Add list fields to any of your selected lists."
+msgstr "選択したリストのいずれかにリストフィールドを追加します。"
+
+#: includes/forms/views/parts/add-fields-help.php:17
+msgid "Log in to your Mailchimp account."
+msgstr "Mailchimp アカウントにログインしてください。"
+
+#: includes/forms/views/parts/add-fields-help.php:12
+msgid "Here's how:"
+msgstr "こちらが手順です。"
+
+#: includes/forms/views/parts/add-fields-help.php:9
+msgid "To add more fields to your form, you will need to create those fields in Mailchimp first."
+msgstr "フォームにフィールドを追加するには、まず Mailchimp でフィールドを作成する必要があります。"
+
+#: includes/forms/views/parts/add-fields-help.php:4
+#: includes/forms/views/tabs/form-fields.php:10
+msgid "Add more fields"
+msgstr "フィールドをさらに追加"
+
+#: includes/forms/views/edit-form.php:54
+msgid "Enter the title of your sign-up form"
+msgstr "登録フォームのタイトルを入力"
+
+#: includes/forms/views/edit-form.php:50
+msgid "Enter form title here"
+msgstr "ここにタイトルを入力"
+
+#: includes/forms/views/edit-form.php:31
+msgid "Edit Form"
+msgstr "フォームを編集"
+
+#: includes/forms/views/edit-form.php:21
+#: includes/integrations/views/integration-settings.php:7
+#: includes/integrations/views/integrations.php:90
+#: includes/views/general-settings.php:7 includes/views/other-settings.php:12
+msgid "You are here: "
+msgstr "現在の位置:"
+
+#: includes/forms/views/edit-form.php:7
+msgid "Appearance"
+msgstr "外観"
+
+#: includes/forms/views/edit-form.php:5
+msgid "Messages"
+msgstr "メッセージ"
+
+#: includes/forms/views/edit-form.php:4
+msgid "Fields"
+msgstr "フィールド"
+
+#: includes/forms/views/add-form.php:24
+msgid "To which Mailchimp audience should this form subscribe?"
+msgstr "このフォームはどの Mailchimp オーディエンスに登録する必要がありますか ?"
+
+#: includes/forms/views/add-form.php:19
+msgid "Enter your form title.."
+msgstr "フォームタイトルを入力..."
+
+#: includes/forms/views/add-form.php:16
+msgid "What is the name of this form?"
+msgstr "このフォームの名前は何ですか ?"
+
+#: includes/forms/views/add-form.php:6 includes/forms/views/add-form.php:55
+msgid "Add new form"
+msgstr "新規フォームを追加"
+
+#: includes/forms/class-form.php:26
+msgid "There is no form with ID %d, perhaps it was deleted?"
+msgstr "ID %d のフォームはありません。削除されたかもしれません。"
+
+#: includes/class-dynamic-content-tags.php:69
+msgid "The property of the currently logged-in user."
+msgstr "現在ログインしているユーザーのプロパティ。"
+
+#: includes/class-dynamic-content-tags.php:64
+msgid "The visitor's IP address. Example: %s."
+msgstr "ユーザーのIPアドレス。例: %s"
+
+#: includes/class-dynamic-content-tags.php:59
+msgid "The site's language. Example: %s."
+msgstr "サイトの言語。例: %s"
+
+#: includes/class-dynamic-content-tags.php:54
+msgid "The current time. Example: %s."
+msgstr "現在の時刻。例: %s。"
+
+#: includes/class-dynamic-content-tags.php:49
+msgid "The current date. Example: %s."
+msgstr "現在の日付。例: %s。"
+
+#: includes/class-dynamic-content-tags.php:44
+msgid "The path of the page."
+msgstr "ページのパス。"
+
+#: includes/class-dynamic-content-tags.php:39
+msgid "The URL of the page."
+msgstr "このページの URL"
+
+#: includes/class-dynamic-content-tags.php:34
+msgid "The email address of the current visitor (if known)."
+msgstr "現在のユーザーのメールアドレス (既知の場合)。"
+
+#: includes/forms/class-form-tags.php:41
+msgid "Data from the URL or a submitted form."
+msgstr "URLまたは送信されたフォームのデータ"
+
+#: includes/forms/views/tabs/form-fields.php:26
+msgid "Form preview"
+msgstr "フォームのプレビュー"
+
+#: includes/forms/class-admin.php:413
+msgid "Go back"
+msgstr "戻る"
+
+#: includes/forms/class-admin.php:411
+msgid "Form not found."
+msgstr "フォームが見つかりません。"
+
+#: includes/admin/migrations/3.0.0-form-1-post-type.php:34
+msgid "Default sign-up form"
+msgstr "標準の登録フォーム"
+
+#: includes/admin/class-admin.php:215
+msgid "Success! The cached configuration for your Mailchimp lists has been renewed."
+msgstr "成功しました。Mailchimp リストのキャッシュ済み設定を更新しました。"
+
+#: includes/admin/class-admin-texts.php:89
+msgid "Documentation"
+msgstr "ドキュメンテーション"
+
+#: config/default-form-messages.php:38
+msgid "Please select at least one list."
+msgstr "1つ以上のリストを選択してください。"
+
+#: includes/views/general-settings.php:54
+msgid "The API key for connecting with your Mailchimp account."
+msgstr "Mailchimp アカウントと連携するための API キー。"
+
+#: includes/integrations/views/integrations.php:56
+#: includes/views/general-settings.php:31
+msgid "Status"
+msgstr "ステータス"
+
+#. Author URI of the plugin
+#: mailchimp-for-wp.php
+msgid "https://www.ibericode.com/"
+msgstr "https://www.ibericode.com/"
+
+#. Author of the plugin
+#: mailchimp-for-wp.php
+msgid "ibericode"
+msgstr "ibericode"
+
+#. Plugin URI of the plugin
+#: mailchimp-for-wp.php
+msgid "https://www.mc4wp.com/#utm_source=wp-plugin&utm_medium=mailchimp-for-wp&utm_campaign=plugins-page"
+msgstr "https://www.mc4wp.com/#utm_source=wp-plugin&utm_medium=mailchimp-for-wp&utm_campaign=plugins-page"
+
+#: includes/views/parts/admin-sidebar.php:12
+msgid "Looking for help?"
+msgstr "ヘルプをお探しですか?"
+
+#: includes/views/parts/admin-footer.php:25
+msgid "This plugin is not developed by or affiliated with Mailchimp in any way."
+msgstr "このプラグインは、Mailchimpによって開発されたり、同サービスと何らかの提携をしているものではありません。"
+
+#. translators: %s links to the WordPress.org translation project
+#: includes/views/parts/admin-footer.php:11
+msgid "Mailchimp for WordPress is in need of translations. Is the plugin not translated in your language or do you spot errors with the current translations? Helping out is easy! Please <a href=\"%s\">help translate the plugin using your WordPress.org account</a>."
+msgstr "Mailchimp for WordPress は翻訳が必要です。プラグインがあなたの言語に翻訳されていない、または現在の翻訳に誤りがあると思いますか ? お手伝いするのは簡単です ! <a href=\"%s\">WordPress.org アカウントを使用してプラグインの翻訳にご協力ください</a>。"
+
+#: includes/forms/class-admin.php:73
+msgid "Add to form"
+msgstr "フォームに追加"
+
+#: includes/forms/class-admin.php:111
+msgid "Wrap in paragraph tags?"
+msgstr "段落タグで折り返しますか ?"
+
+#: includes/forms/class-admin.php:102
+msgid "Placeholder"
+msgstr "プレースホルダー"
+
+#: includes/forms/class-admin.php:110
+msgid "Submit button"
+msgstr "送信ボタン"
+
+#: includes/forms/class-form-tags.php:47
+#: includes/integrations/class-integration-tags.php:32
+msgid "Replaced with the number of subscribers on the selected list(s)"
+msgstr "選択されたリストの購読者数で置き換えられました"
+
+#: includes/forms/class-form-tags.php:36
+msgid "Replaced with the form response (error or success messages)."
+msgstr "フォームの応答で置き換えられました (エラーまたは成功メッセージ)"
+
+#: includes/forms/views/parts/dynamic-content-tags.php:8
+msgid "This allows you to personalise your form or response messages."
+msgstr "フォームや応答メッセージをパーソナライズできます。"
+
+#: includes/forms/views/parts/dynamic-content-tags.php:8
+msgid "The following list of variables can be used to <a href=\"%s\">add some dynamic content to your form or success and error messages</a>."
+msgstr "以下の変数のリストは、<a href=\"%s\">フォームに動的コンテンツまたは成功、失敗メッセージを追加する</a>ことに使えます。"
+
+#: includes/forms/views/tabs/form-messages.php:96
+msgid "HTML tags like %s are allowed in the message fields."
+msgstr "メッセージ欄には %s などの HTML タグが使えます。"
+
+#: includes/forms/views/tabs/form-messages.php:58
+msgid "When using the unsubscribe method, this is the text that shows when the given email address is not on the selected Mailchimp audiences."
+msgstr "登録解除メソッドを使用する場合、これは、指定されたメールアドレスが選択された Mailchimp オーディエンスに含まれていない場合に表示されるテキストです。"
+
+#: includes/forms/views/tabs/form-messages.php:55
+msgid "Not subscribed"
+msgstr "未購読"
+
+#: includes/forms/views/tabs/form-messages.php:51
+msgid "When using the unsubscribe method, this is the text that shows when the given email address is successfully unsubscribed from the selected Mailchimp audiences)."
+msgstr "登録解除メソッドを使用する場合、これは、指定されたメールアドレスが選択された Mailchimp オーディエンスから正常に登録解除されたときに表示されるテキストです) 。"
+
+#: includes/forms/views/tabs/form-messages.php:48
+msgid "Unsubscribed"
+msgstr "購読解除"
+
+#: includes/forms/views/tabs/form-messages.php:44
+msgid "The text that shows when a general error occured."
+msgstr "一般的なエラーが発生したときに表示されるテキスト。"
+
+#: includes/forms/views/tabs/form-messages.php:41
+msgid "General error"
+msgstr "一般的エラー"
+
+#: includes/forms/views/tabs/form-messages.php:37
+msgid "The text that shows when the given email is already subscribed to the selected Mailchimp audiences."
+msgstr "指定されたメールアドレスが、選択された Mailchimp オーディエンスにすでに登録されている場合に表示されるテキスト。"
+
+#: includes/forms/views/tabs/form-messages.php:34
+msgid "Already subscribed"
+msgstr "すでに購読中"
+
+#: includes/forms/views/tabs/form-messages.php:30
+msgid "The text that shows when a required field for the selected Mailchimp audiences is missing."
+msgstr "選択した Mailchimp オーディエンスの必須フィールドが欠落している場合に表示されるテキスト。"
+
+#: includes/forms/views/tabs/form-messages.php:27
+msgid "Required field missing"
+msgstr "必須項目がありません"
+
+#: includes/forms/views/tabs/form-messages.php:23
+msgid "The text that shows when an invalid email address is given."
+msgstr "無効なメールアドレスが指定されたときに表示されるテキストです。"
+
+#: includes/forms/views/tabs/form-messages.php:20
+msgid "Invalid email address"
+msgstr "無効なメールアドレス"
+
+#: includes/forms/views/tabs/form-messages.php:16
+msgid "The text that shows when an email address is successfully subscribed to the selected Mailchimp audiences."
+msgstr "選択した Mailchimp オーディエンスにメール アドレスが正常に登録されたときに表示されるテキスト。"
+
+#: includes/forms/views/tabs/form-messages.php:13
+msgid "Successfully subscribed"
+msgstr "購読申し込み完了"
+
+#: includes/forms/views/tabs/form-settings.php:141
+msgid "Leave empty or enter <code>0</code> for no redirect. Otherwise, use complete (absolute) URLs, including <code>http://</code>."
+msgstr "リダイレクトしない場合は空欄のままにするか、<code>0</code>を入力してください。<code>http://</code> から始まる完全な (絶対) URLを入力するとリダイレクトします。"
+
+#: includes/forms/views/tabs/form-settings.php:139
+msgid "Example: %s"
+msgstr "例: %s"
+
+#: includes/forms/views/tabs/form-settings.php:137
+msgid "Redirect to URL after successful sign-ups"
+msgstr "登録完了時に URL へリダイレクト"
+
+#: includes/forms/views/tabs/form-settings.php:132
+msgid "Select \"yes\" to hide the form fields after a successful sign-up."
+msgstr "登録完了後フォームフィールドを非表示にするには、「はい」を選択します。"
+
+#: includes/forms/views/tabs/form-settings.php:121
+msgid "Hide form after a successful sign-up?"
+msgstr "登録成功後、フォームを非表示にしますか ?"
+
+#: includes/forms/views/tabs/form-settings.php:80
+#: includes/integrations/views/integration-settings.php:254
+msgid "Replace interest groups?"
+msgstr "インタレストグループ置き換えますか ?"
+
+#: includes/forms/views/tabs/form-settings.php:59
+#: includes/integrations/views/integration-settings.php:229
+#: integrations/ninja-forms/class-action.php:66
+msgid "Update existing subscribers?"
+msgstr "既存の購読者を更新しますか?"
+
+#: includes/forms/views/edit-form.php:58
+#: includes/forms/views/tabs/form-fields.php:39
+msgid "Use the shortcode %s to display this form inside a post, page or text widget."
+msgstr "ショートコード %s を使うと、このフォームを投稿、固定ページ、テキストウィジェット内に表示できます。"
+
+#: includes/forms/views/tabs/form-settings.php:36
+msgid "Select the Mailchimp audience to which people who submit this form should be subscribed."
+msgstr "このフォームを送信する人が登録する Mailchimp オーディエンスを選択します。"
+
+#: includes/forms/views/tabs/form-appearance.php:48
+msgid "If you want to load some default CSS styles, select \"basic formatting styles\" or choose one of the color themes"
+msgstr "デフォルトの CSS スタイルを読み込みたい場合は「基本フォーマットスタイル」または色別テーマのいずれかを選んでください"
+
+#: includes/forms/views/tabs/form-appearance.php:9
+msgid "Dark Theme"
+msgstr "ダークテーマ"
+
+#: includes/forms/views/tabs/form-appearance.php:12
+msgid "Blue Theme"
+msgstr "青テーマ"
+
+#: includes/forms/views/tabs/form-appearance.php:11
+msgid "Green Theme"
+msgstr "緑テーマ"
+
+#: includes/forms/views/tabs/form-appearance.php:10
+msgid "Red Theme"
+msgstr "赤テーマ"
+
+#: includes/forms/views/tabs/form-appearance.php:8
+msgid "Light Theme"
+msgstr "ライトテーマ"
+
+#: integrations/woocommerce/admin-after.php:5
+msgid "After billing details"
+msgstr "課金後の詳細"
+
+#: includes/integrations/views/integration-settings.php:195
+msgid "Select \"yes\" if the checkbox appears in a weird place."
+msgstr "チェックボックスの表示位置に問題がある場合「はい」を選択してください。"
+
+#: includes/integrations/views/integration-settings.php:191
+msgid "Load some default CSS?"
+msgstr "いくつかのデフォルトCSSを読み込みますか?"
+
+#: includes/integrations/views/integration-settings.php:158
+#: integrations/gravity-forms/class-gravity-forms.php:124
+msgid "Pre-check the checkbox?"
+msgstr "チェックボックスを事前にチェック済みにしますか ?"
+
+#: includes/integrations/views/integration-settings.php:142
+msgid "HTML tags like %s are allowed in the label text."
+msgstr "ラベルテキストには %s などの HTML タグが使えます。"
+
+#: includes/integrations/views/integration-settings.php:139
+msgid "Checkbox label text"
+msgstr "チェックボックスのラベルテキスト"
+
+#: includes/integrations/views/integration-settings.php:217
+#: integrations/gravity-forms/class-gravity-forms.php:119
+msgid "Select \"yes\" if you want people to confirm their email address before being subscribed (recommended)"
+msgstr "購読前にユーザーにメールアドレスを確認してもらう場合は「はい」を選んでください (推奨)"
+
+#: includes/integrations/views/integration-settings.php:206
+#: integrations/gravity-forms/class-gravity-forms.php:112
+msgid "Double opt-in?"
+msgstr "ダブルオプトイン?"
+
+#: integrations/gravity-forms/class-gravity-forms.php:107
+msgid "Select the list(s) to which people who check the checkbox should be subscribed."
+msgstr "ユーザーが購読を選択できるリストを選択してください。"
+
+#: includes/forms/views/tabs/form-settings.php:17
+#: includes/integrations/views/integration-settings.php:123
+msgid "No audiences found, <a href=\"%s\">are you connected to Mailchimp</a>?"
+msgstr "オーディエンスが見つかりません。<a href=\"%s\">Mailchimp に連携済みですか</a> ?"
+
+#: includes/class-personal-data-exporter.php:74
+msgid "Mailchimp Lists"
+msgstr "Mailchimp リスト"
+
+#: includes/views/parts/lists-overview.php:20
+msgid "A total of %d audiences were found in your Mailchimp account."
+msgstr "Mailchimp アカウントに合計%d個のオーディエンスが見つかりました。"
+
+#: includes/views/parts/lists-overview.php:17
+msgid "No audiences were found in your Mailchimp account"
+msgstr "Mailchimp アカウントにオーディエンスが見つかりませんでした"
+
+#: includes/views/general-settings.php:55
+msgid "Get your API key here."
+msgstr "ここで API キーを取得してください。"
+
+#: includes/views/general-settings.php:52
+msgid "Your Mailchimp API key"
+msgstr "あなたの MailChimp API キー"
+
+#: includes/views/general-settings.php:50
+msgid "API Key"
+msgstr "API キー"
+
+#: includes/views/general-settings.php:41
+msgid "NOT CONNECTED"
+msgstr "未接続"
+
+#: includes/views/general-settings.php:37
+msgid "CONNECTED"
+msgstr "接続中"
+
+#: includes/views/general-settings.php:15
+msgid "API Settings"
+msgstr "API 設定"
+
+#: integrations/gravity-forms/class-field.php:40
+msgid "Mailchimp for WordPress"
+msgstr "Mailchimp for WordPress"
+
+#: includes/forms/views/tabs/form-settings.php:52
+#: includes/forms/views/tabs/form-settings.php:67
+#: includes/forms/views/tabs/form-settings.php:88
+#: includes/forms/views/tabs/form-settings.php:129
+#: includes/integrations/views/integration-settings.php:47
+#: includes/integrations/views/integration-settings.php:72
+#: includes/integrations/views/integration-settings.php:161
+#: includes/integrations/views/integration-settings.php:194
+#: includes/integrations/views/integration-settings.php:214
+#: includes/integrations/views/integration-settings.php:237
+#: includes/integrations/views/integration-settings.php:262
+#: integrations/contact-form-7/class-contact-form-7.php:77
+#: integrations/gravity-forms/class-gravity-forms.php:116
+#: integrations/gravity-forms/class-gravity-forms.php:128
+#: integrations/prosopo-procaptcha/admin-after.php:113
+#: integrations/wpforms/class-field.php:260
+msgid "No"
+msgstr "いいえ"
+
+#: includes/forms/views/tabs/form-settings.php:48
+#: includes/forms/views/tabs/form-settings.php:63
+#: includes/forms/views/tabs/form-settings.php:84
+#: includes/forms/views/tabs/form-settings.php:125
+#: includes/integrations/views/integration-settings.php:46
+#: includes/integrations/views/integration-settings.php:71
+#: includes/integrations/views/integration-settings.php:160
+#: includes/integrations/views/integration-settings.php:193
+#: includes/integrations/views/integration-settings.php:210
+#: includes/integrations/views/integration-settings.php:233
+#: includes/integrations/views/integration-settings.php:258
+#: integrations/contact-form-7/class-contact-form-7.php:77
+#: integrations/gravity-forms/class-gravity-forms.php:115
+#: integrations/gravity-forms/class-gravity-forms.php:127
+#: integrations/prosopo-procaptcha/admin-after.php:109
+#: integrations/wpforms/class-field.php:260
+msgid "Yes"
+msgstr "はい"
+
+#: config/default-form-messages.php:18
+msgid "Given email address is not subscribed."
+msgstr "指定したメールアドレスが登録されていません。"
+
+#: config/default-form-messages.php:14
+msgid "You were successfully unsubscribed."
+msgstr "購読を解除しました。"
+
+#: config/default-form-messages.php:34
+msgid "Please fill in the required fields."
+msgstr "必要な欄に記入してください。"
+
+#: config/default-form-messages.php:30
+msgid "Given email address is already subscribed, thank you!"
+msgstr "指定されたメールアドレスはすでに購読済みです。ありがとうございます。"
+
+#: config/default-form-messages.php:26
+msgid "Please provide a valid email address."
+msgstr "有効なメールアドレスを入力してください。"
+
+#: config/default-form-messages.php:22
+msgid "Oops. Something went wrong. Please try again later."
+msgstr "何かが間違っていました。後ほどもう一度お試しください。"
+
+#: config/default-form-messages.php:6
+msgid "Thank you, your sign-up request was successful! Please check your email inbox to confirm."
+msgstr "ありがとうございます。サインアップが完了しました!  メールの受信トレイを確認してください。"
+
+#: includes/integrations/class-integration.php:80
+msgid "Sign me up for the newsletter!"
+msgstr "ニュースレターに申し込む"
+
+#: config/default-form-content.php:5
+msgid "Sign up"
+msgstr "登録"
+
+#: config/default-form-content.php:4
+msgid "Your email address"
+msgstr "メールアドレス"
+
+#: includes/forms/class-widget.php:98
+msgid "You can edit your sign-up form in the <a href=\"%s\">Mailchimp for WordPress form settings</a>."
+msgstr "<a href=\"%s\">Mailchimp for WordPress フォーム設定</a>で登録フォームを編集できます。"
+
+#: includes/forms/class-widget.php:81
+msgid "Title:"
+msgstr "タイトル:"
+
+#: includes/forms/class-widget.php:27
+msgid "Newsletter"
+msgstr "ニュースレター"
+
+#: includes/forms/class-widget.php:33
+msgid "Displays your Mailchimp for WordPress sign-up form"
+msgstr "Mailchimp for WordPress 登録フォームを表示"
+
+#: includes/forms/class-admin.php:479 includes/forms/class-widget.php:31
+msgid "Mailchimp Sign-Up Form"
+msgstr "Mailchimp 登録フォーム"
+
+#: config/default-form-content.php:3 includes/class-mailchimp.php:254
+#: includes/forms/class-admin.php:85
+msgid "Email address"
+msgstr "メールアドレス"
+
+#: includes/forms/class-admin.php:109
+msgid "Subscribe"
+msgstr "購読"
+
+#: includes/forms/class-admin.php:92
+msgid "Initial value"
+msgstr "初期値"
+
+#: includes/forms/class-admin.php:127 includes/forms/views/edit-form.php:23
+msgid "Forms"
+msgstr "フォーム"
+
+#: includes/forms/views/tabs/form-settings.php:1
+msgid "Form Settings"
+msgstr "フォーム設定"
+
+#: includes/forms/class-admin.php:78
+msgid "Checkboxes"
+msgstr "チェックボックス"
+
+#: includes/admin/class-admin.php:330
+msgid "Mailchimp API Settings"
+msgstr "Mailchimp API 設定"
+
+#: includes/admin/class-admin-texts.php:70 includes/forms/views/edit-form.php:6
+msgid "Settings"
+msgstr "設定"

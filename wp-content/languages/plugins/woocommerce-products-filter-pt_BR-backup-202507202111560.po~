@@ -1,0 +1,4769 @@
+# Translation of Plugins - HUSKY &#8211; Products Filter Professional for WooCommerce - Development (trunk) in Portuguese (Brazil)
+# This file is distributed under the same license as the Plugins - HUSKY &#8211; Products Filter Professional for WooCommerce - Development (trunk) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-07-20 21:09+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Loco https://localise.biz/\n"
+"Language: pt_BR\n"
+"Project-Id-Version: Plugins - HUSKY &#8211; Products Filter Professional for "
+"WooCommerce - Development (trunk)\n"
+"Language-Team: Português do Brasil\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-20 21:08+0000\n"
+"Last-Translator: AdminIT\n"
+"X-Loco-Version: 2.8.0; wp-6.8.2; php-7.4.33"
+
+#: ext/slideout/views/tabs_content.php:243
+#: ext/slideout/views/tabs_content.php:271
+msgid "%"
+msgstr "%"
+
+#: ext/stat/views/tabs_content.php:70
+#, php-format
+msgid "(Statistic collected from: %s %d)"
+msgstr "(Estatística coletada a partir de: %s %d)"
+
+#: ext/by_text/views/options.php:291
+#: ext/front_builder/options/sections/by_text.php:61
+#, fuzzy
+msgid "+SKU"
+msgstr "+ SKU"
+
+#: ext/by_text_2/views/options.php:262
+msgid "+SKU "
+msgstr "+SKU "
+
+#: ext/by_text/views/options.php:266
+#: ext/front_builder/options/sections/by_text.php:54
+msgid "+Taxonomies"
+msgstr "+Taxonomias"
+
+#: ext/stat/views/tabs_content.php:551
+msgid "12 hours recommended"
+msgstr "12 horas recomendadas"
+
+#: ext/url_request/views/tabs_content.php:118
+#, fuzzy
+msgid "2 (recomended)"
+msgstr "2 (recomendado)"
+
+#: ext/by_text_2/views/options.php:289
+msgid ""
+"Ability to search by the description of the any variation in the variable "
+"product"
+msgstr ""
+"Capacidade de pesquisar pela descrição de qualquer variação no produto "
+"variável"
+
+#: ext/by_text/views/options.php:331
+#: ext/front_builder/options/sections/by_text.php:76
+msgid ""
+"Ability to search by the description of the any variation of the variable "
+"product"
+msgstr ""
+"Capacidade de pesquisar pela descrição de qualquer variação do produto "
+"variável"
+
+#: ext/acf_filter/classes/woof_type_acf_filter.php:56
+#, fuzzy
+msgid "ACF fields"
+msgstr "Campos ACF"
+
+#: ext/slideout/views/tabs_content.php:207
+msgid "Action"
+msgstr "Ação"
+
+#: classes/helper.php:858
+msgid "Action failed. Please refresh the page and retry."
+msgstr "A ação falhou. Atualize a página e tente novamente."
+
+#: ext/smart_designer/index.php:288
+msgid "Actions"
+msgstr "Ações"
+
+#: ext/slider/index.php:44
+#, fuzzy
+msgid ""
+"Activates dynamic recount for each term in the the range. If you have very "
+"long range (a lot of terms) this feature will generate additional MySQL "
+"queries which will create additional loading on the server!"
+msgstr ""
+"Ativa a recontagem dinâmica para cada termo no intervalo. Se você tiver um "
+"alcance muito longo (muitos termos), esse recurso gerará consultas MySQL "
+"adicionais que criarão um carregamento adicional no servidor!"
+
+#: ext/by_text_2/views/options.php:263
+msgid "Activates the ability to search by SKU from the same text-input"
+msgstr ""
+"Ativa a capacidade de pesquisar por SKU a partir da mesma entrada de texto"
+
+#: ext/by_text/views/options.php:292
+#: ext/front_builder/options/sections/by_text.php:62
+msgid "Activates the ability to search by SKU in the same text-input"
+msgstr "Ativa a capacidade de pesquisar por SKU na mesma entrada de texto"
+
+#: ext/meta_filter/views/tabs_content.php:43
+msgid "Add"
+msgstr "Adicionar"
+
+#: ext/meta_filter/views/tabs_content.php:42
+msgid "Add Custom key by hands"
+msgstr "Adicionar chave personalizada manualmente"
+
+#: ext/front_builder/index.php:113
+#, fuzzy
+msgid "Add filter section"
+msgstr "Adicionar seção de filtro"
+
+#: ext/url_request/views/tabs_content.php:155
+msgid "Add SEO rule"
+msgstr "Adicionar regra de SEO"
+
+#: ext/query_save/views/options.php:46
+msgid "Add this query"
+msgstr "Adicionar esta consulta"
+
+#: ext/meta_filter/index.php:215 ext/stock_quantity/views/options.php:29
+#: ext/by_instock/views/options.php:29 ext/by_author/views/options.php:31
+#: ext/by_backorder/views/options.php:29 ext/by_text/views/options.php:29
+#: ext/by_onsales/views/options.php:29
+#: ext/products_messenger/views/options.php:30
+#: ext/by_text_2/views/options.php:29 ext/by_sku/views/options.php:28
+#: ext/meta_filter/classes/woof_type_meta_filter.php:64
+#: ext/acf_filter/classes/woof_type_acf_filter.php:64
+#: ext/query_save/views/options.php:30 ext/by_featured/views/options.php:30
+#: ext/by_rating/views/options.php:28
+msgid "additional options"
+msgstr "opções adicionais"
+
+#: ext/quick_search/views/tabs_content.php:177
+msgid "Additional search data for text search"
+msgstr "Dados de pesquisa adicionais para pesquisa de texto"
+
+#: ext/quick_search/views/tabs_content.php:189
+msgid ""
+"Additional search data: which taxonomies terms titles should be included "
+"into TEXT search data file. So, your customers will be able to find with "
+"TEXT search input also products using your taxonomies terms titles! After "
+"selecting new taxonomies here do not forget press Save and then Reassemble "
+"data file!"
+msgstr ""
+"Dados de pesquisa adicionais: quais títulos de termos de taxonomia devem ser "
+"incluídos no arquivo de dados de pesquisa de TEXTO. Assim, seus clientes "
+"poderão encontrar com a entrada de pesquisa de TEXTO também produtos usando "
+"seus títulos de termos de taxonomia! Depois de selecionar novas taxonomias "
+"aqui, não se esqueça de pressionar Salvar e, então, Remontar o arquivo de "
+"dados!"
+
+#: classes/widgets.php:138
+msgid "Additional text before"
+msgstr "Texto adicional antes"
+
+#: ext/turbo_mode/views/tabs_content.php:61
+msgid ""
+"After activation of Turbo Mode firstly what should be done is generating of "
+"the data file, see button below. And also do not forget to set cron mode."
+msgstr ""
+"Após a ativação do modo turbo, primeiramente o que deve ser feito é gerar o "
+"arquivo de dados, veja botão abaixo. E também não se esqueça de definir o "
+"modo cron."
+
+#: ext/stat/views/tabs_content.php:252
+msgid ""
+"After installing all settings for statistics assembling - enable it here"
+msgstr ""
+"Depois de instalar todas as configurações para a montagem de estatísticas, "
+"ative aqui"
+
+#: ext/front_builder/options/options.php:29
+#, fuzzy
+msgid "AJAX redraw"
+msgstr "Redesenho AJAX"
+
+#: ext/by_author/views/options.php:79
+#: ext/front_builder/options/sections/by_author.php:7
+msgid "all"
+msgstr "tudo"
+
+#: ext/front_builder/options/options.php:9
+#, fuzzy
+msgid ""
+"allows auto-submiting of the search form even if its disabled in the plugin "
+"options page"
+msgstr ""
+"permite o envio automático do formulário de pesquisa mesmo que esteja "
+"desabilitado na página de opções do plugin"
+
+#: views/shortcode_generator.php:158
+#, fuzzy
+msgid ""
+"Allows enabling or disabling dynamic recount for the current product search "
+"form."
+msgstr ""
+"Permite ativar ou desativar a recontagem dinâmica para o formulário de "
+"pesquisa de produto atual."
+
+#: views/shortcode_generator.php:73
+#, fuzzy
+msgid ""
+"Allows form auto submit of the search form even if its disabled on the "
+"plugin options page."
+msgstr ""
+"Permite o envio automático do formulário de pesquisa, mesmo que esteja "
+"desativado na página de opções do plugin."
+
+#: ext/select_hierarchy/index.php:47
+msgid ""
+"Allows show disabled drop-downs with its custom name. Necessary changing "
+"custom taxonomy label to title like: Country+City+District^My Locations"
+msgstr ""
+
+#: ext/front_builder/options/options.php:44
+#, fuzzy
+msgid ""
+"allows to set Filter and Reset button on bottom – b, top – t, top and bottom "
+"– tb. Default is bottom"
+msgstr ""
+"permite definir filtro e botão Reset em bottom – b, top – t, top e bottom – "
+"tb. O padrão é bottom"
+
+#: views/shortcode_generator.php:140
+#, fuzzy
+msgid ""
+"Allows to set the Filter and Reset button on the: bottom, top, or both (top "
+"and bottom)"
+msgstr ""
+"Permite definir o filtro e botão de Reset no: inferior, superior, ou ambos "
+"(superior e inferior)"
+
+#: ext/front_builder/options/options.php:37
+#, fuzzy
+msgid "allows to show results on any another page of the site"
+msgstr "permite mostrar resultados em qualquer outra página do site"
+
+#: ext/sections/views/tabs_content.php:34
+msgid ""
+"Allows to wrap filter-elements into [close/open]-sections and make filter "
+"form more compact."
+msgstr ""
+"Permite agrupar elementos de filtro em seções \"fechar/abrir\" e tornar o "
+"formulário de filtro mais compacto."
+
+#: ext/front_builder/options/sections/taxonomies.php:86
+#, fuzzy
+msgid ""
+"AND or OR: if to select AND and on the site front select 2 terms - will be "
+"found products which contains both terms on the same time. If to select NOT "
+"IN will be found items which not has selected terms!! Means vice versa to "
+"the the concept of including: excluding. AND works for that filter sections "
+"which allows to select more than one filter item (checkbox, color)"
+msgstr ""
+"E ou ou: se selecionar e e na frente do site selecionar 2 termos-serão "
+"encontrados produtos que contém os dois termos ao mesmo tempo. Se selecionar "
+"não EM serão encontrados itens que não tem termos selecionados!! Significa "
+"vice-versa ao conceito de incluir: excluir. E funciona para que as seções de "
+"filtro que permite selecionar mais de um item de filtro (caixa de seleção, "
+"cor)"
+
+#: ext/quick_search/views/shortcodes/woof_quick_search.php:169
+msgid "Any"
+msgstr "Qualquer"
+
+#: ext/by_text_2/views/options.php:315
+msgid "Any notes for customer."
+msgstr "Qualquer nota para clientes."
+
+#: ext/by_sku/views/options.php:236
+#: ext/front_builder/options/sections/by_sku.php:69
+#, fuzzy
+msgid ""
+"Any notes for customer. Example: use comma for searching by more than 1 SKU!"
+msgstr ""
+"Quaisquer notas para o cliente. Exemplo: use vírgula para pesquisar por mais "
+"de 1 SKU!"
+
+#: ext/products_messenger/views/options.php:297
+#: ext/query_save/views/options.php:133
+msgid "Any text notes for customer under subscription form."
+msgstr "Quaisquer notas de texto para o cliente no formulário de assinatura."
+
+#: ext/query_save/views/options.php:204
+msgid ""
+"Any text notes for customer. Example: Sorry! This product is not suitable "
+"for your search %title%."
+msgstr ""
+"Quaisquer notas de texto para o cliente. Exemplo: Desculpe! Este produto não "
+"é adequado para sua pesquisa %title%."
+
+#: ext/query_save/views/options.php:192
+msgid ""
+"Any text notes for customer. Example: This product matches your search: "
+"%title%."
+msgstr ""
+"Quaisquer notas de texto para o cliente. Exemplo: Este produto corresponde à "
+"sua pesquisa: %title%."
+
+#: ext/smart_designer/index.php:589
+msgid "Are you sure you want to apply selected preset?"
+msgstr "Tem certeza de que deseja aplicar a predefinição selecionada?"
+
+#: ext/smart_designer/index.php:590
+msgid "Are you sure you want to delete selected preset?"
+msgstr "Tem certeza de que deseja excluir a predefinição selecionada?"
+
+#: ext/front_builder/index.php:94
+#, fuzzy
+msgid "Are you sure you want to delete this filter-section?"
+msgstr "Tem certeza de que deseja excluir esta seção de filtros?"
+
+#: ext/smart_designer/index.php:591 ext/products_messenger/index.php:458
+#: ext/query_save/index.php:255
+msgid "Are you sure?"
+msgstr "Tem certeza?"
+
+#: ext/export_import/index.php:45
+msgid "Are you sure? Settings will be overwritten!"
+msgstr "Tem certeza? As configurações serão substituídas!"
+
+#: ext/front_builder/options/options.php:51
+#, fuzzy
+msgid "As button"
+msgstr "Como botão"
+
+#: ext/sections/views/tabs_content.php:79
+msgid "As checkbox"
+msgstr "Como caixa de seleção"
+
+#: ext/slideout/views/tabs_content.php:74
+msgid "as Image"
+msgstr "como imagem"
+
+#: ext/sections/views/tabs_content.php:80
+msgid "As radio"
+msgstr "Como botão de opção"
+
+#: ext/slideout/views/tabs_content.php:75
+msgid "as Text"
+msgstr "como texto"
+
+#: ext/products_messenger/views/email_template.php:59
+msgid ""
+"Attention! This is the last email. If you want to continue get such emails ->"
+" Go by next link and subscribe again"
+msgstr ""
+"Atenção! Este é o último e-mail. Se você deseja continuar a obter tais e-"
+"mails-> Acesse o seguinte link e assine novamente"
+
+#: ext/front_builder/index.php:698
+#, fuzzy
+msgid "Author"
+msgstr "Autor"
+
+#: ext/by_author/views/shortcodes/woof_author_filter.php:108
+msgid "Author:"
+msgstr "Autor:"
+
+#: ext/by_text/views/options.php:213 ext/by_text_2/views/options.php:180
+#: ext/by_sku/views/options.php:139
+#: ext/front_builder/options/sections/by_text.php:40
+#: ext/front_builder/options/sections/by_sku.php:28
+msgid "Autocomplete"
+msgstr "Autocompletar"
+
+#: ext/by_sku/views/options.php:193
+#: ext/front_builder/options/sections/by_sku.php:48
+#, fuzzy
+msgid "Autocomplete products count"
+msgstr "Autocompletar Contagem de produtos"
+
+#: ext/by_text_2/views/options.php:181
+msgid "Autocomplete relevant variants in by_text textinput"
+msgstr ""
+"Variantes relevantes de preenchimento automático na entrada de texto by_text"
+
+#: ext/by_sku/views/options.php:140
+#: ext/front_builder/options/sections/by_sku.php:29
+#, fuzzy
+msgid "Autocomplete relevant variants in SKU textinput"
+msgstr "Autocompletar variantes relevantes em SKU textinput"
+
+#: ext/front_builder/options/options.php:15
+#, fuzzy
+msgid "Autohide"
+msgstr "Autohide"
+
+#: classes/widgets.php:178 ext/front_builder/options/options.php:8
+msgid "Autosubmit"
+msgstr "Autoenviar"
+
+#: ext/url_request/classes/seo.php:303 ext/by_rating/views/woof.php:28
+msgid "average rating between 1 to 2-"
+msgstr "classificação média entre 1 e 2-"
+
+#: ext/url_request/classes/seo.php:302 ext/by_rating/views/woof.php:27
+msgid "average rating between 2 to 3-"
+msgstr "classificação média entre 2 e 3-"
+
+#: ext/url_request/classes/seo.php:301 ext/by_rating/views/woof.php:26
+msgid "average rating between 3 to 4-"
+msgstr "classificação média entre 3 e 4-"
+
+#: ext/url_request/classes/seo.php:300 ext/by_rating/views/woof.php:25
+msgid "average rating between 4 to 5"
+msgstr "classificação média entre 4 e 5"
+
+#: ext/step_filer/index.php:105 ext/smart_designer/index.php:597
+msgid "Back"
+msgstr "Voltar"
+
+#: ext/smart_designer/data/color.php:275 ext/smart_designer/data/radio.php:98
+#: ext/smart_designer/data/radio.php:367
+#: ext/smart_designer/data/checkbox.php:132
+#: ext/smart_designer/data/checkbox.php:401
+#: ext/smart_designer/data/switcher.php:321
+msgid "Background color"
+msgstr "Cor de fundo"
+
+#: ext/smart_designer/data/color.php:282 ext/smart_designer/data/radio.php:94
+#: ext/smart_designer/data/radio.php:374
+#: ext/smart_designer/data/checkbox.php:128
+#: ext/smart_designer/data/checkbox.php:408
+#: ext/smart_designer/data/switcher.php:328
+msgid "Background image"
+msgstr "Imagem de fundo"
+
+#: ext/color/index.php:135
+#, fuzzy
+msgid "background image url 25x25"
+msgstr "url da imagem de fundo 25x25"
+
+#: ext/by_text/views/options.php:153 ext/by_text_2/views/options.php:120
+#: ext/front_builder/options/sections/by_text.php:15
+msgid "Behavior"
+msgstr "Comportamento"
+
+#: ext/image/index.php:49 ext/color/index.php:60
+#, fuzzy
+msgid "Behavior as radio button"
+msgstr "Comportamento como botão de opção"
+
+#: ext/sections/views/tabs_content.php:98
+msgid "Behavior of how the filter sections will open."
+msgstr "Comportamento de como as seções de filtro serão abertas."
+
+#: ext/by_sku/views/options.php:165
+#: ext/front_builder/options/sections/by_sku.php:35
+#, fuzzy
+msgid "Behavior of reset button"
+msgstr "Comportamento do botão reset"
+
+#: ext/by_text/views/options.php:154
+#: ext/front_builder/options/sections/by_text.php:16
+msgid "Behavior of the text searching"
+msgstr "Comportamento da pesquisa de texto"
+
+#: ext/by_text_2/views/options.php:121
+msgid "behavior of the text searching"
+msgstr "comportamento da pesquisa de texto"
+
+#: ext/turbo_mode/views/tabs_content.php:30
+msgid ""
+"Boost speed of products filtering. This mode allows to avoid generating big "
+"MySQL queries while products filtering on the site front what makes less "
+"loading to the server and getting filtering results more quick"
+msgstr ""
+"Aumente a velocidade da filtragem de produtos. Este modo permite evitar a "
+"geração de grandes consultas MySQL enquanto os produtos filtram na interface "
+"do site, o que gera menos carregamento para o servidor e obtém resultados de "
+"filtragem mais rápidos"
+
+#: ext/smart_designer/data/color.php:61 ext/smart_designer/data/color.php:303
+#: ext/smart_designer/data/radio.php:110 ext/smart_designer/data/radio.php:395
+#: ext/smart_designer/data/checkbox.php:144
+#: ext/smart_designer/data/checkbox.php:429
+#: ext/smart_designer/data/switcher.php:349
+msgid "Border color"
+msgstr "Cor da borda"
+
+#: ext/smart_designer/data/color.php:57 ext/smart_designer/data/color.php:296
+#: ext/smart_designer/data/radio.php:106 ext/smart_designer/data/radio.php:388
+#: ext/smart_designer/data/checkbox.php:140
+#: ext/smart_designer/data/checkbox.php:422
+#: ext/smart_designer/data/switcher.php:342
+msgid "Border radius"
+msgstr "Raio da borda"
+
+#: ext/smart_designer/data/color.php:53 ext/smart_designer/data/color.php:289
+#: ext/smart_designer/data/radio.php:102 ext/smart_designer/data/radio.php:381
+#: ext/smart_designer/data/checkbox.php:136
+#: ext/smart_designer/data/checkbox.php:415
+#: ext/smart_designer/data/switcher.php:335
+msgid "Border width"
+msgstr "Largura da borda"
+
+#: ext/products_messenger/views/options.php:277
+msgid "Both"
+msgstr "Ambos"
+
+#: views/shortcode_generator.php:129 classes/widgets.php:197
+#: ext/slideout/views/tabs_content.php:167
+msgid "Bottom"
+msgstr "Inferior"
+
+#: ext/slideout/views/tabs_content.php:67
+msgid "Button as"
+msgstr "Botão como"
+
+#: ext/slideout/views/tabs_content.php:137
+msgid "Button image size"
+msgstr "Tamanho da imagem do botão"
+
+#: ext/query_save/views/options.php:107
+msgid "Button label"
+msgstr "Rótulo do botão"
+
+#: ext/slideout/views/tabs_content.php:263
+msgid "Button offset (px) from top or left from the window edge"
+msgstr ""
+"Deslocamento do botão (px) da parte superior ou esquerda da borda da janela"
+
+#: ext/front_builder/options/options.php:43
+#, fuzzy
+msgid "Buttons position"
+msgstr "Posição dos botões"
+
+#: ext/by_author/index.php:48
+msgid "By author"
+msgstr "Por autor"
+
+#: ext/products_messenger/views/options.php:275
+msgid "By date"
+msgstr "Por data"
+
+#: ext/products_messenger/views/options.php:276
+msgid "By emails count"
+msgstr "Por contagem de e-mails"
+
+#: ext/front_builder/index.php:749
+#, fuzzy, php-format
+msgid "by Front Builder for: %s"
+msgstr "por Front Builder para: %s"
+
+#: ext/by_rating/index.php:43
+msgid "By rating"
+msgstr "Por classificação"
+
+#: ext/sections/index.php:87 ext/by_rating/views/options.php:17
+msgid "By rating drop-down"
+msgstr "Por menu suspenso de classificação"
+
+#: ext/by_sku/index.php:46
+#, fuzzy
+msgid "by SKU"
+msgstr "por SKU"
+
+#: ext/by_text/index.php:97 ext/by_text/index.php:250
+#: ext/by_text_2/index.php:86
+msgid "By text"
+msgstr "Por texto"
+
+#: ext/slideout/views/tabs_content.php:382
+msgid ""
+"By this button you can set settings and generate shortcode for your needs "
+"for on single pages. After using, if you do not want the settings became "
+"globals, refresh the page to avoid settings saving!"
+msgstr ""
+"Por este botão, você pode definir configurações e gerar um shortcode para "
+"suas necessidades em páginas individuais. Depois de usar, se você não quiser "
+"que as configurações se tornem globais, atualize a página para evitar que as "
+"configurações sejam salvas!"
+
+#: ext/stat/views/tabs_content.php:435
+msgid "Cache folder"
+msgstr "Diretório de cache"
+
+#: ext/stat/views/tabs_content.php:169
+msgid "Calculate Statistics"
+msgstr "Calcular estatísticas"
+
+#: ext/front_builder/options/sections/meta/datepicker.php:36
+#: ext/meta_filter/html_types/datepicker/views/additional_options.php:80
+#, fuzzy
+msgid "Calendar date format"
+msgstr "Formato da data do calendário"
+
+#: classes/helper.php:862
+msgid "Cheatin&#8217; huh?"
+msgstr "Trapaceando, hein?"
+
+#: ext/stat/views/tabs_content.php:298
+msgid "Check DB connection"
+msgstr "Verifique a conexão do BD"
+
+#: ext/smart_designer/index.php:32 ext/meta_filter/index.php:63
+#: ext/select_radio_check/index.php:47 ext/by_instock/views/options.php:85
+#: ext/by_author/views/options.php:100 ext/by_backorder/views/options.php:82
+#: ext/by_onsales/views/options.php:54 ext/by_featured/views/options.php:54
+#: ext/front_builder/options/sections/by_onsales.php:15
+#: ext/front_builder/options/sections/by_featured.php:15
+#: ext/front_builder/options/sections/by_instock.php:28
+#: ext/front_builder/options/sections/by_backorder.php:28
+#: ext/front_builder/options/sections/by_author.php:39
+msgid "Checkbox"
+msgstr "Caixa de seleção"
+
+#: ext/smart_designer/data/radio.php:139
+#: ext/smart_designer/data/checkbox.php:173
+#: ext/smart_designer/data/switcher.php:219
+msgid "Child terms left shift"
+msgstr "Deslocamento à esquerda de termos descendentes"
+
+#: ext/meta_filter/html_types/datepicker/views/woof.php:127
+msgid "Clear"
+msgstr "Limpar"
+
+#: ext/by_sku/views/options.php:173
+#: ext/front_builder/options/sections/by_sku.php:42
+#, fuzzy
+msgid "Clear text input"
+msgstr "Entrada de texto não criptografado"
+
+#: ext/slideout/views/tabs_content.php:214
+msgid "Click"
+msgstr "Clique"
+
+#: ext/front_builder/index.php:99
+#, fuzzy
+#| msgid "Chosen"
+msgid "Close"
+msgstr "Escolhido"
+
+#: views/woof.php:546
+msgid "Close filter"
+msgstr "Fechar filtro"
+
+#: views/shortcode_generator.php:22
+#, fuzzy
+msgid "Close shortcode generator"
+msgstr "Fechar shortcode generator"
+
+#: ext/smart_designer/index.php:35 ext/color/index.php:79
+#: ext/smart_designer/classes/color.php:86
+msgid "Color"
+msgstr "Cor"
+
+#: ext/by_sku/views/options.php:111
+#: ext/front_builder/options/sections/by_sku.php:15
+#, fuzzy
+msgid "Conditions logic"
+msgstr "Lógica das condições"
+
+#: views/shortcode_generator.php:291
+#, fuzzy
+msgid "Copied!"
+msgstr "Copiado!"
+
+#: views/shortcode_generator.php:288
+#, fuzzy
+msgid "Copy"
+msgstr "Copy"
+
+#: ext/smart_designer/data/color.php:179 ext/smart_designer/data/radio.php:271
+#: ext/smart_designer/data/checkbox.php:305
+#: ext/smart_designer/data/switcher.php:225
+msgid "Counter"
+msgstr "Contador"
+
+#: ext/smart_designer/index.php:596
+msgid "Create Element"
+msgstr "Criar elemento"
+
+#: ext/sections/views/tabs_content.php:127
+msgid "Create new section. Don`t forget to click on the save button."
+msgstr "Criar nova seção. Não se esqueça de clicar no botão salvar."
+
+#: ext/sections/views/tabs_content.php:134
+msgid "Create section"
+msgstr "Criar seção"
+
+#: ext/url_request/views/tabs_content.php:154
+msgid "Create your products page URL here"
+msgstr "Crie o URL da sua página de produtos aqui"
+
+#: ext/front_builder/index.php:103 ext/turbo_mode/index.php:205
+msgid "Creating"
+msgstr "Criando"
+
+#: ext/smart_designer/index.php:605
+msgid "creating"
+msgstr "criando"
+
+#: ext/turbo_mode/views/tabs_content.php:67
+msgid "Cron type"
+msgstr "Tipo de cron"
+
+#: ext/by_text/views/options.php:318
+#: ext/front_builder/options/sections/by_text.php:68
+msgid "Custom fields"
+msgstr "Campos personalizados"
+
+#: ext/slideout/views/tabs_content.php:130
+msgid "Custom text of the button"
+msgstr "Texto personalizado do botão"
+
+#: ext/turbo_mode/index.php:117 ext/quick_search/views/tabs_content.php:97
+#: ext/products_messenger/views/options.php:145
+#: ext/stat/views/tabs_content.php:527
+msgid "daily"
+msgstr "diariamente"
+
+#: ext/conditionals/views/tabs_content.php:35
+msgid "Data for default filter"
+msgstr "Dados para filtro padrão"
+
+#: ext/stat/index.php:157
+msgid "Database not connected!    ERROR! "
+msgstr "Banco de dados não conectado!    ERRO!"
+
+#: ext/stat/index.php:159
+msgid "Database successfully connected!!!"
+msgstr "Banco de dados conectado com sucesso!"
+
+#: ext/stat/index.php:175
+msgid "Database successfully updated!!!"
+msgstr "Banco de dados atualizado com sucesso!"
+
+#: ext/meta_filter/views/tabs_content.php:159
+msgid "date"
+msgstr "data"
+
+#: ext/meta_filter/index.php:81
+msgid "Datepicker"
+msgstr "Seletor de data"
+
+#: ext/stat/views/tabs_content.php:293
+msgid "DB Name"
+msgstr "Nome do BD"
+
+#: ext/products_messenger/index.php:30
+msgid ""
+"Dear [DISPLAY_NAME], we increased the range of our products. Number of new "
+"products: [PRODUCT_COUNT]"
+msgstr ""
+"[DISPLAY_NAME], aumentamos a variedade de nossos produtos. Número de novos "
+"produtos: [PRODUCT_COUNT]"
+
+#: views/shortcode_generator.php:62 views/shortcode_generator.php:147
+#: classes/widgets.php:165 classes/widgets.php:181 ext/slider/index.php:70
+#: ext/stock_quantity/views/options.php:276
+#: ext/front_builder/options/sections/by_price.php:99
+#: ext/front_builder/options/sections/taxonomies.php:64
+#: ext/front_builder/options/sections/meta/slider.php:85
+#: ext/meta_filter/html_types/slider/views/additional_options.php:187
+msgid "Default"
+msgstr "Padrão"
+
+#: ext/front_builder/options/sections/meta/datepicker.php:43
+#: ext/meta_filter/html_types/datepicker/views/additional_options.php:87
+msgid "Default - mm/dd/yy"
+msgstr "Padrão - mm/dd/yy"
+
+#: ext/smart_designer/data/color.php:49
+msgid "Default color"
+msgstr "Cor padrão"
+
+#: ext/front_builder/options/layout_options.php:33
+#, fuzzy
+msgid "Default filter section width"
+msgstr "Largura padrão da seção do filtro"
+
+#: ext/front_builder/options/layout_options.php:34
+#, fuzzy
+msgid ""
+"default filter section width. Allows to place filter sections as columns on "
+"a page. Example: 150px, 33%, 49%, 50%. For each filter-section you can set "
+"its width in its own options!"
+msgstr ""
+"largura padrão da seção do filtro. Permite colocar seções de filtro como "
+"colunas em uma página. Exemplo: 150px, 33%, 49%, 50%. Para cada filtro-seção "
+"você pode definir sua largura em suas próprias opções!"
+
+#: views/shortcodes/woof_price_filter_radio.php:57
+#: views/html_types/radio.php:108 views/html_types/radio.php:216
+#: ext/smart_designer/views/woof.php:98
+#: ext/acf_filter/html_types/radio/views/woof.php:137
+msgid "Delete"
+msgstr "Excluir"
+
+#: ext/meta_filter/views/tabs_content.php:164
+msgid "delete"
+msgstr "excluir"
+
+#: ext/front_builder/index.php:111
+#, fuzzy
+msgid "demo mode is activated, and results are visible only to you"
+msgstr ""
+"o modo de demonstração é ativado e os resultados são visíveis apenas para "
+"você"
+
+#: ext/front_builder/index.php:98 ext/smart_designer/data/color.php:34
+#: ext/smart_designer/data/color.php:116 ext/smart_designer/data/color.php:188
+#: ext/smart_designer/data/radio.php:34 ext/smart_designer/data/radio.php:158
+#: ext/smart_designer/data/radio.php:280
+#: ext/smart_designer/data/checkbox.php:34
+#: ext/smart_designer/data/checkbox.php:192
+#: ext/smart_designer/data/checkbox.php:314
+#: ext/smart_designer/data/switcher.php:31
+#: ext/smart_designer/data/switcher.php:235
+msgid "Description"
+msgstr "Descrição"
+
+#: ext/front_builder/options/sections/by_price.php:13
+msgid "Different views of price filter"
+msgstr "Diferentes visualizações do filtro de preço"
+
+#: ext/by_text_2/views/options.php:209
+msgid "Direct links to posts in autocomplete suggestion"
+msgstr "Links diretos para posts na sugestão do autocompletar"
+
+#: ext/front_builder/options/sections/taxonomies.php:73
+msgid "Direction of terms sorted inside of filter block"
+msgstr "Direção dos termos classificados dentro do bloco de filtro"
+
+#: ext/url_request/views/tabs_content.php:76
+msgid "Disable page indexing"
+msgstr "Desativar indexação de página"
+
+#: ext/stat/views/tabs_content.php:219
+msgid "Disabled"
+msgstr "Desativado"
+
+#: ext/url_request/views/tabs_content.php:103
+msgid "Disables page indexing when a seo search query exists."
+msgstr ""
+"Desativa a indexação da página quando existe uma consulta de pesquisa de SEO."
+
+#: ext/front_builder/options/sections/taxonomies.php:50
+msgid "Display items in a row"
+msgstr "Exibir itens em uma linha"
+
+#: ext/query_save/views/options.php:145 ext/query_save/views/options.php:172
+msgid "Display message if current product is suitable for saved search"
+msgstr "Exibir mensagem se o produto atual for adequado para pesquisa salva"
+
+#: ext/stat/index.php:211
+msgid "done!"
+msgstr "feito!"
+
+#: ext/slider/index.php:56
+#, fuzzy
+msgid "double"
+msgstr "duplo"
+
+#: ext/meta_filter/index.php:202 ext/stock_quantity/views/options.php:15
+#: ext/by_instock/views/options.php:15 ext/by_author/views/options.php:18
+#: ext/by_backorder/views/options.php:15 ext/by_text/views/options.php:15
+#: ext/by_onsales/views/options.php:15
+#: ext/products_messenger/views/options.php:15
+#: ext/by_text_2/views/options.php:15 ext/by_sku/views/options.php:15
+#: ext/meta_filter/views/tabs_content.php:112
+#: ext/meta_filter/classes/woof_type_meta_filter.php:51
+#: ext/acf_filter/classes/woof_type_acf_filter.php:51
+#: ext/query_save/views/options.php:15 ext/by_featured/views/options.php:15
+#: ext/by_rating/views/options.php:15
+msgid "drag and drop"
+msgstr "arrastar e soltar"
+
+#: ext/stat/index.php:214
+msgid "drawing graphs ..."
+msgstr "desenhando gráficos..."
+
+#: ext/meta_filter/index.php:69 ext/by_author/views/options.php:99
+#: ext/front_builder/options/sections/by_author.php:38
+msgid "Drop-down"
+msgstr "Menu suspenso"
+
+#: ext/front_builder/options/sections/by_price.php:23
+msgid ""
+"Drop-down OR radio price filter ranges. Ranges for price filter. Example: 0-"
+"50,51-100,101-i. Where \"i\" is infinity."
+msgstr ""
+"Faixas de filtro de preço em menu suspenso ou botões de opção. Faixas para o "
+"filtro de preço. Exemplo: 0–50, 51–100, 101–∞. Onde \"i\" representa "
+"infinito."
+
+#: ext/front_builder/options/sections/by_price.php:22
+#, fuzzy
+msgid "Drop-down OR radio ranges"
+msgstr "Drop-down ou faixas de rádio"
+
+#: ext/front_builder/options/sections/by_price.php:65
+msgid "Drop-down price filter first option text"
+msgstr "Texto da primeira opção do filtro de preço suspenso"
+
+#: ext/front_builder/options/sections/by_price.php:64
+msgid "Drop-down price filter text"
+msgstr "Texto do filtro de preço suspenso"
+
+#: ext/by_rating/views/options.php:19
+#, fuzzy
+msgid "Drop-down to filter products by rating"
+msgstr "Menu suspenso para filtrar produtos por classificação"
+
+#: classes/widgets.php:162
+msgid "Dynamic recount"
+msgstr "Recontagem dinâmica"
+
+#: classes/widgets.php:175
+msgid "Dynamic recount for current search form"
+msgstr "Recontagem dinâmica para o formulário de pesquisa atual"
+
+#: ext/front_builder/options/layout_options.php:42
+#, fuzzy
+msgid "each filter section max height. Example: 200px, auto"
+msgstr "cada seção do filtro Altura máxima. Exemplo: 200px, auto"
+
+#: ext/url_request/views/tabs_content.php:231
+msgid "Each new link must be on a new line"
+msgstr "Cada novo link deve estar em uma nova linha"
+
+#: ext/products_messenger/views/options.php:256
+msgid "Emails count"
+msgstr "Contagem de e-mails"
+
+#: ext/slider/index.php:43
+#, fuzzy
+msgid "Enable dynamic recount"
+msgstr "Ativar recontagem dinâmica"
+
+#: ext/turbo_mode/views/tabs_content.php:34
+msgid "Enable turbo mode"
+msgstr "Ativar modo turbo"
+
+#: ext/url_request/views/tabs_content.php:42
+msgid "Enable/Disable"
+msgstr "Ativar/Desativar"
+
+#: ext/stat/views/tabs_content.php:220
+msgid "Enabled"
+msgstr "Ativado"
+
+#: views/shortcode_generator.php:178
+#, fuzzy
+msgid "enabled in premium version"
+msgstr "habilitado na versão premium"
+
+#: ext/by_sku/views/shortcodes/woof_sku_filter.php:14
+#, fuzzy
+msgid "enter a product sku here ..."
+msgstr "insira um sku de produto aqui ..."
+
+#: ext/by_text_2/views/shortcodes/woof_text_filter.php:15
+msgid "enter a product title here ..."
+msgstr "digite um título de produto aqui..."
+
+#: ext/meta_filter/html_types/textinput/views/woof.php:17
+msgid "enter a text here ..."
+msgstr "digite um texto aqui..."
+
+#: ext/quick_search/views/tabs_content.php:81
+#: ext/turbo_mode/views/tabs_content.php:117
+#: ext/stat/views/tabs_content.php:508
+msgid ""
+"Enter any random text in the field and use it in the external cron with link "
+"like: http://mysite.com/?woof_stat_collection=__YOUR_SECRET_KEY_HERE__"
+msgstr ""
+"Digite qualquer texto aleatório no campo e use-o no cron externo com link "
+"como: http://mysite.com/?woof_stat_collection=__YOUR_SECRET_KEY_HERE__"
+
+#: ext/front_builder/options/sections/taxonomies.php:37
+#, fuzzy
+msgid ""
+"Enter count of terms which should be visible to make all other collapsible. "
+"\"Show more\" button will be appeared. This feature is works with: radio, "
+"checkboxes, labels, colors, smart designer items."
+msgstr ""
+"Insira a contagem de termos que devem estar visíveis para tornar todos os "
+"outros recolhíveis. O botão \"Mostrar mais\" será exibido. Este recurso é "
+"funciona com: rádio, caixas de seleção, etiquetas, cores, itens de designer "
+"inteligentes."
+
+#: ext/meta_filter/views/tabs_content.php:49
+msgid "enter product ID"
+msgstr "digite o ID do produto"
+
+#: ext/meta_filter/views/tabs_content.php:118
+msgid "enter title"
+msgstr "digitar título"
+
+#: ext/smart_designer/index.php:604
+msgid ""
+"Enter title and press Enter keyboard to save options of the current element "
+"as preset"
+msgstr ""
+"Digite o título e pressione Enter no teclado para salvar as opções do "
+"elemento atual como uma predefinição"
+
+#: ext/color/index.php:43
+#, fuzzy
+msgid "Enter tooltip text if necessary"
+msgstr "Digite o texto da dica de ferramenta, se necessário"
+
+#: ext/select_radio_check/index.php:54
+msgid "enter value in px"
+msgstr "digite o valor em px"
+
+#: ext/export_import/index.php:108
+msgid "Error!"
+msgstr "Erro!"
+
+#: ext/export_import/index.php:91
+msgid "Error! No data"
+msgstr "Erro! Não há dados"
+
+#: ext/quick_search/views/shortcodes/woof_quick_search.php:250
+#: ext/quick_search/views/shortcodes/woof_quick_search.php:283
+#: ext/quick_search/views/shortcodes/woof_quick_search.php:336
+#: ext/quick_search/views/shortcodes/woof_quick_search.php:340
+msgid "Error! Please read documents"
+msgstr "Erro! Leia os documentos"
+
+#: ext/export_import/index.php:94
+msgid "Error! Security issue"
+msgstr "Erro! Problema de segurança"
+
+#: ext/front_builder/options/sections/meta/datepicker.php:44
+#: ext/meta_filter/html_types/datepicker/views/additional_options.php:88
+msgid "Europe - dd-mm-yy"
+msgstr "Europa - dd-mm-yy"
+
+#: ext/meta_filter/html_types/textinput/views/additional_options.php:22
+msgid "EXACT"
+msgstr "EXATO"
+
+#: ext/by_sku/views/options.php:118
+#: ext/front_builder/options/sections/by_sku.php:22
+#: ext/front_builder/options/sections/meta/textinput.php:15
+#, fuzzy
+msgid "Exact match"
+msgstr "Correspondência exata"
+
+#: ext/front_builder/options/sections/meta/checkbox.php:15
+#: ext/meta_filter/html_types/checkbox/views/additional_options.php:18
+msgid "Exact value"
+msgstr "Valor exato"
+
+#: ext/image/index.php:125 ext/by_text_2/views/options.php:328
+#: ext/by_sku/views/options.php:250
+msgid "Example"
+msgstr "Exemplo"
+
+#: ext/front_builder/options/sections/by_sku.php:76
+#, fuzzy, php-format
+msgid "Example %s"
+msgstr "Exemplo %s"
+
+#: ext/smart_designer/data/color.php:20 ext/smart_designer/data/radio.php:20
+#: ext/smart_designer/data/checkbox.php:20
+#: ext/smart_designer/data/switcher.php:16
+msgid "Example terms by real taxonomy"
+msgstr "Termos de exemplo de uma taxonomia real"
+
+#: ext/url_request/index.php:167
+msgid "Example: /color-{any}/"
+msgstr "Exemplo: /color-{any}/"
+
+#: ext/stock_quantity/views/options.php:188
+#: ext/front_builder/options/sections/meta/slider.php:44
+#: ext/meta_filter/html_types/slider/views/additional_options.php:99
+msgid "Example: 1^100"
+msgstr "Exemplo: 1^100"
+
+#: ext/by_backorder/index.php:47
+#, fuzzy
+msgid "Exclude On backorder"
+msgstr "Excluir em backorder"
+
+#: ext/by_backorder/views/options.php:29
+#, fuzzy
+msgid "Exclude on backorder"
+msgstr "Excluir em backorder"
+
+#: ext/front_builder/index.php:699 ext/sections/index.php:91
+#: ext/by_backorder/views/options.php:17
+msgid "Exclude products on backorder"
+msgstr "Excluir produtos de encomendas"
+
+#: views/shortcode_generator.php:249
+#, fuzzy
+msgid "Exclude taxonomies from the filter (vice versa for param tax_only)."
+msgstr "Excluir taxonomias do filtro (vice-versa para param tax_only)."
+
+#: ext/by_backorder/views/woof.php:6
+#, fuzzy
+msgid "Exclude: On backorder"
+msgstr "Exclude: On backorder"
+
+#: ext/export_import/views/tabs_content.php:26
+msgid "Export data"
+msgstr "Exportar dados"
+
+#: ext/export_import/index.php:36
+msgid "Export/Import"
+msgstr "Exportar/Importar"
+
+#: ext/turbo_mode/views/tabs_content.php:96
+msgid ""
+"External cron is more predictable with time of execution, but additional "
+"knowledge how to set it correctly is required"
+msgstr ""
+"O cron externo é mais previsível com o tempo de execução, mas é necessário "
+"conhecimento adicional sobre como configurá-lo corretamente"
+
+#: ext/products_messenger/views/options.php:165
+msgid "External cron key (is recommended as flexible for timetable)"
+msgstr "Chave de cron externo (recomendada como flexível para horários)"
+
+#: ext/front_builder/index.php:700 ext/sections/index.php:92
+#: ext/by_featured/views/options.php:17 ext/by_featured/views/options.php:30
+#, fuzzy
+msgid "Featured"
+msgstr "Destaque"
+
+#: ext/by_featured/index.php:46 ext/by_featured/views/woof.php:6
+#, fuzzy
+msgid "Featured products"
+msgstr "Produtos em destaque"
+
+#: ext/turbo_mode/views/tabs_content.php:168
+msgid "File updated!!!"
+msgstr "Arquivo atualizado!"
+
+#: views/woof.php:50 classes/helper.php:380 classes/helper.php:510
+#: ext/slideout/index.php:157 ext/slideout/views/tabs_content.php:118
+msgid "Filter"
+msgstr "Filtro"
+
+#: views/shortcode_generator.php:122
+#, fuzzy
+msgid ""
+"Filter as a button. If the form is hidden, you will see a simple button. "
+"After clicking the button, the search form will appear. Allows to hide big "
+"form improve page performance."
+msgstr ""
+"Filtre como um botão. Se o formulário estiver oculto, você verá um botão "
+"simples. Após clicar no botão, aparecerá o formulário de busca. Permite "
+"ocultar grande forma melhorar o desempenho da página."
+
+#: views/shortcodes/woof_price_filter_select.php:27
+msgid "Filter by price"
+msgstr "Filtrar por preço"
+
+#: views/shortcodes/woof_price_filter_select.php:7
+msgid "filter by price"
+msgstr "filtrar por preço"
+
+#: ext/url_request/classes/seo.php:299 ext/by_rating/views/woof.php:20
+#: ext/by_rating/views/woof.php:24 ext/by_rating/views/woof.php:32
+msgid "Filter by rating"
+msgstr "Filtrar por classificação"
+
+#: ext/front_builder/options/layout_options.php:59
+#, fuzzy
+msgid "filter form bottom margin, example: 10px, 10%"
+msgstr "margem inferior do formulário de filtro, exemplo: 10px, 10%"
+
+#: ext/front_builder/options/layout_options.php:68
+#, fuzzy
+msgid "filter form left margin, example: 10px, 10%"
+msgstr "filtrar formulário margem esquerda, exemplo: 10px, 10%"
+
+#: ext/front_builder/options/layout_options.php:26
+#, fuzzy
+msgid "filter form max height, example: 300px"
+msgstr "altura máxima do formulário de filtro, exemplo: 300px"
+
+#: ext/front_builder/options/layout_options.php:77
+#, fuzzy
+msgid "filter form right margin, example: 10px, 10%"
+msgstr "filtro Forma margem direita, exemplo: 10px, 10%"
+
+#: ext/front_builder/options/layout_options.php:50
+#, fuzzy
+msgid "filter form top margin, example: 10px, 10%"
+msgstr "margem superior do formulário de filtro, exemplo: 10px, 10%"
+
+#: ext/front_builder/options/layout_options.php:18
+#, fuzzy
+msgid "filter form width, example: 200px, 100%"
+msgstr "largura do formulário de filtro, exemplo: 200px, 100%"
+
+#: ext/front_builder/options/layout_options.php:25
+#, fuzzy
+msgid "Filter max height"
+msgstr "Altura máxima do filtro"
+
+#: ext/front_builder/options/layout_options.php:17
+#, fuzzy
+msgid "Filter max width"
+msgstr "Largura máxima do filtro"
+
+#: ext/front_builder/index.php:107
+#, fuzzy
+msgid "filter redrawing"
+msgstr "redesenho do filtro"
+
+#: ext/front_builder/options/layout_options.php:41
+#, fuzzy
+msgid "Filter section max height"
+msgstr "Altura máxima da seção do filtro"
+
+#: ext/front_builder/options/sections_layout_options.php:9
+#, fuzzy
+msgid "filter-section width, example: 200px, 100%, 49%, 50%, inherit"
+msgstr "filtro-largura da seção, exemplo: 200px, 100%, 49%, 50%, herdar"
+
+#: ext/stat/index.php:215
+msgid "finished!"
+msgstr "terminou!"
+
+#: ext/by_author/views/options.php:58
+#: ext/front_builder/options/sections/by_author.php:15
+msgid "First drop-down option placeholder text OR title for checkboxes"
+msgstr ""
+"Texto de marcação da primeira opção do menu suspenso OU título para caixas "
+"de seleção"
+
+#: ext/front_builder/options/layout_options.php:85
+#, fuzzy
+msgid "Float"
+msgstr "Float"
+
+#: ext/front_builder/options/layout_options.php:86
+#, fuzzy
+msgid "float of the filter form in the text content"
+msgstr "float do formulário de filtro no conteúdo do texto"
+
+#: ext/slider/index.php:67
+#, fuzzy
+msgid "For each taxonomy it is possible to select a unique slider design"
+msgstr ""
+"Para cada taxonomia é possível selecionar um design de slider exclusivo"
+
+#: ext/front_builder/options/sections/taxonomies.php:44
+msgid ""
+"For example you want to show title of Product Categories as \"My Products\". "
+"Just for your convenience."
+msgstr ""
+"Por exemplo, você deseja mostrar o título das categorias de produtos como "
+"\"Meus produtos\". Apenas para sua conveniência."
+
+#: ext/products_messenger/views/options.php:166
+msgid "For external cron use the next link"
+msgstr "Para cron externo use o seguinte link"
+
+#: classes/alert.php:100
+msgid ""
+"For more marketing attraction of your woocommerce shop HUSKY team recommends "
+"you to install"
+msgstr ""
+"Para mais atração de marketing para sua loja WooCommerce, a equipe HUSKY "
+"recomenda que você instale"
+
+#: ext/by_sku/views/options.php:215
+#, fuzzy
+msgid "For simple and for variables products"
+msgstr "Para produtos simples e para variáveis"
+
+#: ext/by_sku/views/options.php:214
+#, fuzzy
+msgid "For simple products only"
+msgstr "Somente para produtos simples"
+
+#: ext/by_sku/views/options.php:208
+#, fuzzy
+msgid ""
+"For which type of products will be realized searching by SKU. Request for "
+"variables products creates more mysql queries in database ..."
+msgstr ""
+"Para qual tipo de produto será realizado a busca por SKU. Solicitação de "
+"produtos variáveis cria mais consultas mysql no banco de dados ..."
+
+#: ext/url_request/classes/url_parser.php:186
+msgid "Forbidden"
+msgstr "Proibido"
+
+#: classes/widgets.php:210
+msgid "Form AJAX redrawing"
+msgstr "Redesenho AJAX do formulário"
+
+#: ext/stock_quantity/views/woof.php:131 ext/stat/views/tabs_content.php:80
+#: ext/meta_filter/html_types/slider/views/woof.php:120
+#: ext/meta_filter/html_types/datepicker/views/woof.php:116
+msgid "From"
+msgstr "De"
+
+#: ext/sections/index.php:143 ext/url_request/classes/seo.php:274
+#: ext/meta_filter/html_types/datepicker/views/woof.php:115
+msgid "from"
+msgstr "de"
+
+#: ext/meta_filter/html_types/slider/index.php:132
+#, php-format
+msgid "from %s %s to %s %s"
+msgstr "de %s %s até %s %s"
+
+#: ext/slider/views/woof.php:86
+#, fuzzy, php-format
+msgid "from %s to %s"
+msgstr "de %s A %s"
+
+#: ext/meta_filter/html_types/datepicker/index.php:179
+#: ext/meta_filter/html_types/datepicker/views/woof.php:91
+#, php-format
+msgid "from: %s"
+msgstr "de: %s"
+
+#: ext/front_builder/options/sections/meta/datepicker.php:48
+#: ext/meta_filter/html_types/datepicker/views/additional_options.php:92
+msgid "Full - DD, d MM, yy"
+msgstr "Completo - DD, d MM, yy"
+
+#: ext/smart_designer/views/tabs_content.php:26
+msgid "gallery of custom-element types"
+msgstr "galeria de tipos de elementos personalizados"
+
+#: ext/sections/views/tabs_content.php:141
+msgid "Generate attributes for shortcode [woof]"
+msgstr "Gerar atributos para o shortcode [woof]"
+
+#: ext/export_import/views/tabs_content.php:32
+msgid "Generate data for export"
+msgstr "Gerar dados para exportação"
+
+#: views/shortcode_generator.php:284 ext/slideout/views/tabs_content.php:378
+msgid "Generate shortcode"
+msgstr "Gerar shortcode"
+
+#: views/shortcode_generator.php:25
+#, fuzzy, php-format
+msgid "Generate your own custom filter by shortcode %s"
+msgstr "Gere seu próprio filtro personalizado por shortcode %s"
+
+#: ext/meta_filter/views/tabs_content.php:49
+msgid "Get"
+msgstr "Obter"
+
+#: ext/meta_filter/views/tabs_content.php:48
+msgid "Get keys from any product by its ID"
+msgstr "Obter chaves de qualquer produto por seu ID"
+
+#: ext/stat/index.php:208
+msgid "getting of operative tables ..."
+msgstr "obtendo tabelas operacionais..."
+
+#: ext/stat/index.php:210
+msgid "getting the data from the table"
+msgstr "obtendo os dados da tabela"
+
+#: lib/alert/index.php:80
+msgid "Give Feedback"
+msgstr "Dê sua opinião"
+
+#: ext/slideout/views/tabs_content.php:33
+msgid "Global visibility"
+msgstr "Visibilidade global"
+
+#: ext/front_builder/index.php:101
+#, fuzzy
+msgid "good to use in content areas"
+msgstr "bom para usar em áreas de conteúdo"
+
+#: ext/stat/index.php:213
+msgid ""
+"Google charts library not loaded! If site is on localhost just disable "
+"statistic extension in tab Extensions!"
+msgstr ""
+"A biblioteca de gráficos do Google não foi carregada! Se o site estiver em "
+"localhost, desative a extensão estatística na aba Extensões!"
+
+#: ext/stat/views/tabs_content.php:184
+msgid "Graphics"
+msgstr "Gráficos"
+
+#: ext/slider/index.php:61
+#, fuzzy
+msgid "Grid step"
+msgstr "Passo da grade"
+
+#: ext/url_request/index.php:175
+msgid "H1  title"
+msgstr "Título H1"
+
+#: ext/select_radio_check/index.php:51 ext/smart_designer/data/color.php:45
+#: ext/smart_designer/data/radio.php:45 ext/smart_designer/data/checkbox.php:79
+msgid "Height"
+msgstr "Altura"
+
+#: ext/select_radio_check/index.php:52
+msgid "Height of the drop-down of the opened active panel."
+msgstr "Altura do menu suspenso do painel ativo aberto."
+
+#: ext/export_import/views/tabs_content.php:35
+msgid ""
+"Here is generated HUSKY settings data for export. You can only export HUSKY "
+"settings and not taxonomies or other site data. For taxonomies, products and "
+"other  use special third-party plugins."
+msgstr ""
+"Aqui são gerados dados de configurações HUSKY para exportação. Você só pode "
+"exportar configurações HUSKY e não taxonomias ou outros dados do site. Para "
+"taxonomias, produtos e outros, use plugins especiais de terceiros."
+
+#: ext/smart_designer/index.php:611
+msgid ""
+"Here you can save options for the current element to use for future purposes "
+"on elements of the same type!"
+msgstr ""
+"Aqui você pode salvar opções para o elemento atual para uso futuro em "
+"elementos do mesmo tipo!"
+
+#: ext/front_builder/views/global_options.php:31
+#, fuzzy
+msgid ""
+"Here, you can set slug aliases for front builder forms. Ensure that the "
+"default slug is not already integrated into the shop logic. If it is, you "
+"should also update it wherever it is used. It's important to understand the "
+"implications of these changes!"
+msgstr ""
+"Aqui, você pode definir aliases de slug para Front builder forms. Certifique-"
+"se de que o slug padrão ainda não esteja integrado à lógica da loja. Se for, "
+"você também deve atualizá-lo onde quer que seja usado. É importante entender "
+"as implicações dessas mudanças!"
+
+#: lib/alert/index.php:61
+msgid "Hi! Are you enjoying using HUSKY - Products Filter for WooCommerce?"
+msgstr ""
+"Oi! Você está gostando de usar o HUSKY - Products Filter for WooCommerce?"
+
+#: ext/slideout/views/tabs_content.php:40
+msgid "Hide"
+msgstr "Ocultar"
+
+#: ext/slider/index.php:62
+#, fuzzy
+msgid ""
+"Hide each Nth grid label. -1 hide all labels, 1 show all labels, 2n show "
+"each second label, 3n show each third label, etc..."
+msgstr ""
+"Oculte cada rótulo da enésima grade. -1 ocultar todos os rótulos, 1 Mostrar "
+"todos os rótulos, 2N mostrar cada segundo rótulo, 3N mostrar cada terceiro "
+"rótulo, etc..."
+
+#: classes/widgets.php:147
+msgid "Hide search form by default and show one button instead"
+msgstr "Ocultar o formulário de pesquisa por padrão e mostrar um botão"
+
+#: ext/front_builder/options/options.php:85
+msgid ""
+"hide the HUSKY filter form on a mobile device and a button appears to show "
+"the filter. To display the button in a specific place use the shortcode "
+"[woof_mobile] – this shortcode adds a container to which the button is "
+"inserted."
+msgstr ""
+
+#: classes/widgets.php:237
+msgid ""
+"Hide the widget on a mobile device and a button appears to show the filter"
+msgstr ""
+"Oculta o widget em um dispositivo móvel e um botão aparecerá para mostrar o "
+"filtro"
+
+#: views/shortcode_generator.php:197
+#, fuzzy
+msgid ""
+"Hides the filter form on mobile devices and displays a button to show the "
+"filter."
+msgstr ""
+"Oculta o formulário de filtro em dispositivos móveis e exibe um botão para "
+"mostrar o filtro."
+
+#: views/shortcode_generator.php:176
+#, fuzzy
+msgid "Hides the text with the count of variants"
+msgstr "Oculta o texto com a contagem de variantes"
+
+#: ext/select_hierarchy/index.php:33
+msgid "Hierarchy drop-down"
+msgstr "Hierarquia do menu suspenso"
+
+#: ext/by_text/index.php:534
+msgid "Home"
+msgstr "Início"
+
+#: ext/stat/views/tabs_content.php:287
+msgid "Host"
+msgstr "Servidor"
+
+#: ext/products_messenger/views/options.php:143
+#: ext/stat/views/tabs_content.php:525
+msgid "hourly"
+msgstr "por hora"
+
+#: ext/slideout/views/tabs_content.php:215
+msgid "Hover"
+msgstr "Sobreposição do mouse"
+
+#: ext/smart_designer/data/color.php:123 ext/smart_designer/data/radio.php:215
+#: ext/smart_designer/data/checkbox.php:249
+msgid "Hover border color"
+msgstr "Cor da borda ao sobrepor"
+
+#: ext/smart_designer/data/color.php:161 ext/smart_designer/data/radio.php:253
+#: ext/smart_designer/data/checkbox.php:287
+msgid "Hover border width"
+msgstr "Largura da borda ao sobrepor"
+
+#: ext/smart_designer/data/radio.php:169
+#: ext/smart_designer/data/checkbox.php:203
+msgid "Hover color"
+msgstr "Cor ao sobrepor"
+
+#: ext/smart_designer/data/radio.php:173
+#: ext/smart_designer/data/checkbox.php:207
+msgid "Hover image"
+msgstr "Imagem ao sobrepor"
+
+#: ext/smart_designer/data/color.php:169 ext/smart_designer/data/radio.php:261
+#: ext/smart_designer/data/checkbox.php:295
+msgid "Hover scale"
+msgstr "Escala ao sobrepor"
+
+#: ext/smart_designer/data/radio.php:181
+#: ext/smart_designer/data/checkbox.php:215
+msgid "Hover text color"
+msgstr "Cor do texto ao sobrepor"
+
+#: ext/products_messenger/views/options.php:228
+msgid "How long user will get emails after subscription"
+msgstr "Por quanto tempo o usuário receberá e-mails após a assinatura"
+
+#: ext/stat/views/tabs_content.php:396
+msgid ""
+"How many search requests will be catched and written down into the "
+"statistical mySQL table per 1 unique user before cron will assemble the data"
+msgstr ""
+"Quantas solicitações de pesquisa serão capturadas e anotadas na tabela "
+"estatística mySQL por 1 usuário único antes que o cron reúna os dados"
+
+#: ext/by_sku/views/options.php:194
+#: ext/front_builder/options/sections/by_sku.php:49
+#, fuzzy
+msgid "How many show products in the autocomplete list"
+msgstr "Quantos mostram produtos na lista de preenchimento automático"
+
+#: ext/stat/views/tabs_content.php:576
+msgid ""
+"How many taxonomies and terms to show on the graphs. Use no more than 10 to "
+"understand situation with statistical data"
+msgstr ""
+"Quantas taxonomias e termos mostrar nos gráficos. Use no máximo 10 para "
+"entender a situação com dados estatísticos"
+
+#: ext/stat/views/tabs_content.php:421
+msgid ""
+"How many taxonomies per one search request will be written down into the "
+"statistical mySQL table for 1 unique user. The excess data will be truncated!"
+" Number 5 is recommended. More depth - more space in the DataBase will be "
+"occupied by the data"
+msgstr ""
+"Quantas taxonomias por solicitação de pesquisa serão anotadas na tabela "
+"estatística mySQL para 1 usuário exclusivo. Os dados em excesso serão "
+"eliminados! O número 5 é recomendado. Mais profundidade significa mais "
+"espaço ocupado pelos dados no banco de dados"
+
+#: ext/quick_search/views/tabs_content.php:31
+msgid "How often assemble data file"
+msgstr "Com que frequência montar o arquivo de dados"
+
+#: ext/turbo_mode/views/tabs_content.php:151
+msgid "How often update products data file"
+msgstr "Com que frequência atualizar o arquivo de dados dos produtos"
+
+#: ext/stat/views/tabs_content.php:458
+msgid "How to assemble statistic"
+msgstr "Como montar a estatística"
+
+#: ext/by_author/views/options.php:93
+#: ext/front_builder/options/sections/by_author.php:32
+#, fuzzy
+msgid "How to display search by author filter section"
+msgstr "Como exibir a seção de filtro pesquisar por Autor"
+
+#: ext/select_radio_check/index.php:43
+msgid "How to display this filter-element on the site frontend"
+msgstr "Como exibir este elemento do filtro na interface do site"
+
+#: ext/by_text/views/options.php:240 ext/by_text_2/views/options.php:235
+#: ext/front_builder/options/sections/by_text.php:47
+msgid "How to open links with posts in suggestion"
+msgstr "Como abrir links com posts na sugestão"
+
+#: ext/front_builder/options/sections/by_price.php:12
+#, fuzzy
+msgid "How to show"
+msgstr "Como mostrar"
+
+#: ext/slideout/views/tabs_content.php:336
+msgid "how to show slideout popup after page loaded: opened or closed"
+msgstr ""
+"Como mostrar o popup do deslizante depois do carregamento da página: aberto "
+"ou fechado"
+
+#: ext/by_instock/views/options.php:79 ext/by_backorder/views/options.php:76
+#: ext/by_onsales/views/options.php:48 ext/by_featured/views/options.php:48
+#: ext/front_builder/options/sections/by_onsales.php:9
+#: ext/front_builder/options/sections/by_featured.php:9
+#: ext/front_builder/options/sections/by_instock.php:22
+#: ext/front_builder/options/sections/by_backorder.php:22
+#, fuzzy
+msgid "How to show: checkbox or switcher"
+msgstr "Como mostrar: checkbox ou switcher"
+
+#: ext/front_builder/options/sections/taxonomies.php:58
+msgid "How to sort terms inside of filter block"
+msgstr "Como ordenar termos dentro do bloco de filtro"
+
+#. Author URI of the plugin
+msgid "https://pluginus.net/"
+msgstr "https://pluginus.net/"
+
+#. URI of the plugin
+msgid "https://products-filter.com/"
+msgstr "https://products-filter.com/"
+
+#. Name of the plugin
+#: classes/widgets.php:9
+msgid "HUSKY - Products Filter Professional for WooCommerce"
+msgstr "HUSKY - Products Filter Professional for WooCommerce"
+
+#. Description of the plugin
+msgid ""
+"HUSKY - WooCommerce Products Filter Professional. Flexible, easy and robust "
+"products filter for WooCommerce store site!"
+msgstr ""
+"WOOF - WooCommerce filtro de produtos. Filtro de produtos para WooCommerce "
+"flexível, fácil e robusto!"
+
+#: ext/front_builder/index.php:856
+#, fuzzy
+#| msgid ""
+#| "HUSKY cannot create the database table! Make sure that your mysql user "
+#| "has the CREATE privilege! Do it manually using your host panel&phpmyadmin!"
+msgid ""
+"HUSKY cannot create database table for front builder! Make sure that your "
+"MySQL user has the CREATE privilege! Do it manually using your host panel "
+"and phpmyadmin!"
+msgstr ""
+"O HUSKY não pode criar a tabela do banco de dados! Certifique-se de que seu "
+"usuário mysql tenha o privilégio CREATE! Faça isso manualmente usando o "
+"painel da hospedagem & phpmyadmin!"
+
+#: ext/smart_designer/index.php:752 ext/smart_designer/classes/presets.php:110
+msgid ""
+"HUSKY cannot create database table for smart designer! Make sure that your "
+"mysql user has the CREATE privilege! Do it manually using your host panel "
+"and phpmyadmin!"
+msgstr ""
+"O HUSKY não pode criar a tabela de banco de dados do designer inteligente! "
+"Certifique-se de que seu usuário mysql tenha o privilégio CREATE! Faça isso "
+"manualmente usando seu painel de host e phpmyadmin!"
+
+#: ext/stat/views/tabs_content.php:614 ext/stat/views/tabs_content.php:636
+msgid ""
+"HUSKY cannot create database table for statistic! Make sure that your mysql "
+"user has the CREATE privilege! Do it manually using your host panel&amp;"
+"phpmyadmin!"
+msgstr ""
+"O HUSKY não pode criar a tabela de banco de dados para estatísticas! "
+"Certifique-se de que seu usuário mysql tenha o privilégio CREATE! Faça isso "
+"manualmente usando o painel da hospedagem&amp;phpmyadmin!"
+
+#: classes/widgets.php:118
+msgid "HUSKY Filter"
+msgstr "Filtro do HUSKY"
+
+#: ext/smart_designer/views/tabs_content.php:18
+msgid "HUSKY Filter Elements Constructor"
+msgstr "Construtor de elementos de filtro do HUSKY"
+
+#: ext/smart_designer/views/tabs_content.php:26
+msgid "HUSKY support forum"
+msgstr "fórum de suporte do HUSKY"
+
+#: lib/alert/index.php:73
+msgid "I already did"
+msgstr "Eu já fiz"
+
+#: ext/products_messenger/views/email_template.php:63
+#: ext/products_messenger/views/email_template.php:88
+msgid "If you want to Unsubscribe from this newsletter"
+msgstr "Se você deseja cancelar a assinatura deste boletim informativo"
+
+#: ext/image/index.php:68 ext/slideout/index.php:41
+#: ext/smart_designer/classes/color.php:87 ext/by_text_2/views/options.php:326
+#: ext/by_sku/views/options.php:248
+#: ext/front_builder/options/sections/by_sku.php:75
+msgid "Image"
+msgstr "Imagem"
+
+#: ext/by_sku/views/options.php:249
+#: ext/front_builder/options/sections/by_sku.php:76
+#, fuzzy
+msgid ""
+"Image for sku search button which appears near input when users typing there "
+"any symbols. Better use png. Size is: 20x20 px."
+msgstr ""
+"Imagem para sku botão de pesquisa que aparece perto de entrada quando os "
+"usuários digitando lá quaisquer símbolos. Melhor usar png. O tamanho é: "
+"20x20 px."
+
+#: ext/by_text_2/views/options.php:327
+msgid ""
+"Image for text search button which appears near input when users typing "
+"there any symbols. Better use png. Size is: 20x20 px."
+msgstr ""
+"Imagem para o botão de pesquisa de texto que aparece na entrada quando os "
+"usuários digitam quaisquer símbolos. Melhor usar png. O tamanho é: 20x20 px."
+
+#: ext/slideout/views/tabs_content.php:94
+msgid ""
+"Image or text, button-image can be selected below of the option, instead of "
+"default one in Slideout image field. If text - you can below of the option "
+"insert Slideout text"
+msgstr ""
+"Imagem ou texto. A imagem-botão pode ser selecionada abaixo da opção, em vez "
+"da padrão no campo \"Imagem do deslizante\". Se for texto, você pode inserir "
+"abaixo da opção \"Texto do deslizante\""
+
+#: ext/image/index.php:114
+#, fuzzy, php-format
+msgid "Image settings for term %s"
+msgstr "Configurações de imagem para o termo %s"
+
+#: ext/image/index.php:122
+#, fuzzy
+msgid "Image styles"
+msgstr "Estilos de imagem"
+
+#: ext/smart_designer/index.php:613
+msgid "Import"
+msgstr "Importar"
+
+#: ext/export_import/views/tabs_content.php:10
+msgid "Import data"
+msgstr "Importar dados"
+
+#: ext/smart_designer/index.php:602
+msgid "Import new preset code"
+msgstr "Importar novo código predefinido"
+
+#: ext/export_import/views/tabs_content.php:16
+msgid "Import placed data"
+msgstr "Importar dados colocados"
+
+#: ext/meta_filter/views/tabs_content.php:23
+msgid "In FREE version it is possible to operate by 2 meta fields only!"
+msgstr "Na versão GRATUITA é possível operar apenas por 2 campos de metadados!"
+
+#: ext/conditionals/views/tabs_content.php:41
+msgid ""
+"In FREE version it is possible to operate with 1 condition (first) only!"
+msgstr "Na versão GRATUITA é possível operar apenas com 1 condição (primeira)!"
+
+#: ext/url_request/views/tabs_content.php:35
+msgid "In FREE version it is possible to operate with 2 rules only!"
+msgstr "Na versão GRATUITA é possível operar apenas com 2 regras!"
+
+#: ext/by_instock/index.php:43 ext/front_builder/index.php:701
+#: ext/sections/index.php:93 ext/by_instock/views/options.php:17
+#: ext/by_instock/views/woof.php:6
+msgid "In stock"
+msgstr "Em estoque"
+
+#: ext/smart_designer/views/tabs_content.php:49
+#, php-format
+msgid ""
+"In the free version of HUSKY you can operate with 1 element! If you want to "
+"create more elements you can make upgrade to the %s."
+msgstr ""
+"Na versão gratuita do HUSKY você pode operar com 1 elemento! Se você deseja "
+"criar mais elementos, pode atualizar para a %s."
+
+#: ext/by_text/views/options.php:241 ext/by_text_2/views/options.php:236
+#: ext/front_builder/options/sections/by_text.php:48
+msgid "In the same window (_self) or in the new one (_blank)"
+msgstr "Na mesma janela (_self) ou em uma nova (_blank)"
+
+#: classes/helper.php:891
+msgid "info"
+msgstr "info"
+
+#: ext/sections/views/tabs_content.php:39
+msgid "Init sections"
+msgstr "Seções Init"
+
+#: ext/sections/views/tabs_content.php:65
+msgid "Init sections by default"
+msgstr "Seções Init por padrão"
+
+#: ext/by_text/views/options.php:433
+#: ext/front_builder/options/sections/by_text.php:118
+msgid ""
+"Insert the name of your custom template. The template must be located at:"
+msgstr ""
+"Insira o nome do seu modelo personalizado. O modelo deve estar localizado em:"
+
+#: classes/alert.php:101 classes/alert.php:145 classes/alert.php:190
+msgid "Install"
+msgstr "Instalar"
+
+#: classes/alert.php:102 classes/alert.php:146 classes/alert.php:191
+msgid "Install Now"
+msgstr "Instalar agora"
+
+#: ext/front_builder/options/sections/by_price.php:92
+#, fuzzy
+#| msgid "Range-slider skin"
+msgid "Ion Range slider skin"
+msgstr "Tema do controle deslizante de intervalo"
+
+#: ext/front_builder/options/sections/by_price.php:71
+#, fuzzy
+#| msgid "Ion Range slider"
+msgid "Ion Range slider step"
+msgstr "Controle deslizante de intervalo \"Ion\""
+
+#: ext/front_builder/options/sections/by_price.php:85
+#, fuzzy
+msgid "Ion Range slider Taxes"
+msgstr "Ion Range slider impostos"
+
+#: ext/front_builder/options/sections/by_price.php:78
+#, fuzzy
+msgid "Ion Range slider text inputs"
+msgstr "Ion Range slider entradas de texto"
+
+#: ext/front_builder/options/options.php:22
+#, fuzzy
+msgid "Is AJAX"
+msgstr "Is AJAX"
+
+#: ext/front_builder/options/options.php:52
+#, fuzzy
+msgid ""
+"is generated searching form should be hidden. In the case of the hidden form "
+"you will see simple button where after clicking on search form will be "
+"appeared"
+msgstr ""
+"é gerado formulário de pesquisa deve estar oculto. No caso do formulário "
+"oculto você verá botão simples onde após clicar no formulário de busca será "
+"exibido"
+
+#: ext/front_builder/options/options.php:23
+msgid ""
+"is generated searching form should works with AJAX. Should be activated "
+"option in tab Options [Try to ajaxify the shop]. Also for using with "
+"shortcode [woof_products] use there required attribute is_ajax=1: "
+"[woof_products is_ajax=1]"
+msgstr ""
+
+#: ext/front_builder/options/options.php:16
+#, fuzzy
+msgid "is search form for should be hidden or shown after page loaded"
+msgstr ""
+"é Formulário de pesquisa para deve ser escondido ou mostrado após a página "
+"carregada"
+
+#: ext/front_builder/options/sections/meta/datepicker.php:45
+#: ext/meta_filter/html_types/datepicker/views/additional_options.php:89
+msgid "ISO 8601 - yy-mm-dd"
+msgstr "ISO 8601 - yy-mm-dd"
+
+#: ext/turbo_mode/views/tabs_content.php:210
+msgid ""
+"It is better to keep products data file in wp-uploads folder to avoid data "
+"removing after the plugin update, but not all hosting providers allows to "
+"get json data from this folder, so if you select keep data in the plugin "
+"folder remember about it and reassemble products data using button above "
+"after the plugin update."
+msgstr ""
+"É melhor manter o arquivo de dados do produto na pasta wp-uploads para "
+"evitar a remoção de dados após a atualização do plugin, mas nem todos os "
+"provedores de hospedagem permitem obter dados json dessa pasta. Portanto, se "
+"você selecionar manter os dados na pasta do plugin, lembre-se disso e "
+"remonte os dados dos produtos usando o botão acima após a atualização do "
+"plugin."
+
+#: ext/stock_quantity/views/options.php:272
+#: ext/front_builder/options/sections/meta/slider.php:79
+#: ext/meta_filter/html_types/slider/views/additional_options.php:183
+msgid "It is possible to select a unique slider design for each meta field"
+msgstr ""
+"É possível selecionar um design de controle deslizante único para cada "
+"metacampo"
+
+#: ext/front_builder/options/sections/by_price.php:86
+#, fuzzy
+#| msgid "It will be counted in the filter( Only for ion-slider )"
+msgid "It will be counted in the filter (only for ion-slider)"
+msgstr "Será contado no filtro (somente para controles deslizantes \"ion\")"
+
+#: ext/stat/index.php:1324
+#, php-format
+msgid "Its not possible to create file: %s"
+msgstr "Não é possível criar o arquivo: %s"
+
+#: ext/stat/index.php:1309 ext/stat/index.php:1316
+#, php-format
+msgid "Its not possible to create folder: %s"
+msgstr "Não é possível criar a pasta: %s"
+
+#: ext/label/index.php:34 ext/products_messenger/views/options.php:96
+#: ext/query_save/views/options.php:83
+msgid "Label"
+msgstr "Rótulo"
+
+#: lib/alert/index.php:59
+msgid "Later"
+msgstr "Mais tarde"
+
+#: ext/front_builder/index.php:105
+#, fuzzy
+msgid "Layout"
+msgstr "Layout"
+
+#: ext/by_text/views/options.php:140
+#: ext/front_builder/options/sections/by_text.php:9
+msgid "Leave it empty if you not need it."
+msgstr "Deixe em branco se não precisar disso."
+
+#: ext/by_text/views/options.php:126 ext/by_text_2/views/options.php:92
+#: ext/by_text_2/views/options.php:106 ext/by_sku/views/options.php:85
+msgid "Leave it empty if you not need this"
+msgstr "Deixe em branco se você não precisa disso"
+
+#: ext/stat/index.php:205
+msgid "leave it empty to see all terms"
+msgstr "deixe em branco para ver todos os termos"
+
+#: ext/slideout/views/tabs_content.php:165
+msgid "Left"
+msgstr "Esquerda"
+
+#: ext/front_builder/options/layout_options.php:94
+#, fuzzy
+msgid "left"
+msgstr "esquerda"
+
+#: ext/by_sku/views/options.php:119
+#: ext/front_builder/options/sections/by_sku.php:23
+#: ext/front_builder/options/sections/meta/textinput.php:16
+#: ext/meta_filter/html_types/textinput/views/additional_options.php:21
+msgid "LIKE"
+msgstr "SIMILAR"
+
+#: ext/by_sku/views/options.php:112
+#: ext/front_builder/options/sections/by_sku.php:16
+#: ext/front_builder/options/sections/meta/textinput.php:9
+#: ext/meta_filter/html_types/textinput/views/additional_options.php:15
+#, fuzzy
+msgid "LIKE or Exact match"
+msgstr "LIKE ou correspondência exata"
+
+#: ext/by_text_2/views/options.php:208
+msgid "Links to posts in suggestion"
+msgstr "Links para posts na sugestão"
+
+#: ext/smart_designer/index.php:593
+msgid "Loaded!"
+msgstr "Carregado!"
+
+#: ext/smart_designer/index.php:592
+#: ext/smart_designer/views/tabs_content.php:40
+msgid "Loading"
+msgstr "Carregando"
+
+#: ext/front_builder/options/sections/taxonomies.php:85
+msgid "Logic of filtering"
+msgstr "Lógica de filtragem"
+
+#: ext/stat/index.php:216
+msgid "Looks like troubles with JavaScript!"
+msgstr "Parece que há problemas com JavaScript!"
+
+#: ext/by_sku/views/options.php:172
+#: ext/front_builder/options/sections/by_sku.php:43
+#, fuzzy
+msgid "Make filtering"
+msgstr "Fazer filtragem"
+
+#: ext/by_sku/views/options.php:166
+#: ext/front_builder/options/sections/by_sku.php:36
+#, fuzzy
+msgid ""
+"Make filtering after clearing the SKU field or just clear the text input."
+msgstr ""
+"Faça a filtragem após limpar o campo SKU ou apenas limpe a entrada de texto."
+
+#: ext/smart_designer/data/color.php:84 ext/smart_designer/data/radio.php:133
+#: ext/smart_designer/data/checkbox.php:167
+#: ext/smart_designer/data/switcher.php:215
+msgid "Margin bottom"
+msgstr "Margem inferior"
+
+#: ext/smart_designer/data/color.php:80 ext/smart_designer/data/radio.php:129
+#: ext/smart_designer/data/checkbox.php:163
+msgid "Margin right"
+msgstr "Margem direita"
+
+#: ext/front_builder/options/layout_options.php:58
+#, fuzzy
+msgid "Margint bottom"
+msgstr "Margint bottom"
+
+#: ext/front_builder/options/layout_options.php:67
+#, fuzzy
+msgid "Margint left"
+msgstr "Margint saiu"
+
+#: ext/front_builder/options/layout_options.php:76
+#, fuzzy
+msgid "Margint right"
+msgstr "Margint direito"
+
+#: ext/front_builder/options/layout_options.php:49
+#, fuzzy
+msgid "Margint top"
+msgstr "Margint top"
+
+#: ext/stat/views/tabs_content.php:406
+msgid "Max deep of the search request"
+msgstr "Profundidade máxima da solicitação de pesquisa"
+
+#: ext/by_text/views/options.php:420
+#: ext/front_builder/options/sections/by_text.php:110
+msgid "Max drop-down height"
+msgstr "Altura máxima do menu suspenso"
+
+#: classes/helper.php:380 classes/helper.php:509
+msgid "Max price"
+msgstr "Preço máx."
+
+#: views/shortcodes/woof_price_filter_text.php:8
+msgid "max price"
+msgstr "preço máx."
+
+#: ext/stat/views/tabs_content.php:381
+msgid "Max requests per unique user"
+msgstr "Máximo de solicitações por usuário único"
+
+#: ext/query_save/views/options.php:120
+msgid "Max saved queries per user"
+msgstr "Máximo de consultas salvas por usuário"
+
+#: ext/products_messenger/views/options.php:179
+msgid "Max subscriptions per user"
+msgstr "Máximo de assinaturas por usuário"
+
+#: ext/stat/views/tabs_content.php:561
+msgid "Max terms or taxonomies per graph"
+msgstr "Máximo de termos ou taxonomias por gráfico"
+
+#: ext/products_messenger/views/options.php:257
+msgid "Maximum number of emails per one subscribed user. -1 means no limit."
+msgstr ""
+"Número máximo de e-mails por um usuário assinante. -1 significa sem limite."
+
+#: ext/products_messenger/views/options.php:180
+#: ext/query_save/views/options.php:121
+msgid "Maximum number of subscriptions for a single registered user."
+msgstr "Número máximo de assinaturas para um único usuário registrado."
+
+#: ext/front_builder/options/sections/meta/datepicker.php:47
+#: ext/meta_filter/html_types/datepicker/views/additional_options.php:91
+msgid "Medium - d MM, y"
+msgstr "Médio - d MM, y"
+
+#: ext/meta_filter/index.php:128
+msgid "Meta Data"
+msgstr "Metadados"
+
+#: ext/url_request/index.php:179
+msgid "Meta description"
+msgstr "Metadescrição"
+
+#: ext/meta_filter/views/tabs_content.php:18
+msgid "Meta Fields"
+msgstr "Campos de metadados"
+
+#: ext/meta_filter/index.php:207
+#: ext/meta_filter/classes/woof_type_meta_filter.php:56
+msgid "Meta filter"
+msgstr "Metafiltro"
+
+#: ext/url_request/index.php:171
+msgid "Meta title"
+msgstr "Metatítulo"
+
+#: ext/smart_designer/data/color.php:209 ext/smart_designer/data/radio.php:301
+#: ext/smart_designer/data/checkbox.php:335
+#: ext/smart_designer/data/switcher.php:256
+msgid "Min height"
+msgstr "Altura mínima"
+
+#: classes/helper.php:380 classes/helper.php:508
+msgid "Min price"
+msgstr "Preço mín."
+
+#: views/shortcodes/woof_price_filter_text.php:7
+msgid "min price"
+msgstr "preço mín."
+
+#: ext/by_rating/views/woof.php:44
+msgid "Min rating: "
+msgstr "Classificação mínima: "
+
+#: ext/by_text/views/options.php:396
+#: ext/front_builder/options/sections/by_text.php:96
+msgid "Min symbols"
+msgstr "Mínimo de símbolos"
+
+#: ext/smart_designer/data/color.php:41 ext/smart_designer/data/color.php:202
+#: ext/smart_designer/data/radio.php:41 ext/smart_designer/data/radio.php:294
+#: ext/smart_designer/data/checkbox.php:59
+#: ext/smart_designer/data/checkbox.php:328
+#: ext/smart_designer/data/switcher.php:249
+msgid "Min width"
+msgstr "Largura mínima"
+
+#: ext/turbo_mode/index.php:133 ext/products_messenger/views/options.php:239
+#: ext/stat/views/tabs_content.php:530
+msgid "min1"
+msgstr "min1"
+
+#: ext/by_text/views/options.php:397
+#: ext/front_builder/options/sections/by_text.php:97
+msgid "Minimum number of symbols to start searching. By default 3 symbols"
+msgstr ""
+"Número mínimo de símbolos para iniciar a pesquisa. 3 símbolos por padrão"
+
+#: ext/slideout/views/tabs_content.php:342
+msgid "Mobile behavior"
+msgstr "Comportamento em dispositivos móveis"
+
+#: classes/widgets.php:225 ext/front_builder/options/options.php:84
+msgid "Mobile mode"
+msgstr "Modo de dispositivos móveis"
+
+#: ext/turbo_mode/index.php:129 ext/quick_search/views/tabs_content.php:100
+#: ext/products_messenger/views/options.php:148
+#: ext/stat/views/tabs_content.php:529
+msgid "monthly"
+msgstr "mensalmente"
+
+#: ext/meta_filter/index.php:75
+msgid "Multi Drop-down"
+msgstr "Multi menu suspenso"
+
+#: ext/query_save/index.php:137
+msgid "My query"
+msgstr "Minha consulta"
+
+#: ext/products_messenger/views/item_list_subscr.php:4
+#: ext/query_save/views/item_list_query.php:8
+msgid "new"
+msgstr "novo"
+
+#: ext/smart_designer/index.php:598
+msgid "New element"
+msgstr "Novo elemento"
+
+#: ext/products_messenger/index.php:29
+msgid "New products"
+msgstr "Novos produtos"
+
+#: ext/products_messenger/index.php:28
+msgid "New Products by your request"
+msgstr "Novos produtos por sua solicitação"
+
+#: ext/sections/index.php:142
+msgid "New section"
+msgstr "Nova seção"
+
+#: ext/by_text/views/options.php:247 ext/by_text_2/views/options.php:242
+msgid "new window"
+msgstr "nova janela"
+
+#: ext/step_filer/index.php:101 ext/by_text/index.php:260
+msgid "Next"
+msgstr "Próximo"
+
+#: views/shortcode_generator.php:46 views/shortcode_generator.php:63
+#: views/shortcode_generator.php:79 views/shortcode_generator.php:95
+#: views/shortcode_generator.php:112 views/shortcode_generator.php:148
+#: views/shortcode_generator.php:165 views/shortcode_generator.php:187
+#: classes/widgets.php:150 classes/widgets.php:166 classes/widgets.php:182
+#: classes/widgets.php:213 classes/widgets.php:228
+#: ext/select_hierarchy/index.php:50 ext/slider/index.php:47
+#: ext/image/index.php:44 ext/image/index.php:53 ext/meta_filter/index.php:211
+#: ext/turbo_mode/index.php:627 ext/color/index.php:47 ext/color/index.php:55
+#: ext/color/index.php:64 ext/stock_quantity/views/options.php:23
+#: ext/stock_quantity/views/options.php:116
+#: ext/stock_quantity/views/options.php:141
+#: ext/stock_quantity/views/options.php:227
+#: ext/stock_quantity/views/options.php:252
+#: ext/url_request/views/tabs_content.php:50
+#: ext/url_request/views/tabs_content.php:84
+#: ext/by_instock/views/options.php:23 ext/by_instock/views/options.php:112
+#: ext/by_author/views/options.php:26 ext/by_backorder/views/options.php:23
+#: ext/by_text/views/options.php:24 ext/by_text/views/options.php:192
+#: ext/by_text/views/options.php:220 ext/by_text/views/options.php:273
+#: ext/by_text/views/options.php:299 ext/by_text/views/options.php:337
+#: ext/by_text/views/options.php:364 ext/by_onsales/views/options.php:23
+#: ext/products_messenger/views/options.php:24
+#: ext/products_messenger/views/options.php:116
+#: ext/products_messenger/views/options.php:142
+#: ext/sections/views/tabs_content.php:46 ext/by_text_2/views/options.php:24
+#: ext/by_text_2/views/options.php:159 ext/by_text_2/views/options.php:187
+#: ext/by_text_2/views/options.php:215 ext/by_text_2/views/options.php:269
+#: ext/by_text_2/views/options.php:295 ext/by_sku/views/options.php:23
+#: ext/by_sku/views/options.php:146
+#: ext/meta_filter/classes/woof_type_meta_filter.php:60
+#: ext/acf_filter/classes/woof_type_acf_filter.php:60
+#: ext/turbo_mode/views/tabs_content.php:42 ext/query_save/views/options.php:24
+#: ext/query_save/views/options.php:151 ext/by_featured/views/options.php:24
+#: ext/slideout/views/tabs_content.php:317 ext/by_rating/views/options.php:23
+#: ext/by_rating/views/options.php:51
+#: ext/front_builder/options/sections/default.php:22
+#: ext/front_builder/options/sections/by_price.php:57
+#: ext/front_builder/options/sections/by_rating.php:15
+#: ext/front_builder/options/sections/taxonomies.php:22
+#: ext/front_builder/options/sections/meta/mselect.php:22
+#: ext/front_builder/options/sections/meta/slider.php:22
+#: ext/front_builder/options/sections/meta/select.php:22
+#: ext/front_builder/options/sections/meta/datepicker.php:22
+#: ext/meta_filter/html_types/mselect/views/additional_options.php:20
+#: ext/meta_filter/html_types/mselect/views/additional_options.php:45
+#: ext/meta_filter/html_types/slider/views/additional_options.php:27
+#: ext/meta_filter/html_types/slider/views/additional_options.php:52
+#: ext/meta_filter/html_types/slider/views/additional_options.php:138
+#: ext/meta_filter/html_types/slider/views/additional_options.php:163
+#: ext/meta_filter/html_types/select/views/additional_options.php:19
+#: ext/meta_filter/html_types/select/views/additional_options.php:45
+#: ext/meta_filter/html_types/datepicker/views/additional_options.php:20
+#: ext/meta_filter/html_types/datepicker/views/additional_options.php:45
+#: ext/acf_filter/html_types/radio/views/additional_options.php:18
+#: ext/acf_filter/html_types/radio/views/additional_options.php:44
+#: ext/acf_filter/html_types/select/views/additional_options.php:18
+#: ext/acf_filter/html_types/select/views/additional_options.php:44
+msgid "No"
+msgstr "Não"
+
+#: ext/acf_filter/html_types/true_false/views/additional_options.php:8
+#, fuzzy
+msgid "No data"
+msgstr "Sem dados"
+
+#: ext/stat/index.php:212
+msgid "No data for the selected time period!"
+msgstr "Não há dados para o período de tempo selecionado!"
+
+#: ext/export_import/index.php:46
+msgid "No data to import!"
+msgstr "Nenhum dado para importar!"
+
+#: ext/smart_designer/index.php:603
+msgid "No items"
+msgstr "Nenhum item"
+
+#: ext/products_messenger/views/options.php:234
+msgid "No limit"
+msgstr "Sem limite"
+
+#: ext/products_messenger/views/email_template.php:83
+msgid "No products found"
+msgstr "Nenhum produto encontrado"
+
+#: lib/alert/index.php:81
+msgid "No thanks"
+msgstr "Não, obrigado"
+
+#: views/shortcode_generator.php:211 views/shortcode_generator.php:230
+#: ext/products_messenger/index.php:439 ext/query_save/index.php:236
+msgid "None"
+msgstr "Nenhum"
+
+#: ext/front_builder/options/layout_options.php:93
+#, fuzzy
+msgid "none"
+msgstr "nenhum"
+
+#: lib/alert/index.php:72
+msgid "Nope, maybe later"
+msgstr "Não, talvez mais tarde"
+
+#: classes/rate_alert.php:63
+msgid "Nope, maybe later!"
+msgstr "Não, talvez mais tarde!"
+
+#: ext/front_builder/classes/options-layout.php:92
+#: ext/front_builder/classes/options-sections.php:108
+#: ext/front_builder/classes/options-sections-layout.php:92
+#: ext/front_builder/classes/options.php:87
+#, fuzzy
+msgid "Not has effect in free version!"
+msgstr "Não tem efeito na versão gratuita!"
+
+#: views/shortcodes/woof_price_filter_radio.php:30
+#: views/shortcodes/woof_price_filter_select.php:55
+msgid ""
+"Not possible. Enter options ranges in the plugin settings -> tab Structure ->"
+" Search by price -> additional options"
+msgstr ""
+"Não é possível. Digite os intervalos de opções nas configurações do plugin ->"
+" aba Estrutura -> Pesquisar por preço -> opções adicionais"
+
+#: lib/alert/index.php:62
+msgid "Not really..."
+msgstr "Na verdade, não..."
+
+#: ext/front_builder/options/sections/taxonomies.php:36
+msgid "Not toggled terms count"
+msgstr "Nenhum termo de alternância contado"
+
+#: ext/by_text/views/options.php:454
+#: ext/products_messenger/views/options.php:296
+#: ext/by_text_2/views/options.php:314 ext/by_sku/views/options.php:235
+#: ext/query_save/views/options.php:132
+#: ext/front_builder/options/sections/by_text.php:125
+#: ext/front_builder/options/sections/by_sku.php:68
+msgid "Notes for customer"
+msgstr "Notas para o cliente"
+
+#: ext/by_text/index.php:258
+msgid "Nothing found!"
+msgstr "Nada encontrado!"
+
+#: ext/front_builder/options/sections/query_save.php:8
+#: ext/front_builder/options/sections/products_messenger.php:8
+#, fuzzy
+#| msgid "Native"
+msgid "Notice"
+msgstr "Nativo"
+
+#: ext/meta_filter/html_types/mselect/views/woof.php:75
+msgid "Notice! Add options in the plugin settings->Meta filter"
+msgstr "Aviso! Adicione opções nas configurações do plugin->Metafiltro"
+
+#: ext/stat/views/tabs_content.php:51
+msgid "Notice:"
+msgstr "Notas:"
+
+#: ext/smart_designer/views/tabs_content.php:26
+#, php-format
+msgid ""
+"Notice: This extension works for now only with taxonomies and its "
+"functionality will be extended with new element types, and also with meta "
+"data elements. HUSKY SD has %s. If you have an idea about HTML element(s) "
+"you want to see in HUSKY filter elements constructor discuss please your "
+"suggestion using %s."
+msgstr ""
+"Aviso: Esta extensão funciona por enquanto apenas com taxonomias e sua "
+"funcionalidade será estendida com novos tipos de elementos e também com "
+"elementos de metadados. O designer inteligente do HUSKY tem uma %s. Se você "
+"tem uma ideia sobre o(s) elemento(s) HTML que deseja ver no construtor de "
+"elementos de filtro HUSKY, discuta sua sugestão usando o %s."
+
+#: ext/meta_filter/views/tabs_content.php:157
+msgid "number"
+msgstr "número"
+
+#: ext/by_text/views/options.php:409
+#: ext/front_builder/options/sections/by_text.php:104
+msgid "Number of products per one block on the search drop-down"
+msgstr "Número de produtos por bloco no menu suspenso de pesquisa"
+
+#: ext/by_text/views/options.php:385
+#: ext/front_builder/options/sections/by_text.php:90
+msgid "Number of words in the description"
+msgstr "Número de palavras na descrição"
+
+#: ext/front_builder/options/sections/taxonomies.php:67
+#, fuzzy
+#| msgid "Numeric."
+msgid "Numeric"
+msgstr "Numérico."
+
+#: ext/slideout/views/tabs_content.php:249
+msgid "Offset"
+msgstr "Deslocamento"
+
+#: ext/turbo_mode/index.php:183
+msgid ""
+"Oh no! It looks like the filter can't open the search file. Please try "
+"generating a new file in Advanced -> Turbo mode -> [Update now!]."
+msgstr ""
+
+#: classes/rate_alert.php:67
+msgid "Ok, you deserve it"
+msgstr "Ok, você merece"
+
+#: lib/alert/index.php:70
+msgid "Okay, you deserve it"
+msgstr "Ok, você merece"
+
+#: ext/front_builder/index.php:702 ext/by_onsales/index.php:19
+#: ext/by_onsales/index.php:46 ext/sections/index.php:94
+#: ext/by_onsales/views/options.php:17 ext/by_onsales/views/options.php:29
+#: ext/by_onsales/views/woof.php:6
+msgid "On sale"
+msgstr "Promoção"
+
+#: ext/products_messenger/views/options.php:237
+msgid "One month"
+msgstr "Um mês"
+
+#: ext/products_messenger/views/options.php:235
+msgid "One week"
+msgstr "Uma semana"
+
+#: views/woof.php:545
+msgid "Open filter"
+msgstr "Abrir filtro"
+
+#: ext/stat/index.php:209
+msgid "operative tables are prepared"
+msgstr "tabelas operacionais estão preparadas"
+
+#: ext/front_builder/index.php:96
+#, fuzzy
+msgid "Option"
+msgstr "Opção"
+
+#: ext/front_builder/index.php:95 ext/smart_designer/data/color.php:29
+#: ext/smart_designer/data/color.php:111 ext/smart_designer/data/color.php:183
+#: ext/smart_designer/data/radio.php:29 ext/smart_designer/data/radio.php:153
+#: ext/smart_designer/data/radio.php:275
+#: ext/smart_designer/data/checkbox.php:29
+#: ext/smart_designer/data/checkbox.php:187
+#: ext/smart_designer/data/checkbox.php:309
+#: ext/smart_designer/data/switcher.php:26
+#: ext/smart_designer/data/switcher.php:230 ext/stat/views/tabs_content.php:35
+msgid "Options"
+msgstr "Opções"
+
+#: ext/stat/views/tabs_content.php:296
+msgid "Password"
+msgstr "Senha"
+
+#: ext/by_text/views/options.php:408
+#: ext/front_builder/options/sections/by_text.php:103
+msgid "Per page"
+msgstr "Por página"
+
+#: ext/products_messenger/views/options.php:136
+msgid ""
+"Period of emailing to subscribed users. Set it to \"No\" if you going to use "
+"external cron."
+msgstr ""
+"Período de envio de e-mail para usuários inscritos. Defina como \"Não\" se "
+"for usar o cron externo."
+
+#: ext/url_request/views/tabs_content.php:23
+msgid "Permalinks should be enabled!"
+msgstr "Links permanentes devem estar habilitados!"
+
+#: ext/stat/index.php:236
+msgid ""
+"PHP extension PDO_MYSQL is not enabled on your server, not possible to "
+"collect statistic data! Contact your hosting support to about enabling "
+"PDO_MYSQL."
+msgstr ""
+"A extensão PHP PDO_MYSQL não está ativa em seu servidor, não é possível "
+"coletar dados estatísticos! Entre em contato com o suporte de hospedagem "
+"para saber como ativar o PDO_MYSQL."
+
+#: ext/query_save/views/options.php:95
+msgid "Placeholder"
+msgstr "Conteúdo de marcação"
+
+#: ext/by_author/views/options.php:57 ext/by_text/views/options.php:139
+#: ext/by_text_2/views/options.php:105 ext/by_sku/views/options.php:98
+#: ext/front_builder/options/sections/by_text.php:8
+#: ext/front_builder/options/sections/by_author.php:14
+#: ext/front_builder/options/sections/by_sku.php:8
+msgid "Placeholder text"
+msgstr "Texto de marcação"
+
+#: ext/query_save/views/shortcodes/woof_save_query.php:96
+msgid "Please fill the title field."
+msgstr "Preencha o campo do título."
+
+#: ext/quick_search/views/shortcodes/woof_quick_search.php:224
+msgid "Please read documents"
+msgstr "Leia os documentos"
+
+#: ext/stat/views/tabs_content.php:56
+msgid "Please update database: "
+msgstr "Atualize o banco de dados: "
+
+#: ext/slideout/views/tabs_content.php:200
+msgid "popup animation speed in (ms)"
+msgstr "velocidade da animação do popup em ms"
+
+#: ext/slideout/views/tabs_content.php:157
+msgid "Position"
+msgstr "Posição"
+
+#: ext/conditionals/views/tabs_content.php:52
+msgid "Possible keys"
+msgstr "Chaves possíveis"
+
+#: ext/stock_quantity/views/options.php:210
+#: ext/front_builder/options/sections/meta/slider.php:57
+#: ext/meta_filter/html_types/slider/views/additional_options.php:121
+msgid "Postfix"
+msgstr "Sufixo"
+
+#: ext/stock_quantity/views/options.php:211
+#: ext/front_builder/options/sections/meta/slider.php:58
+#: ext/meta_filter/html_types/slider/views/additional_options.php:122
+#, fuzzy
+msgid "Postfix for slider slides"
+msgstr "Postfix para slides deslizantes"
+
+#: ext/front_builder/options/sections/by_price.php:72
+msgid "predifined step"
+msgstr "etapa predefinida"
+
+#: ext/stock_quantity/views/options.php:198
+#: ext/front_builder/options/sections/meta/slider.php:50
+#: ext/meta_filter/html_types/slider/views/additional_options.php:109
+msgid "Prefix"
+msgstr "Prefixo"
+
+#: ext/stock_quantity/views/options.php:199
+#: ext/front_builder/options/sections/meta/slider.php:51
+#: ext/meta_filter/html_types/slider/views/additional_options.php:110
+#, fuzzy
+msgid "Prefix for slider slides"
+msgstr "Prefixo para slides deslizantes"
+
+#: ext/smart_designer/views/tabs_content.php:49
+msgid "premium version of the plugin"
+msgstr "versão premium do plugin"
+
+#: ext/smart_designer/index.php:601
+msgid "Preset code (copy to share)"
+msgstr "Código predefinido (copie para compartilhar)"
+
+#: ext/smart_designer/index.php:600
+msgid "Presets"
+msgstr "Predefinições"
+
+#: ext/by_text/index.php:259
+msgid "Prev"
+msgstr "Anterior"
+
+#: ext/front_builder/index.php:694 ext/quick_search/index.php:679
+#: ext/url_request/classes/seo.php:268
+msgid "Price"
+msgstr "Preço"
+
+#: ext/products_messenger/index.php:392 ext/query_save/index.php:176
+#, php-format
+msgid "Price - from %s to %s"
+msgstr "Preço - de %s até %s"
+
+#: views/shortcodes/woof_price_filter_slider.php:141
+msgid "Price filter"
+msgstr "Filtro de preço"
+
+#: views/shortcodes/woof_price_filter_slider.php:131
+msgid "Price from"
+msgstr "Preço a partir de"
+
+#: views/shortcodes/woof_price_filter_slider.php:133
+msgid "Price to"
+msgstr "Preço até"
+
+#: ext/quick_search/index.php:626 ext/quick_search/index.php:627
+#: ext/quick_search/index.php:635 ext/quick_search/index.php:636
+#, php-format
+msgid "Price- %s "
+msgstr "Preço- %s "
+
+#: classes/helper.php:382 classes/helper.php:512
+msgid "Price:"
+msgstr "Preço:"
+
+#: ext/products_messenger/views/options.php:268
+msgid "Priority of limitations"
+msgstr "Prioridade de limitações"
+
+#: ext/quick_search/views/templates/list_3/output.php:40
+#: ext/quick_search/views/templates/list_2/output.php:57
+#: ext/quick_search/views/templates/grid_2/output.php:37
+#: ext/quick_search/views/templates/grid_1/output.php:40
+#: ext/quick_search/views/templates/list_1/output.php:54
+msgid "Product not found"
+msgstr "Produto não encontrado"
+
+#: ext/turbo_mode/index.php:206
+msgid "Products and Variants"
+msgstr "Produtos e variantes"
+
+#: ext/quick_search/views/tabs_content.php:61
+msgid "Products assembling period in data file for quick search."
+msgstr ""
+"Período de montagem dos produtos em arquivo de dados para pesquisa rápida."
+
+#: classes/widgets.php:11
+msgid "Products Filter for WooCommerce by realmag777"
+msgstr "Products Filter for WooCommerce por realmag777"
+
+#: ext/front_builder/index.php:703 ext/sections/index.php:95
+#: ext/products_messenger/views/options.php:17
+#: ext/products_messenger/views/options.php:30
+#: ext/products_messenger/views/options.php:40
+#: ext/query_save/views/options.php:30
+msgid "Products Messenger"
+msgstr "Mensageiro de produtos"
+
+#: ext/by_text_2/index.php:519 ext/by_sku/index.php:234
+msgid "Products not found!"
+msgstr "Nenhum produto encontrado!"
+
+#: ext/slideout/views/tabs_content.php:242
+#: ext/slideout/views/tabs_content.php:270
+msgid "px"
+msgstr "px"
+
+#: ext/quick_search/index.php:195 ext/quick_search/views/tabs_content.php:19
+msgid "Quick search"
+msgstr "Pesquisa rápida"
+
+#: ext/smart_designer/index.php:33 ext/select_radio_check/index.php:46
+msgid "Radio"
+msgstr "Botão de opção"
+
+#: ext/front_builder/options/layout_options.php:101
+#, fuzzy
+#| msgid "Radio and checkboxes skin"
+msgid "Radio and Checkbox skin"
+msgstr "Tema dos botões de seleção e de opção"
+
+#: ext/select_radio_check/index.php:30
+msgid "Radio/Checkbox in drop-down"
+msgstr "Opções/Caixas de seleção no menu suspenso"
+
+#: ext/stock_quantity/views/options.php:187
+#: ext/front_builder/options/sections/meta/slider.php:43
+#: ext/meta_filter/html_types/slider/views/additional_options.php:98
+msgid "Range"
+msgstr "Intervalo"
+
+#: ext/stock_quantity/views/options.php:178
+#: ext/front_builder/options/sections/meta/slider.php:37
+#: ext/meta_filter/html_types/slider/views/additional_options.php:89
+#, fuzzy
+msgid "Range step"
+msgstr "Range step"
+
+#: ext/front_builder/index.php:695
+#, fuzzy
+#| msgid "rating"
+msgid "Rating"
+msgstr "classificação"
+
+#. Author of the plugin
+msgid "realmag777"
+msgstr "realmag777"
+
+#: ext/quick_search/views/tabs_content.php:129
+msgid "Reassemble data file"
+msgstr "Remontar o arquivo de dados"
+
+#: ext/quick_search/views/tabs_content.php:137
+msgid "Reassemble data file for quick search manually now"
+msgstr "Remontar agora o arquivo de dados para pesquisa rápida manualmente"
+
+#: ext/turbo_mode/views/tabs_content.php:159
+msgid "Reassemble products data now!"
+msgstr "Remontar os dados dos produtos agora!"
+
+#: ext/front_builder/options/options.php:36
+#, fuzzy
+msgid "Redirect"
+msgstr "Redirecionar"
+
+#: classes/widgets.php:142
+msgid "Redirect to"
+msgstr "Redirecionar para"
+
+#: classes/widgets.php:144
+msgid ""
+"Redirect to any page - use it by your own logic. Leave it empty for default "
+"behavior."
+msgstr ""
+"Redireciona para qualquer página - use de acordo com sua própria lógica. "
+"Deixe em branco para o comportamento padrão."
+
+#: views/shortcode_generator.php:105
+#, fuzzy
+msgid ""
+"Redraw the search form without submitting the search data, just a redrawing. "
+"Does not work with AJAX mode."
+msgstr ""
+"Redesenhe o formulário de pesquisa sem enviar os dados de pesquisa, apenas "
+"um redesenho. Não funciona com o modo AJAX."
+
+#: ext/front_builder/index.php:108 ext/front_builder/index.php:109
+#, fuzzy
+msgid "redrawn"
+msgstr "redesenhado"
+
+#: classes/widgets.php:222
+msgid ""
+"Redraws search form by AJAX, and to start filtering \"Filter\" button should "
+"be pressed. Useful when uses hierarchical drop-down for example"
+msgstr ""
+"Redesenha o formulário de pesquisa por AJAX e, para iniciar a filtragem, o "
+"botão \"Filtro\" deve ser pressionado. Útil quando usa um menu suspenso "
+"hierárquico, por exemplo"
+
+#: ext/front_builder/options/options.php:30
+#, fuzzy
+msgid ""
+"redraws search form without submiting of the search data. Doesn work in AJAX "
+"mode"
+msgstr ""
+"redesenha o formulário de pesquisa sem enviar os dados de pesquisa. Não "
+"funciona no modo AJAX"
+
+#: views/woof.php:41 ext/quick_search/index.php:98
+#: ext/smart_designer/index.php:599
+#: ext/step_filer/views/shortcode/step_filter.php:16
+msgid "Reset"
+msgstr "Redefinir"
+
+#: ext/smart_designer/data/color.php:223 ext/smart_designer/data/radio.php:315
+#: ext/smart_designer/data/checkbox.php:349
+#: ext/smart_designer/data/switcher.php:270
+#: ext/slideout/views/tabs_content.php:164
+msgid "Right"
+msgstr "Direita"
+
+#: ext/front_builder/options/layout_options.php:95
+#, fuzzy
+msgid "right"
+msgstr "direita"
+
+#: ext/by_author/views/options.php:71
+#: ext/front_builder/options/sections/by_author.php:21
+msgid "Role"
+msgstr "Função"
+
+#: ext/url_request/views/tabs_content.php:150
+msgid "Rules"
+msgstr "Regras"
+
+#: ext/query_save/views/options.php:40
+msgid "Save current search query"
+msgstr "Salvar consulta de pesquisa atual"
+
+#: ext/front_builder/index.php:704 ext/sections/index.php:96
+#: ext/query_save/views/options.php:17
+msgid "Save search query"
+msgstr "Salvar consulta de pesquisa"
+
+#: ext/smart_designer/index.php:595
+msgid "Saved"
+msgstr "Salvo"
+
+#: ext/smart_designer/index.php:594
+msgid "Saving"
+msgstr "Salvando"
+
+#: ext/sections/index.php:90 ext/by_author/views/options.php:20
+#: ext/by_author/views/options.php:31
+msgid "Search by Author"
+msgstr "Pesquisar por autor"
+
+#: ext/by_text/views/options.php:162 ext/by_text_2/views/options.php:129
+#: ext/front_builder/options/sections/by_text.php:23
+msgid "Search by content"
+msgstr "Pesquisar por conteúdo"
+
+#: ext/by_text/views/options.php:164 ext/by_text_2/views/options.php:131
+#: ext/front_builder/options/sections/by_text.php:25
+msgid "Search by content OR excerpt"
+msgstr "Pesquisar por conteúdo OU por resumo"
+
+#: ext/by_text/views/options.php:330
+#: ext/front_builder/options/sections/by_text.php:75
+msgid "Search by description in product variations"
+msgstr "Pesquisar por descrição nas variações do produto"
+
+#: ext/by_text_2/views/options.php:288
+msgid "Search by description in variations"
+msgstr "Pesquisar pela descrição nas variações"
+
+#: ext/front_builder/options/sections/meta/checkbox.php:9
+#: ext/meta_filter/html_types/checkbox/views/additional_options.php:12
+msgid "Search by exact value OR if meta key exists"
+msgstr "Pesquisar pelo valor exato OU se a chave de meta existe"
+
+#: ext/by_text/views/options.php:163 ext/by_text_2/views/options.php:130
+#: ext/front_builder/options/sections/by_text.php:24
+msgid "Search by excerpt"
+msgstr "Pesquisa por resumo"
+
+#: ext/by_text/views/options.php:185 ext/by_text_2/views/options.php:152
+#: ext/front_builder/options/sections/by_text.php:33
+msgid "Search by full word only"
+msgstr "Pesquisar apenas por palavra completa"
+
+#: ext/stock_quantity/views/options.php:29 ext/by_instock/views/options.php:29
+msgid "Search by InStock"
+msgstr "Pesquisar por \"em estoque\""
+
+#: ext/sections/index.php:86
+msgid "Search by Price"
+msgstr "Pesquisar por preço"
+
+#: ext/by_rating/views/options.php:28
+msgid "Search by rating"
+msgstr "Pesquisar por classificação"
+
+#: ext/sections/index.php:88 ext/by_sku/views/options.php:17
+#: ext/by_sku/views/options.php:28
+msgid "Search by SKU"
+msgstr "Pesquisar por SKU"
+
+#: ext/sections/index.php:89 ext/by_text/views/options.php:17
+#: ext/by_text_2/views/options.php:17
+msgid "Search by Text"
+msgstr "Pesquisar por texto"
+
+#: ext/meta_filter/index.php:57 ext/by_text/views/options.php:29
+#: ext/by_text_2/views/options.php:29
+msgid "Search by text"
+msgstr "Pesquisar por texto"
+
+#: ext/by_text/views/options.php:161 ext/by_text_2/views/options.php:128
+#: ext/front_builder/options/sections/by_text.php:22
+msgid "Search by title"
+msgstr "Pesquisar por título"
+
+#: ext/by_text_2/views/options.php:134
+msgid "Search by title AND content"
+msgstr "Pesquisar por título E conteúdo"
+
+#: ext/by_text/views/options.php:166 ext/by_text_2/views/options.php:133
+#: ext/front_builder/options/sections/by_text.php:27
+msgid "Search by title OR content"
+msgstr "Pesquisar por título OU conteúdo"
+
+#: ext/by_text/views/options.php:165 ext/by_text_2/views/options.php:132
+#: ext/front_builder/options/sections/by_text.php:26
+msgid "Search by title OR content OR excerpt"
+msgstr "Pesquisar por título OU conteúdo OU resumo"
+
+#: ext/stock_quantity/views/options.php:93 ext/by_instock/views/options.php:61
+#: ext/by_backorder/views/options.php:58
+#: ext/front_builder/options/sections/by_instock.php:16
+#: ext/front_builder/options/sections/by_backorder.php:16
+#: ext/front_builder/options/sections/by_sku.php:63
+msgid "Search in products and their variations"
+msgstr "Pesquisar em produtos e suas variações"
+
+#: ext/stock_quantity/views/options.php:85 ext/by_instock/views/options.php:53
+#: ext/by_backorder/views/options.php:50
+#: ext/front_builder/options/sections/by_instock.php:8
+#: ext/front_builder/options/sections/by_backorder.php:8
+#: ext/front_builder/options/sections/by_sku.php:55
+msgid "Search in variable produts"
+msgstr "Pesquisar em produtos variáveis"
+
+#: ext/front_builder/options/sections/meta/checkbox.php:8
+#: ext/meta_filter/html_types/checkbox/views/additional_options.php:11
+msgid "Search option"
+msgstr "Opção de pesquisa"
+
+#: ext/meta_filter/html_types/checkbox/views/additional_options.php:38
+msgid "Search value"
+msgstr "Valor da pesquisa"
+
+#: ext/front_builder/options/sections/meta/checkbox.php:21
+#, fuzzy
+msgid "Search value (for not numeric)"
+msgstr "Valor de pesquisa (para não numérico)"
+
+#: ext/by_text/views/options.php:20
+msgid ""
+"Searching by text in the: title, content, excerpt and their combinations. "
+"Also SKU option allows making search in the same text-input"
+msgstr ""
+"Pesquisa por texto no: título, conteúdo, resumo e suas combinações. A opção "
+"SKU também permite fazer pesquisas na mesma entrada de texto"
+
+#: ext/quick_search/views/tabs_content.php:69
+#: ext/turbo_mode/views/tabs_content.php:105
+#: ext/stat/views/tabs_content.php:496
+msgid "Secret key for external cron"
+msgstr "Chave secreta para o cron externo"
+
+#: ext/front_builder/index.php:97
+#, fuzzy
+msgid "Section Options"
+msgstr "Opções De Seção"
+
+#: ext/front_builder/index.php:106
+#, fuzzy
+msgid "Section options"
+msgstr "Opções de seção"
+
+#: ext/front_builder/options/sections_layout_options.php:8
+#, fuzzy
+msgid "Section width"
+msgstr "Largura da seção"
+
+#: ext/sections/index.php:53 ext/sections/views/tabs_content.php:23
+#: ext/sections/views/tabs_content.php:104
+msgid "Sections"
+msgstr "Seções"
+
+#: ext/sections/views/tabs_content.php:72
+msgid "Sections behavior"
+msgstr "Comportamento das seções"
+
+#: ext/products_messenger/views/email_template.php:78
+msgid "See more new products..."
+msgstr "Ver mais produtos novos..."
+
+#: ext/by_author/views/shortcodes/woof_author_filter.php:42
+msgid "Select a product author"
+msgstr "Selecione um autor de produto"
+
+#: ext/turbo_mode/views/tabs_content.php:97
+msgid "Select acceptable for your hosting type of cron"
+msgstr "Selecione aceitável para o seu tipo de hospedagem de cron"
+
+#: ext/stat/views/tabs_content.php:449
+msgid ""
+"Select cron which you want to use for the statistic assembling. Better use "
+"WordPress cron, but on the server create external cron and set there period "
+"of site visiting."
+msgstr ""
+"Selecione o cron que você deseja usar para a montagem da estatística. É "
+"melhor usar o cron do WordPress, mas no servidor, crie um cron externo e "
+"defina o período de visita ao site."
+
+#: ext/stat/index.php:206
+msgid "Select date range for statistic!"
+msgstr "Selecione o intervalo de datas para as estatísticas!"
+
+#: ext/image/index.php:111 ext/color/index.php:136
+#: ext/by_text_2/views/options.php:333 ext/by_sku/views/options.php:255
+#: ext/slideout/views/tabs_content.php:109
+msgid "Select Image"
+msgstr "Selecionar imagem"
+
+#: ext/smart_designer/index.php:609
+msgid "Select image"
+msgstr "Selecionar imagem"
+
+#: ext/smart_designer/index.php:610
+msgid "Select image for term"
+msgstr "Selecione a imagem para o termo"
+
+#: ext/stat/views/tabs_content.php:67
+msgid "Select period:"
+msgstr "Selecionar período:"
+
+#: ext/stat/views/tabs_content.php:368
+msgid "Select taxonomies and meta keys which you want to track"
+msgstr "Selecionar taxonomias e chaves de meta que você deseja rastrear"
+
+#: ext/stat/views/tabs_content.php:163
+msgid "Select taxonomies in tab Options and press \"Save changes\""
+msgstr ""
+"Selecione as taxonomias na aba Opções e clique em \"Salvar alterações\""
+
+#: views/shortcode_generator.php:271
+#, fuzzy
+msgid "Select Taxonomies Terms"
+msgstr "Selecionar Termos De Taxonomias"
+
+#: views/shortcode_generator.php:260
+#, fuzzy
+msgid "Select taxonomy"
+msgstr "Selecione taxonomia"
+
+#: ext/step_filer/views/tabs_content.php:41 ext/stat/views/tabs_content.php:175
+msgid ""
+"Select taxonomy, taxonomies combinations OR leave this field empty to see "
+"general data for all the most requested taxonomies"
+msgstr ""
+"Selecione a taxonomia, combinações de taxonomias OU deixe este campo vazio "
+"para ver dados gerais para todas as taxonomias mais solicitados"
+
+#: ext/stat/views/tabs_content.php:90
+msgid "Select the time period for which you want to see statistical data"
+msgstr ""
+"Selecione o período de tempo para o qual você deseja ver os dados "
+"estatísticos"
+
+#: ext/smart_designer/data/color.php:127 ext/smart_designer/data/radio.php:219
+#: ext/smart_designer/data/checkbox.php:253
+msgid "Selected border color"
+msgstr "Cor da borda do selecionado"
+
+#: ext/smart_designer/data/color.php:165 ext/smart_designer/data/radio.php:257
+#: ext/smart_designer/data/checkbox.php:291
+msgid "Selected border width"
+msgstr "Largura da borda do selecionado"
+
+#: ext/smart_designer/data/radio.php:165
+#: ext/smart_designer/data/checkbox.php:199
+msgid "Selected color"
+msgstr "Cor do selecionado"
+
+#: ext/smart_designer/data/radio.php:177
+#: ext/smart_designer/data/checkbox.php:211
+msgid "Selected image"
+msgstr "Imagem selecionada"
+
+#: ext/smart_designer/data/color.php:173 ext/smart_designer/data/radio.php:265
+#: ext/smart_designer/data/checkbox.php:299
+msgid "Selected scale"
+msgstr "Escala do selecionado"
+
+#: ext/smart_designer/views/woof.php:6
+msgid "Selected SD element is not correct!"
+msgstr "O elemento selecionado não está correto!"
+
+#: ext/smart_designer/data/radio.php:185
+#: ext/smart_designer/data/checkbox.php:219
+msgid "Selected text color"
+msgstr "Cor do texto do selecionado"
+
+#: ext/smart_designer/data/color.php:107 ext/smart_designer/data/radio.php:149
+#: ext/smart_designer/data/checkbox.php:183
+msgid "Selected/Hovered Terms"
+msgstr "Termos selecionados/sobrepostos"
+
+#: ext/url_request/index.php:183
+msgid "SEO text"
+msgstr "Texto SEO"
+
+#: ext/url_request/index.php:102 ext/url_request/views/tabs_content.php:18
+msgid "SEO URL request"
+msgstr "Solicitação de URL de SEO"
+
+#: ext/stat/views/tabs_content.php:260
+msgid "Server options for statistic stock"
+msgstr "Opções de servidor para o estoque de estatística"
+
+#: ext/by_text_2/views/options.php:107
+msgid "Set \"none\" to disable placeholder for this textinput"
+msgstr ""
+"Defina \"none\" para desativar o conteúdo de marcação para esta entrada de "
+"texto"
+
+#: ext/image/index.php:110
+#, fuzzy
+msgid "set link to the image"
+msgstr "definir link para a imagem"
+
+#: ext/smart_designer/index.php:606
+msgid "Set terms color/image"
+msgstr "Definir cor/imagem dos termos"
+
+#: ext/export_import/index.php:106
+msgid "Settings imported successfully. Reload the page please."
+msgstr "Configurações importadas com sucesso. Recarregue a página por favor."
+
+#: ext/front_builder/options/sections/meta/datepicker.php:46
+#: ext/meta_filter/html_types/datepicker/views/additional_options.php:90
+msgid "Short - d M, y"
+msgstr "Curto - d M, y"
+
+#: ext/front_builder/index.php:104
+#, fuzzy
+msgid "Shortcode"
+msgstr "Shortcode"
+
+#: views/shortcode_generator.php:34
+#, fuzzy
+msgid ""
+"Shortcode identifier is used to generate a unique CSS class in the main "
+"container of the generated search form, creating a unique design."
+msgstr ""
+"O identificador de Shortcode é usado para gerar uma classe CSS exclusiva no "
+"contêiner principal do formulário de pesquisa gerado, criando um design "
+"exclusivo."
+
+#: ext/front_builder/options/options.php:92
+#, fuzzy
+msgid ""
+"shortcode-identificator – uses for generating unique CSS class in main "
+"container of generated search form making unique design. Defined and basic "
+"sid in the plugin is 'auto_shorcode'. Customers and developers can create "
+"any sids and apply theirs own CSS styles. If you not understand - do not "
+"touch."
+msgstr ""
+"shortcode-identificator-usos para gerar classe CSS exclusiva no contêiner "
+"principal do formulário de pesquisa gerado fazendo design exclusivo. O sid "
+"definido e básico no plugin é 'auto_shorcode'. Clientes e desenvolvedores "
+"podem criar qualquer sids e aplicar seus próprios estilos CSS. Se você não "
+"entender-não toque."
+
+#: ext/slideout/views/tabs_content.php:370
+msgid "Should the slideout button be visible on mobile devices"
+msgstr "O botão deslizante deve estar visível em dispositivos móveis"
+
+#: ext/slideout/views/tabs_content.php:41
+msgid "Show"
+msgstr "Mostrar"
+
+#: ext/by_rating/views/options.php:45
+msgid "Show  stars in drop-down"
+msgstr "Mostrar estrelas no menu suspenso"
+
+#: views/woof.php:568
+msgid "show blocks helper"
+msgstr "mostrar o auxiliar de blocos"
+
+#: ext/front_builder/options/sections/by_price.php:43
+#, fuzzy
+msgid "Show button for woo range-slider"
+msgstr "Mostrar botão para woo range-slider"
+
+#: ext/front_builder/options/sections/by_price.php:44
+msgid ""
+"Show button for woocommerce filter by price inside woof search form when it "
+"is dispayed as woo range-slider"
+msgstr ""
+"Mostrar botão para o filtro woocommerce por preço dentro do formulário de "
+"pesquisa woof quando ele é exibido como controle deslizante de intervalo "
+"\"woo\""
+
+#: ext/select_hierarchy/index.php:46
+#, fuzzy
+msgid "Show chain always"
+msgstr "Mostrar corrente sempre"
+
+#: ext/smart_designer/data/color.php:101
+msgid "Show count inside tooltip"
+msgstr "Mostrar contagem dentro da dica de ferramenta"
+
+#: ext/smart_designer/data/color.php:195 ext/smart_designer/data/radio.php:287
+#: ext/smart_designer/data/checkbox.php:321
+#: ext/smart_designer/data/switcher.php:242
+msgid "Show counter"
+msgstr "Mostrar contador"
+
+#: ext/by_featured/views/options.php:20
+msgid "Show Featured products checkbox inside HUSKY search form"
+msgstr ""
+"Mostrar caixa de seleção de produtos em destaque dentro do formulário de "
+"pesquisa HUSKY"
+
+#: ext/by_text/views/options.php:214
+#: ext/front_builder/options/sections/by_text.php:41
+msgid "Show found variants in drop-down list"
+msgstr "Mostrar variantes encontradas no menu suspenso"
+
+#: ext/image/index.php:40
+#, fuzzy
+msgid "Show image title"
+msgstr "Mostrar título da imagem"
+
+#: ext/image/index.php:41
+#, fuzzy
+msgid "Show image title below picture"
+msgstr "Mostrar título da imagem abaixo imagem"
+
+#: ext/color/index.php:51
+#, fuzzy
+msgid "Show in one column"
+msgstr "Mostrar em uma coluna"
+
+#: ext/color/index.php:52
+#, fuzzy
+msgid "Show in one column with title"
+msgstr "Mostrar em uma coluna com título"
+
+#: ext/stock_quantity/views/options.php:19 ext/by_instock/views/options.php:19
+msgid "Show In stock only checkbox inside woof search form"
+msgstr ""
+"Mostrar a caixa de seleção \"Somente em estoque\" dentro do formulário de "
+"pesquisa woof"
+
+#: ext/stock_quantity/views/options.php:220
+#: ext/front_builder/options/sections/meta/slider.php:64
+#: ext/meta_filter/html_types/slider/views/additional_options.php:131
+msgid "Show inputs"
+msgstr "Mostrar campos"
+
+#: classes/helper.php:949
+msgid "Show less"
+msgstr "Mostrar menos"
+
+#: classes/helper.php:948
+msgid "Show more"
+msgstr "Mostrar mais"
+
+#: ext/query_save/views/options.php:144
+msgid "Show notice"
+msgstr "Mostrar aviso"
+
+#: ext/query_save/views/options.php:171
+msgid "Show notice on product page"
+msgstr "Mostrar aviso na página do produto"
+
+#: ext/slideout/views/tabs_content.php:349
+msgid "Show on all devices"
+msgstr "Mostrar em todos os dispositivos"
+
+#: ext/by_backorder/views/options.php:19
+#, fuzzy
+msgid "Show On backorder checkbox inside woof search form"
+msgstr ""
+"Mostrar na caixa de seleção de pedidos pendentes dentro do formulário de "
+"pesquisa woof"
+
+#: ext/by_onsales/views/options.php:19
+msgid "Show On sale only checkbox inside woof search form"
+msgstr ""
+"Mostrar a caixa de seleção \"Somente em promoção\" dentro do formulário de "
+"pesquisa woof"
+
+#: ext/slideout/views/tabs_content.php:351
+msgid "Show only on desktop"
+msgstr "Mostrar apenas no desktop"
+
+#: ext/slideout/views/tabs_content.php:350
+msgid "Show only on mobile"
+msgstr "Mostrar apenas em dispositivos móveis"
+
+#: ext/products_messenger/views/options.php:20
+msgid "Show product mesenger box inside woof search form"
+msgstr ""
+"Mostrar a caixa do mensageiro de produtos dentro do formulário de pesquisa "
+"do woof"
+
+#: ext/by_author/views/options.php:22
+msgid "Show Search by author drop-down inside woof search form"
+msgstr ""
+"Mostrar menu suspenso \"Pesquisar por autor\" dentro do formulário de "
+"pesquisa woof"
+
+#: ext/front_builder/options/sections/by_rating.php:9
+#, fuzzy
+msgid "Show stars in drop-down"
+msgstr "Mostrar estrelas no menu suspenso"
+
+#: ext/products_messenger/views/options.php:109
+msgid "Show subscription button"
+msgstr "Mostrar botão de assinatura"
+
+#: ext/products_messenger/views/options.php:110
+msgid ""
+"Show subscription button without search query. For example, user will be "
+"able to subscribe for new products in any products category."
+msgstr ""
+"Mostrar botão de inscrição sem consulta de pesquisa. Por exemplo, o usuário "
+"poderá se inscrever para novos produtos em qualquer categoria de produtos."
+
+#: ext/by_sku/views/options.php:19
+#, fuzzy
+msgid "Show textinput for searching by products sku"
+msgstr "Mostrar textinput para pesquisar por produtos sku"
+
+#: ext/by_text_2/views/options.php:20
+msgid "Show textinput for searching by products title"
+msgstr "Mostrar entrada de texto para pesquisa por título de produtos"
+
+#: ext/stock_quantity/views/options.php:109
+#: ext/front_builder/options/sections/taxonomies.php:8
+#: ext/front_builder/options/sections/meta/mselect.php:8
+#: ext/front_builder/options/sections/meta/slider.php:8
+#: ext/front_builder/options/sections/meta/select.php:8
+#: ext/front_builder/options/sections/meta/datepicker.php:8
+#: ext/meta_filter/html_types/mselect/views/additional_options.php:13
+#: ext/meta_filter/html_types/slider/views/additional_options.php:20
+#: ext/meta_filter/html_types/select/views/additional_options.php:12
+#: ext/meta_filter/html_types/datepicker/views/additional_options.php:13
+#: ext/acf_filter/html_types/radio/views/additional_options.php:11
+#: ext/acf_filter/html_types/select/views/additional_options.php:11
+msgid "Show title label"
+msgstr "Mostrar rótulo do título"
+
+#: ext/front_builder/options/sections/default.php:8
+#, fuzzy
+msgid "Show title label if possible"
+msgstr "Mostrar rótulo do título, se possível"
+
+#: ext/stock_quantity/views/options.php:134
+#: ext/front_builder/options/sections/taxonomies.php:15
+#: ext/front_builder/options/sections/meta/mselect.php:15
+#: ext/front_builder/options/sections/meta/slider.php:15
+#: ext/front_builder/options/sections/meta/select.php:15
+#: ext/front_builder/options/sections/meta/datepicker.php:15
+#: ext/meta_filter/html_types/mselect/views/additional_options.php:38
+#: ext/meta_filter/html_types/slider/views/additional_options.php:45
+#: ext/meta_filter/html_types/select/views/additional_options.php:38
+#: ext/meta_filter/html_types/datepicker/views/additional_options.php:38
+#: ext/acf_filter/html_types/radio/views/additional_options.php:37
+#: ext/acf_filter/html_types/select/views/additional_options.php:37
+msgid "Show toggle button"
+msgstr "Mostrar botão de alternância"
+
+#: ext/front_builder/options/sections/by_price.php:50
+#, fuzzy
+msgid "Show toggle button for radio"
+msgstr "Mostrar botão de alternância para rádio"
+
+#: ext/front_builder/options/sections/default.php:15
+#, fuzzy
+msgid "Show toggle button if possible"
+msgstr "Mostrar botão de alternância, se possível"
+
+#: ext/stock_quantity/views/options.php:135
+#: ext/front_builder/options/sections/default.php:16
+#: ext/front_builder/options/sections/meta/mselect.php:16
+#: ext/front_builder/options/sections/meta/slider.php:16
+#: ext/front_builder/options/sections/meta/select.php:16
+#: ext/front_builder/options/sections/meta/datepicker.php:16
+#: ext/meta_filter/html_types/mselect/views/additional_options.php:39
+#: ext/meta_filter/html_types/slider/views/additional_options.php:46
+#: ext/meta_filter/html_types/select/views/additional_options.php:39
+#: ext/meta_filter/html_types/datepicker/views/additional_options.php:39
+#: ext/acf_filter/html_types/radio/views/additional_options.php:38
+#: ext/acf_filter/html_types/select/views/additional_options.php:38
+msgid ""
+"Show toggle button near the title on the front above the block of html-items"
+msgstr ""
+"Mostrar botão de alternância perto do título na interface acima do bloco de "
+"itens html"
+
+#: ext/front_builder/options/sections/by_price.php:51
+msgid ""
+"Show toggle button near the title on the front above the block of html-items "
+"if price filter displayed as radio buttons"
+msgstr ""
+"Exibir um botão de alternância (toggle) próximo ao título na parte frontal "
+"(do site), acima do bloco de itens HTML, se o filtro de preço for exibido "
+"como botões de opção (radio buttons)."
+
+#: ext/front_builder/options/sections/taxonomies.php:16
+msgid ""
+"Show toggle button near the title on the front above the block of html-items."
+" If title label is disabled leave here [No]."
+msgstr ""
+
+#: ext/meta_filter/html_types/mselect/views/additional_options.php:66
+#: ext/meta_filter/html_types/datepicker/views/additional_options.php:66
+#: ext/acf_filter/html_types/radio/views/additional_options.php:65
+#: ext/acf_filter/html_types/select/views/additional_options.php:65
+msgid "Show tooltip"
+msgstr "Mostrar dica de ferramenta"
+
+#: ext/front_builder/options/sections/by_price.php:37
+#: ext/front_builder/options/sections/taxonomies.php:30
+#, fuzzy
+msgid "Show tooltip in title label. Enter any text."
+msgstr "Mostrar dica de ferramenta no rótulo do título. Digite qualquer texto."
+
+#: ext/smart_designer/data/color.php:92
+msgid "Show tooltip on hover"
+msgstr "Mostrar dica de ferramenta ao passar o mouse"
+
+#: ext/stock_quantity/views/options.php:221
+#: ext/front_builder/options/sections/meta/slider.php:65
+#: ext/meta_filter/html_types/slider/views/additional_options.php:132
+msgid ""
+"Show two number inputs: from minimum value to maximum value of the search "
+"range"
+msgstr ""
+"Mostrar duas entradas numéricas: do valor mínimo ao valor máximo do "
+"intervalo de pesquisa"
+
+#: ext/acf_filter/html_types/radio/views/additional_options.php:12
+#: ext/acf_filter/html_types/select/views/additional_options.php:12
+#, fuzzy
+#| msgid "Show/Hide taxonomy block title on the front"
+msgid "Show/Hide ACF block title on the front"
+msgstr "Mostrar/ocultar o título do bloco de taxonomia na interface"
+
+#: ext/stock_quantity/views/options.php:110
+#: ext/front_builder/options/sections/meta/mselect.php:9
+#: ext/front_builder/options/sections/meta/slider.php:9
+#: ext/front_builder/options/sections/meta/select.php:9
+#: ext/front_builder/options/sections/meta/datepicker.php:9
+#: ext/meta_filter/html_types/mselect/views/additional_options.php:14
+#: ext/meta_filter/html_types/slider/views/additional_options.php:21
+#: ext/meta_filter/html_types/select/views/additional_options.php:13
+#: ext/meta_filter/html_types/datepicker/views/additional_options.php:14
+msgid "Show/Hide meta block title on the front"
+msgstr "Mostrar/Ocultar o título do metabloco na interface"
+
+#: ext/front_builder/options/sections/default.php:9
+#, fuzzy
+msgid ""
+"Show/Hide meta block title on the front. This is default options for "
+"elements which has not their own options, and even this ones can not be "
+"accessible for 100%"
+msgstr ""
+"Mostrar / Ocultar título do bloco meta na frente. Esta é opções padrão para "
+"elementos que não tem suas próprias opções, e mesmo este não pode ser "
+"acessível para 100%"
+
+#: ext/slideout/views/tabs_content.php:60
+msgid "Show/Hide slideout on shop pages"
+msgstr "Mostrar/ocultar deslizante nas páginas da loja"
+
+#: ext/smart_designer/data/checkbox.php:75
+msgid "Side Padding"
+msgstr "Preenchimento lateral"
+
+#: ext/smart_designer/data/color.php:267 ext/smart_designer/data/radio.php:359
+#: ext/smart_designer/data/checkbox.php:393
+#: ext/smart_designer/data/switcher.php:314
+msgid "Side padding"
+msgstr "Preenchimento lateral"
+
+#: ext/stock_quantity/views/options.php:92 ext/by_instock/views/options.php:60
+#: ext/by_backorder/views/options.php:57
+#: ext/front_builder/options/sections/by_instock.php:15
+#: ext/front_builder/options/sections/by_backorder.php:15
+#: ext/front_builder/options/sections/by_sku.php:62
+msgid "Simple products only"
+msgstr "Apenas produtos simples"
+
+#: ext/slider/index.php:57
+#, fuzzy
+msgid "single"
+msgstr "solteiro"
+
+#: ext/front_builder/options/layout_options.php:102
+#, fuzzy
+msgid ""
+"skins for radio and checkbox items. Has no sense for Smart designer filter "
+"items"
+msgstr ""
+"skins para itens de rádio e checkbox. Não tem sentido para itens de filtro "
+"de designer inteligente"
+
+#: ext/front_builder/options/sections/by_price.php:93
+#, fuzzy
+#| msgid "Skin only works for ion slider"
+msgid "Skins only works for ion slider"
+msgstr "Tema funciona somente com o controle deslizante \"ion\""
+
+#: ext/front_builder/index.php:696 ext/quick_search/index.php:680
+msgid "SKU"
+msgstr "SKU"
+
+#: ext/by_sku/views/options.php:99
+#: ext/front_builder/options/sections/by_sku.php:9
+#, fuzzy
+msgid ""
+"SKU textinput placeholder. Set \"none\" if you want leave it empty on the "
+"front."
+msgstr ""
+"SKU textinput placeholder. Defina \"Nenhum\" se quiser deixe-o vazio na "
+"frente."
+
+#: ext/slideout/index.php:107 ext/slideout/views/tabs_content.php:20
+msgid "Slideout"
+msgstr "Deslizante"
+
+#: ext/slideout/views/tabs_content.php:104
+msgid "Slideout image"
+msgstr "Imagem do deslizante"
+
+#: ext/slideout/views/tabs_content.php:122
+msgid "Slideout text"
+msgstr "Texto do deslizante"
+
+#: ext/slider/index.php:30 ext/meta_filter/index.php:51
+msgid "Slider"
+msgstr "Controle deslizante"
+
+#: ext/slider/index.php:66 ext/stock_quantity/views/options.php:271
+#: ext/front_builder/options/sections/meta/slider.php:78
+#: ext/meta_filter/html_types/slider/views/additional_options.php:182
+msgid "Slider skin"
+msgstr "Tema do controle deslizante"
+
+#: ext/slider/index.php:53
+msgid ""
+"Slider type with two values (from and to) [double] or with one value (to) "
+"[single]"
+msgstr ""
+
+#: ext/front_builder/options/options.php:98
+#, fuzzy
+msgid "Slug alias"
+msgstr "Slug alias"
+
+#: ext/front_builder/views/global_options.php:7
+#, fuzzy
+msgid "Slug aliases for front builder forms"
+msgstr "Slug aliases para front builder forms"
+
+#: ext/smart_designer/index.php:544
+#: ext/smart_designer/views/tabs_content.php:17
+msgid "Smart Designer"
+msgstr "Designer Inteligente"
+
+#: ext/front_builder/index.php:102
+#, fuzzy
+msgid ""
+"Smart Designer item will be created and attached to this filter section and "
+"will cancel current type, proceed?"
+msgstr ""
+"O item de Designer inteligente será criado e anexado a esta seção de filtro "
+"e cancelará o tipo atual, prosseguir?"
+
+#: ext/stat/index.php:171
+msgid "Somthing wrong!"
+msgstr "Algo está errado!"
+
+#: ext/query_save/views/options.php:64
+msgid "Sorry! This product is not suitable for your search %title%."
+msgstr "Desculpe! Este produto não é adequado para sua pesquisa %title%."
+
+#: ext/front_builder/options/sections/taxonomies.php:57
+msgid "Sort terms"
+msgstr "Ordenar termos"
+
+#: ext/front_builder/options/sections/taxonomies.php:72
+#, fuzzy
+msgid "Sort terms direction"
+msgstr "Classificar Termos direção"
+
+#: ext/smart_designer/data/radio.php:90
+#: ext/smart_designer/data/checkbox.php:124
+msgid "Space background color"
+msgstr "Cor de fundo do espaço"
+
+#: ext/smart_designer/data/radio.php:86
+#: ext/smart_designer/data/checkbox.php:120
+msgid "Space width"
+msgstr "Largura do espaço"
+
+#: ext/slideout/views/tabs_content.php:193
+msgid "Speed"
+msgstr "Velocidade"
+
+#: ext/by_rating/views/woof.php:36
+msgid "SS"
+msgstr "SS"
+
+#: ext/by_rating/views/woof.php:35
+msgid "SSS"
+msgstr "SSS"
+
+#: ext/by_rating/views/woof.php:34
+msgid "SSSS"
+msgstr "SSSS"
+
+#: ext/by_rating/views/woof.php:33
+msgid "SSSSS"
+msgstr "SSSSS"
+
+#: ext/front_builder/options/sections/by_rating.php:8
+#, fuzzy
+msgid "Stars"
+msgstr "Estrelas"
+
+#: ext/stat/index.php:342
+msgid "stat is not activated or PDO not inited"
+msgstr "stat não está ativado ou o PDO não iniciou"
+
+#: ext/slideout/views/tabs_content.php:309
+msgid "State after init"
+msgstr "Estado após init"
+
+#: ext/stat/index.php:183 ext/stat/views/tabs_content.php:12
+#: ext/stat/views/tabs_content.php:29
+msgid "Statistic"
+msgstr "Estatísticas"
+
+#: ext/stat/views/tabs_content.php:278
+msgid ""
+"Statistic -> tab Options -> \"Stat server options\" inputs should be filled "
+"in by right data, another way not possible to collect statistical data!"
+msgstr ""
+"Estatísticas -> aba Opções -> As entradas \"Opções do servidor de "
+"estatísticas\" devem ser preenchidas com os dados corretos, se não é "
+"impossível coletar dados estatísticos!"
+
+#: ext/stat/index.php:207
+msgid "Statistic calculation ..."
+msgstr "Cálculo de estatísticas..."
+
+#: ext/stat/views/tabs_content.php:232
+msgid ""
+"Statistic extension is activated but statistics collection is not enabled. "
+"Enable it on: tab Statistic -> tab Options -> \"Statistics collection "
+"enabled\""
+msgstr ""
+"A extensão de estatísticas está ativada, mas a coleta de estatísticas não "
+"está. Ative em: aba Estatísticas -> aba Opções -> \"Coleta de estatísticas "
+"ativada\""
+
+#: ext/stat/views/tabs_content.php:316
+msgid "Statistic for:"
+msgstr "Estatística para:"
+
+#: ext/step_filer/views/tabs_content.php:33 ext/stat/views/tabs_content.php:101
+msgid "Statistical parameters:"
+msgstr "Parâmetros estatísticos:"
+
+#: ext/stat/views/tabs_content.php:211
+msgid "Statistics collection:"
+msgstr "Coleção de estatísticas:"
+
+#: ext/stock_quantity/views/options.php:177
+#: ext/front_builder/options/sections/meta/slider.php:36
+#: ext/meta_filter/html_types/slider/views/additional_options.php:88
+msgid "Step"
+msgstr "Etapa"
+
+#: ext/step_filer/index.php:42 ext/step_filer/views/tabs_content.php:14
+msgid "Step by step filter"
+msgstr "Filtro passo a passo"
+
+#: ext/stock_quantity/views/options.php:17
+#: ext/stock_quantity/views/woof.php:106
+msgid "Stock Quantity"
+msgstr "Quantidade em estoque"
+
+#: ext/stock_quantity/index.php:59
+msgid "Stock quantity slider"
+msgstr "Controle deslizante de quantidade de estoque"
+
+#: ext/meta_filter/views/tabs_content.php:158
+msgid "string"
+msgstr "string"
+
+#: ext/products_messenger/views/options.php:203
+msgid "Subject of the email"
+msgstr "Assunto do e-mail"
+
+#: ext/products_messenger/views/options.php:204
+msgid "Subject of the email."
+msgstr "Assunto do e-mail."
+
+#: classes/widgets.php:194
+msgid "Submit button position"
+msgstr "Enviar posição do botão"
+
+#: ext/products_messenger/views/email_template.php:60
+msgid "Subscribe "
+msgstr "Assinar "
+
+#: ext/products_messenger/views/shortcodes/woof_products_messenger.php:61
+msgid "Subscribe on the current search request"
+msgstr "Assinar a solicitação de pesquisa atual"
+
+#: ext/products_messenger/index.php:59
+msgid "Subscription"
+msgstr "Inscrição"
+
+#: ext/products_messenger/views/options.php:227
+msgid "Subscription time"
+msgstr "Tempo de inscrição"
+
+#: ext/smart_designer/data/switcher.php:162
+msgid "Substrate border radius (px)"
+msgstr "Raio da borda do substrato (px)"
+
+#: ext/smart_designer/data/switcher.php:166
+msgid "Substrate border width"
+msgstr "Largura da borda do substrato"
+
+#: ext/smart_designer/data/switcher.php:135
+msgid "Substrate disabled background color"
+msgstr "Cor de fundo do substrato desativado"
+
+#: ext/smart_designer/data/switcher.php:139
+msgid "Substrate disabled background image"
+msgstr "Imagem de fundo do substrato desativado"
+
+#: ext/smart_designer/data/switcher.php:143
+msgid "Substrate disabled border color"
+msgstr "Cor da borda do substrato desativado"
+
+#: ext/smart_designer/data/switcher.php:108
+msgid "Substrate enabled background color"
+msgstr "Cor de fundo do substrato ativado"
+
+#: ext/smart_designer/data/switcher.php:112
+msgid "Substrate enabled background image"
+msgstr "Imagem de fundo do substrato ativado"
+
+#: ext/smart_designer/data/switcher.php:116
+msgid "Substrate enabled border color"
+msgstr "Cor da borda do substrato ativado"
+
+#: ext/smart_designer/data/switcher.php:174
+msgid "Substrate height (px)"
+msgstr "Altura do substrato (px)"
+
+#: ext/smart_designer/data/switcher.php:170
+msgid "Substrate width (px)"
+msgstr "Largura do substrato (px)"
+
+#: ext/smart_designer/index.php:612
+msgid "Such type doesn exists!"
+msgstr "Esse tipo não existe!"
+
+#: ext/front_builder/index.php:100
+#, fuzzy
+msgid "Suggest the feature"
+msgstr "Sugira o recurso"
+
+#: classes/rate_alert.php:48
+msgid "support"
+msgstr "suporte"
+
+#: ext/smart_designer/index.php:34 ext/by_instock/views/options.php:86
+#: ext/by_backorder/views/options.php:83 ext/by_onsales/views/options.php:55
+#: ext/by_featured/views/options.php:55
+#: ext/front_builder/options/sections/by_onsales.php:16
+#: ext/front_builder/options/sections/by_featured.php:16
+#: ext/front_builder/options/sections/by_instock.php:29
+#: ext/front_builder/options/sections/by_backorder.php:29
+msgid "Switcher"
+msgstr "Interruptor"
+
+#: ext/conditionals/views/tabs_content.php:49
+msgid ""
+"Syntax example: product_cat>pa_size,by_instock>pa_color. In the example "
+"described: if a user will select a [product category] then filter by "
+"[pa_size] or [by_instock] will be appeared [pa_color]. For shortcode [woof] "
+"use an attribute: [conditionals]. Use line break in the textarea to define "
+"some rules (press Enter keyboard). In [woof] shortcode to define some rules "
+"use sign: [+]."
+msgstr ""
+"Exemplo de sintaxe: product_cat>pa_size,by_instock>pa_color. No exemplo "
+"descrito: se um usuário selecionar uma [categoria de produto] então o filtro "
+"por [pa_size] ou [by_instock] aparecerá [pa_color]. Para o shortcode [woof] "
+"use um atributo: [condicionals]. Use a quebra de linha na área de texto para "
+"definir algumas regras (pressione Enter no teclado). No shortcode [woof] "
+"para definir algumas regras, use o sinal: [+]."
+
+#: ext/quick_search/index.php:681
+msgid "Tags"
+msgstr "Tags"
+
+#: ext/quick_search/views/tabs_content.php:154
+msgid "Taxonomy conditionals"
+msgstr "Condicionais de taxonomia"
+
+#: ext/front_builder/options/sections/taxonomies.php:43
+msgid "Taxonomy custom label"
+msgstr "Rótulo personalizado de taxonomia"
+
+#: ext/by_text/views/options.php:432
+#: ext/front_builder/options/sections/by_text.php:117
+msgid "Template"
+msgstr "Modelo"
+
+#: ext/smart_designer/data/switcher.php:10
+msgid "Template #1"
+msgstr "Modelo #1"
+
+#: ext/smart_designer/data/color.php:10
+msgid "Template #1 (as checkbox)"
+msgstr "Modelo #1 (como caixa de seleção)"
+
+#: ext/smart_designer/data/radio.php:10 ext/smart_designer/data/checkbox.php:10
+msgid "Template #1 (list, subcategories)"
+msgstr "Modelo #1 (lista, subcategorias)"
+
+#: ext/smart_designer/data/color.php:14
+msgid "Template #2 (as radio)"
+msgstr "Modelo #2 (como opções)"
+
+#: ext/smart_designer/data/radio.php:14 ext/smart_designer/data/checkbox.php:14
+msgid "Template #2 (tile, no sub-categories)"
+msgstr "Modelo #2 (ladrilho, sem subcategorias)"
+
+#: ext/smart_designer/data/color.php:25 ext/smart_designer/data/radio.php:25
+#: ext/smart_designer/data/checkbox.php:25
+#: ext/smart_designer/data/switcher.php:21
+msgid "Terms"
+msgstr "Termos"
+
+#: ext/smart_designer/index.php:607
+msgid "Terms color"
+msgstr "Cor dos termos"
+
+#: ext/products_messenger/views/email_template.php:55
+msgid "Terms: "
+msgstr "Termos: "
+
+#: ext/front_builder/index.php:697
+msgid "Text"
+msgstr "Texto"
+
+#: ext/front_builder/options/sections/by_price.php:30
+msgid ""
+"Text before the price filter range slider. Leave it empty if you not need it!"
+msgstr ""
+"Texto antes do controle deslizante do filtro de intervalo de preço. Deixe em "
+"branco se não precisar!"
+
+#: ext/smart_designer/data/color.php:237 ext/smart_designer/data/radio.php:76
+#: ext/smart_designer/data/radio.php:329
+#: ext/smart_designer/data/checkbox.php:110
+#: ext/smart_designer/data/checkbox.php:363
+#: ext/smart_designer/data/switcher.php:178
+#: ext/smart_designer/data/switcher.php:284
+msgid "Text color"
+msgstr "Cor do texto"
+
+#: ext/smart_designer/data/color.php:244 ext/smart_designer/data/radio.php:53
+#: ext/smart_designer/data/radio.php:336
+#: ext/smart_designer/data/checkbox.php:87
+#: ext/smart_designer/data/checkbox.php:370
+#: ext/smart_designer/data/switcher.php:190
+#: ext/smart_designer/data/switcher.php:291
+msgid "Text font family (theme must support)"
+msgstr "Família da fonte do texto (o tema deve suportar)"
+
+#: ext/smart_designer/data/color.php:230 ext/smart_designer/data/radio.php:49
+#: ext/smart_designer/data/radio.php:322
+#: ext/smart_designer/data/checkbox.php:83
+#: ext/smart_designer/data/checkbox.php:356
+#: ext/smart_designer/data/switcher.php:277
+msgid "Text font size"
+msgstr "Tamanho da fonte do texto"
+
+#: ext/smart_designer/data/switcher.php:182
+msgid "Text font size (px)"
+msgstr "Tamanho da fonte do texto (px)"
+
+#: ext/query_save/views/options.php:203
+msgid "Text if current product is not suitable for saved searches"
+msgstr "Texto se o produto atual não for adequado para pesquisas salvas"
+
+#: ext/query_save/views/options.php:191
+msgid "Text if current product is suitable for saved searches"
+msgstr "Texto se o produto atual for adequado para pesquisas salvas"
+
+#: ext/products_messenger/views/options.php:192
+msgid "Text in header of the email."
+msgstr "Texto no cabeçalho do e-mail."
+
+#: ext/products_messenger/views/options.php:216
+msgid ""
+"Text in the body of the email. You can use next variables: [DISPLAY_NAME], "
+"[USER_NICENAME], [PRODUCT_COUNT]."
+msgstr ""
+"Texto no corpo do e-mail. Você pode usar as seguinte variáveis: "
+"[DISPLAY_NAME], [USER_NICENAME], [PRODUCT_COUNT]."
+
+#: ext/smart_designer/data/switcher.php:207
+msgid "Text left (px)"
+msgstr "Esquerda do texto (px)"
+
+#: ext/by_text/views/options.php:384
+#: ext/front_builder/options/sections/by_text.php:89
+msgid "Text length"
+msgstr "Comprimento do texto"
+
+#: ext/smart_designer/data/radio.php:72
+#: ext/smart_designer/data/checkbox.php:106
+#: ext/smart_designer/data/switcher.php:186
+msgid "Text line height (px)"
+msgstr "Altura da linha de texto (px)"
+
+#: ext/by_text/views/options.php:455
+#: ext/front_builder/options/sections/by_text.php:126
+msgid "Text notes for customer if you need it."
+msgstr "Notas de texto para o cliente, se necessário."
+
+#: ext/products_messenger/views/options.php:215
+msgid "Text of the email"
+msgstr "Texto do e-mail"
+
+#: ext/quick_search/index.php:87
+#: ext/by_text/views/shortcodes/woof_text_filter.php:11
+msgid "Text search"
+msgstr "Pesquisa de texto"
+
+#: ext/by_text/views/options.php:267
+#: ext/front_builder/options/sections/by_text.php:55
+msgid "Text search also works with taxonomies (attributes, categories, tags)"
+msgstr ""
+"A pesquisa de texto também funciona com taxonomias (atributos, categorias, "
+"tags)"
+
+#: ext/front_builder/options/sections/meta/textinput.php:8
+#: ext/meta_filter/html_types/textinput/views/additional_options.php:14
+msgid "Text search conditional"
+msgstr "Condicional de pesquisa de texto"
+
+#: ext/smart_designer/data/radio.php:82
+#: ext/smart_designer/data/checkbox.php:116
+msgid "Text top"
+msgstr "Topo do texto"
+
+#: ext/smart_designer/data/switcher.php:211
+msgid "Text top (px)"
+msgstr "Topo do texto (px)"
+
+#: classes/rate_alert.php:71
+msgid "Thank you, I did it!"
+msgstr "Obrigado, eu fiz isso!"
+
+#: lib/alert/index.php:66
+#, php-format
+msgid ""
+"That's awesome! Could you please do us a BIG favor and give it a 5-star "
+"rating on %s to help us spread the word and boost our motivation?"
+msgstr ""
+"Isso é fantástico! Você poderia nos fazer um GRANDE favor e dar uma "
+"classificação de 5 estrelas no %s para nos ajudar a espalhar a palavra e "
+"aumentar nossa motivação?"
+
+#: ext/by_text/views/options.php:421
+#: ext/front_builder/options/sections/by_text.php:111
+msgid "The maximum height of the drop-down with the results in px."
+msgstr "A altura máxima do menu suspenso com os resultados em px."
+
+#: ext/stock_quantity/views/options.php:246
+#: ext/front_builder/options/sections/meta/slider.php:72
+#: ext/meta_filter/html_types/slider/views/additional_options.php:157
+#, fuzzy
+msgid "The number will have a thousands separator"
+msgstr "O número terá um separador de milhares"
+
+#: ext/query_save/views/options.php:96
+msgid "The placeholder  in title field"
+msgstr "O conteúdo de marcação no campo de título"
+
+#: ext/by_text/views/options.php:186 ext/by_text_2/views/options.php:153
+#: ext/front_builder/options/sections/by_text.php:34
+msgid "The result is only with the full coincidence of words"
+msgstr "O resultado é apenas com a coincidência total de palavras"
+
+#: ext/by_text/views/options.php:248 ext/by_text_2/views/options.php:243
+msgid "the same window"
+msgstr "na mesma janela"
+
+#: classes/widgets.php:207
+msgid "The submit and reset buttons position in current search form"
+msgstr ""
+"A posição dos botões enviar e redefinir no formulário de pesquisa atual"
+
+#: ext/products_messenger/views/options.php:97
+#: ext/query_save/views/options.php:84
+msgid "The text before the block of subscription block"
+msgstr "O texto antes do bloco de assinatura"
+
+#: ext/query_save/views/options.php:108
+msgid "The text in the button"
+msgstr "O texto no botão"
+
+#: ext/sections/views/tabs_content.php:146
+msgid ""
+"This button is just helper which allows to assemble data for [woof] "
+"shortcode."
+msgstr ""
+"Este botão é apenas um auxiliar que permite montar dados para o shortcode "
+"[woof]."
+
+#: ext/by_instock/views/options.php:106
+#: ext/front_builder/options/sections/by_instock.php:35
+msgid "This can speed up in stock searches for variable products."
+msgstr "Isso pode acelerar as pesquisas de estoque para produtos variáveis."
+
+#: ext/stat/views/tabs_content.php:303
+msgid ""
+"This data is very important for assembling statistics data, so please fill "
+"fields very responsibly. To collect statistical data uses a separate MySQL "
+"table."
+msgstr ""
+"Esses dados são muito importantes para a compilação de dados estatísticos, "
+"portanto, preencha os campos com muita responsabilidade. Para coletar dados "
+"estatísticos uma tabela MySQL separada é usada."
+
+#: views/shortcode_generator.php:89
+#, fuzzy
+msgid "This enables the AJAX mode."
+msgstr "Isso habilita o modo AJAX."
+
+#: views/shortcode_generator.php:40
+#, fuzzy
+msgid ""
+"This field is for the full URL. Allows showing results on any other page of "
+"the shop."
+msgstr ""
+"Este campo é para a URL completa. Permite mostrar resultados em qualquer "
+"outra página da loja."
+
+#: ext/front_builder/index.php:110
+#, fuzzy
+msgid "this functionality is only visible for the site administrator"
+msgstr "essa funcionalidade só é visível para o administrador do site"
+
+#: ext/front_builder/options/sections/query_save.php:9
+#: ext/front_builder/options/sections/products_messenger.php:9
+msgid ""
+"This is application and all its settings you can find in HUSKY options page -"
+"> tab Structure"
+msgstr ""
+
+#: ext/url_request/views/tabs_content.php:69
+msgid ""
+"This option changes the search link. The search query becomes part of the "
+"URL."
+msgstr ""
+"Esta opção altera o link de pesquisa. A consulta de pesquisa torna-se parte "
+"do URL."
+
+#: ext/image/index.php:123
+#, fuzzy
+msgid "This option should be set"
+msgstr "Esta opção deve ser definida"
+
+#: ext/query_save/views/options.php:61
+msgid "This product matches your search %title%."
+msgstr "Este produto corresponde à sua pesquisa %title%."
+
+#: views/shortcode_generator.php:56
+#, fuzzy
+msgid ""
+"This setting determines whether the filter form will be hidden or shown "
+"after the page is loaded."
+msgstr ""
+"Essa configuração determina se o formulário de filtro será oculto ou exibido "
+"após o carregamento da página."
+
+#: ext/front_builder/options/sections/by_price.php:79
+msgid "This works with ionSlider only"
+msgstr "Apenas funciona com controles deslizantes \"ion\""
+
+#: classes/widgets.php:134 ext/quick_search/index.php:677
+#: ext/smart_designer/index.php:286 ext/smart_designer/classes/color.php:85
+#: ext/front_builder/options/sections/taxonomies.php:66
+msgid "Title"
+msgstr "Título"
+
+#: ext/products_messenger/views/options.php:191
+msgid "Title of the email"
+msgstr "Título do e-mail"
+
+#: ext/query_save/views/options.php:43
+msgid "Title of the Query*"
+msgstr "Título da consulta*"
+
+#: ext/by_text/views/options.php:125 ext/by_text_2/views/options.php:91
+#: ext/by_sku/views/options.php:84
+#: ext/front_builder/options/sections/by_price.php:29
+msgid "Title text"
+msgstr "Texto do título"
+
+#: ext/quick_search/index.php:628 ext/quick_search/index.php:629
+#: ext/quick_search/index.php:637 ext/quick_search/index.php:638
+#, php-format
+msgid "Title- %s "
+msgstr "Título- %s "
+
+#: ext/stock_quantity/views/woof.php:133 ext/stat/views/tabs_content.php:83
+#: ext/meta_filter/html_types/slider/views/woof.php:122
+#: ext/meta_filter/html_types/datepicker/views/woof.php:125
+msgid "To"
+msgstr "Para"
+
+#: ext/sections/index.php:149 ext/url_request/classes/seo.php:276
+#: ext/meta_filter/html_types/datepicker/views/woof.php:124
+msgid "to"
+msgstr "até"
+
+#: ext/smart_designer/index.php:608
+#, fuzzy
+msgid "To assign color value to terms select appropriate taxonomy here!"
+msgstr ""
+"Para atribuir valor de cor aos Termos selecione taxonomia apropriada aqui!"
+
+#: ext/front_builder/options/options.php:99
+#, fuzzy
+msgid ""
+"To change the slug alias for this shortcode, please navigate to the plugin "
+"settings, select the 'Advanced' tab, and then proceed to 'Slug aliases for "
+"front builder forms'"
+msgstr ""
+"Para alterar o alias do slug para este shortcode, navegue até as "
+"configurações do plug-in, selecione a guia 'Avançado' e prossiga para 'Slug "
+"aliases for front builder forms'"
+
+#: ext/products_messenger/views/options.php:167
+msgid ""
+"To update the key, just delete it and save the plugin settings. Key should "
+"be min 16 symbols."
+msgstr ""
+"Para atualizar a chave, basta excluí-la e salvar as configurações do plugin. "
+"A chave deve ter no mínimo 16 símbolos."
+
+#: ext/meta_filter/html_types/datepicker/index.php:183
+#: ext/meta_filter/html_types/datepicker/views/woof.php:95
+#, php-format
+msgid "to: %s"
+msgstr "até: %s"
+
+#: classes/helper.php:920 classes/helper.php:924 classes/helper.php:925
+msgid "toggle"
+msgstr "botão de alternância"
+
+#: ext/color/index.php:114
+#, fuzzy
+msgid "toggle color terms"
+msgstr "alternar Termos de cores"
+
+#: ext/image/index.php:78
+#, fuzzy
+msgid "toggle image terms"
+msgstr "toggle image terms"
+
+#: ext/stock_quantity/views/options.php:161
+#: ext/front_builder/options/sections/by_price.php:36
+#: ext/front_builder/options/sections/taxonomies.php:29
+#: ext/front_builder/options/sections/meta/mselect.php:29
+#: ext/front_builder/options/sections/meta/slider.php:29
+#: ext/front_builder/options/sections/meta/select.php:29
+#: ext/front_builder/options/sections/meta/datepicker.php:29
+#: ext/meta_filter/html_types/mselect/views/additional_options.php:65
+#: ext/meta_filter/html_types/slider/views/additional_options.php:72
+#: ext/meta_filter/html_types/select/views/additional_options.php:65
+#: ext/meta_filter/html_types/datepicker/views/additional_options.php:65
+#: ext/acf_filter/html_types/radio/views/additional_options.php:64
+#: ext/acf_filter/html_types/select/views/additional_options.php:64
+msgid "Tooltip"
+msgstr "Dica de ferramenta"
+
+#: ext/front_builder/options/sections/default.php:29
+#, fuzzy
+msgid "Tooltip if possible"
+msgstr "Dica de ferramenta, se possível"
+
+#: ext/color/index.php:42
+#, fuzzy
+msgid "Tooltip text"
+msgstr "Texto da dica de Ferramenta"
+
+#: ext/stock_quantity/views/options.php:162
+#: ext/front_builder/options/sections/default.php:30
+#: ext/front_builder/options/sections/meta/mselect.php:30
+#: ext/front_builder/options/sections/meta/slider.php:30
+#: ext/front_builder/options/sections/meta/select.php:30
+#: ext/front_builder/options/sections/meta/datepicker.php:30
+#: ext/meta_filter/html_types/slider/views/additional_options.php:73
+#: ext/meta_filter/html_types/select/views/additional_options.php:66
+#, fuzzy
+msgid "Tooltip text if necessary"
+msgstr "Texto da dica de ferramenta, se necessário"
+
+#: views/shortcode_generator.php:130 classes/widgets.php:198
+#: ext/smart_designer/data/color.php:216 ext/smart_designer/data/radio.php:308
+#: ext/smart_designer/data/checkbox.php:342
+#: ext/smart_designer/data/switcher.php:263
+#: ext/slideout/views/tabs_content.php:166
+msgid "Top"
+msgstr "Acima"
+
+#: classes/widgets.php:199
+msgid "Top AND Bottom"
+msgstr "Acima E abaixo"
+
+#: views/shortcode_generator.php:131
+#, fuzzy
+msgid "Top&bottom"
+msgstr "Superior e inferior"
+
+#: ext/smart_designer/data/color.php:88 ext/smart_designer/data/radio.php:143
+#: ext/smart_designer/data/checkbox.php:177
+msgid "Transition (ms)"
+msgstr "Transição (ms)"
+
+#: ext/front_builder/options/sections/meta/checkbox.php:22
+#: ext/meta_filter/html_types/checkbox/views/additional_options.php:39
+msgid ""
+"TRUE value, all another are FALSE. Example: yes or true or 1. By default if "
+"this textinput empty 1 is true and 0 is false"
+msgstr ""
+"Valor TRUE, todos os outros são FALSE. Exemplo: \"yes\" ou \"true\" ou \"1\"."
+" Por padrão, se esta entrada de texto estiver vazia, 1 é verdadeiro e 0 é "
+"falso"
+
+#: classes/alert.php:189
+msgid ""
+"Try HUSKY compatible plugin for displaying your WooCommerce shop products in "
+"table format"
+msgstr ""
+"Experimente o plugin compatível com HUSKY para exibir seus produtos de loja "
+"WooCommerce em formato de tabela"
+
+#: classes/alert.php:144
+msgid ""
+"Try plugin for managing and BULK edit WooCommerce Products data in robust "
+"and flexible way"
+msgstr ""
+"Experimente o plugin para gerenciar e editar dados de produtos WooCommerce "
+"EM MASSA de maneira robusta e flexível"
+
+#: ext/turbo_mode/index.php:194 ext/turbo_mode/views/tabs_content.php:19
+msgid "Turbo mode"
+msgstr "Modo turbo"
+
+#: ext/products_messenger/views/options.php:144
+#: ext/stat/views/tabs_content.php:526
+msgid "twicedaily"
+msgstr "duas vezes por dia"
+
+#: ext/turbo_mode/index.php:125 ext/quick_search/views/tabs_content.php:99
+#: ext/products_messenger/views/options.php:147
+msgid "twicemonthly"
+msgstr "duas vezes por mês"
+
+#: ext/products_messenger/views/options.php:238
+msgid "Two months"
+msgstr "Dois meses"
+
+#: ext/products_messenger/views/options.php:236
+msgid "Two weeks"
+msgstr "Duas semanas"
+
+#: ext/smart_designer/index.php:287 ext/slider/index.php:52
+#: ext/select_radio_check/index.php:42
+msgid "Type"
+msgstr "Tipo"
+
+#: ext/by_text/views/options.php:319
+#: ext/front_builder/options/sections/by_text.php:69
+msgid ""
+"Type meta keys separated by comma. An example:_seo_description,seo_title"
+msgstr ""
+"Digite as chaves de meta separadas por vírgula. Por exemplo: "
+"_seo_description,seo_title"
+
+#: ext/front_builder/index.php:548
+msgid "Unique name should be set for shortcode [woof_front_builder]"
+msgstr ""
+
+#: ext/products_messenger/views/email_template.php:63
+#: ext/products_messenger/views/email_template.php:88
+msgid "unsubscribe"
+msgstr "cancelar assinatura"
+
+#: ext/stat/views/tabs_content.php:57
+msgid "Update"
+msgstr "Atualizar"
+
+#: ext/quick_search/views/tabs_content.php:134
+#: ext/turbo_mode/views/tabs_content.php:163
+msgid "Update now!"
+msgstr "Atualizar agora!"
+
+#: ext/url_request/views/tabs_content.php:109
+#, fuzzy
+msgid "URL depth"
+msgstr "URL depth"
+
+#: ext/slideout/views/tabs_content.php:112
+msgid "Url of the custom image for the button"
+msgstr "URL da imagem personalizada para o botão"
+
+#: ext/url_request/index.php:166
+msgid "URL of the page"
+msgstr "URL da página"
+
+#: ext/by_text/views/options.php:357
+#: ext/front_builder/options/sections/by_text.php:82
+msgid "Use cache"
+msgstr "Usar cache"
+
+#: ext/meta_filter/views/tabs_content.php:151
+msgid ""
+"Use comma as in example: 1,2,3,4,5. If you want structure like title->value "
+"use next syntax example: France^1,Germany^2,USA^3. Countries are titles here."
+msgstr ""
+"Use vírgula como no exemplo: 1,2,3,4,5. Se você deseja uma estrutura como "
+"título->valor, use o próximo exemplo de sintaxe: França^1,Alemanha^2,EUA^3. "
+"Países são títulos aqui."
+
+#: ext/by_sku/views/options.php:207
+#, fuzzy
+msgid "Use for"
+msgstr "Use para"
+
+#: ext/image/index.php:50 ext/color/index.php:61
+#, fuzzy
+msgid "Use image as radio button"
+msgstr "Usar imagem como botão de opção"
+
+#: ext/by_instock/views/options.php:105
+#: ext/front_builder/options/sections/by_instock.php:34
+msgid "Use new DB."
+msgstr "Usar novo BD."
+
+#: ext/stock_quantity/views/options.php:245
+#: ext/front_builder/options/sections/meta/slider.php:71
+#: ext/meta_filter/html_types/slider/views/additional_options.php:156
+#, fuzzy
+msgid "Use prettify"
+msgstr "Use prettify"
+
+#: views/shortcode_generator.php:235
+#, fuzzy
+msgid "Use this for NOT taxonomies filter sections you want to see on the form"
+msgstr ""
+"Use isso para não taxonomias filtrar seções que você deseja ver no formulário"
+
+#: views/shortcode_generator.php:216
+#, fuzzy
+msgid ""
+"Use this for taxonomies filter sections which you want to see on the form"
+msgstr ""
+"Use isso para seções de filtro de taxonomias que você deseja ver no "
+"formulário"
+
+#: ext/stat/views/tabs_content.php:487
+msgid ""
+"Use WordPress Cron if your site has a lot of traffic, and external cron if "
+"the site traffic is not big. External cron is more predictable with time of "
+"execution, but additional knowledge how to set it correctly is required"
+msgstr ""
+"Use o WordPress Cron se o seu site tiver muito tráfego e o cron externo se o "
+"tráfego do site não for grande. O cron externo é mais previsível com o tempo "
+"de execução, mas é necessário conhecimento adicional sobre como configurá-lo "
+"corretamente"
+
+#: ext/stat/views/tabs_content.php:290
+msgid "User"
+msgstr "Usuário"
+
+#: ext/query_save/views/options.php:20
+msgid "User can save the search query"
+msgstr "O usuário pode salvar a consulta de pesquisa"
+
+#: classes/widgets.php:159
+msgid ""
+"User on the site front will have to press button like \"Show products filter "
+"form\" to load search form by ajax and start filtering. Good feature when "
+"search form is quite big and page loading takes more time because of it!"
+msgstr ""
+"O usuário da interface do site terá que pressionar um botão como \"Mostrar "
+"formulário de filtro de produtos\" para carregar o formulário de pesquisa "
+"por ajax e iniciar a filtragem. Bom recurso quando o formulário de pesquisa "
+"é muito grande e o carregamento da página leva mais tempo por causa disso!"
+
+#: views/shortcode_generator.php:275
+#, fuzzy
+msgid ""
+"uses to display relevant filter-items in generated search form if activated: "
+"show count+dynamic recount+hide empty options in the plugin settings. Just "
+"select taxonomy, terms and press button Select Taxonomies Terms"
+msgstr ""
+"usa para exibir itens de filtro relevantes no formulário de pesquisa gerado "
+"se ativado: mostrar contagem+recontagem dinâmica+ocultar opções vazias nas "
+"configurações do plugin. Basta selecionar taxonomia, Termos e pressionar o "
+"botão Selecionar Termos de taxonomias"
+
+#: ext/front_builder/options/sections/meta/checkbox.php:16
+#: ext/meta_filter/html_types/checkbox/views/additional_options.php:19
+msgid "Value exists"
+msgstr "Valor existente"
+
+#: ext/smart_designer/data/switcher.php:104
+msgid "Vertex border radius (%)"
+msgstr "Raio da borda do vértice (%)"
+
+#: ext/smart_designer/data/switcher.php:92
+msgid "Vertex border width"
+msgstr "Largura da borda do vértice"
+
+#: ext/smart_designer/data/switcher.php:65
+msgid "Vertex disabled background color"
+msgstr "Cor de fundo do vértice desativado"
+
+#: ext/smart_designer/data/switcher.php:69
+msgid "Vertex disabled background image"
+msgstr "Imagem de fundo do vértice desativado"
+
+#: ext/smart_designer/data/switcher.php:73
+msgid "Vertex disabled border color"
+msgstr "Cor da borda do vértice desativado"
+
+#: ext/smart_designer/data/switcher.php:38
+msgid "Vertex enabled background color"
+msgstr "Cor de fundo do vértice ativado"
+
+#: ext/smart_designer/data/switcher.php:42
+msgid "Vertex enabled background image"
+msgstr "Imagem de fundo do vértice ativado"
+
+#: ext/smart_designer/data/switcher.php:46
+msgid "Vertex enabled border color"
+msgstr "Cor de borda do vértice ativado"
+
+#: ext/smart_designer/data/switcher.php:96
+msgid "Vertex size (px)"
+msgstr "Tamanho do vértice (px)"
+
+#: ext/smart_designer/data/switcher.php:100
+msgid "Vertex top (px)"
+msgstr "Topo do vértice (px)"
+
+#: ext/stat/index.php:255
+#, php-format
+msgid ""
+"Very recommend for the statistic not less than %s of the memory to avoid "
+"malfunctionality. Now is on the site %s"
+msgstr ""
+"Muito recomendável para estatísticas, não ter menos do que %s de memória "
+"para evitar mau funcionamento. Agora, seu site tem %s"
+
+#: ext/by_instock/views/options.php:78 ext/by_author/views/options.php:92
+#: ext/by_backorder/views/options.php:75 ext/by_onsales/views/options.php:47
+#: ext/by_featured/views/options.php:47
+#: ext/front_builder/options/sections/by_onsales.php:8
+#: ext/front_builder/options/sections/by_featured.php:8
+#: ext/front_builder/options/sections/by_instock.php:21
+#: ext/front_builder/options/sections/by_backorder.php:21
+#: ext/front_builder/options/sections/by_author.php:31
+msgid "View"
+msgstr "Ver"
+
+#: ext/quick_search/views/templates/list_3/output.php:35
+#: ext/quick_search/views/templates/grid_2/output.php:29
+msgid "View product"
+msgstr "Ver produto"
+
+#: ext/front_builder/options/sections/taxonomies.php:9
+#, fuzzy
+msgid "Visibility of block title"
+msgstr "Visibilidade do título do bloco"
+
+#: ext/export_import/views/tabs_content.php:19
+msgid ""
+"WARNING: this action will overwrite all current HUSKY settings. Insert HUSKY "
+"settings data you need to import! Here you can import only HUSKY settings "
+"and nothing more! If your site don`t have taxonomies HUSKY will not create "
+"them (you should create taxonomies before)."
+msgstr ""
+"ATENÇÃO: esta ação substituirá todas as configurações HUSKY atuais. Insira "
+"os dados de configuração do HUSKY que você precisa importar! Aqui você pode "
+"importar apenas configurações HUSKY e nada mais! Se o seu site não tiver "
+"taxonomias, o HUSKY não irá criá-las (você deve criar taxonomias antes)."
+
+#: ext/slideout/views/tabs_content.php:234
+msgid "Way to show of slideout popup out: click or hover"
+msgstr ""
+"Forma de exibição da saída do popup do deslizante: clique ou sobreposição do "
+"mouse"
+
+#: lib/alert/index.php:78
+msgid ""
+"We are sorry to hear you aren't enjoying HUSKY. We would love a chance to "
+"improve it. Could you take a minute and let us know what we can do better?"
+msgstr ""
+"Ficamos tristes de ouvir que você não está gostando do HUSKY. Queremos muito "
+"uma chance para melhorar. Poderia nos dar um minuto e nos contar o que "
+"podemos fazer melhor?"
+
+#: ext/turbo_mode/index.php:121 ext/quick_search/views/tabs_content.php:98
+#: ext/products_messenger/views/options.php:146
+#: ext/stat/views/tabs_content.php:528
+msgid "weekly"
+msgstr "semanalmente"
+
+#: ext/quick_search/views/tabs_content.php:121
+msgid "Weekly recommended"
+msgstr "Semanal recomendado"
+
+#: ext/url_request/views/tabs_content.php:144
+#, fuzzy
+msgid ""
+"What is the maximum depth of the URL (how many filters can be in a request)"
+msgstr ""
+"Qual é a profundidade máxima da URL (quantos filtros podem estar em uma "
+"solicitação)"
+
+#: ext/turbo_mode/views/tabs_content.php:183
+msgid "Where to keep products data file"
+msgstr "Onde manter o arquivo de dados dos produtos"
+
+#: ext/slideout/views/tabs_content.php:186
+msgid "Where to show slideout button: right, left, top"
+msgstr "Onde exibir o botão do deslizante: direita, esquerda, topo"
+
+#: ext/products_messenger/views/options.php:269
+msgid ""
+"Which limitation has priority. Event after which user stop getting the "
+"emails. Both - means that any first event of two ones, will reset user "
+"subscription."
+msgstr ""
+"Qual limitação tem prioridade. Evento após o qual o usuário para de receber "
+"os e-mails. Ambos - significa que qualquer primeiro evento de dois, "
+"redefinirá a assinatura do usuário."
+
+#: ext/by_author/views/options.php:72
+#: ext/front_builder/options/sections/by_author.php:22
+#, fuzzy
+msgid "Which users by the selected role to show"
+msgstr "Quais usuários pela função selecionada mostrar"
+
+#: ext/slideout/views/tabs_content.php:303
+msgid "Width and height of the popup html container size in (px)"
+msgstr "Largura e altura do tamanho do contêiner do popup html em (px)"
+
+#: ext/smart_designer/data/checkbox.php:43
+msgid "Width auto"
+msgstr "Auto largura"
+
+#: ext/slideout/views/tabs_content.php:150
+msgid "Width X Height (px) of the button image"
+msgstr "Largura x altura (px) da imagem do botão"
+
+#: ext/stock_quantity/views/options.php:86 ext/by_instock/views/options.php:54
+#: ext/by_backorder/views/options.php:51
+#: ext/front_builder/options/sections/by_instock.php:9
+#: ext/front_builder/options/sections/by_backorder.php:9
+#: ext/front_builder/options/sections/by_sku.php:56
+msgid ""
+"Will the plugin look in each variable of variable products. Request for "
+"variables products creates more mysql queries in database ..."
+msgstr ""
+"O plugin vai olhar em cada variável de produtos variáveis. A solicitação de "
+"produtos variáveis cria mais consultas MySQL no banco de dados..."
+
+#: ext/turbo_mode/index.php:137
+msgid "without update"
+msgstr "sem atualização"
+
+#: ext/quick_search/views/tabs_content.php:39
+#: ext/turbo_mode/views/tabs_content.php:75 ext/stat/views/tabs_content.php:466
+msgid "WordPress Cron"
+msgstr "Cron do WordPress"
+
+#: ext/quick_search/views/tabs_content.php:89
+#: ext/turbo_mode/views/tabs_content.php:125
+#: ext/stat/views/tabs_content.php:517
+msgid "WordPress Cron period"
+msgstr "Período do cron do WordPress"
+
+#: ext/products_messenger/views/options.php:135
+msgid "WordPress cron period"
+msgstr "Período do cron do WordPress"
+
+#: ext/front_builder/options/sections/taxonomies.php:51
+msgid ""
+"Works for radio and checkboxes only. Allows show radio/checkboxes in 1 row!"
+msgstr ""
+"Funciona apenas com botões de opção e caixas de seleção. Permite mostrar os "
+"botões em 1 linha!"
+
+#: ext/by_text/views/options.php:358
+#: ext/front_builder/options/sections/by_text.php:83
+msgid "Works for text search and make its faster"
+msgstr "Funciona para pesquisa de texto e a torna mais rápida"
+
+#: ext/stat/index.php:284
+msgid "Wrong data for \"Server options for statistic stock\" options"
+msgstr "Dados incorretos para \"Opções do servidor para estoque estatístico\""
+
+#: ext/by_text/index.php:1038
+msgid "Wrong path to template"
+msgstr "Caminho incorreto para o modelo"
+
+#: views/shortcode_generator.php:47 views/shortcode_generator.php:64
+#: views/shortcode_generator.php:80 views/shortcode_generator.php:96
+#: views/shortcode_generator.php:113 views/shortcode_generator.php:149
+#: views/shortcode_generator.php:166 views/shortcode_generator.php:188
+#: classes/widgets.php:151 classes/widgets.php:167 classes/widgets.php:183
+#: classes/widgets.php:214 classes/widgets.php:229
+#: ext/select_hierarchy/index.php:51 ext/slider/index.php:48
+#: ext/image/index.php:45 ext/image/index.php:54 ext/meta_filter/index.php:212
+#: ext/color/index.php:46 ext/color/index.php:56 ext/color/index.php:65
+#: ext/stock_quantity/views/options.php:24
+#: ext/stock_quantity/views/options.php:117
+#: ext/stock_quantity/views/options.php:228
+#: ext/stock_quantity/views/options.php:253
+#: ext/url_request/views/tabs_content.php:51
+#: ext/url_request/views/tabs_content.php:85
+#: ext/by_instock/views/options.php:24 ext/by_instock/views/options.php:113
+#: ext/by_author/views/options.php:27 ext/by_backorder/views/options.php:24
+#: ext/by_text/views/options.php:25 ext/by_text/views/options.php:193
+#: ext/by_text/views/options.php:221 ext/by_text/views/options.php:274
+#: ext/by_text/views/options.php:300 ext/by_text/views/options.php:338
+#: ext/by_text/views/options.php:365 ext/by_onsales/views/options.php:24
+#: ext/products_messenger/views/options.php:25
+#: ext/products_messenger/views/options.php:117
+#: ext/sections/views/tabs_content.php:47 ext/by_text_2/views/options.php:25
+#: ext/by_text_2/views/options.php:160 ext/by_text_2/views/options.php:188
+#: ext/by_text_2/views/options.php:216 ext/by_text_2/views/options.php:270
+#: ext/by_text_2/views/options.php:296 ext/by_sku/views/options.php:24
+#: ext/by_sku/views/options.php:147
+#: ext/meta_filter/classes/woof_type_meta_filter.php:61
+#: ext/acf_filter/classes/woof_type_acf_filter.php:61
+#: ext/turbo_mode/views/tabs_content.php:43 ext/query_save/views/options.php:25
+#: ext/query_save/views/options.php:153 ext/by_featured/views/options.php:25
+#: ext/slideout/views/tabs_content.php:316 ext/by_rating/views/options.php:24
+#: ext/by_rating/views/options.php:52
+#: ext/front_builder/options/sections/by_rating.php:16
+#: ext/meta_filter/html_types/mselect/views/additional_options.php:21
+#: ext/meta_filter/html_types/slider/views/additional_options.php:28
+#: ext/meta_filter/html_types/slider/views/additional_options.php:139
+#: ext/meta_filter/html_types/slider/views/additional_options.php:164
+#: ext/meta_filter/html_types/select/views/additional_options.php:20
+#: ext/meta_filter/html_types/datepicker/views/additional_options.php:21
+#: ext/acf_filter/html_types/radio/views/additional_options.php:19
+#: ext/acf_filter/html_types/select/views/additional_options.php:19
+#: ext/acf_filter/html_types/true_false/views/woof.php:62
+msgid "Yes"
+msgstr "Sim"
+
+#: classes/widgets.php:191
+msgid ""
+"Yes - filtering starts immediately if user changed any item in the search "
+"form. No - user can set search data and then should press Filter button"
+msgstr ""
+"Sim - filtragem inicia imediatamente se o usuário mudar qualquer item no "
+"formulário de pesquisa. Não - o usuário pode definir os dados de pesquisa e "
+"então ele deve pressionar o botão Filtrar."
+
+#: ext/query_save/views/options.php:152
+msgid "Yes(only if the product exists)"
+msgstr "Sim (apenas se o produto existir)"
+
+#: ext/turbo_mode/index.php:628
+msgid "Yes, for all devices"
+msgstr "Sim, para todos os dispositivos"
+
+#: lib/alert/index.php:62
+msgid "Yes, I love it"
+msgstr "Sim, eu adoro"
+
+#: ext/turbo_mode/index.php:629
+msgid "Yes, only for PC"
+msgstr "Sim, apenas no PC"
+
+#: ext/stock_quantity/views/options.php:142
+#: ext/front_builder/options/sections/default.php:23
+#: ext/front_builder/options/sections/by_price.php:58
+#: ext/front_builder/options/sections/taxonomies.php:23
+#: ext/front_builder/options/sections/meta/mselect.php:23
+#: ext/front_builder/options/sections/meta/slider.php:23
+#: ext/front_builder/options/sections/meta/select.php:23
+#: ext/front_builder/options/sections/meta/datepicker.php:23
+#: ext/meta_filter/html_types/mselect/views/additional_options.php:46
+#: ext/meta_filter/html_types/slider/views/additional_options.php:53
+#: ext/meta_filter/html_types/select/views/additional_options.php:46
+#: ext/meta_filter/html_types/datepicker/views/additional_options.php:46
+#: ext/acf_filter/html_types/radio/views/additional_options.php:45
+#: ext/acf_filter/html_types/select/views/additional_options.php:45
+msgid "Yes, show as closed"
+msgstr "Sim, mostrar como fechado"
+
+#: ext/stock_quantity/views/options.php:143
+#: ext/front_builder/options/sections/default.php:24
+#: ext/front_builder/options/sections/by_price.php:59
+#: ext/front_builder/options/sections/taxonomies.php:24
+#: ext/front_builder/options/sections/meta/mselect.php:24
+#: ext/front_builder/options/sections/meta/slider.php:24
+#: ext/front_builder/options/sections/meta/select.php:24
+#: ext/front_builder/options/sections/meta/datepicker.php:24
+#: ext/meta_filter/html_types/mselect/views/additional_options.php:47
+#: ext/meta_filter/html_types/slider/views/additional_options.php:54
+#: ext/meta_filter/html_types/select/views/additional_options.php:47
+#: ext/meta_filter/html_types/datepicker/views/additional_options.php:47
+#: ext/acf_filter/html_types/radio/views/additional_options.php:46
+#: ext/acf_filter/html_types/select/views/additional_options.php:46
+msgid "Yes, show as opened"
+msgstr "Sim, mostrar como aberto"
+
+#: ext/url_request/views/tabs_content.php:215
+msgid "YOAST: add HUSKY SEO links to sitemap"
+msgstr "YOAST: adicionar links de SEO do HUSKY ao sitemap"
+
+#: ext/products_messenger/index.php:120
+msgid "You are unsubscribed from the future products newsletters."
+msgstr ""
+"Você cancelou a assinatura dos boletins informativos de produtos futuros."
+
+#: ext/turbo_mode/views/tabs_content.php:175
+msgid ""
+"You can always assemble products data for Turbo Mode by one click! While its "
+"assembling filtering on the site front is still possible with previous "
+"assembled products data until new data assembled!"
+msgstr ""
+"Você sempre pode montar dados de produtos para o Modo Turbo com um clique! "
+"Enquanto sua filtragem de montagem na interface do site ainda é possível com "
+"dados de produtos montados anteriormente até novos dados montados!"
+
+#: ext/conditionals/views/tabs_content.php:48
+msgid ""
+"You can define the conditions for displaying filter elements depending of "
+"the current filtering request. Briefly this feature allows to hide some "
+"filter-elements while others are not selected. Or vice versa - show some "
+"filter-elements if some another filter elements are selected."
+msgstr ""
+"Você pode definir as condições de exibição dos elementos de filtro "
+"dependendo da solicitação de filtragem atual. Resumidamente, esse recurso "
+"permite ocultar alguns elementos de filtro enquanto outros não são "
+"selecionados. Ou vice-versa. Mostre alguns elementos de filtro se algum "
+"outro elemento de filtro estiver selecionado."
+
+#: ext/url_request/views/tabs_content.php:158
+msgid ""
+"You can insert key {any} into the link. An example: /color-{any}/. For "
+"fields title and description - you can insert names of the terms that should "
+"be in the search query. For example insert the name of the current color: "
+"{pa_color}. To show taxonomy title use literal key {pa_color_title}. Example:"
+" Current season clothes of {pa_color_title} {pa_color}. Rule like "
+"\"{pa_color_title} {pa_color}\" will generate in the text: \"Color red\". "
+"Additional values: {site_name},{current_tax_name}. Such rules can be set for "
+"each language with WPML plugin automatically,  for another plugins you can "
+"use hook woof_seo_rules_langs (read this extension documentation)"
+msgstr ""
+
+#: ext/meta_filter/html_types/datepicker/views/woof.php:118
+msgid "Сlear"
+msgstr "Limpar"
+
+#: ext/conditionals/index.php:59 ext/conditionals/views/tabs_content.php:21
+msgid "Сonditionals"
+msgstr "Condicionais"
+
+#: ext/slideout/views/tabs_content.php:280
+msgid "Сontainer size"
+msgstr "Tamanho do contêiner"
+
+#: ext/products_messenger/index.php:286 ext/query_save/index.php:132
+msgid "Сount is max"
+msgstr "A contagem é máxima"
