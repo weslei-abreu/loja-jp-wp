@@ -618,3 +618,87 @@ add_action('wp_ajax_nopriv_j1_classificados_get_post_id_by_url', function() {
         wp_send_json_error('Invalid URL');
     }
 });
+
+// ✅ Modificar o widget de chat do Dokan para funcionar em páginas de classificados
+add_action('wp_loaded', function() {
+    // ✅ Filtro para permitir que o widget de chat funcione em páginas de classificados
+    add_filter('dokan_is_store_page', function($is_store_page) {
+        // Se já é uma página de loja, retorna true
+        if ($is_store_page) {
+            return true;
+        }
+        
+        // Se é uma página de classificado, verifica se tem autor/vendedor
+        if (is_singular('classified')) {
+            $post_id = get_the_ID();
+            if ($post_id) {
+                $author_id = get_post_field('post_author', $post_id);
+                if ($author_id && dokan_is_user_seller($author_id)) {
+                    return true;
+                }
+            }
+        }
+        
+        return $is_store_page;
+    });
+    
+    // ✅ Filtro para obter o ID da loja em páginas de classificados
+    add_filter('dokan_elementor_store_data_id', function($store_id) {
+        if (!$store_id && is_singular('classified')) {
+            $post_id = get_the_ID();
+            if ($post_id) {
+                $author_id = get_post_field('post_author', $post_id);
+                if ($author_id && dokan_is_user_seller($author_id)) {
+                    return $author_id;
+                }
+            }
+        }
+        return $store_id;
+    });
+    
+    // ✅ Filtro para obter dados da loja em páginas de classificados
+    add_filter('dokan_elementor_store_data', function($store_data) {
+        if (empty($store_data['id']) && is_singular('classified')) {
+            $post_id = get_the_ID();
+            if ($post_id) {
+                $author_id = get_post_field('post_author', $post_id);
+                if ($author_id && dokan_is_user_seller($author_id)) {
+                    $vendor = dokan()->vendor->get($author_id);
+                    if ($vendor) {
+                        $store_data['id'] = $author_id;
+                        $store_data['name'] = $vendor->get_shop_name();
+                        $store_data['banner'] = [
+                            'id' => $vendor->get_banner_id(),
+                            'url' => $vendor->get_banner(),
+                        ];
+                        $store_data['profile_picture'] = [
+                            'id' => $vendor->get_avatar_id(),
+                            'url' => $vendor->get_avatar(),
+                        ];
+                        $store_data['address'] = dokan_get_seller_short_address($author_id, false);
+                        $store_data['phone'] = $vendor->get_phone();
+                        $store_data['email'] = $vendor->show_email() ? $vendor->get_email() : '';
+                    }
+                }
+            }
+        }
+        return $store_data;
+    });
+    
+    // ✅ Filtro para modificar a verificação do widget de chat
+    add_filter('elementor/frontend/widget/should_render', function($should_render, $widget) {
+        if ($widget->get_name() === 'dokan-store-live-chat-button') {
+            // Se é uma página de classificado, verifica se tem autor/vendedor
+            if (is_singular('classified')) {
+                $post_id = get_the_ID();
+                if ($post_id) {
+                    $author_id = get_post_field('post_author', $post_id);
+                    if ($author_id && dokan_is_user_seller($author_id)) {
+                        return true;
+                    }
+                }
+            }
+        }
+        return $should_render;
+    }, 10, 2);
+});
