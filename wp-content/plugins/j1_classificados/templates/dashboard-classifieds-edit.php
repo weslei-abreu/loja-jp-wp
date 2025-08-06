@@ -141,7 +141,7 @@ get_header();
                                 </div>
                             </div>
 
-                            <div class="content-half-part conditions-price" id="conditions-container" style="display: block;">
+                            <div class="content-half-part conditions-price" id="conditions-container" style="display: none;">
                                 <label for="classified_conditions" class="form-label">
                                     <?php esc_html_e('Salário', 'j1_classificados'); ?>
                                 </label>

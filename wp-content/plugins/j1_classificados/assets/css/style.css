@@ -640,11 +640,11 @@ input[type="checkbox"]#classified_is_job {
 
 /* ✅ REGRA ESPECÍFICA PARA O CONTAINER DE CONDIÇÕES */
 #conditions-container {
+    display: none !important;
+}
+
+#conditions-container.show {
     display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    height: auto !important;
-    overflow: visible !important;
 }
 
 /* Melhorar espaçamento do botão */
@@ -984,4 +984,63 @@ input[type="checkbox"]#classified_is_job {
 
 .j1-form-loading-overlay.hidden {
     display: none !important;
+}
+
+/* ✅ Estilos para preços e condições */
+.dokan-price-container {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.dokan-price-container .content-half-part {
+    flex: 1;
+}
+
+.dokan-price-container .dokan-input-group {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.dokan-price-container .dokan-input-group-addon {
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    border-right: none;
+    padding: 10px 12px;
+    border-radius: 4px 0 0 4px;
+    color: #666;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.dokan-price-container .dokan-form-control {
+    border-radius: 0 4px 4px 0;
+    border-left: none;
+    flex: 1;
+}
+
+/* ✅ Estilos para o container de condições */
+#conditions-container {
+    display: none !important;
+}
+
+#conditions-container.show {
+    display: block !important;
+}
+
+/* ✅ Garantir que os inputs funcionem corretamente */
+.dokan-form-control {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.dokan-form-control:focus {
+    border-color: #007cba;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 124, 186, 0.2);
 }

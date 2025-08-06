@@ -244,16 +244,11 @@ jQuery(document).ready(function($) {
         var isChecked = $(this).is(':checked');
         
         if (isChecked) {
-            conditionsContainer.show();
+            conditionsContainer.show().addClass('show');
         } else {
-            conditionsContainer.hide();
+            conditionsContainer.hide().removeClass('show');
             $('#classified_conditions').val(''); // Limpar o valor quando desmarcar
         }
-    });
-
-    // ✅ TESTE: Adicionar evento de clique também
-    $(document).on('click', '#classified_is_job', function() {
-        console.log('Checkbox CLICKED!');
     });
 
     // ✅ SIMPLES: Inicializar estado das condições
@@ -262,19 +257,16 @@ jQuery(document).ready(function($) {
         var conditionsContainer = $('#conditions-container');
         
         if (isJobChecked) {
-            conditionsContainer.show();
+            conditionsContainer.show().addClass('show');
         } else {
-            conditionsContainer.hide();
+            conditionsContainer.hide().removeClass('show');
         }
     }
 
-    // Executar inicialização
-    initializeConditionsState();
-
-    // ✅ TESTE: Verificar se os elementos existem
-    console.log('Checkbox exists:', $('#classified_is_job').length);
-    console.log('Container exists:', $('#conditions-container').length);
-    console.log('Form exists:', $('form[name="classified_form"]').length);
+    // Executar inicialização após o DOM estar pronto
+    $(document).ready(function() {
+        initializeConditionsState();
+    });
 
     // ✅ Upload de imagem destacada com loading
     $('.dokan-feat-image-btn').on('click', function(e) {
