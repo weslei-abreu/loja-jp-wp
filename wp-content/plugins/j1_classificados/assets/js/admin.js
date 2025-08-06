@@ -320,8 +320,18 @@ jQuery(document).ready(function($) {
     });
 
     // ✅ Upload de imagem destacada com loading
-    $('.dokan-feat-image-btn').on('click', function(e) {
+    $('.dokan-feat-image-btn').off('click').on('click', function(e) {
         e.preventDefault();
+        e.stopPropagation();
+        
+        var $btn = $(this);
+        
+        // Evitar cliques múltiplos
+        if ($btn.hasClass('loading')) {
+            return false;
+        }
+        
+        $btn.addClass('loading');
         
         // Mostrar loading imediatamente
         showPageLoading('Carregando biblioteca de mídia...');
@@ -336,6 +346,7 @@ jQuery(document).ready(function($) {
         frame.on('open', function() {
             hidePageLoading();
             hideUploadLoading('.dokan-feat-image-upload');
+            $btn.removeClass('loading');
         });
 
         frame.on('select', function() {
@@ -355,13 +366,15 @@ jQuery(document).ready(function($) {
             // Garantir que o loading seja escondido se ainda estiver visível
             hidePageLoading();
             hideUploadLoading('.dokan-feat-image-upload');
+            $btn.removeClass('loading');
         });
 
-        // Fallback: esconder loading após 3 segundos se a biblioteca não abrir
+        // Fallback: esconder loading após 5 segundos se a biblioteca não abrir
         setTimeout(function() {
             hidePageLoading();
             hideUploadLoading('.dokan-feat-image-upload');
-        }, 3000);
+            $btn.removeClass('loading');
+        }, 5000);
 
         frame.open();
     });
@@ -377,8 +390,18 @@ jQuery(document).ready(function($) {
     });
 
     // ✅ Upload galeria de imagens com loading
-    $('.add-product-images').on('click', function(e) {
+    $('.add-product-images').off('click').on('click', function(e) {
         e.preventDefault();
+        e.stopPropagation();
+        
+        var $btn = $(this);
+        
+        // Evitar cliques múltiplos
+        if ($btn.hasClass('loading')) {
+            return false;
+        }
+        
+        $btn.addClass('loading');
         
         // Mostrar loading imediatamente
         showPageLoading('Carregando biblioteca de mídia...');
@@ -393,6 +416,7 @@ jQuery(document).ready(function($) {
         frame.on('open', function() {
             hidePageLoading();
             hideUploadLoading('.dokan-product-gallery');
+            $btn.removeClass('loading');
         });
 
         frame.on('select', function() {
@@ -426,13 +450,15 @@ jQuery(document).ready(function($) {
             // Garantir que o loading seja escondido se ainda estiver visível
             hidePageLoading();
             hideUploadLoading('.dokan-product-gallery');
+            $btn.removeClass('loading');
         });
 
-        // Fallback: esconder loading após 3 segundos se a biblioteca não abrir
+        // Fallback: esconder loading após 5 segundos se a biblioteca não abrir
         setTimeout(function() {
             hidePageLoading();
             hideUploadLoading('.dokan-product-gallery');
-        }, 3000);
+            $btn.removeClass('loading');
+        }, 5000);
 
         frame.open();
     });
