@@ -50,12 +50,16 @@ jQuery(document).ready(function($) {
         console.log('hidePageLoading called, overlay found:', loadingOverlay.length);
         
         if (loadingOverlay.length) {
-            loadingOverlay.addClass('hidden').hide().fadeOut(300);
+            loadingOverlay.fadeOut(300, function() {
+                $(this).addClass('hidden').hide();
+            });
             console.log('Loading overlay hidden successfully');
         } else {
             console.log('Loading overlay not found for hiding');
             // Fallback: tentar esconder qualquer elemento com a classe
-            $('.j1-loading-overlay').addClass('hidden').hide().fadeOut(300);
+            $('.j1-loading-overlay').fadeOut(300, function() {
+                $(this).addClass('hidden').hide();
+            });
         }
     }
 
@@ -162,11 +166,13 @@ jQuery(document).ready(function($) {
         // Mostrar loading inicialmente
         showPageLoading('Carregando...');
         
-        // ✅ Esconder loading após 1.5 segundos (simples e eficaz)
+        // ✅ Esconder loading após 1 segundo (mais rápido)
         setTimeout(function() {
-            console.log('Hiding loading after 1.5 seconds...');
-            hidePageLoading();
-        }, 1500);
+            console.log('Hiding loading after 1 second...');
+            $('#j1-page-loading').fadeOut(300, function() {
+                $(this).addClass('hidden').hide();
+            });
+        }, 1000);
 
         // Adicionar loading nos links
         $('.j1-loading-link').on('click', function(e) {
