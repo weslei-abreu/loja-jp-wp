@@ -101,6 +101,30 @@ get_header();
 .dokan-table-action a.dokan-btn:last-child {
     margin-right: 0 !important;
 }
+
+/* ✅ Estilos para a coluna de visualizações */
+.j1-views-count {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 5px !important;
+    font-size: 12px !important;
+    color: #666 !important;
+    font-weight: 500 !important;
+    padding: 4px 8px !important;
+    background: #f8f9fa !important;
+    border-radius: 4px !important;
+    border: 1px solid #e9ecef !important;
+}
+
+.j1-views-count i {
+    color: #007cba !important;
+    font-size: 11px !important;
+}
+
+.j1-views-count:hover {
+    background: #e9ecef !important;
+    color: #333 !important;
+}
 </style>
 
 <?php do_action('dokan_dashboard_wrap_start'); ?>
@@ -154,6 +178,7 @@ jQuery(document).ready(function($) {
                                 <th><?php esc_html_e('Título', 'j1_classificados'); ?></th>
                                 <th><?php esc_html_e('Preço', 'j1_classificados'); ?></th>
                                 <th><?php esc_html_e('Status', 'j1_classificados'); ?></th>
+                                <th><?php esc_html_e('Visualizações', 'j1_classificados'); ?></th>
                                 <th><?php esc_html_e('Data', 'j1_classificados'); ?></th>
                                 <th><?php esc_html_e('Ações', 'j1_classificados'); ?></th>
                             </tr>
@@ -201,6 +226,15 @@ jQuery(document).ready(function($) {
                                         <span class="dokan-label <?php echo esc_attr(dokan_get_post_status_label_class(get_post_status())); ?>">
                                             <?php echo esc_html(dokan_get_post_status(get_post_status())); ?>
                                         </span>
+                                    </td>
+                                    <td>
+                                        <?php
+                                        $views = j1_classificados_get_views(get_the_ID());
+                                        echo '<span class="j1-views-count" data-post-id="' . get_the_ID() . '" title="' . esc_attr__('Visualizações', 'j1_classificados') . '">';
+                                        echo '<i class="fas fa-eye"></i> ';
+                                        echo number_format_i18n($views);
+                                        echo '</span>';
+                                        ?>
                                     </td>
                                     <td>
                                         <?php echo get_the_date(); ?>

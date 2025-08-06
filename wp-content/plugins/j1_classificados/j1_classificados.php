@@ -539,3 +539,82 @@ add_action('init', function() {
         wp_die('Investigation complete. Check error log.');
     }
 });
+
+// ✅ Sistema de visualizações para classificados
+function j1_classificados_increment_views($post_id) {
+    if (!$post_id) return;
+    
+    $current_views = get_post_meta($post_id, '_classified_views', true);
+    $current_views = $current_views ? intval($current_views) : 0;
+    $new_views = $current_views + 1;
+    
+    update_post_meta($post_id, '_classified_views', $new_views);
+    return $new_views;
+}
+
+function j1_classificados_get_views($post_id) {
+    if (!$post_id) return 0;
+    
+    $views = get_post_meta($post_id, '_classified_views', true);
+    return $views ? intval($views) : 0;
+}
+
+// ✅ Hook para incrementar visualizações quando alguém acessa o classificado
+add_action('wp_head', function() {
+    if (is_singular('classified')) {
+        $post_id = get_the_ID();
+        if ($post_id) {
+            j1_classificados_increment_views($post_id);
+        }
+    }
+});
+
+// ✅ AJAX para incrementar visualizações via JavaScript (opcional)
+add_action('wp_ajax_j1_classificados_increment_views', function() {
+    $post_id = intval($_POST['post_id'] ?? 0);
+    if ($post_id && get_post_type($post_id) === 'classified') {
+        $new_views = j1_classificados_increment_views($post_id);
+        wp_send_json_success(['views' => $new_views]);
+    } else {
+        wp_send_json_error('Invalid post ID');
+    }
+});
+
+add_action('wp_ajax_nopriv_j1_classificados_increment_views', function() {
+    $post_id = intval($_POST['post_id'] ?? 0);
+    if ($post_id && get_post_type($post_id) === 'classified') {
+        $new_views = j1_classificados_increment_views($post_id);
+        wp_send_json_success(['views' => $new_views]);
+    } else {
+        wp_send_json_error('Invalid post ID');
+    }
+});
+
+// ✅ AJAX para obter ID do post pela URL
+add_action('wp_ajax_j1_classificados_get_post_id_by_url', function() {
+    $url = sanitize_url($_POST['url'] ?? '');
+    if ($url) {
+        $post_id = url_to_postid($url);
+        if ($post_id && get_post_type($post_id) === 'classified') {
+            wp_send_json_success(['post_id' => $post_id]);
+        } else {
+            wp_send_json_error('Post not found');
+        }
+    } else {
+        wp_send_json_error('Invalid URL');
+    }
+});
+
+add_action('wp_ajax_nopriv_j1_classificados_get_post_id_by_url', function() {
+    $url = sanitize_url($_POST['url'] ?? '');
+    if ($url) {
+        $post_id = url_to_postid($url);
+        if ($post_id && get_post_type($post_id) === 'classified') {
+            wp_send_json_success(['post_id' => $post_id]);
+        } else {
+            wp_send_json_error('Post not found');
+        }
+    } else {
+        wp_send_json_error('Invalid URL');
+    }
+});

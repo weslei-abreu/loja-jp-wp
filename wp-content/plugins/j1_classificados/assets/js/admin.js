@@ -562,4 +562,64 @@ jQuery(document).ready(function($) {
         // Se chegou até aqui, permitir o envio
         return true;
     });
+
+    // ✅ Sistema de visualizações
+    function incrementViews(postId) {
+        if (!postId) return;
+        
+        $.ajax({
+            url: j1_classificados_ajax.ajax_url,
+            type: 'POST',
+            data: {
+                action: 'j1_classificados_increment_views',
+                post_id: postId,
+                nonce: j1_classificados_ajax.nonce
+            },
+            success: function(response) {
+                if (response.success) {
+                    // Atualizar o contador na tabela
+                    var viewsElement = $('.j1-views-count[data-post-id="' + postId + '"]');
+                    if (viewsElement.length) {
+                        var currentViews = parseInt(viewsElement.text().replace(/[^\d]/g, ''));
+                        var newViews = currentViews + 1;
+                        viewsElement.html('<i class="fas fa-eye"></i> ' + newViews.toLocaleString());
+                    }
+                }
+            },
+            error: function() {
+                console.log('Erro ao incrementar visualizações');
+            }
+        });
+    }
+
+    // ✅ Incrementar visualizações quando clica no link "Ver"
+    $(document).on('click', '.dokan-table-action a[href*="classifieds"][target="_blank"]', function(e) {
+        var $link = $(this);
+        var href = $link.attr('href');
+        
+        // Tentar extrair o ID do post da URL
+        var urlParts = href.split('/');
+        var lastPart = urlParts[urlParts.length - 1];
+        
+        // Se a URL termina com um número, é provavelmente o ID
+        if (/^\d+$/.test(lastPart)) {
+            incrementViews(lastPart);
+        } else {
+            // Tentar encontrar o ID via AJAX
+            $.ajax({
+                url: j1_classificados_ajax.ajax_url,
+                type: 'POST',
+                data: {
+                    action: 'j1_classificados_get_post_id_by_url',
+                    url: href,
+                    nonce: j1_classificados_ajax.nonce
+                },
+                success: function(response) {
+                    if (response.success && response.data.post_id) {
+                        incrementViews(response.data.post_id);
+                    }
+                }
+            });
+        }
+    });
 }); 
