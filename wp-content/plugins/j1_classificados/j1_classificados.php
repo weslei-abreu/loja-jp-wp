@@ -232,6 +232,18 @@ add_action( 'wp_enqueue_scripts', function () {
             '1.0',
             true
         );
+        
+        // Adicionar dados localizados para o JavaScript
+        wp_localize_script('j1-classificados-admin', 'j1_classificados_ajax', array(
+            'ajax_url' => admin_url('admin-ajax.php'),
+            'nonce' => wp_create_nonce('j1_classificados_nonce'),
+            'strings' => array(
+                'select_featured_image' => __('Selecionar Imagem Destacada', 'j1_classificados'),
+                'select_gallery_images' => __('Selecionar Imagens da Galeria', 'j1_classificados'),
+                'delete_image' => __('Excluir imagem', 'j1_classificados'),
+                'select_categories' => __('Selecione categorias', 'j1_classificados')
+            )
+        ));
     }
 });
 

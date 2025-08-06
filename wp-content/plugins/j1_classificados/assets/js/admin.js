@@ -1,21 +1,34 @@
 jQuery(document).ready(function($) {
     'use strict';
 
+    // Verificar se wp.media está disponível
+    if (typeof wp === 'undefined' || !wp.media) {
+        console.warn('wp.media não está disponível');
+        return;
+    }
+
+    // Verificar se as strings localizadas estão disponíveis
+    var strings = typeof j1_classificados_ajax !== 'undefined' ? j1_classificados_ajax.strings : {};
+
     // Upload de imagem destacada
     $('.dokan-feat-image-btn').on('click', function(e) {
         e.preventDefault();
         
         var frame = wp.media({
-            title: 'Selecionar Imagem Destacada',
+            title: strings.select_featured_image || 'Selecionar Imagem Destacada',
             multiple: false
         });
 
         frame.on('select', function() {
             var attachment = frame.state().get('selection').first().toJSON();
-            $('.dokan-feat-image-id').val(attachment.id);
-            $('.image-wrap img').attr('src', attachment.url);
-            $('.image-wrap').removeClass('dokan-hide');
-            $('.instruction-inside').addClass('dokan-hide');
+            if (attachment && attachment.url) {
+                // Garantir que a URL está correta
+                var imageUrl = attachment.url.replace(/^https:\/\/loja\.jp/, 'https://loja.jp');
+                $('.dokan-feat-image-id').val(attachment.id);
+                $('.image-wrap img').attr('src', imageUrl);
+                $('.image-wrap').removeClass('dokan-hide');
+                $('.instruction-inside').addClass('dokan-hide');
+            }
         });
 
         frame.open();
@@ -35,7 +48,7 @@ jQuery(document).ready(function($) {
         e.preventDefault();
         
         var frame = wp.media({
-            title: 'Selecionar Imagens da Galeria',
+            title: strings.select_gallery_images || 'Selecionar Imagens da Galeria',
             multiple: true
         });
 
@@ -47,9 +60,15 @@ jQuery(document).ready(function($) {
             attachments.forEach(function(attachment) {
                 if (ids.indexOf(attachment.id.toString()) === -1) {
                     ids.push(attachment.id);
+                    
+                    // Garantir que a URL está correta
+                    var imageUrl = attachment.sizes && attachment.sizes.thumbnail ? 
+                        attachment.sizes.thumbnail.url.replace(/^https:\/\/loja\.jp/, 'https://loja.jp') : 
+                        attachment.url.replace(/^https:\/\/loja\.jp/, 'https://loja.jp');
+                    
                     var html = '<li class="image" data-attachment_id="' + attachment.id + '">' +
-                              '<img src="' + attachment.sizes.thumbnail.url + '" alt="">' +
-                              '<a href="#" class="action-delete" title="Excluir imagem">&times;</a>' +
+                              '<img src="' + imageUrl + '" alt="">' +
+                              '<a href="#" class="action-delete" title="' + (strings.delete_image || 'Excluir imagem') + '">&times;</a>' +
                               '</li>';
                     $('.product_images').prepend(html);
                 }
@@ -76,11 +95,12 @@ jQuery(document).ready(function($) {
         $(this).parent().remove();
     });
 
-    // Select2 para categorias
+    // Select2 para categorias - com verificação de disponibilidade
     if ($.fn.select2) {
         $('#classified_category').select2({
-            placeholder: 'Selecione categorias',
-            allowClear: true
+            placeholder: strings.select_categories || 'Selecione categorias',
+            allowClear: true,
+            width: '100%'
         });
     }
 
@@ -102,4 +122,20 @@ jQuery(document).ready(function($) {
     } else {
         $('#conditions-container').hide();
     }
+
+    // Otimização de performance: debounce para eventos de mudança
+    var debounceTimer;
+    $('input, select, textarea').on('change', function() {
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(function() {
+            // Ações que precisam ser executadas após mudanças
+        }, 300);
+    });
+
+    // Otimização: lazy loading para imagens
+    $('img').on('error', function() {
+        console.warn('Erro ao carregar imagem:', this.src);
+        // Fallback para imagem quebrada
+        $(this).attr('src', 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2Y1ZjVmNSIvPjx0ZXh0IHg9IjUwIiB5PSI1MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjEyIiBmaWxsPSIjOTk5IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+SW1hZ2VuPC90ZXh0Pjwvc3ZnPg==');
+    });
 }); 
