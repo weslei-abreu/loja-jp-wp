@@ -22,11 +22,10 @@ get_header();
 
 <?php do_action('dokan_dashboard_wrap_start'); ?>
 
-<!-- ✅ Loading overlay para a página -->
+<!-- ✅ Loading overlay para a página (sem mensagem) -->
 <div id="j1-page-loading" class="j1-loading-overlay">
     <div style="text-align: center;">
         <div class="j1-loading-spinner"></div>
-        <div class="j1-loading-text">Carregando classificados...</div>
     </div>
 </div>
 
@@ -39,22 +38,19 @@ get_header();
         <article class="dokan-classifieds-area">
             <header class="dokan-dashboard-header">
                 <h1 class="entry-title"><?php esc_html_e('Meus Classificados', 'j1_classificados'); ?></h1>
+                
+                <!-- ✅ Botão Adicionar Novo Classificado reposicionado -->
+                <?php if (dokan_is_seller_enabled($current_user) && current_user_can('dokan_add_product')) : ?>
+                    <div class="j1-add-classified-btn">
+                        <a href="<?php echo esc_url(add_query_arg(['action' => 'add'], dokan_get_navigation_url('classifieds'))); ?>" class="dokan-btn dokan-btn-theme j1-loading-link">
+                            <i class="fas fa-briefcase">&nbsp;</i>
+                            <span class="btn-text"><?php esc_html_e('Adicionar Novo Classificado', 'j1_classificados'); ?></span>
+                        </a>
+                    </div>
+                <?php endif; ?>
             </header>
 
             <?php if ($query->have_posts()) : ?>
-                <div class="product-listing-top dokan-clearfix">
-                    <?php if (dokan_is_seller_enabled($current_user)) : ?>
-                        <span class="dokan-add-product-link">
-                            <?php if (current_user_can('dokan_add_product')) : ?>
-                                <a href="<?php echo esc_url(add_query_arg(['action' => 'add'], dokan_get_navigation_url('classifieds'))); ?>" class="dokan-btn dokan-btn-theme j1-loading-link">
-                                    <i class="fas fa-briefcase">&nbsp;</i>
-                                    <span class="btn-text"><?php esc_html_e('Adicionar Novo Classificado', 'j1_classificados'); ?></span>
-                                </a>
-                            <?php endif; ?>
-                        </span>
-                    <?php endif; ?>
-                </div>
-
                 <div class="dokan-dashboard-product-listing-wrapper" id="j1-classifieds-table">
                     <table class="dokan-table dokan-table-striped">
                         <thead>
@@ -117,14 +113,14 @@ get_header();
                                     <td>
                                         <div class="dokan-table-action">
                                             <a href="<?php echo esc_url(add_query_arg(['action' => 'edit', 'id' => get_the_ID()], dokan_get_navigation_url('classifieds'))); ?>" 
-                                               class="dokan-btn dokan-btn-default dokan-btn-sm tips j1-loading-link" 
+                                               class="dokan-btn dokan-btn-white dokan-btn-sm tips j1-loading-link" 
                                                title="<?php esc_attr_e('Editar', 'j1_classificados'); ?>">
                                                 <i class="fas fa-edit"></i>
                                                 <span class="btn-text"><?php esc_html_e('Editar', 'j1_classificados'); ?></span>
                                             </a>
                                             
                                             <a href="<?php echo esc_url(get_permalink()); ?>" 
-                                               class="dokan-btn dokan-btn-default dokan-btn-sm tips j1-loading-link" 
+                                               class="dokan-btn dokan-btn-white dokan-btn-sm tips j1-loading-link" 
                                                title="<?php esc_attr_e('Ver', 'j1_classificados'); ?>" 
                                                target="_blank">
                                                 <i class="fas fa-eye"></i>
@@ -132,7 +128,7 @@ get_header();
                                             </a>
                                             
                                             <a href="<?php echo wp_nonce_url(add_query_arg(['action' => 'delete', 'id' => get_the_ID()], dokan_get_navigation_url('classifieds')), 'delete_classified_' . get_the_ID()); ?>" 
-                                               class="dokan-btn dokan-btn-default dokan-btn-sm tips j1-loading-link" 
+                                               class="dokan-btn dokan-btn-white dokan-btn-sm tips j1-loading-link" 
                                                title="<?php esc_attr_e('Excluir', 'j1_classificados'); ?>"
                                                onclick="return confirm('<?php esc_attr_e('Tem certeza que deseja excluir este classificado?', 'j1_classificados'); ?>');">
                                                 <i class="fas fa-trash"></i>

@@ -27,14 +27,18 @@ jQuery(document).ready(function($) {
     function showPageLoading(text = 'Carregando...') {
         var loadingOverlay = $('#j1-page-loading');
         if (loadingOverlay.length) {
-            loadingOverlay.find('.j1-loading-text').text(text);
+            // ✅ Não mostrar mensagem na listagem - apenas spinner
+            if (text && text !== 'Carregando...') {
+                loadingOverlay.find('.j1-loading-text').text(text);
+            } else {
+                loadingOverlay.find('.j1-loading-text').hide();
+            }
             loadingOverlay.removeClass('hidden').show();
         } else {
             // Criar overlay se não existir
             var overlay = $('<div id="j1-page-loading" class="j1-loading-overlay">' +
-                '<div style="text-align: center; background: rgba(255, 255, 255, 0.9); padding: 30px; border-radius: 10px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); min-width: 200px;">' +
+                '<div style="text-align: center; background: transparent; padding: 0; border-radius: 0; box-shadow: none; min-width: auto; border: none;">' +
                 '<div class="j1-loading-spinner"></div>' +
-                '<div class="j1-loading-text">' + text + '</div>' +
                 '</div>' +
                 '</div>');
             $('body').append(overlay);
