@@ -240,6 +240,108 @@ input[type="checkbox"]#classified_is_job {
     }
 }
 
+/* Otimizações específicas para performance */
+.dokan-btn,
+.action-delete,
+.add-product-images {
+    /* Evitar repaints desnecessários */
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+/* Reduzir complexidade de animações */
+.dokan-btn:hover,
+.action-delete:hover,
+.add-product-images:hover {
+    /* Usar apenas propriedades que não causam reflow */
+    opacity: 0.9;
+    transform: translateZ(0) scale(1.02);
+}
+
+/* Otimizar hover states */
+.dokan-btn.hover,
+.action-delete.hover,
+.add-product-images.hover {
+    opacity: 0.9;
+    transform: translateZ(0) scale(1.02);
+}
+
+/* Melhorar performance de scroll */
+.dokan-dashboard-wrap,
+.dokan-dashboard-content {
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+}
+
+/* Otimizar carregamento de imagens */
+img {
+    /* Evitar layout shift */
+    max-width: 100%;
+    height: auto;
+    /* Melhorar performance de renderização */
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+
+/* Reduzir repaints em elementos interativos */
+.dokan-form-control,
+.dokan-btn,
+.action-delete,
+.add-product-images {
+    /* Usar transform em vez de propriedades que causam reflow */
+    transform: translateZ(0);
+    will-change: transform, opacity;
+}
+
+/* Otimizar transições */
+.dokan-form-control:focus,
+.dokan-btn:focus,
+.action-delete:focus,
+.add-product-images:focus {
+    /* Usar apenas propriedades que não causam reflow */
+    transform: translateZ(0) scale(1.02);
+    outline: none;
+}
+
+/* Melhorar performance de hover */
+.dokan-btn:hover,
+.action-delete:hover,
+.add-product-images:hover {
+    /* Usar apenas propriedades que não causam reflow */
+    transform: translateZ(0) scale(1.02);
+    opacity: 0.9;
+}
+
+/* Otimizar animações */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateZ(0) translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateZ(0) translateY(0);
+    }
+}
+
+/* Reduzir complexidade de seletores */
+.dokan-form-group,
+.dokan-product-edit-form,
+.dokan-dashboard-content {
+    /* Usar transform em vez de propriedades que causam reflow */
+    transform: translateZ(0);
+    will-change: auto;
+}
+
+/* Otimizar performance de imagens */
+.product_images img,
+.dokan-feat-image-upload img {
+    /* Usar transform em vez de propriedades que causam reflow */
+    transform: translateZ(0);
+    will-change: auto;
+}
+
 /* Estilos para o plugin J1 Classificados */
 
 /* Container principal */

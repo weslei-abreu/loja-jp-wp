@@ -10,6 +10,29 @@ jQuery(document).ready(function($) {
     // Verificar se as strings localizadas estão disponíveis
     var strings = typeof j1_classificados_ajax !== 'undefined' ? j1_classificados_ajax.strings : {};
 
+    // Função para corrigir URLs malformadas
+    function fixMalformedUrl(url) {
+        if (typeof url === 'string' && url.indexOf('https://loja.jp/wp-content/uploads/https:/loja.jp') === 0) {
+            return url.replace('https://loja.jp/wp-content/uploads/https:/loja.jp', 'https://loja.jp/wp-content/uploads');
+        }
+        return url;
+    }
+
+    // Função para corrigir URLs em objetos de attachment
+    function fixAttachmentUrls(attachment) {
+        if (attachment && attachment.url) {
+            attachment.url = fixMalformedUrl(attachment.url);
+        }
+        if (attachment && attachment.sizes) {
+            Object.keys(attachment.sizes).forEach(function(size) {
+                if (attachment.sizes[size] && attachment.sizes[size].url) {
+                    attachment.sizes[size].url = fixMalformedUrl(attachment.sizes[size].url);
+                }
+            });
+        }
+        return attachment;
+    }
+
     // Otimização: debounce para eventos de mudança
     var debounceTimer;
     $('input, select, textarea').on('change', function() {
@@ -26,18 +49,26 @@ jQuery(document).ready(function($) {
         $(this).attr('src', 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2Y1ZjVmNSIvPjx0ZXh0IHg9IjUwIiB5PSI1MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjEyIiBmaWxsPSIjOTk5IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+SW1hZ2VuPC90ZXh0Pjwvc3ZnPg==');
     });
 
-    // Otimização: reduzir eventos de mouseover/click
+    // Otimização: reduzir eventos de mouseover/click com throttling
+    var throttleTimer;
     $(document).on('mouseover', '.dokan-btn, .action-delete, .add-product-images', function() {
-        // Usar requestAnimationFrame para otimizar repaints
-        requestAnimationFrame(function() {
-            $(this).addClass('hover');
-        }.bind(this));
+        if (throttleTimer) return;
+        throttleTimer = setTimeout(function() {
+            requestAnimationFrame(function() {
+                $('.dokan-btn, .action-delete, .add-product-images').addClass('hover');
+            });
+            throttleTimer = null;
+        }, 16); // ~60fps
     });
 
     $(document).on('mouseout', '.dokan-btn, .action-delete, .add-product-images', function() {
-        requestAnimationFrame(function() {
-            $(this).removeClass('hover');
-        }.bind(this));
+        if (throttleTimer) return;
+        throttleTimer = setTimeout(function() {
+            requestAnimationFrame(function() {
+                $('.dokan-btn, .action-delete, .add-product-images').removeClass('hover');
+            });
+            throttleTimer = null;
+        }, 16);
     });
 
     // Upload de imagem destacada
@@ -52,13 +83,11 @@ jQuery(document).ready(function($) {
         frame.on('select', function() {
             var attachment = frame.state().get('selection').first().toJSON();
             if (attachment && attachment.url) {
-                // Corrigir URL malformada - remover duplicação de domínio
-                var imageUrl = attachment.url;
-                if (imageUrl.indexOf('https://loja.jp/wp-content/uploads/https:/loja.jp') === 0) {
-                    imageUrl = imageUrl.replace('https://loja.jp/wp-content/uploads/https:/loja.jp', 'https://loja.jp/wp-content/uploads');
-                }
+                // Corrigir URL malformada
+                attachment = fixAttachmentUrls(attachment);
+                
                 $('.dokan-feat-image-id').val(attachment.id);
-                $('.image-wrap img').attr('src', imageUrl);
+                $('.image-wrap img').attr('src', attachment.url);
                 $('.image-wrap').removeClass('dokan-hide');
                 $('.instruction-inside').addClass('dokan-hide');
             }
@@ -94,13 +123,11 @@ jQuery(document).ready(function($) {
                 if (ids.indexOf(attachment.id.toString()) === -1) {
                     ids.push(attachment.id);
                     
-                    // Corrigir URL malformada - remover duplicação de domínio
+                    // Corrigir URL malformada
+                    attachment = fixAttachmentUrls(attachment);
+                    
                     var imageUrl = attachment.sizes && attachment.sizes.thumbnail ? 
                         attachment.sizes.thumbnail.url : attachment.url;
-                    
-                    if (imageUrl.indexOf('https://loja.jp/wp-content/uploads/https:/loja.jp') === 0) {
-                        imageUrl = imageUrl.replace('https://loja.jp/wp-content/uploads/https:/loja.jp', 'https://loja.jp/wp-content/uploads');
-                    }
                     
                     var html = '<li class="image" data-attachment_id="' + attachment.id + '">' +
                               '<img src="' + imageUrl + '" alt="">' +
@@ -157,5 +184,44 @@ jQuery(document).ready(function($) {
         $('#conditions-container').show();
     } else {
         $('#conditions-container').hide();
+    }
+
+    // Corrigir URLs existentes na página
+    $('img').each(function() {
+        var src = $(this).attr('src');
+        if (src && src.indexOf('https://loja.jp/wp-content/uploads/https:/loja.jp') === 0) {
+            $(this).attr('src', fixMalformedUrl(src));
+        }
+    });
+
+    // Função para limpar URLs malformadas via AJAX
+    function cleanMalformedUrls() {
+        if (typeof j1_classificados_ajax !== 'undefined') {
+            $.ajax({
+                url: j1_classificados_ajax.ajax_url,
+                type: 'POST',
+                data: {
+                    action: 'j1_classificados_clean_urls',
+                    nonce: j1_classificados_ajax.nonce
+                },
+                success: function(response) {
+                    if (response.success) {
+                        console.log('URLs malformadas foram corrigidas');
+                        // Recarregar a página para aplicar as correções
+                        location.reload();
+                    }
+                },
+                error: function() {
+                    console.error('Erro ao limpar URLs malformadas');
+                }
+            });
+        }
+    }
+
+    // Adicionar botão para limpar URLs malformadas (apenas para administradores)
+    if ($('body').hasClass('wp-admin') || $('body').hasClass('dokan-dashboard')) {
+        $('<button type="button" class="button" style="margin: 10px 0;">Limpar URLs Malformadas</button>')
+            .on('click', cleanMalformedUrls)
+            .insertAfter('.dokan-dashboard-header');
     }
 }); 

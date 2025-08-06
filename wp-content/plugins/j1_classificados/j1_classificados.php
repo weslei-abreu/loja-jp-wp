@@ -277,3 +277,104 @@ add_filter('wp_get_attachment_image_src', function($image, $attachment_id, $size
     }
     return $image;
 }, 10, 4);
+
+// ✅ Corrigir URLs malformadas em wp_get_attachment_image
+add_filter('wp_get_attachment_image', function($html, $attachment_id, $size, $icon, $attr) {
+    if (strpos($html, 'https://loja.jp/wp-content/uploads/https:/loja.jp') !== false) {
+        $html = str_replace('https://loja.jp/wp-content/uploads/https:/loja.jp', 'https://loja.jp/wp-content/uploads', $html);
+    }
+    return $html;
+}, 10, 5);
+
+// ✅ Corrigir URLs malformadas em wp_get_attachment_metadata
+add_filter('wp_get_attachment_metadata', function($data, $attachment_id) {
+    if ($data && isset($data['file'])) {
+        if (strpos($data['file'], 'https://loja.jp/wp-content/uploads/https:/loja.jp') === 0) {
+            $data['file'] = str_replace('https://loja.jp/wp-content/uploads/https:/loja.jp', 'https://loja.jp/wp-content/uploads', $data['file']);
+        }
+    }
+    return $data;
+}, 10, 2);
+
+// ✅ Corrigir URLs malformadas em wp_attachment_is_image
+add_filter('wp_attachment_is_image', function($result, $attachment_id) {
+    // Este filtro é chamado antes de wp_get_attachment_url, então vamos garantir que a URL esteja correta
+    $url = wp_get_attachment_url($attachment_id);
+    if (strpos($url, 'https://loja.jp/wp-content/uploads/https:/loja.jp') === 0) {
+        // Forçar a correção da URL
+        $corrected_url = str_replace('https://loja.jp/wp-content/uploads/https:/loja.jp', 'https://loja.jp/wp-content/uploads', $url);
+        update_attached_file($attachment_id, str_replace(wp_upload_dir()['baseurl'], '', $corrected_url));
+    }
+    return $result;
+}, 10, 2);
+
+// ✅ Corrigir URLs malformadas em wp_upload_dir
+add_filter('upload_dir', function($uploads) {
+    if (isset($uploads['url']) && strpos($uploads['url'], 'https://loja.jp/wp-content/uploads/https:/loja.jp') === 0) {
+        $uploads['url'] = str_replace('https://loja.jp/wp-content/uploads/https:/loja.jp', 'https://loja.jp/wp-content/uploads', $uploads['url']);
+    }
+    if (isset($uploads['baseurl']) && strpos($uploads['baseurl'], 'https://loja.jp/wp-content/uploads/https:/loja.jp') === 0) {
+        $uploads['baseurl'] = str_replace('https://loja.jp/wp-content/uploads/https:/loja.jp', 'https://loja.jp/wp-content/uploads', $uploads['baseurl']);
+    }
+    return $uploads;
+}, 10, 1);
+
+// ✅ Corrigir URLs malformadas em wp_get_attachment_image_attributes
+add_filter('wp_get_attachment_image_attributes', function($attr, $attachment, $size) {
+    if (isset($attr['src']) && strpos($attr['src'], 'https://loja.jp/wp-content/uploads/https:/loja.jp') === 0) {
+        $attr['src'] = str_replace('https://loja.jp/wp-content/uploads/https:/loja.jp', 'https://loja.jp/wp-content/uploads', $attr['src']);
+    }
+    return $attr;
+}, 10, 3);
+
+// ✅ Corrigir URLs malformadas em wp_get_attachment_thumb_url
+add_filter('wp_get_attachment_thumb_url', function($url, $attachment_id) {
+    if (strpos($url, 'https://loja.jp/wp-content/uploads/https:/loja.jp') === 0) {
+        $url = str_replace('https://loja.jp/wp-content/uploads/https:/loja.jp', 'https://loja.jp/wp-content/uploads', $url);
+    }
+    return $url;
+}, 10, 2);
+
+// ✅ Função para limpar URLs malformadas no banco de dados
+function j1_classificados_clean_malformed_urls() {
+    global $wpdb;
+    
+    // Limpar URLs malformadas na tabela postmeta
+    $wpdb->query("
+        UPDATE {$wpdb->postmeta} 
+        SET meta_value = REPLACE(meta_value, 'https://loja.jp/wp-content/uploads/https:/loja.jp', 'https://loja.jp/wp-content/uploads')
+        WHERE meta_key IN ('_wp_attached_file', '_wp_attachment_metadata')
+        AND meta_value LIKE '%https://loja.jp/wp-content/uploads/https:/loja.jp%'
+    ");
+    
+    // Limpar URLs malformadas na tabela posts (guid)
+    $wpdb->query("
+        UPDATE {$wpdb->posts} 
+        SET guid = REPLACE(guid, 'https://loja.jp/wp-content/uploads/https:/loja.jp', 'https://loja.jp/wp-content/uploads')
+        WHERE post_type = 'attachment'
+        AND guid LIKE '%https://loja.jp/wp-content/uploads/https:/loja.jp%'
+    ");
+}
+
+// ✅ Executar limpeza de URLs malformadas na ativação do plugin
+register_activation_hook(__FILE__, 'j1_classificados_clean_malformed_urls');
+
+// ✅ Adicionar ação para limpar URLs malformadas via AJAX
+add_action('wp_ajax_j1_classificados_clean_urls', function() {
+    if (!wp_verify_nonce($_POST['nonce'], 'j1_classificados_nonce')) {
+        wp_die('Security check failed');
+    }
+    
+    j1_classificados_clean_malformed_urls();
+    wp_send_json_success('URLs malformadas foram corrigidas');
+});
+
+// ✅ Executar limpeza de URLs malformadas quando necessário
+add_action('init', function() {
+    // Verificar se há URLs malformadas e limpar se necessário
+    if (isset($_GET['clean_malformed_urls']) && current_user_can('manage_options')) {
+        j1_classificados_clean_malformed_urls();
+        wp_redirect(remove_query_arg('clean_malformed_urls'));
+        exit;
+    }
+});
