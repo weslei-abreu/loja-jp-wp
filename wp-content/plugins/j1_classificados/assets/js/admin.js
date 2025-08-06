@@ -41,6 +41,40 @@ jQuery(document).ready(function($) {
         return attachment;
     }
 
+    // ✅ Toggle Condições baseado no checkbox de vaga de emprego
+    $(document).on('change', '#classified_is_job', function() {
+        var conditionsContainer = $('#conditions-container');
+        var isChecked = $(this).is(':checked');
+        
+        console.log('Checkbox changed:', isChecked, 'Container:', conditionsContainer.length); // Debug temporário
+        
+        if (isChecked) {
+            conditionsContainer.show().addClass('force-show').removeClass('dokan-hide');
+            console.log('Showing conditions container'); // Debug temporário
+        } else {
+            conditionsContainer.hide().removeClass('force-show').addClass('dokan-hide');
+            $('#classified_conditions').val(''); // Limpar o valor quando desmarcar
+            console.log('Hiding conditions container'); // Debug temporário
+        }
+    });
+
+    // ✅ Inicializar estado das condições
+    function initializeConditionsState() {
+        var isJobChecked = $('#classified_is_job').is(':checked');
+        var conditionsContainer = $('#conditions-container');
+        
+        console.log('Initializing conditions state:', isJobChecked, 'Container:', conditionsContainer.length); // Debug temporário
+        
+        if (isJobChecked) {
+            conditionsContainer.show().addClass('force-show').removeClass('dokan-hide');
+        } else {
+            conditionsContainer.hide().removeClass('force-show').addClass('dokan-hide');
+        }
+    }
+
+    // Executar inicialização após um pequeno delay para garantir que o DOM esteja pronto
+    setTimeout(initializeConditionsState, 100);
+
     // ✅ Otimização: debounce para eventos de mudança
     var debounceTimer;
     $('input, select, textarea').on('change', function() {
@@ -107,13 +141,14 @@ jQuery(document).ready(function($) {
     // Remover imagem destacada
     $('.dokan-remove-feat-image').on('click', function(e) {
         e.preventDefault();
+        
         $('.dokan-feat-image-id').val('');
         $('.image-wrap').addClass('dokan-hide');
         $('.instruction-inside').removeClass('dokan-hide');
         $('.image-wrap img').attr('src', '');
     });
 
-    // Upload de galeria
+    // Upload galeria de imagens
     $('.add-product-images').on('click', function(e) {
         e.preventDefault();
         
@@ -124,28 +159,29 @@ jQuery(document).ready(function($) {
 
         frame.on('select', function() {
             var attachments = frame.state().get('selection').toJSON();
-            var gallery_ids = $('#product_image_gallery').val();
-            var ids = gallery_ids ? gallery_ids.split(',') : [];
+            var galleryIds = [];
             
             attachments.forEach(function(attachment) {
-                if (ids.indexOf(attachment.id.toString()) === -1) {
-                    ids.push(attachment.id);
-                    
+                if (attachment && attachment.url) {
                     // Corrigir URL malformada
                     attachment = fixAttachmentUrls(attachment);
                     
-                    var imageUrl = attachment.sizes && attachment.sizes.thumbnail ? 
-                        attachment.sizes.thumbnail.url : attachment.url;
+                    galleryIds.push(attachment.id);
                     
-                    var html = '<li class="image" data-attachment_id="' + attachment.id + '">' +
-                              '<img src="' + imageUrl + '" alt="">' +
-                              '<a href="#" class="action-delete" title="' + (strings.delete_image || 'Excluir imagem') + '">&times;</a>' +
-                              '</li>';
-                    $('.product_images').prepend(html);
+                    var imageHtml = '<li class="image" data-attachment_id="' + attachment.id + '">' +
+                        '<img src="' + attachment.url + '" alt="">' +
+                        '<a href="#" class="action-delete" title="' + (strings.delete_image || 'Excluir imagem') + '">&times;</a>' +
+                        '</li>';
+                    
+                    $('.product_images li.add-image').before(imageHtml);
                 }
             });
             
-            $('#product_image_gallery').val(ids.join(','));
+            if (galleryIds.length > 0) {
+                var currentGallery = $('#product_image_gallery').val();
+                var newGallery = currentGallery ? currentGallery + ',' + galleryIds.join(',') : galleryIds.join(',');
+                $('#product_image_gallery').val(newGallery);
+            }
         });
 
         frame.open();
@@ -154,16 +190,19 @@ jQuery(document).ready(function($) {
     // Remover imagem da galeria
     $(document).on('click', '.action-delete', function(e) {
         e.preventDefault();
-        var attachment_id = $(this).parent().data('attachment_id');
-        var gallery_ids = $('#product_image_gallery').val().split(',');
-        var index = gallery_ids.indexOf(attachment_id.toString());
         
-        if (index > -1) {
-            gallery_ids.splice(index, 1);
-            $('#product_image_gallery').val(gallery_ids.join(','));
+        var $li = $(this).closest('li');
+        var attachmentId = $li.data('attachment_id');
+        
+        if (attachmentId) {
+            var currentGallery = $('#product_image_gallery').val();
+            var galleryIds = currentGallery.split(',').filter(function(id) {
+                return id != attachmentId;
+            });
+            $('#product_image_gallery').val(galleryIds.join(','));
         }
         
-        $(this).parent().remove();
+        $li.remove();
     });
 
     // Select2 para categorias - com verificação de disponibilidade
@@ -173,28 +212,6 @@ jQuery(document).ready(function($) {
             allowClear: true,
             width: '100%'
         });
-    }
-
-    // Toggle Condições baseado no checkbox de vaga de emprego
-    $('#classified_is_job').on('change', function() {
-        var conditionsContainer = $('#conditions-container');
-        var isChecked = $(this).is(':checked');
-        
-        if (isChecked) {
-            conditionsContainer.show().addClass('force-show');
-        } else {
-            conditionsContainer.hide().removeClass('force-show');
-            $('#classified_conditions').val(''); // Limpar o valor quando desmarcar
-        }
-    });
-
-    // Inicializar estado das condições
-    var isJobChecked = $('#classified_is_job').is(':checked');
-    
-    if (isJobChecked) {
-        $('#conditions-container').show().addClass('force-show');
-    } else {
-        $('#conditions-container').hide().removeClass('force-show');
     }
 
     // Corrigir URLs existentes na página
@@ -257,17 +274,23 @@ jQuery(document).ready(function($) {
 
     // ✅ Validação específica para nosso formulário
     $('form[name="classified_form"]').on('submit', function(e) {
-        var title = $('#classified_title').val().trim();
-        var price = $('#classified_price').val().trim();
+        // Prevenir validação padrão do Dokan
+        e.stopPropagation();
+        e.stopImmediatePropagation();
         
-        if (!title) {
+        var title = $('#classified_title').val();
+        var price = $('#classified_price').val();
+        
+        // Verificar se title existe e não está vazio
+        if (!title || (typeof title === 'string' && !title.trim())) {
             e.preventDefault();
             alert('Por favor, preencha o título do classificado.');
             $('#classified_title').focus();
             return false;
         }
         
-        if (!price || isNaN(price)) {
+        // Verificar se price existe e é válido
+        if (!price || isNaN(parseFloat(price))) {
             e.preventDefault();
             alert('Por favor, preencha um preço válido.');
             $('#classified_price').focus();

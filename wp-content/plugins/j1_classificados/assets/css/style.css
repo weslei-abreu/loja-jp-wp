@@ -630,6 +630,28 @@ input[type="checkbox"]#classified_is_job {
     opacity: 1 !important;
 }
 
+/* Garantir que o container não seja escondido pelo Dokan */
+.dokan-price-container #conditions-container.force-show,
+.dokan-price-container #conditions-container[style*="display: block"],
+.dokan-price-container #conditions-container.show {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    overflow: visible !important;
+}
+
+/* Garantir que o container apareça quando o checkbox estiver marcado */
+#classified_is_job:checked ~ .dokan-price-container #conditions-container,
+#classified_is_job:checked + .dokan-price-container #conditions-container,
+.dokan-price-container #conditions-container.force-show {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    overflow: visible !important;
+}
+
 /* Melhorar espaçamento do botão */
 .dokan-form-group[style*="margin-top: 30px"] {
     padding-top: 20px;

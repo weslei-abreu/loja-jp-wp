@@ -183,19 +183,13 @@ get_header();
                             </div>
 
                                                          <div class="image-wrap<?php echo $thumbnail_id ? '' : ' dokan-hide'; ?>">
-                                 <a class="close dokan-remove-feat-image">&times;</a>
-                                 <?php if ($thumbnail_id) : ?>
-                                     <?php 
-                                     // DEBUG: Vamos investigar a imagem destacada também
-                                     echo "<!-- DEBUG: Thumbnail ID: " . $thumbnail_id . " -->\n";
-                                     $thumb_url = wp_get_attachment_image_url($thumbnail_id, 'shop_single');
-                                     echo "<!-- DEBUG: Thumbnail URL: " . $thumb_url . " -->\n";
-                                     ?>
-                                     <?php echo get_the_post_thumbnail($post_id, 'shop_single', ['height' => '', 'width' => '']); ?>
-                                 <?php else : ?>
-                                     <img height="" width="" src="" alt="">
-                                 <?php endif; ?>
-                             </div>
+                                <a class="close dokan-remove-feat-image">&times;</a>
+                                <?php if ($thumbnail_id) : ?>
+                                    <?php echo get_the_post_thumbnail($post_id, 'shop_single', ['height' => '', 'width' => '']); ?>
+                                <?php else : ?>
+                                    <img height="" width="" src="" alt="">
+                                <?php endif; ?>
+                            </div>
                         </div>
 
                         <!-- Galeria de Imagens -->
@@ -209,20 +203,14 @@ get_header();
                                              foreach ($gallery_ids as $image_id) :
                                                  if (empty($image_id)) continue;
                                                  
-                                                 // DEBUG: Vamos investigar o problema
-                                                 echo "<!-- DEBUG: Image ID: " . $image_id . " -->\n";
-                                                 
                                                  $attachment_image = wp_get_attachment_image_src($image_id, 'thumbnail');
-                                                 echo "<!-- DEBUG: Attachment Image: " . var_export($attachment_image, true) . " -->\n";
                                                  
                                                  if ($attachment_image) :
                                                      // Corrigir URL malformada - remover duplicação de domínio
                                                      $image_url = $attachment_image[0];
-                                                     echo "<!-- DEBUG: Original URL: " . $image_url . " -->\n";
                                                      
                                                      if (strpos($image_url, 'https://loja.jp/wp-content/uploads/https:/loja.jp') === 0) {
                                                          $image_url = str_replace('https://loja.jp/wp-content/uploads/https:/loja.jp', 'https://loja.jp/wp-content/uploads', $image_url);
-                                                         echo "<!-- DEBUG: Fixed URL: " . $image_url . " -->\n";
                                                      }
                                          ?>
                                             <li class="image" data-attachment_id="<?php echo esc_attr($image_id); ?>">
