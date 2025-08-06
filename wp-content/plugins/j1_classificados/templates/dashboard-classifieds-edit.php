@@ -99,14 +99,17 @@ get_header();
 
                         <!-- Checkbox Vaga de Emprego -->
                         <div class="dokan-form-group">
-                            <label class="form-label">
+                            <div style="display: flex; align-items: center; gap: 8px;">
                                 <input type="checkbox" 
                                        name="classified_is_job" 
                                        id="classified_is_job" 
                                        value="1" 
+                                       style="width: 16px; height: 16px; margin: 0;"
                                        <?php checked(get_post_meta($post_id, '_classified_is_job', true), '1'); ?>>
-                                <?php esc_html_e('O classificado é uma vaga de emprego?', 'j1_classificados'); ?>
-                            </label>
+                                <label for="classified_is_job" style="margin: 0; cursor: pointer; font-weight: normal;">
+                                    <?php esc_html_e('O classificado é uma vaga de emprego?', 'j1_classificados'); ?>
+                                </label>
+                            </div>
                         </div>
 
                         <!-- Categorias -->

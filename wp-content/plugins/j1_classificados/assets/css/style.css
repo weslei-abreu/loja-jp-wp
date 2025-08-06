@@ -299,15 +299,70 @@
     }
 }
 
-/* Estilos para checkbox */
-.dokan-form-group input[type="checkbox"] {
-    margin-right: 8px;
-    width: auto;
-    display: inline-block;
+/* Estilos para checkbox - Regras mais específicas */
+.dokan-form-group input[type="checkbox"],
+.dokan-form-group label input[type="checkbox"],
+#classified_is_job,
+.dokan-product-edit-form input[type="checkbox"] {
+    width: 16px !important;
+    height: 16px !important;
+    margin-right: 8px !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
+    position: relative !important;
+    top: -1px !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    appearance: checkbox !important;
+    -webkit-appearance: checkbox !important;
+    -moz-appearance: checkbox !important;
+    border: 1px solid #ccc !important;
+    background: white !important;
+    border-radius: 2px !important;
+    clip: auto !important;
+    clip-path: none !important;
+    -webkit-clip-path: none !important;
+    overflow: visible !important;
 }
 
-.dokan-form-group label input[type="checkbox"] {
-    margin-right: 8px;
+/* Regra mais agressiva para garantir que o checkbox apareça */
+input[type="checkbox"]#classified_is_job {
+    width: 16px !important;
+    height: 16px !important;
+    margin-right: 8px !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
+    position: relative !important;
+    top: -1px !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    appearance: checkbox !important;
+    -webkit-appearance: checkbox !important;
+    -moz-appearance: checkbox !important;
+    border: 1px solid #ccc !important;
+    background: white !important;
+    border-radius: 2px !important;
+    clip: auto !important;
+    clip-path: none !important;
+    -webkit-clip-path: none !important;
+    overflow: visible !important;
+    transform: none !important;
+    -webkit-transform: none !important;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    -o-transform: none !important;
+}
+
+/* Estilo específico para o label do checkbox */
+.dokan-form-group label[for="classified_is_job"] {
+    display: flex !important;
+    align-items: center !important;
+    cursor: pointer !important;
+    font-weight: normal !important;
+}
+
+.dokan-form-group label[for="classified_is_job"] span {
+    margin-left: 4px;
 }
 
 /* Estilos para campo de condições */
