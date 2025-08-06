@@ -259,3 +259,21 @@ add_filter('elementor/utils/is_post_type_support', function($is_supported, $post
     }
     return $is_supported;
 }, 10, 2);
+
+// ✅ Corrigir URLs malformadas de anexos
+add_filter('wp_get_attachment_url', function($url, $attachment_id) {
+    if (strpos($url, 'https://loja.jp/wp-content/uploads/https:/loja.jp') === 0) {
+        $url = str_replace('https://loja.jp/wp-content/uploads/https:/loja.jp', 'https://loja.jp/wp-content/uploads', $url);
+    }
+    return $url;
+}, 10, 2);
+
+// ✅ Corrigir URLs malformadas em wp_get_attachment_image_src
+add_filter('wp_get_attachment_image_src', function($image, $attachment_id, $size, $icon) {
+    if ($image && isset($image[0])) {
+        if (strpos($image[0], 'https://loja.jp/wp-content/uploads/https:/loja.jp') === 0) {
+            $image[0] = str_replace('https://loja.jp/wp-content/uploads/https:/loja.jp', 'https://loja.jp/wp-content/uploads', $image[0]);
+        }
+    }
+    return $image;
+}, 10, 4);

@@ -100,13 +100,13 @@ input[type="checkbox"]#classified_is_job {
 /* Otimizar upload de imagem destacada */
 .dokan-feat-image-upload {
     position: relative;
-    min-height: 200px;
     border: 2px dashed #ddd;
     border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    background: #f9f9f9;
     transition: border-color 0.2s ease;
+    will-change: border-color;
 }
 
 .dokan-feat-image-upload:hover {
@@ -115,75 +115,100 @@ input[type="checkbox"]#classified_is_job {
 
 .image-wrap {
     position: relative;
-    width: 100%;
-    height: 200px;
+    display: inline-block;
+    max-width: 100%;
     border-radius: 8px;
     overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .image-wrap img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
 .close.dokan-remove-feat-image {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: -8px;
+    right: -8px;
     width: 24px;
     height: 24px;
-    background: rgba(0,0,0,0.7);
+    background: #ff4444;
     color: white;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
+    line-height: 24px;
     cursor: pointer;
     font-size: 16px;
-    line-height: 1;
-    z-index: 10;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    transition: background-color 0.2s ease;
+    will-change: background-color;
 }
 
 .close.dokan-remove-feat-image:hover {
-    background: rgba(0,0,0,0.9);
+    background: #cc0000;
 }
 
-/* Melhorar performance dos botões */
+/* Otimizar botões */
 .dokan-btn {
-    position: relative;
-    overflow: hidden;
+    display: inline-block;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    will-change: transform, background-color;
 }
 
 .dokan-btn:active {
     transform: translateY(1px);
 }
 
-/* Otimizar formulários */
+.dokan-btn.hover {
+    background-color: #005a87;
+    transform: translateY(-1px);
+}
+
+/* Otimizar inputs */
 .dokan-form-control {
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.2s ease;
+    will-change: border-color;
 }
 
 .dokan-form-control:focus {
     border-color: #007cba;
+    outline: none;
     box-shadow: 0 0 0 2px rgba(0, 124, 186, 0.2);
 }
 
-/* Reduzir layout thrashing */
+/* Otimizar container de preço */
 .dokan-price-container {
     display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
 }
 
+/* Otimizar layout */
 .content-half-part {
     flex: 1;
-    min-width: 200px;
+    padding: 20px;
 }
 
 /* Otimizar mensagens */
 .dokan-message {
+    padding: 12px 16px;
+    border-radius: 4px;
+    margin-bottom: 20px;
     animation: slideIn 0.3s ease;
+    will-change: transform, opacity;
 }
 
 @keyframes slideIn {
@@ -197,14 +222,15 @@ input[type="checkbox"]#classified_is_job {
     }
 }
 
-/* Melhorar responsividade */
+/* Responsividade */
 @media (max-width: 768px) {
     .dokan-price-container {
         flex-direction: column;
+        align-items: stretch;
     }
     
     .content-half-part {
-        min-width: 100%;
+        padding: 15px;
     }
     
     .product_images li.image,
@@ -494,4 +520,47 @@ input[type="checkbox"]#classified_is_job {
 .dokan-form-group[style*="margin-top: 30px"] {
     padding-top: 20px;
     border-top: 1px solid #eee;
+}
+
+/* Otimizar action-delete */
+.action-delete {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 20px;
+    height: 20px;
+    background: #ff4444;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+    will-change: background-color;
+}
+
+.action-delete:hover,
+.action-delete.hover {
+    background: #cc0000;
+}
+
+/* Otimizar add-product-images */
+.add-product-images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: #007cba;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    will-change: color;
+}
+
+.add-product-images:hover,
+.add-product-images.hover {
+    color: #005a87;
 }

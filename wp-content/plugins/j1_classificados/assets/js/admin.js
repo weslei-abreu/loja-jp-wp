@@ -10,6 +10,36 @@ jQuery(document).ready(function($) {
     // Verificar se as strings localizadas estão disponíveis
     var strings = typeof j1_classificados_ajax !== 'undefined' ? j1_classificados_ajax.strings : {};
 
+    // Otimização: debounce para eventos de mudança
+    var debounceTimer;
+    $('input, select, textarea').on('change', function() {
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(function() {
+            // Ações que precisam ser executadas após mudanças
+        }, 300);
+    });
+
+    // Otimização: lazy loading para imagens
+    $('img').on('error', function() {
+        console.warn('Erro ao carregar imagem:', this.src);
+        // Fallback para imagem quebrada
+        $(this).attr('src', 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2Y1ZjVmNSIvPjx0ZXh0IHg9IjUwIiB5PSI1MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjEyIiBmaWxsPSIjOTk5IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+SW1hZ2VuPC90ZXh0Pjwvc3ZnPg==');
+    });
+
+    // Otimização: reduzir eventos de mouseover/click
+    $(document).on('mouseover', '.dokan-btn, .action-delete, .add-product-images', function() {
+        // Usar requestAnimationFrame para otimizar repaints
+        requestAnimationFrame(function() {
+            $(this).addClass('hover');
+        }.bind(this));
+    });
+
+    $(document).on('mouseout', '.dokan-btn, .action-delete, .add-product-images', function() {
+        requestAnimationFrame(function() {
+            $(this).removeClass('hover');
+        }.bind(this));
+    });
+
     // Upload de imagem destacada
     $('.dokan-feat-image-btn').on('click', function(e) {
         e.preventDefault();
@@ -22,8 +52,11 @@ jQuery(document).ready(function($) {
         frame.on('select', function() {
             var attachment = frame.state().get('selection').first().toJSON();
             if (attachment && attachment.url) {
-                // Garantir que a URL está correta
-                var imageUrl = attachment.url.replace(/^https:\/\/loja\.jp/, 'https://loja.jp');
+                // Corrigir URL malformada - remover duplicação de domínio
+                var imageUrl = attachment.url;
+                if (imageUrl.indexOf('https://loja.jp/wp-content/uploads/https:/loja.jp') === 0) {
+                    imageUrl = imageUrl.replace('https://loja.jp/wp-content/uploads/https:/loja.jp', 'https://loja.jp/wp-content/uploads');
+                }
                 $('.dokan-feat-image-id').val(attachment.id);
                 $('.image-wrap img').attr('src', imageUrl);
                 $('.image-wrap').removeClass('dokan-hide');
@@ -61,10 +94,13 @@ jQuery(document).ready(function($) {
                 if (ids.indexOf(attachment.id.toString()) === -1) {
                     ids.push(attachment.id);
                     
-                    // Garantir que a URL está correta
+                    // Corrigir URL malformada - remover duplicação de domínio
                     var imageUrl = attachment.sizes && attachment.sizes.thumbnail ? 
-                        attachment.sizes.thumbnail.url.replace(/^https:\/\/loja\.jp/, 'https://loja.jp') : 
-                        attachment.url.replace(/^https:\/\/loja\.jp/, 'https://loja.jp');
+                        attachment.sizes.thumbnail.url : attachment.url;
+                    
+                    if (imageUrl.indexOf('https://loja.jp/wp-content/uploads/https:/loja.jp') === 0) {
+                        imageUrl = imageUrl.replace('https://loja.jp/wp-content/uploads/https:/loja.jp', 'https://loja.jp/wp-content/uploads');
+                    }
                     
                     var html = '<li class="image" data-attachment_id="' + attachment.id + '">' +
                               '<img src="' + imageUrl + '" alt="">' +
@@ -122,20 +158,4 @@ jQuery(document).ready(function($) {
     } else {
         $('#conditions-container').hide();
     }
-
-    // Otimização de performance: debounce para eventos de mudança
-    var debounceTimer;
-    $('input, select, textarea').on('change', function() {
-        clearTimeout(debounceTimer);
-        debounceTimer = setTimeout(function() {
-            // Ações que precisam ser executadas após mudanças
-        }, 300);
-    });
-
-    // Otimização: lazy loading para imagens
-    $('img').on('error', function() {
-        console.warn('Erro ao carregar imagem:', this.src);
-        // Fallback para imagem quebrada
-        $(this).attr('src', 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2Y1ZjVmNSIvPjx0ZXh0IHg9IjUwIiB5PSI1MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjEyIiBmaWxsPSIjOTk5IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+SW1hZ2VuPC90ZXh0Pjwvc3ZnPg==');
-    });
 }); 

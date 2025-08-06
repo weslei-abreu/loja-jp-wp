@@ -203,9 +203,14 @@ get_header();
                                                 
                                                 $attachment_image = wp_get_attachment_image_src($image_id, 'thumbnail');
                                                 if ($attachment_image) :
+                                                    // Corrigir URL malformada - remover duplicação de domínio
+                                                    $image_url = $attachment_image[0];
+                                                    if (strpos($image_url, 'https://loja.jp/wp-content/uploads/https:/loja.jp') === 0) {
+                                                        $image_url = str_replace('https://loja.jp/wp-content/uploads/https:/loja.jp', 'https://loja.jp/wp-content/uploads', $image_url);
+                                                    }
                                         ?>
                                             <li class="image" data-attachment_id="<?php echo esc_attr($image_id); ?>">
-                                                <img src="<?php echo esc_url(str_replace('https:/loja.jp', 'https://loja.jp', $attachment_image[0])); ?>" alt="">
+                                                <img src="<?php echo esc_url($image_url); ?>" alt="">
                                                 <a href="#" class="action-delete" title="<?php esc_attr_e('Excluir imagem', 'j1_classificados'); ?>">&times;</a>
                                             </li>
                                         <?php 
