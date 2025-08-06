@@ -31,6 +31,14 @@ get_header();
 
 <?php do_action('dokan_dashboard_wrap_start'); ?>
 
+<!-- ✅ Loading overlay para a página -->
+<div id="j1-page-loading" class="j1-loading-overlay">
+    <div style="text-align: center;">
+        <div class="j1-loading-spinner"></div>
+        <div class="j1-loading-text">Carregando formulário...</div>
+    </div>
+</div>
+
 <div class="dokan-dashboard-wrap">
     <?php do_action('dokan_dashboard_content_before'); ?>
 
@@ -257,8 +265,8 @@ get_header();
                 <input type="hidden" name="classified_id" value="<?php echo $post_id; ?>">
 
                 <div class="dokan-form-group" style="margin-top: 30px;">
-                    <button type="submit" class="dokan-btn dokan-btn-theme dokan-btn-lg">
-                        <?php echo $post_id ? __('Salvar Alterações', 'j1_classificados') : __('Publicar Classificado', 'j1_classificados'); ?>
+                    <button type="submit" class="dokan-btn dokan-btn-theme dokan-btn-lg j1-submit-btn">
+                        <span class="btn-text"><?php echo $post_id ? __('Salvar Alterações', 'j1_classificados') : __('Publicar Classificado', 'j1_classificados'); ?></span>
                     </button>
                 </div>
             </form>
