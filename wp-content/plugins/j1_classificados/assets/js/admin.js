@@ -68,8 +68,63 @@ jQuery(document).ready(function($) {
         $element.removeClass('j1-upload-loading');
     }
 
+    // ✅ FUNÇÕES ESPECÍFICAS PARA LOADING DA PÁGINA DE EDIÇÃO
+    function showEditPageLoading(text = 'Carregando formulário...') {
+        var loadingOverlay = $('#j1-edit-page-loading');
+        if (loadingOverlay.length) {
+            loadingOverlay.find('.j1-loading-text').text(text);
+            loadingOverlay.removeClass('hidden').show();
+        }
+    }
+
+    function hideEditPageLoading() {
+        var loadingOverlay = $('#j1-edit-page-loading');
+        var pageContent = $('.j1-edit-page-content');
+        
+        if (loadingOverlay.length) {
+            loadingOverlay.addClass('hidden').hide();
+            
+            // Mostrar conteúdo da página com fade in
+            if (pageContent.length) {
+                pageContent.addClass('loaded');
+            }
+        }
+    }
+
     // ✅ INICIALIZAR LOADINGS
     function initializeLoadings() {
+        // Verificar se estamos na página de edição/criação
+        var isEditPage = $('form[name="classified_form"]').length > 0;
+        
+        if (isEditPage) {
+            console.log('Página de edição detectada - usando loading específico');
+            initializeEditPageLoading();
+        } else {
+            console.log('Página padrão - usando loading padrão');
+            initializeDefaultLoading();
+        }
+    }
+
+    // ✅ LOADING ESPECÍFICO PARA PÁGINA DE EDIÇÃO/CRIAÇÃO
+    function initializeEditPageLoading() {
+        // Mostrar loading inicialmente
+        showEditPageLoading('Carregando formulário...');
+        
+        // Esconder loading após carregamento completo
+        $(window).on('load', function() {
+            setTimeout(function() {
+                hideEditPageLoading();
+            }, 1000); // Aguardar 1 segundo para garantir que tudo carregou
+        });
+
+        // Fallback: esconder loading após 5 segundos
+        setTimeout(function() {
+            hideEditPageLoading();
+        }, 5000);
+    }
+
+    // ✅ LOADING PADRÃO PARA OUTRAS PÁGINAS
+    function initializeDefaultLoading() {
         // Mostrar loading inicialmente
         showPageLoading('Carregando...');
         

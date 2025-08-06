@@ -229,11 +229,20 @@ add_action( 'wp_enqueue_scripts', function () {
           (isset( $_GET['action'] ) && in_array( $_GET['action'], ['add', 'edit'] ))) ) {
         
         wp_enqueue_media();
+        
+        // Carregar CSS específico para a página de edição
+        wp_enqueue_style(
+            'j1-classificados-edit-style',
+            plugin_dir_url( __FILE__ ) . 'assets/css/style.css',
+            [],
+            '1.1'
+        );
+        
         wp_enqueue_script(
             'j1-classificados-admin',
             plugin_dir_url( __FILE__ ) . 'assets/js/admin.js',
             ['jquery', 'media-upload'],
-            '1.0',
+            '1.1',
             true
         );
         

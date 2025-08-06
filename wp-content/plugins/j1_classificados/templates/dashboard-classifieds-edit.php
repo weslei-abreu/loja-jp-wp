@@ -31,15 +31,16 @@ get_header();
 
 <?php do_action('dokan_dashboard_wrap_start'); ?>
 
-<!-- ✅ Loading overlay para a página -->
-<div id="j1-page-loading" class="j1-loading-overlay">
-    <div style="text-align: center;">
+<!-- ✅ Loading específico para página de edição/criação -->
+<div id="j1-edit-page-loading" class="j1-edit-page-loading">
+    <div>
         <div class="j1-loading-spinner"></div>
         <div class="j1-loading-text">Carregando formulário...</div>
+        <div class="j1-loading-subtitle">Aguarde enquanto preparamos tudo para você</div>
     </div>
 </div>
 
-<div class="dokan-dashboard-wrap">
+<div class="dokan-dashboard-wrap j1-edit-page-content">
     <?php do_action('dokan_dashboard_content_before'); ?>
 
     <div class="dokan-dashboard-content dokan-product-edit dokan-layout">
@@ -53,14 +54,6 @@ get_header();
                     <span class="dokan-label <?php echo esc_attr(dokan_get_post_status_label_class($classified->post_status)); ?> dokan-product-status-label">
                         <?php echo esc_html(dokan_get_post_status($classified->post_status)); ?>
                     </span>
-                    
-                    <?php if ($classified->post_status === 'publish') : ?>
-                        <span class="dokan-right">
-                            <a class="dokan-btn dokan-btn-theme dokan-btn-sm" href="<?php echo esc_url(get_permalink($post_id)); ?>" target="_blank">
-                                <?php esc_html_e('Ver Classificado', 'j1_classificados'); ?>
-                            </a>
-                        </span>
-                    <?php endif; ?>
                 <?php endif; ?>
             </h1>
             
@@ -73,12 +66,6 @@ get_header();
                     <button type="button" class="dokan-close" data-dismiss="alert">&times;</button>
                     <strong><?php esc_html_e('Sucesso!', 'j1_classificados'); ?></strong> 
                     <?php esc_html_e('O classificado foi salvo com sucesso.', 'j1_classificados'); ?>
-                    
-                    <?php if ($post_id && $classified && $classified->post_status === 'publish') : ?>
-                        <a href="<?php echo esc_url(get_permalink($post_id)); ?>" target="_blank">
-                            <?php esc_html_e('Ver Classificado &rarr;', 'j1_classificados'); ?>
-                        </a>
-                    <?php endif; ?>
                 </div>
             <?php endif; ?>
 
