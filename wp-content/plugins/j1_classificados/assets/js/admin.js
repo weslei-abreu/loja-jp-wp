@@ -1,6 +1,9 @@
 jQuery(document).ready(function($) {
     'use strict';
 
+    // ✅ TESTE: Verificar se o JavaScript está sendo carregado
+    console.log('J1 Classificados JavaScript loaded!');
+
     // ✅ Verificar se estamos na página de classificados
     if (!$('form[name="classified_form"]').length && !$('#j1-classifieds-table').length) {
         return; // Sair se não estivermos na página de classificados
@@ -243,11 +246,17 @@ jQuery(document).ready(function($) {
         var conditionsContainer = $('#conditions-container');
         var isChecked = $(this).is(':checked');
         
+        console.log('Checkbox changed:', isChecked);
+        console.log('Container found:', conditionsContainer.length);
+        console.log('Container HTML:', conditionsContainer.html());
+        
         if (isChecked) {
-            conditionsContainer.show().addClass('show');
+            conditionsContainer.show();
+            console.log('Showing conditions container');
         } else {
-            conditionsContainer.hide().removeClass('show');
+            conditionsContainer.hide();
             $('#classified_conditions').val(''); // Limpar o valor quando desmarcar
+            console.log('Hiding conditions container');
         }
     });
 
@@ -256,15 +265,24 @@ jQuery(document).ready(function($) {
         var isJobChecked = $('#classified_is_job').is(':checked');
         var conditionsContainer = $('#conditions-container');
         
+        console.log('Initializing conditions state:', isJobChecked);
+        console.log('Container found:', conditionsContainer.length);
+        console.log('Container HTML:', conditionsContainer.html());
+        
         if (isJobChecked) {
-            conditionsContainer.show().addClass('show');
+            conditionsContainer.show();
+            console.log('Showing conditions container on init');
         } else {
-            conditionsContainer.hide().removeClass('show');
+            conditionsContainer.hide();
+            console.log('Hiding conditions container on init');
         }
     }
 
     // Executar inicialização após o DOM estar pronto
     $(document).ready(function() {
+        console.log('DOM ready, initializing conditions state');
+        console.log('Checkbox found:', $('#classified_is_job').length);
+        console.log('Container found:', $('#conditions-container').length);
         initializeConditionsState();
     });
 
