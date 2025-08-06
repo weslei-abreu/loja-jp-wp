@@ -1,10 +1,15 @@
 jQuery(document).ready(function($) {
     'use strict';
 
+    console.log('J1 Classificados JS loaded!');
+
     // ✅ Verificar se estamos na página de classificados
     if (!$('form[name="classified_form"]').length) {
+        console.log('Not on classified form page');
         return; // Sair se não estivermos na página de classificados
     }
+
+    console.log('On classified form page - proceeding...');
 
     // ✅ Desabilitar validação do Dokan para nosso formulário
     $('form[name="classified_form"]').off('submit.dokan-validation');
@@ -41,77 +46,53 @@ jQuery(document).ready(function($) {
         return attachment;
     }
 
-    // ✅ Toggle Condições baseado no checkbox de vaga de emprego
+    // ✅ SIMPLES: Toggle Condições baseado no checkbox de vaga de emprego
     $(document).on('change', '#classified_is_job', function() {
         var conditionsContainer = $('#conditions-container');
         var isChecked = $(this).is(':checked');
         
-        console.log('Checkbox changed:', isChecked, 'Container:', conditionsContainer.length); // Debug temporário
+        console.log('Checkbox clicked:', isChecked);
+        console.log('Container found:', conditionsContainer.length);
         
         if (isChecked) {
-            conditionsContainer.show().addClass('force-show').removeClass('dokan-hide');
-            console.log('Showing conditions container'); // Debug temporário
+            conditionsContainer.show();
+            console.log('SHOWING container');
         } else {
-            conditionsContainer.hide().removeClass('force-show').addClass('dokan-hide');
+            conditionsContainer.hide();
             $('#classified_conditions').val(''); // Limpar o valor quando desmarcar
-            console.log('Hiding conditions container'); // Debug temporário
+            console.log('HIDING container');
         }
     });
 
-    // ✅ Inicializar estado das condições
+    // ✅ TESTE: Adicionar evento de clique também
+    $(document).on('click', '#classified_is_job', function() {
+        console.log('Checkbox CLICKED!');
+    });
+
+    // ✅ SIMPLES: Inicializar estado das condições
     function initializeConditionsState() {
         var isJobChecked = $('#classified_is_job').is(':checked');
         var conditionsContainer = $('#conditions-container');
         
-        console.log('Initializing conditions state:', isJobChecked, 'Container:', conditionsContainer.length); // Debug temporário
+        console.log('Initializing - Checkbox checked:', isJobChecked);
+        console.log('Container found:', conditionsContainer.length);
         
         if (isJobChecked) {
-            conditionsContainer.show().addClass('force-show').removeClass('dokan-hide');
+            conditionsContainer.show();
+            console.log('INITIAL SHOW');
         } else {
-            conditionsContainer.hide().removeClass('force-show').addClass('dokan-hide');
+            conditionsContainer.hide();
+            console.log('INITIAL HIDE');
         }
     }
 
-    // Executar inicialização após um pequeno delay para garantir que o DOM esteja pronto
-    setTimeout(initializeConditionsState, 100);
+    // Executar inicialização
+    initializeConditionsState();
 
-    // ✅ Otimização: debounce para eventos de mudança
-    var debounceTimer;
-    $('input, select, textarea').on('change', function() {
-        clearTimeout(debounceTimer);
-        debounceTimer = setTimeout(function() {
-            // Ações que precisam ser executadas após mudanças
-        }, 300);
-    });
-
-    // ✅ Otimização: lazy loading para imagens
-    $('img').on('error', function() {
-        console.warn('Erro ao carregar imagem:', this.src);
-        // Fallback para imagem quebrada
-        $(this).attr('src', 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2Y1ZjVmNSIvPjx0ZXh0IHg9IjUwIiB5PSI1MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjEyIiBmaWxsPSIjOTk5IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+SW1hZ2VuPC90ZXh0Pjwvc3ZnPg==');
-    });
-
-    // ✅ Otimização: reduzir eventos de mouseover/click com throttling
-    var throttleTimer;
-    $(document).on('mouseover', '.dokan-btn, .action-delete, .add-product-images', function() {
-        if (throttleTimer) return;
-        throttleTimer = setTimeout(function() {
-            requestAnimationFrame(function() {
-                $('.dokan-btn, .action-delete, .add-product-images').addClass('hover');
-            });
-            throttleTimer = null;
-        }, 16); // ~60fps
-    });
-
-    $(document).on('mouseout', '.dokan-btn, .action-delete, .add-product-images', function() {
-        if (throttleTimer) return;
-        throttleTimer = setTimeout(function() {
-            requestAnimationFrame(function() {
-                $('.dokan-btn, .action-delete, .add-product-images').removeClass('hover');
-            });
-            throttleTimer = null;
-        }, 16);
-    });
+    // ✅ TESTE: Verificar se os elementos existem
+    console.log('Checkbox exists:', $('#classified_is_job').length);
+    console.log('Container exists:', $('#conditions-container').length);
+    console.log('Form exists:', $('form[name="classified_form"]').length);
 
     // Upload de imagem destacada
     $('.dokan-feat-image-btn').on('click', function(e) {
@@ -220,56 +201,6 @@ jQuery(document).ready(function($) {
         if (src && src.indexOf('https://loja.jp/wp-content/uploads/https:/loja.jp') === 0) {
             $(this).attr('src', fixMalformedUrl(src));
         }
-    });
-
-    // ✅ Função para limpar URLs malformadas via AJAX
-    function cleanMalformedUrls() {
-        if (typeof j1_classificados_ajax !== 'undefined') {
-            $.ajax({
-                url: j1_classificados_ajax.ajax_url,
-                type: 'POST',
-                data: {
-                    action: 'j1_classificados_clean_urls',
-                    nonce: j1_classificados_ajax.nonce
-                },
-                success: function(response) {
-                    if (response.success) {
-                        console.log('URLs malformadas foram corrigidas');
-                        // Recarregar a página para aplicar as correções
-                        location.reload();
-                    }
-                },
-                error: function() {
-                    console.error('Erro ao limpar URLs malformadas');
-                }
-            });
-        }
-    }
-
-    // ✅ Adicionar botão para limpar URLs malformadas (apenas para administradores)
-    if ($('body').hasClass('wp-admin') || $('body').hasClass('dokan-dashboard')) {
-        $('<button type="button" class="button" style="margin: 10px 0;">Limpar URLs Malformadas</button>')
-            .on('click', cleanMalformedUrls)
-            .insertAfter('.dokan-dashboard-header');
-    }
-
-    // ✅ Handler para o botão de limpeza de URLs no template
-    $('#clean-malformed-urls-btn').on('click', function() {
-        var $btn = $(this);
-        var $status = $('#clean-urls-status');
-        
-        $btn.prop('disabled', true);
-        $status.show();
-        
-        cleanMalformedUrls();
-        
-        // Mostrar feedback visual
-        setTimeout(function() {
-            $status.html('<span style="color: #28a745;">✅ URLs corrigidas! Recarregando...</span>');
-            setTimeout(function() {
-                location.reload();
-            }, 1000);
-        }, 2000);
     });
 
     // ✅ Validação específica para nosso formulário

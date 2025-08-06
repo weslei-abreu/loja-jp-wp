@@ -605,17 +605,9 @@ input[type="checkbox"]#classified_is_job {
     margin-left: 4px;
 }
 
-/* Estilos para campo de condições */
+/* Estilos para campo de condições - SIMPLES */
 #conditions-container {
-    transition: all 0.3s ease;
-}
-
-#conditions-container.show {
-    display: block !important;
-}
-
-#conditions-container.hide {
-    display: none !important;
+    /* Regras básicas */
 }
 
 /* Garantir que o campo apareça quando necessário */
@@ -623,17 +615,22 @@ input[type="checkbox"]#classified_is_job {
     display: block !important;
 }
 
-/* Forçar exibição quando necessário */
-#conditions-container.force-show {
+/* Garantir que o container não seja escondido pelo Dokan */
+.dokan-price-container #conditions-container {
+    /* Regras básicas */
+}
+
+/* ✅ REGRA SIMPLES: Forçar exibição quando necessário */
+#conditions-container.show,
+#conditions-container.force-show,
+.dokan-price-container #conditions-container.show {
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
 }
 
-/* Garantir que o container não seja escondido pelo Dokan */
-.dokan-price-container #conditions-container.force-show,
-.dokan-price-container #conditions-container[style*="display: block"],
-.dokan-price-container #conditions-container.show {
+/* ✅ REGRA MAIS ESPECÍFICA: Garantir que apareça */
+.content-half-part.conditions-price#conditions-container {
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
@@ -641,10 +638,8 @@ input[type="checkbox"]#classified_is_job {
     overflow: visible !important;
 }
 
-/* Garantir que o container apareça quando o checkbox estiver marcado */
-#classified_is_job:checked ~ .dokan-price-container #conditions-container,
-#classified_is_job:checked + .dokan-price-container #conditions-container,
-.dokan-price-container #conditions-container.force-show {
+/* ✅ REGRA ESPECÍFICA PARA O CONTAINER DE CONDIÇÕES */
+#conditions-container {
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;

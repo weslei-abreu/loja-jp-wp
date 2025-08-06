@@ -223,7 +223,11 @@ add_action( 'wp_enqueue_scripts', function () {
 
 // ✅ Carregar scripts para o dashboard de classificados
 add_action( 'wp_enqueue_scripts', function () {
-    if ( dokan_is_seller_dashboard() && isset( $_GET['classifieds'] ) ) {
+    // Carregar quando estivermos no dashboard de classificados (add ou edit)
+    if ( dokan_is_seller_dashboard() && 
+         (isset( $_GET['classifieds'] ) || 
+          (isset( $_GET['action'] ) && in_array( $_GET['action'], ['add', 'edit'] ))) ) {
+        
         wp_enqueue_media();
         wp_enqueue_script(
             'j1-classificados-admin',
