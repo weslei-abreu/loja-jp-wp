@@ -31,12 +31,10 @@ get_header();
 
 <?php do_action('dokan_dashboard_wrap_start'); ?>
 
-<!-- ✅ Loading específico para página de edição/criação -->
+<!-- ✅ Loading overlay para a página -->
 <div id="j1-edit-page-loading" class="j1-edit-page-loading">
     <div>
         <div class="j1-loading-spinner"></div>
-        <div class="j1-loading-text">Carregando formulário...</div>
-        <div class="j1-loading-subtitle">Aguarde enquanto preparamos tudo para você</div>
     </div>
 </div>
 

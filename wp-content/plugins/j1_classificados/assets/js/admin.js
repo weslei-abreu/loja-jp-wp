@@ -1,15 +1,10 @@
 jQuery(document).ready(function($) {
     'use strict';
 
-    console.log('J1 Classificados JS loaded!');
-
     // ✅ Verificar se estamos na página de classificados
     if (!$('form[name="classified_form"]').length && !$('#j1-classifieds-table').length) {
-        console.log('Not on classified page');
         return; // Sair se não estivermos na página de classificados
     }
-
-    console.log('On classified page - proceeding...');
 
     // ✅ FUNÇÕES DE LOADING
     function showPageLoading(text = 'Carregando...') {
@@ -69,11 +64,10 @@ jQuery(document).ready(function($) {
     }
 
     // ✅ FUNÇÕES ESPECÍFICAS PARA LOADING DA PÁGINA DE EDIÇÃO
-    function showEditPageLoading(text = 'Carregando formulário...') {
+    function showEditPageLoading() {
         var loadingOverlay = $('#j1-edit-page-loading');
         if (loadingOverlay.length) {
-            loadingOverlay.find('.j1-loading-text').text(text);
-            loadingOverlay.removeClass('hidden').show();
+            loadingOverlay.show();
         }
     }
 
@@ -82,7 +76,7 @@ jQuery(document).ready(function($) {
         var pageContent = $('.j1-edit-page-content');
         
         if (loadingOverlay.length) {
-            loadingOverlay.addClass('hidden').hide();
+            loadingOverlay.hide();
             
             // Mostrar conteúdo da página com fade in
             if (pageContent.length) {
@@ -97,10 +91,8 @@ jQuery(document).ready(function($) {
         var isEditPage = $('form[name="classified_form"]').length > 0;
         
         if (isEditPage) {
-            console.log('Página de edição detectada - usando loading específico');
             initializeEditPageLoading();
         } else {
-            console.log('Página padrão - usando loading padrão');
             initializeDefaultLoading();
         }
     }
@@ -108,19 +100,12 @@ jQuery(document).ready(function($) {
     // ✅ LOADING ESPECÍFICO PARA PÁGINA DE EDIÇÃO/CRIAÇÃO
     function initializeEditPageLoading() {
         // Mostrar loading inicialmente
-        showEditPageLoading('Carregando formulário...');
+        showEditPageLoading();
         
-        // Esconder loading após carregamento completo
-        $(window).on('load', function() {
-            setTimeout(function() {
-                hideEditPageLoading();
-            }, 1000); // Aguardar 1 segundo para garantir que tudo carregou
-        });
-
-        // Fallback: esconder loading após 5 segundos
+        // Esconder loading após 2 segundos
         setTimeout(function() {
             hideEditPageLoading();
-        }, 5000);
+        }, 2000);
     }
 
     // ✅ LOADING PADRÃO PARA OUTRAS PÁGINAS
@@ -218,14 +203,6 @@ jQuery(document).ready(function($) {
     // ✅ EXECUTAR INICIALIZAÇÃO
     initializeLoadings();
     
-    // ✅ Garantir que o loading seja mostrado imediatamente
-    if ($('#j1-page-loading').length) {
-        $('#j1-page-loading').removeClass('hidden').show();
-    } else {
-        // Criar loading se não existir
-        showPageLoading('Carregando...');
-    }
-    
     // ✅ Desabilitar validação do Dokan para nosso formulário
     $('form[name="classified_form"]').off('submit.dokan-validation');
 
@@ -266,16 +243,11 @@ jQuery(document).ready(function($) {
         var conditionsContainer = $('#conditions-container');
         var isChecked = $(this).is(':checked');
         
-        console.log('Checkbox clicked:', isChecked);
-        console.log('Container found:', conditionsContainer.length);
-        
         if (isChecked) {
             conditionsContainer.show();
-            console.log('SHOWING container');
         } else {
             conditionsContainer.hide();
             $('#classified_conditions').val(''); // Limpar o valor quando desmarcar
-            console.log('HIDING container');
         }
     });
 
@@ -289,15 +261,10 @@ jQuery(document).ready(function($) {
         var isJobChecked = $('#classified_is_job').is(':checked');
         var conditionsContainer = $('#conditions-container');
         
-        console.log('Initializing - Checkbox checked:', isJobChecked);
-        console.log('Container found:', conditionsContainer.length);
-        
         if (isJobChecked) {
             conditionsContainer.show();
-            console.log('INITIAL SHOW');
         } else {
             conditionsContainer.hide();
-            console.log('INITIAL HIDE');
         }
     }
 
