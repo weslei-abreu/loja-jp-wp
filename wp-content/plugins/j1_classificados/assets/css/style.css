@@ -298,3 +298,33 @@
         padding: 20px;
     }
 }
+
+/* Estilos para checkbox */
+.dokan-form-group input[type="checkbox"] {
+    margin-right: 8px;
+    width: auto;
+    display: inline-block;
+}
+
+.dokan-form-group label input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+/* Estilos para campo de condições */
+#conditions-container {
+    transition: all 0.3s ease;
+}
+
+#conditions-container.show {
+    display: block !important;
+}
+
+#conditions-container.hide {
+    display: none !important;
+}
+
+/* Melhorar espaçamento do botão */
+.dokan-form-group[style*="margin-top: 30px"] {
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}

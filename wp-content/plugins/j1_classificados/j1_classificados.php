@@ -94,7 +94,8 @@ add_action('template_redirect', function () {
     $title = sanitize_text_field($_POST['classified_title']);
     $content = wp_kses_post($_POST['classified_content']);
     $price = floatval($_POST['classified_price']);
-    $regular_price = floatval($_POST['classified_regular_price']);
+    $is_job = isset($_POST['classified_is_job']) ? '1' : '0';
+    $conditions = sanitize_text_field($_POST['classified_conditions'] ?? '');
     $categories = isset($_POST['classified_category']) ? array_map('intval', $_POST['classified_category']) : [];
 
     // Verificar permissões
@@ -119,7 +120,8 @@ add_action('template_redirect', function () {
 
     if ($post_id) {
         update_post_meta($post_id, '_price', $price);
-        update_post_meta($post_id, '_regular_price', $regular_price);
+        update_post_meta($post_id, '_classified_is_job', $is_job);
+        update_post_meta($post_id, '_classified_conditions', $conditions);
         wp_set_post_terms($post_id, $categories, 'product_cat', false);
 
         // Upload imagem destacada via media library

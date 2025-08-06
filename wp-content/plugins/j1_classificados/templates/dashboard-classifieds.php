@@ -79,7 +79,23 @@ get_header();
                                     <td>
                                         <?php
                                         $price = get_post_meta(get_the_ID(), '_price', true);
-                                        echo $price ? '¥ ' . number_format_i18n($price) : '—';
+                                        $is_job = get_post_meta(get_the_ID(), '_classified_is_job', true);
+                                        $conditions = get_post_meta(get_the_ID(), '_classified_conditions', true);
+                                        
+                                        if ($price) {
+                                            echo '¥ ' . number_format_i18n($price);
+                                            if ($is_job && $conditions) {
+                                                $conditions_labels = [
+                                                    'por_hora' => __('por hora', 'j1_classificados'),
+                                                    'por_dia' => __('por dia', 'j1_classificados'),
+                                                    'por_semana' => __('por semana', 'j1_classificados'),
+                                                    'por_mes' => __('por mês', 'j1_classificados')
+                                                ];
+                                                echo ' <small>(' . esc_html($conditions_labels[$conditions] ?? $conditions) . ')</small>';
+                                            }
+                                        } else {
+                                            echo '—';
+                                        }
                                         ?>
                                     </td>
                                     <td>

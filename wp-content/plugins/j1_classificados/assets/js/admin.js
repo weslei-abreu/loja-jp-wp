@@ -83,4 +83,23 @@ jQuery(document).ready(function($) {
             allowClear: true
         });
     }
+
+    // Toggle Condições baseado no checkbox de vaga de emprego
+    $('#classified_is_job').on('change', function() {
+        var conditionsContainer = $('#conditions-container');
+        if ($(this).is(':checked')) {
+            conditionsContainer.show();
+        } else {
+            conditionsContainer.hide();
+            $('#classified_conditions').val(''); // Limpar o valor quando desmarcar
+        }
+    });
+
+    // Inicializar estado das condições
+    var isJobChecked = $('#classified_is_job').is(':checked');
+    if (isJobChecked) {
+        $('#conditions-container').show();
+    } else {
+        $('#conditions-container').hide();
+    }
 }); 

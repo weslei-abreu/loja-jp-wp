@@ -97,6 +97,18 @@ get_header();
                             </div>
                         </div>
 
+                        <!-- Checkbox Vaga de Emprego -->
+                        <div class="dokan-form-group">
+                            <label class="form-label">
+                                <input type="checkbox" 
+                                       name="classified_is_job" 
+                                       id="classified_is_job" 
+                                       value="1" 
+                                       <?php checked(get_post_meta($post_id, '_classified_is_job', true), '1'); ?>>
+                                <?php esc_html_e('O classificado é uma vaga de emprego?', 'j1_classificados'); ?>
+                            </label>
+                        </div>
+
                         <!-- Categorias -->
                         <div class="dokan-form-group">
                             <label for="classified_category" class="form-label">
@@ -112,7 +124,7 @@ get_header();
                             </select>
                         </div>
 
-                        <!-- Preços -->
+                        <!-- Preços e Condições -->
                         <div class="dokan-form-group dokan-clearfix dokan-price-container">
                             <div class="content-half-part regular-price">
                                 <label for="classified_price" class="form-label">
@@ -131,21 +143,25 @@ get_header();
                                 </div>
                             </div>
 
-                            <div class="content-half-part sale-price">
-                                <label for="classified_regular_price" class="form-label">
-                                    <?php esc_html_e('Preço Normal', 'j1_classificados'); ?>
+                            <div class="content-half-part conditions-price" id="conditions-container" style="display: none;">
+                                <label for="classified_conditions" class="form-label">
+                                    <?php esc_html_e('Condições', 'j1_classificados'); ?>
                                 </label>
-                                <div class="dokan-input-group">
-                                    <span class="dokan-input-group-addon">¥</span>
-                                    <input type="number" 
-                                           name="classified_regular_price" 
-                                           id="classified_regular_price" 
-                                           class="dokan-form-control dokan-product-sales-price" 
-                                           value="<?php echo esc_attr($regular_price); ?>" 
-                                           min="0" 
-                                           step="1"
-                                           placeholder="0">
-                                </div>
+                                <select name="classified_conditions" id="classified_conditions" class="dokan-form-control">
+                                    <option value=""><?php esc_html_e('Selecione uma opção', 'j1_classificados'); ?></option>
+                                    <option value="por_hora" <?php selected(get_post_meta($post_id, '_classified_conditions', true), 'por_hora'); ?>>
+                                        <?php esc_html_e('Por hora', 'j1_classificados'); ?>
+                                    </option>
+                                    <option value="por_dia" <?php selected(get_post_meta($post_id, '_classified_conditions', true), 'por_dia'); ?>>
+                                        <?php esc_html_e('Por dia', 'j1_classificados'); ?>
+                                    </option>
+                                    <option value="por_semana" <?php selected(get_post_meta($post_id, '_classified_conditions', true), 'por_semana'); ?>>
+                                        <?php esc_html_e('Por semana', 'j1_classificados'); ?>
+                                    </option>
+                                    <option value="por_mes" <?php selected(get_post_meta($post_id, '_classified_conditions', true), 'por_mes'); ?>>
+                                        <?php esc_html_e('Por mês', 'j1_classificados'); ?>
+                                    </option>
+                                </select>
                             </div>
                         </div>
 
@@ -228,7 +244,7 @@ get_header();
 
                 <input type="hidden" name="classified_id" value="<?php echo $post_id; ?>">
 
-                <div class="dokan-form-group">
+                <div class="dokan-form-group" style="margin-top: 30px;">
                     <button type="submit" class="dokan-btn dokan-btn-theme dokan-btn-lg">
                         <?php echo $post_id ? __('Salvar Alterações', 'j1_classificados') : __('Publicar Classificado', 'j1_classificados'); ?>
                     </button>
@@ -324,6 +340,24 @@ jQuery(document).ready(function($) {
         
         $(this).parent().remove();
     });
+
+    // Toggle Condições
+    $('#classified_is_job').on('change', function() {
+        var conditionsContainer = $('#conditions-container');
+        if ($(this).is(':checked')) {
+            conditionsContainer.show();
+        } else {
+            conditionsContainer.hide();
+        }
+    });
+
+    // Initialize Condições
+    var isJobChecked = $('#classified_is_job').is(':checked');
+    if (isJobChecked) {
+        $('#conditions-container').show();
+    } else {
+        $('#conditions-container').hide();
+    }
 });
 </script>
 
