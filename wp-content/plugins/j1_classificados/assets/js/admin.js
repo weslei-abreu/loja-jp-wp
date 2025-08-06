@@ -67,7 +67,7 @@ jQuery(document).ready(function($) {
     function showEditPageLoading() {
         var loadingOverlay = $('#j1-edit-page-loading');
         if (loadingOverlay.length) {
-            loadingOverlay.show();
+            loadingOverlay.removeClass('hidden').show();
         }
     }
 
@@ -76,7 +76,7 @@ jQuery(document).ready(function($) {
         var pageContent = $('.j1-edit-page-content');
         
         if (loadingOverlay.length) {
-            loadingOverlay.hide();
+            loadingOverlay.addClass('hidden').hide();
             
             // Mostrar conteúdo da página com fade in
             if (pageContent.length) {

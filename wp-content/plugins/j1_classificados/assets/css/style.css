@@ -927,6 +927,10 @@ input[type="checkbox"]#classified_is_job {
     backdrop-filter: blur(4px) !important;
 }
 
+.j1-edit-page-loading.hidden {
+    display: none !important;
+}
+
 .j1-edit-page-loading > div {
     text-align: center !important;
     background: transparent !important;
