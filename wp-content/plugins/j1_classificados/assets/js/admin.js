@@ -69,14 +69,23 @@ jQuery(document).ready(function($) {
     // ✅ FUNÇÕES ESPECÍFICAS PARA LOADING DA PÁGINA DE EDIÇÃO
     function showEditPageLoading() {
         var loadingOverlay = $('#j1-edit-page-loading');
+        console.log('Loading overlay found:', loadingOverlay.length);
+        
         if (loadingOverlay.length) {
             loadingOverlay.removeClass('hidden').show();
+            console.log('Loading overlay shown successfully');
+        } else {
+            console.log('Loading overlay not found!');
         }
     }
 
     function hideEditPageLoading() {
         var loadingOverlay = $('#j1-edit-page-loading');
         var pageContent = $('.j1-edit-page-content');
+        
+        console.log('Hiding loading overlay...');
+        console.log('Loading overlay found:', loadingOverlay.length);
+        console.log('Page content found:', pageContent.length);
         
         if (loadingOverlay.length) {
             loadingOverlay.addClass('hidden').hide();
@@ -85,6 +94,9 @@ jQuery(document).ready(function($) {
             if (pageContent.length) {
                 pageContent.addClass('loaded');
             }
+            console.log('Loading overlay hidden successfully');
+        } else {
+            console.log('Loading overlay not found for hiding!');
         }
     }
 
@@ -92,6 +104,9 @@ jQuery(document).ready(function($) {
     function initializeLoadings() {
         // Verificar se estamos na página de edição/criação
         var isEditPage = $('form[name="classified_form"]').length > 0;
+        
+        console.log('Is edit page:', isEditPage);
+        console.log('Form found:', $('form[name="classified_form"]').length);
         
         if (isEditPage) {
             initializeEditPageLoading();
@@ -102,12 +117,16 @@ jQuery(document).ready(function($) {
 
     // ✅ LOADING ESPECÍFICO PARA PÁGINA DE EDIÇÃO/CRIAÇÃO
     function initializeEditPageLoading() {
+        console.log('Initializing edit page loading...');
+        
         // Mostrar loading inicialmente
         showEditPageLoading();
+        console.log('Loading overlay shown');
         
         // Esconder loading após 2 segundos
         setTimeout(function() {
             hideEditPageLoading();
+            console.log('Loading overlay hidden');
         }, 2000);
     }
 
