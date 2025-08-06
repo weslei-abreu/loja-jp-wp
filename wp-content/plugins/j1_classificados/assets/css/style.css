@@ -700,26 +700,41 @@ input[type="checkbox"]#classified_is_job {
 
 /* Loading geral para páginas */
 .j1-loading-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.9);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    backdrop-filter: blur(2px);
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    z-index: 999999 !important;
+    backdrop-filter: blur(5px) !important;
+}
+
+.j1-loading-overlay.hidden {
+    display: none !important;
+}
+
+.j1-loading-overlay > div {
+    text-align: center !important;
+    background: rgba(255, 255, 255, 0.9) !important;
+    padding: 30px !important;
+    border-radius: 10px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
+    min-width: 200px !important;
 }
 
 .j1-loading-spinner {
-    width: 50px;
-    height: 50px;
-    border: 4px solid #f3f3f3;
-    border-top: 4px solid #007cba;
-    border-radius: 50%;
-    animation: j1-spin 1s linear infinite;
+    width: 60px !important;
+    height: 60px !important;
+    border: 5px solid #f3f3f3 !important;
+    border-top: 5px solid #007cba !important;
+    border-radius: 50% !important;
+    animation: j1-spin 1s linear infinite !important;
+    margin: 0 auto !important;
+    display: block !important;
 }
 
 @keyframes j1-spin {
@@ -728,10 +743,11 @@ input[type="checkbox"]#classified_is_job {
 }
 
 .j1-loading-text {
-    margin-top: 15px;
-    color: #007cba;
-    font-weight: 600;
-    text-align: center;
+    margin-top: 20px !important;
+    color: #007cba !important;
+    font-weight: 600 !important;
+    text-align: center !important;
+    font-size: 16px !important;
 }
 
 /* Loading para botões */

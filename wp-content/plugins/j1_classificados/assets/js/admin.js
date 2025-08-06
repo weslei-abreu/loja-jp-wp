@@ -16,12 +16,24 @@ jQuery(document).ready(function($) {
         var loadingOverlay = $('#j1-page-loading');
         if (loadingOverlay.length) {
             loadingOverlay.find('.j1-loading-text').text(text);
-            loadingOverlay.show();
+            loadingOverlay.removeClass('hidden').show();
+        } else {
+            // Criar overlay se não existir
+            var overlay = $('<div id="j1-page-loading" class="j1-loading-overlay">' +
+                '<div style="text-align: center; background: rgba(255, 255, 255, 0.9); padding: 30px; border-radius: 10px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); min-width: 200px;">' +
+                '<div class="j1-loading-spinner"></div>' +
+                '<div class="j1-loading-text">' + text + '</div>' +
+                '</div>' +
+                '</div>');
+            $('body').append(overlay);
         }
     }
 
     function hidePageLoading() {
-        $('#j1-page-loading').hide();
+        var loadingOverlay = $('#j1-page-loading');
+        if (loadingOverlay.length) {
+            loadingOverlay.addClass('hidden').hide();
+        }
     }
 
     function showButtonLoading(button, text = 'Carregando...') {
@@ -58,32 +70,38 @@ jQuery(document).ready(function($) {
 
     // ✅ INICIALIZAR LOADINGS
     function initializeLoadings() {
+        // Mostrar loading inicialmente
+        showPageLoading('Carregando...');
+        
         // Esconder loading da página após carregamento completo
         $(window).on('load', function() {
             setTimeout(function() {
                 hidePageLoading();
-            }, 300);
+            }, 500);
         });
 
-        // Fallback: esconder loading após 2 segundos se a página não carregar completamente
+        // Fallback: esconder loading após 3 segundos se a página não carregar completamente
         setTimeout(function() {
             hidePageLoading();
-        }, 2000);
+        }, 3000);
 
         // Adicionar loading nos links
         $('.j1-loading-link').on('click', function(e) {
+            showPageLoading('Carregando...');
             showButtonLoading(this, 'Carregando...');
         });
 
         // Adicionar loading nos links de ação da tabela
         $('.dokan-table-action a').on('click', function(e) {
             if (!$(this).hasClass('j1-loading-link')) {
+                showPageLoading('Carregando...');
                 showButtonLoading(this, 'Carregando...');
             }
         });
 
         // Adicionar loading no formulário
         $('form[name="classified_form"]').on('submit', function(e) {
+            showPageLoading('Publicando...');
             showFormLoading(this);
             showButtonLoading('.j1-submit-btn', 'Publicando...');
         });
@@ -144,7 +162,15 @@ jQuery(document).ready(function($) {
 
     // ✅ EXECUTAR INICIALIZAÇÃO
     initializeLoadings();
-
+    
+    // ✅ Garantir que o loading seja mostrado imediatamente
+    if ($('#j1-page-loading').length) {
+        $('#j1-page-loading').removeClass('hidden').show();
+    } else {
+        // Criar loading se não existir
+        showPageLoading('Carregando...');
+    }
+    
     // ✅ Desabilitar validação do Dokan para nosso formulário
     $('form[name="classified_form"]').off('submit.dokan-validation');
 
@@ -232,6 +258,7 @@ jQuery(document).ready(function($) {
     $('.dokan-feat-image-btn').on('click', function(e) {
         e.preventDefault();
         
+        showPageLoading('Carregando mídia...');
         showUploadLoading('.dokan-feat-image-upload');
         
         var frame = wp.media({
@@ -250,10 +277,12 @@ jQuery(document).ready(function($) {
                 $('.image-wrap').removeClass('dokan-hide');
                 $('.instruction-inside').addClass('dokan-hide');
             }
+            hidePageLoading();
             hideUploadLoading('.dokan-feat-image-upload');
         });
 
         frame.on('close', function() {
+            hidePageLoading();
             hideUploadLoading('.dokan-feat-image-upload');
         });
 
@@ -274,6 +303,7 @@ jQuery(document).ready(function($) {
     $('.add-product-images').on('click', function(e) {
         e.preventDefault();
         
+        showPageLoading('Carregando mídia...');
         showUploadLoading('.dokan-product-gallery');
         
         var frame = wp.media({
@@ -306,10 +336,12 @@ jQuery(document).ready(function($) {
                 var newGallery = currentGallery ? currentGallery + ',' + galleryIds.join(',') : galleryIds.join(',');
                 $('#product_image_gallery').val(newGallery);
             }
+            hidePageLoading();
             hideUploadLoading('.dokan-product-gallery');
         });
 
         frame.on('close', function() {
+            hidePageLoading();
             hideUploadLoading('.dokan-product-gallery');
         });
 
