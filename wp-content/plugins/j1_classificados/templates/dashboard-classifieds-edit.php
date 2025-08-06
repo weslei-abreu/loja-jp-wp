@@ -56,17 +56,7 @@ get_header();
                 <?php endif; ?>
             </h1>
             
-            <!-- ✅ Botão para limpar URLs malformadas (apenas para administradores) -->
-            <?php if (current_user_can('manage_options')) : ?>
-                <div style="margin-top: 10px;">
-                    <button type="button" class="button" id="clean-malformed-urls-btn">
-                        🔧 Limpar URLs Malformadas
-                    </button>
-                    <span id="clean-urls-status" style="margin-left: 10px; display: none;">
-                        <span style="color: #007cba;">⏳ Processando...</span>
-                    </span>
-                </div>
-            <?php endif; ?>
+
         </header>
 
         <div class="product-edit-new-container product-edit-container">
@@ -192,14 +182,20 @@ get_header();
                                 </a>
                             </div>
 
-                            <div class="image-wrap<?php echo $thumbnail_id ? '' : ' dokan-hide'; ?>">
-                                <a class="close dokan-remove-feat-image">&times;</a>
-                                <?php if ($thumbnail_id) : ?>
-                                    <?php echo get_the_post_thumbnail($post_id, 'shop_single', ['height' => '', 'width' => '']); ?>
-                                <?php else : ?>
-                                    <img height="" width="" src="" alt="">
-                                <?php endif; ?>
-                            </div>
+                                                         <div class="image-wrap<?php echo $thumbnail_id ? '' : ' dokan-hide'; ?>">
+                                 <a class="close dokan-remove-feat-image">&times;</a>
+                                 <?php if ($thumbnail_id) : ?>
+                                     <?php 
+                                     // DEBUG: Vamos investigar a imagem destacada também
+                                     echo "<!-- DEBUG: Thumbnail ID: " . $thumbnail_id . " -->\n";
+                                     $thumb_url = wp_get_attachment_image_url($thumbnail_id, 'shop_single');
+                                     echo "<!-- DEBUG: Thumbnail URL: " . $thumb_url . " -->\n";
+                                     ?>
+                                     <?php echo get_the_post_thumbnail($post_id, 'shop_single', ['height' => '', 'width' => '']); ?>
+                                 <?php else : ?>
+                                     <img height="" width="" src="" alt="">
+                                 <?php endif; ?>
+                             </div>
                         </div>
 
                         <!-- Galeria de Imagens -->
@@ -207,20 +203,28 @@ get_header();
                             <div class="dokan-side-body" id="dokan-product-images">
                                 <div id="product_images_container">
                                     <ul class="product_images dokan-clearfix">
-                                        <?php
-                                        if ($gallery) :
-                                            $gallery_ids = explode(',', $gallery);
-                                            foreach ($gallery_ids as $image_id) :
-                                                if (empty($image_id)) continue;
-                                                
-                                                $attachment_image = wp_get_attachment_image_src($image_id, 'thumbnail');
-                                                if ($attachment_image) :
-                                                    // Corrigir URL malformada - remover duplicação de domínio
-                                                    $image_url = $attachment_image[0];
-                                                    if (strpos($image_url, 'https://loja.jp/wp-content/uploads/https:/loja.jp') === 0) {
-                                                        $image_url = str_replace('https://loja.jp/wp-content/uploads/https:/loja.jp', 'https://loja.jp/wp-content/uploads', $image_url);
-                                                    }
-                                        ?>
+                                                                                 <?php
+                                         if ($gallery) :
+                                             $gallery_ids = explode(',', $gallery);
+                                             foreach ($gallery_ids as $image_id) :
+                                                 if (empty($image_id)) continue;
+                                                 
+                                                 // DEBUG: Vamos investigar o problema
+                                                 echo "<!-- DEBUG: Image ID: " . $image_id . " -->\n";
+                                                 
+                                                 $attachment_image = wp_get_attachment_image_src($image_id, 'thumbnail');
+                                                 echo "<!-- DEBUG: Attachment Image: " . var_export($attachment_image, true) . " -->\n";
+                                                 
+                                                 if ($attachment_image) :
+                                                     // Corrigir URL malformada - remover duplicação de domínio
+                                                     $image_url = $attachment_image[0];
+                                                     echo "<!-- DEBUG: Original URL: " . $image_url . " -->\n";
+                                                     
+                                                     if (strpos($image_url, 'https://loja.jp/wp-content/uploads/https:/loja.jp') === 0) {
+                                                         $image_url = str_replace('https://loja.jp/wp-content/uploads/https:/loja.jp', 'https://loja.jp/wp-content/uploads', $image_url);
+                                                         echo "<!-- DEBUG: Fixed URL: " . $image_url . " -->\n";
+                                                     }
+                                         ?>
                                             <li class="image" data-attachment_id="<?php echo esc_attr($image_id); ?>">
                                                 <img src="<?php echo esc_url($image_url); ?>" alt="">
                                                 <a href="#" class="action-delete" title="<?php esc_attr_e('Excluir imagem', 'j1_classificados'); ?>">&times;</a>

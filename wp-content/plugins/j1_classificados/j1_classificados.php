@@ -262,8 +262,11 @@ add_filter('elementor/utils/is_post_type_support', function($is_supported, $post
 
 // ✅ Corrigir URLs malformadas de anexos
 add_filter('wp_get_attachment_url', function($url, $attachment_id) {
+    // DEBUG: Vamos investigar onde está acontecendo a concatenação
     if (strpos($url, 'https://loja.jp/wp-content/uploads/https:/loja.jp') === 0) {
+        error_log("DEBUG: URL malformada detectada em wp_get_attachment_url - Attachment ID: " . $attachment_id . " - URL: " . $url);
         $url = str_replace('https://loja.jp/wp-content/uploads/https:/loja.jp', 'https://loja.jp/wp-content/uploads', $url);
+        error_log("DEBUG: URL corrigida: " . $url);
     }
     return $url;
 }, 10, 2);
@@ -272,7 +275,9 @@ add_filter('wp_get_attachment_url', function($url, $attachment_id) {
 add_filter('wp_get_attachment_image_src', function($image, $attachment_id, $size, $icon) {
     if ($image && isset($image[0])) {
         if (strpos($image[0], 'https://loja.jp/wp-content/uploads/https:/loja.jp') === 0) {
+            error_log("DEBUG: URL malformada detectada em wp_get_attachment_image_src - Attachment ID: " . $attachment_id . " - Size: " . $size . " - URL: " . $image[0]);
             $image[0] = str_replace('https://loja.jp/wp-content/uploads/https:/loja.jp', 'https://loja.jp/wp-content/uploads', $image[0]);
+            error_log("DEBUG: URL corrigida: " . $image[0]);
         }
     }
     return $image;
@@ -358,6 +363,20 @@ add_filter('wp_calculate_image_sizes', function($sizes, $size, $image_src, $imag
 // ✅ Função para limpar URLs malformadas no banco de dados
 function j1_classificados_clean_malformed_urls() {
     global $wpdb;
+    
+    // DEBUG: Vamos investigar o que está no banco de dados
+    $malformed_attachments = $wpdb->get_results("
+        SELECT post_id, meta_key, meta_value 
+        FROM {$wpdb->postmeta} 
+        WHERE meta_key IN ('_wp_attached_file', '_wp_attachment_metadata', '_product_image_gallery')
+        AND meta_value LIKE '%https://loja.jp/wp-content/uploads/https:/loja.jp%'
+        LIMIT 10
+    ");
+    
+    error_log("DEBUG: Encontrados " . count($malformed_attachments) . " registros com URLs malformadas no banco:");
+    foreach ($malformed_attachments as $attachment) {
+        error_log("DEBUG: Post ID: " . $attachment->post_id . " - Meta Key: " . $attachment->meta_key . " - Meta Value: " . $attachment->meta_value);
+    }
     
     // Limpar URLs malformadas na tabela postmeta
     $wpdb->query("
@@ -457,3 +476,53 @@ add_filter('wp_get_attachment_url', function($url, $attachment_id) {
     }
     return $url;
 }, 5, 2); // Prioridade 5 para executar antes dos outros filtros
+
+// ✅ Função para investigar a origem das URLs malformadas
+function j1_classificados_investigate_malformed_urls() {
+    global $wpdb;
+    
+    error_log("=== INVESTIGAÇÃO DE URLs MALFORMADAS ===");
+    
+    // 1. Verificar configurações de upload
+    $upload_dir = wp_upload_dir();
+    error_log("DEBUG: Upload URL: " . $upload_dir['url']);
+    error_log("DEBUG: Upload Base URL: " . $upload_dir['baseurl']);
+    error_log("DEBUG: Upload Path: " . $upload_dir['path']);
+    error_log("DEBUG: Upload Base Path: " . $upload_dir['basedir']);
+    
+    // 2. Verificar configurações do site
+    error_log("DEBUG: Site URL: " . get_site_url());
+    error_log("DEBUG: Home URL: " . get_home_url());
+    error_log("DEBUG: WordPress URL: " . get_option('siteurl'));
+    
+    // 3. Verificar anexos com URLs malformadas
+    $malformed_attachments = $wpdb->get_results("
+        SELECT p.ID, p.post_title, p.guid, pm.meta_key, pm.meta_value
+        FROM {$wpdb->posts} p
+        LEFT JOIN {$wpdb->postmeta} pm ON p.ID = pm.post_id
+        WHERE p.post_type = 'attachment'
+        AND (p.guid LIKE '%https://loja.jp/wp-content/uploads/https:/loja.jp%'
+             OR pm.meta_value LIKE '%https://loja.jp/wp-content/uploads/https:/loja.jp%')
+        LIMIT 5
+    ");
+    
+    error_log("DEBUG: Encontrados " . count($malformed_attachments) . " anexos com URLs malformadas:");
+    foreach ($malformed_attachments as $attachment) {
+        error_log("DEBUG: Attachment ID: " . $attachment->ID);
+        error_log("DEBUG: Attachment Title: " . $attachment->post_title);
+        error_log("DEBUG: Attachment GUID: " . $attachment->guid);
+        error_log("DEBUG: Meta Key: " . $attachment->meta_key);
+        error_log("DEBUG: Meta Value: " . $attachment->meta_value);
+        error_log("---");
+    }
+    
+    error_log("=== FIM DA INVESTIGAÇÃO ===");
+}
+
+// ✅ Executar investigação quando necessário
+add_action('init', function() {
+    if (isset($_GET['investigate_urls']) && current_user_can('manage_options')) {
+        j1_classificados_investigate_malformed_urls();
+        wp_die('Investigation complete. Check error log.');
+    }
+});
