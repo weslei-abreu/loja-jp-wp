@@ -112,6 +112,18 @@ get_header();
     </div>
 </div>
 
+<!-- ✅ Script inline para garantir que o loading seja escondido -->
+<script>
+jQuery(document).ready(function($) {
+    // Esconder loading após 1.5 segundos como fallback
+    setTimeout(function() {
+        $('#j1-page-loading').fadeOut(300, function() {
+            $(this).addClass('hidden').hide();
+        });
+    }, 1500);
+});
+</script>
+
 <div class="dokan-dashboard-wrap">
     <?php do_action('dokan_dashboard_content_before'); ?>
 
