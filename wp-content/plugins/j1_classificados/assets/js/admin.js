@@ -4,6 +4,20 @@ jQuery(document).ready(function($) {
     // ✅ TESTE: Verificar se o JavaScript está sendo carregado
     console.log('J1 Classificados JavaScript loaded!');
 
+    // ✅ TESTE: Verificar se os inputs estão funcionando
+    console.log('Input de valor encontrado:', $('#classified_price').length);
+    console.log('Input de salário encontrado:', $('#classified_conditions').length);
+    console.log('Checkbox encontrado:', $('#classified_is_job').length);
+
+    // ✅ TESTE: Verificar se os inputs estão funcionando corretamente
+    $('#classified_price').on('input', function() {
+        console.log('Input de valor alterado:', $(this).val());
+    });
+
+    $('#classified_conditions').on('change', function() {
+        console.log('Input de salário alterado:', $(this).val());
+    });
+
     // ✅ Verificar se estamos na página de classificados
     if (!$('form[name="classified_form"]').length && !$('#j1-classifieds-table').length) {
         return; // Sair se não estivermos na página de classificados
