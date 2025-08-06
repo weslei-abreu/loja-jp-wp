@@ -55,6 +55,18 @@ get_header();
                     <?php endif; ?>
                 <?php endif; ?>
             </h1>
+            
+            <!-- ✅ Botão para limpar URLs malformadas (apenas para administradores) -->
+            <?php if (current_user_can('manage_options')) : ?>
+                <div style="margin-top: 10px;">
+                    <button type="button" class="button" id="clean-malformed-urls-btn">
+                        🔧 Limpar URLs Malformadas
+                    </button>
+                    <span id="clean-urls-status" style="margin-left: 10px; display: none;">
+                        <span style="color: #007cba;">⏳ Processando...</span>
+                    </span>
+                </div>
+            <?php endif; ?>
         </header>
 
         <div class="product-edit-new-container product-edit-container">
@@ -72,7 +84,7 @@ get_header();
                 </div>
             <?php endif; ?>
 
-            <form method="post" enctype="multipart/form-data" class="dokan-product-edit-form" role="form" id="post">
+            <form method="post" name="classified_form" enctype="multipart/form-data" class="dokan-product-edit-form" role="form" id="post">
                 <?php wp_nonce_field('save_classified', 'classified_nonce'); ?>
                 
                 <?php do_action('dokan_product_edit_before_main'); ?>
@@ -131,7 +143,7 @@ get_header();
                         <div class="dokan-form-group dokan-clearfix dokan-price-container">
                             <div class="content-half-part regular-price">
                                 <label for="classified_price" class="form-label">
-                                    <?php esc_html_e('Preço', 'j1_classificados'); ?>
+                                    <?php esc_html_e('Valor', 'j1_classificados'); ?>
                                 </label>
                                 <div class="dokan-input-group">
                                     <span class="dokan-input-group-addon">¥</span>
@@ -146,9 +158,9 @@ get_header();
                                 </div>
                             </div>
 
-                            <div class="content-half-part conditions-price" id="conditions-container" style="display: none;">
+                            <div class="content-half-part conditions-price" id="conditions-container" style="<?php echo get_post_meta($post_id, '_classified_is_job', true) ? 'display: block;' : 'display: none;'; ?>">
                                 <label for="classified_conditions" class="form-label">
-                                    <?php esc_html_e('Condições', 'j1_classificados'); ?>
+                                    <?php esc_html_e('Salário', 'j1_classificados'); ?>
                                 </label>
                                 <select name="classified_conditions" id="classified_conditions" class="dokan-form-control">
                                     <option value=""><?php esc_html_e('Selecione uma opção', 'j1_classificados'); ?></option>

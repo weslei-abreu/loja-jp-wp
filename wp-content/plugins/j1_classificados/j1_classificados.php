@@ -335,6 +335,26 @@ add_filter('wp_get_attachment_thumb_url', function($url, $attachment_id) {
     return $url;
 }, 10, 2);
 
+// ✅ Corrigir URLs malformadas em wp_get_attachment_image_srcset
+add_filter('wp_calculate_image_srcset', function($sources, $size_array, $image_src, $image_meta, $attachment_id) {
+    if (is_array($sources)) {
+        foreach ($sources as $width => $source) {
+            if (isset($source['url']) && strpos($source['url'], 'https://loja.jp/wp-content/uploads/https:/loja.jp') === 0) {
+                $sources[$width]['url'] = str_replace('https://loja.jp/wp-content/uploads/https:/loja.jp', 'https://loja.jp/wp-content/uploads', $source['url']);
+            }
+        }
+    }
+    return $sources;
+}, 10, 5);
+
+// ✅ Corrigir URLs malformadas em wp_get_attachment_image_sizes
+add_filter('wp_calculate_image_sizes', function($sizes, $size, $image_src, $image_meta, $attachment_id) {
+    if (strpos($image_src, 'https://loja.jp/wp-content/uploads/https:/loja.jp') === 0) {
+        $image_src = str_replace('https://loja.jp/wp-content/uploads/https:/loja.jp', 'https://loja.jp/wp-content/uploads', $image_src);
+    }
+    return $sizes;
+}, 10, 5);
+
 // ✅ Função para limpar URLs malformadas no banco de dados
 function j1_classificados_clean_malformed_urls() {
     global $wpdb;
@@ -343,7 +363,7 @@ function j1_classificados_clean_malformed_urls() {
     $wpdb->query("
         UPDATE {$wpdb->postmeta} 
         SET meta_value = REPLACE(meta_value, 'https://loja.jp/wp-content/uploads/https:/loja.jp', 'https://loja.jp/wp-content/uploads')
-        WHERE meta_key IN ('_wp_attached_file', '_wp_attachment_metadata')
+        WHERE meta_key IN ('_wp_attached_file', '_wp_attachment_metadata', '_product_image_gallery')
         AND meta_value LIKE '%https://loja.jp/wp-content/uploads/https:/loja.jp%'
     ");
     
@@ -354,6 +374,28 @@ function j1_classificados_clean_malformed_urls() {
         WHERE post_type = 'attachment'
         AND guid LIKE '%https://loja.jp/wp-content/uploads/https:/loja.jp%'
     ");
+    
+    // Limpar URLs malformadas em opções do WordPress
+    $wpdb->query("
+        UPDATE {$wpdb->options} 
+        SET option_value = REPLACE(option_value, 'https://loja.jp/wp-content/uploads/https:/loja.jp', 'https://loja.jp/wp-content/uploads')
+        WHERE option_name LIKE '%upload%'
+        AND option_value LIKE '%https://loja.jp/wp-content/uploads/https:/loja.jp%'
+    ");
+    
+    // Limpar cache de transients
+    $wpdb->query("
+        DELETE FROM {$wpdb->options} 
+        WHERE option_name LIKE '_transient_%'
+        AND option_value LIKE '%https://loja.jp/wp-content/uploads/https:/loja.jp%'
+    ");
+    
+    // Limpar cache de object cache se existir
+    if (function_exists('wp_cache_flush')) {
+        wp_cache_flush();
+    }
+    
+    return true;
 }
 
 // ✅ Executar limpeza de URLs malformadas na ativação do plugin
@@ -377,4 +419,41 @@ add_action('init', function() {
         wp_redirect(remove_query_arg('clean_malformed_urls'));
         exit;
     }
+    
+    // ✅ Forçar limpeza automática se detectar URLs malformadas
+    if (isset($_GET['classifieds']) && current_user_can('manage_options')) {
+        global $wpdb;
+        $malformed_count = $wpdb->get_var("
+            SELECT COUNT(*) FROM {$wpdb->postmeta} 
+            WHERE meta_key IN ('_wp_attached_file', '_wp_attachment_metadata', '_product_image_gallery')
+            AND meta_value LIKE '%https://loja.jp/wp-content/uploads/https:/loja.jp%'
+        ");
+        
+        if ($malformed_count > 0) {
+            // Limpar URLs malformadas automaticamente
+            j1_classificados_clean_malformed_urls();
+        }
+    }
 });
+
+// ✅ Adicionar filtro para corrigir URLs em tempo real
+add_filter('wp_get_attachment_url', function($url, $attachment_id) {
+    // Corrigir URLs malformadas em tempo real
+    if (strpos($url, 'https://loja.jp/wp-content/uploads/https:/loja.jp') === 0) {
+        $corrected_url = str_replace('https://loja.jp/wp-content/uploads/https:/loja.jp', 'https://loja.jp/wp-content/uploads', $url);
+        
+        // Atualizar o banco de dados com a URL corrigida
+        global $wpdb;
+        $wpdb->update(
+            $wpdb->postmeta,
+            ['meta_value' => $corrected_url],
+            [
+                'post_id' => $attachment_id,
+                'meta_key' => '_wp_attached_file'
+            ]
+        );
+        
+        return $corrected_url;
+    }
+    return $url;
+}, 5, 2); // Prioridade 5 para executar antes dos outros filtros

@@ -1,6 +1,14 @@
 jQuery(document).ready(function($) {
     'use strict';
 
+    // ✅ Verificar se estamos na página de classificados
+    if (!$('form[name="classified_form"]').length) {
+        return; // Sair se não estivermos na página de classificados
+    }
+
+    // ✅ Desabilitar validação do Dokan para nosso formulário
+    $('form[name="classified_form"]').off('submit.dokan-validation');
+
     // Verificar se wp.media está disponível
     if (typeof wp === 'undefined' || !wp.media) {
         console.warn('wp.media não está disponível');
@@ -33,7 +41,7 @@ jQuery(document).ready(function($) {
         return attachment;
     }
 
-    // Otimização: debounce para eventos de mudança
+    // ✅ Otimização: debounce para eventos de mudança
     var debounceTimer;
     $('input, select, textarea').on('change', function() {
         clearTimeout(debounceTimer);
@@ -42,14 +50,14 @@ jQuery(document).ready(function($) {
         }, 300);
     });
 
-    // Otimização: lazy loading para imagens
+    // ✅ Otimização: lazy loading para imagens
     $('img').on('error', function() {
         console.warn('Erro ao carregar imagem:', this.src);
         // Fallback para imagem quebrada
         $(this).attr('src', 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2Y1ZjVmNSIvPjx0ZXh0IHg9IjUwIiB5PSI1MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjEyIiBmaWxsPSIjOTk5IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+SW1hZ2VuPC90ZXh0Pjwvc3ZnPg==');
     });
 
-    // Otimização: reduzir eventos de mouseover/click com throttling
+    // ✅ Otimização: reduzir eventos de mouseover/click com throttling
     var throttleTimer;
     $(document).on('mouseover', '.dokan-btn, .action-delete, .add-product-images', function() {
         if (throttleTimer) return;
@@ -170,20 +178,23 @@ jQuery(document).ready(function($) {
     // Toggle Condições baseado no checkbox de vaga de emprego
     $('#classified_is_job').on('change', function() {
         var conditionsContainer = $('#conditions-container');
-        if ($(this).is(':checked')) {
-            conditionsContainer.show();
+        var isChecked = $(this).is(':checked');
+        
+        if (isChecked) {
+            conditionsContainer.show().addClass('force-show');
         } else {
-            conditionsContainer.hide();
+            conditionsContainer.hide().removeClass('force-show');
             $('#classified_conditions').val(''); // Limpar o valor quando desmarcar
         }
     });
 
     // Inicializar estado das condições
     var isJobChecked = $('#classified_is_job').is(':checked');
+    
     if (isJobChecked) {
-        $('#conditions-container').show();
+        $('#conditions-container').show().addClass('force-show');
     } else {
-        $('#conditions-container').hide();
+        $('#conditions-container').hide().removeClass('force-show');
     }
 
     // Corrigir URLs existentes na página
@@ -194,7 +205,7 @@ jQuery(document).ready(function($) {
         }
     });
 
-    // Função para limpar URLs malformadas via AJAX
+    // ✅ Função para limpar URLs malformadas via AJAX
     function cleanMalformedUrls() {
         if (typeof j1_classificados_ajax !== 'undefined') {
             $.ajax({
@@ -218,10 +229,52 @@ jQuery(document).ready(function($) {
         }
     }
 
-    // Adicionar botão para limpar URLs malformadas (apenas para administradores)
+    // ✅ Adicionar botão para limpar URLs malformadas (apenas para administradores)
     if ($('body').hasClass('wp-admin') || $('body').hasClass('dokan-dashboard')) {
         $('<button type="button" class="button" style="margin: 10px 0;">Limpar URLs Malformadas</button>')
             .on('click', cleanMalformedUrls)
             .insertAfter('.dokan-dashboard-header');
     }
+
+    // ✅ Handler para o botão de limpeza de URLs no template
+    $('#clean-malformed-urls-btn').on('click', function() {
+        var $btn = $(this);
+        var $status = $('#clean-urls-status');
+        
+        $btn.prop('disabled', true);
+        $status.show();
+        
+        cleanMalformedUrls();
+        
+        // Mostrar feedback visual
+        setTimeout(function() {
+            $status.html('<span style="color: #28a745;">✅ URLs corrigidas! Recarregando...</span>');
+            setTimeout(function() {
+                location.reload();
+            }, 1000);
+        }, 2000);
+    });
+
+    // ✅ Validação específica para nosso formulário
+    $('form[name="classified_form"]').on('submit', function(e) {
+        var title = $('#classified_title').val().trim();
+        var price = $('#classified_price').val().trim();
+        
+        if (!title) {
+            e.preventDefault();
+            alert('Por favor, preencha o título do classificado.');
+            $('#classified_title').focus();
+            return false;
+        }
+        
+        if (!price || isNaN(price)) {
+            e.preventDefault();
+            alert('Por favor, preencha um preço válido.');
+            $('#classified_price').focus();
+            return false;
+        }
+        
+        // Se chegou até aqui, permitir o envio
+        return true;
+    });
 }); 

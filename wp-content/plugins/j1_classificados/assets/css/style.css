@@ -1,9 +1,9 @@
-/* Otimizações de Performance */
+/* ✅ Otimizações de Performance - Reduzir lentidão */
 * {
     box-sizing: border-box;
 }
 
-/* Evitar forced reflow */
+/* ✅ Evitar forced reflow - Melhorar performance */
 .dokan-form-group,
 .dokan-product-edit-form,
 .dokan-dashboard-content {
@@ -12,19 +12,19 @@
     backface-visibility: hidden;
 }
 
-/* Otimizar animações */
+/* ✅ Otimizar animações - Reduzir lentidão */
 .dokan-form-group,
 .dokan-btn,
 .dokan-input-group {
     transition: all 0.2s ease;
 }
 
-/* Melhorar performance de scroll */
+/* ✅ Melhorar performance de scroll */
 .dokan-dashboard-wrap {
     -webkit-overflow-scrolling: touch;
 }
 
-/* Otimizar carregamento de imagens */
+/* ✅ Otimizar carregamento de imagens */
 .dokan-feat-image-upload img,
 .product_images img {
     max-width: 100%;
@@ -32,14 +32,14 @@
     object-fit: cover;
 }
 
-/* Reduzir repaints */
+/* ✅ Reduzir repaints - Melhorar performance */
 .dokan-form-control:focus,
 .dokan-btn:focus {
     outline: none;
     box-shadow: 0 0 0 2px rgba(0, 124, 186, 0.2);
 }
 
-/* Otimizar Select2 */
+/* ✅ Otimizar Select2 */
 .select2-container {
     z-index: 9999;
 }
@@ -50,14 +50,14 @@
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-/* Melhorar performance do checkbox */
+/* ✅ Melhorar performance do checkbox */
 input[type="checkbox"]#classified_is_job {
     transform: none !important;
     transition: none !important;
     will-change: auto !important;
 }
 
-/* Otimizar galeria de imagens */
+/* ✅ Otimizar galeria de imagens */
 .product_images {
     display: flex;
     flex-wrap: wrap;
@@ -97,7 +97,7 @@ input[type="checkbox"]#classified_is_job {
     border-color: #007cba;
 }
 
-/* Otimizar upload de imagem destacada */
+/* ✅ Otimizar upload de imagem destacada */
 .dokan-feat-image-upload {
     position: relative;
     border: 2px dashed #ddd;
@@ -152,7 +152,7 @@ input[type="checkbox"]#classified_is_job {
     background: #cc0000;
 }
 
-/* Otimizar botões */
+/* ✅ Otimizar botões - Melhorar performance */
 .dokan-btn {
     display: inline-block;
     padding: 8px 16px;
@@ -173,7 +173,7 @@ input[type="checkbox"]#classified_is_job {
     transform: translateY(-1px);
 }
 
-/* Otimizar inputs */
+/* ✅ Otimizar inputs - Melhorar performance */
 .dokan-form-control {
     width: 100%;
     padding: 8px 12px;
@@ -189,20 +189,20 @@ input[type="checkbox"]#classified_is_job {
     box-shadow: 0 0 0 2px rgba(0, 124, 186, 0.2);
 }
 
-/* Otimizar container de preço */
+/* ✅ Otimizar container de preço */
 .dokan-price-container {
     display: flex;
     gap: 10px;
     align-items: center;
 }
 
-/* Otimizar layout */
+/* ✅ Otimizar layout */
 .content-half-part {
     flex: 1;
     padding: 20px;
 }
 
-/* Otimizar mensagens */
+/* ✅ Otimizar mensagens */
 .dokan-message {
     padding: 12px 16px;
     border-radius: 4px;
@@ -222,7 +222,7 @@ input[type="checkbox"]#classified_is_job {
     }
 }
 
-/* Responsividade */
+/* ✅ Responsividade */
 @media (max-width: 768px) {
     .dokan-price-container {
         flex-direction: column;
@@ -240,7 +240,7 @@ input[type="checkbox"]#classified_is_job {
     }
 }
 
-/* Otimizações específicas para performance */
+/* ✅ Otimizações específicas para performance - Reduzir lentidão */
 .dokan-btn,
 .action-delete,
 .add-product-images {
@@ -250,7 +250,7 @@ input[type="checkbox"]#classified_is_job {
     perspective: 1000px;
 }
 
-/* Reduzir complexidade de animações */
+/* ✅ Reduzir complexidade de animações - Melhorar performance */
 .dokan-btn:hover,
 .action-delete:hover,
 .add-product-images:hover {
@@ -259,7 +259,7 @@ input[type="checkbox"]#classified_is_job {
     transform: translateZ(0) scale(1.02);
 }
 
-/* Otimizar hover states */
+/* ✅ Otimizar hover states */
 .dokan-btn.hover,
 .action-delete.hover,
 .add-product-images.hover {
@@ -267,14 +267,14 @@ input[type="checkbox"]#classified_is_job {
     transform: translateZ(0) scale(1.02);
 }
 
-/* Melhorar performance de scroll */
+/* ✅ Melhorar performance de scroll */
 .dokan-dashboard-wrap,
 .dokan-dashboard-content {
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
 }
 
-/* Otimizar carregamento de imagens */
+/* ✅ Otimizar carregamento de imagens */
 img {
     /* Evitar layout shift */
     max-width: 100%;
@@ -284,7 +284,7 @@ img {
     image-rendering: crisp-edges;
 }
 
-/* Reduzir repaints em elementos interativos */
+/* ✅ Reduzir repaints em elementos interativos - Melhorar performance */
 .dokan-form-control,
 .dokan-btn,
 .action-delete,
@@ -294,7 +294,7 @@ img {
     will-change: transform, opacity;
 }
 
-/* Otimizar transições */
+/* ✅ Otimizar transições */
 .dokan-form-control:focus,
 .dokan-btn:focus,
 .action-delete:focus,
@@ -304,7 +304,7 @@ img {
     outline: none;
 }
 
-/* Melhorar performance de hover */
+/* ✅ Melhorar performance de hover */
 .dokan-btn:hover,
 .action-delete:hover,
 .add-product-images:hover {
@@ -313,7 +313,7 @@ img {
     opacity: 0.9;
 }
 
-/* Otimizar animações */
+/* ✅ Otimizar animações */
 @keyframes slideIn {
     from {
         opacity: 0;
@@ -325,7 +325,7 @@ img {
     }
 }
 
-/* Reduzir complexidade de seletores */
+/* ✅ Reduzir complexidade de seletores */
 .dokan-form-group,
 .dokan-product-edit-form,
 .dokan-dashboard-content {
@@ -334,7 +334,7 @@ img {
     will-change: auto;
 }
 
-/* Otimizar performance de imagens */
+/* ✅ Otimizar performance de imagens */
 .product_images img,
 .dokan-feat-image-upload img {
     /* Usar transform em vez de propriedades que causam reflow */
@@ -342,7 +342,7 @@ img {
     will-change: auto;
 }
 
-/* Estilos para o plugin J1 Classificados */
+/* ✅ Estilos para o plugin J1 Classificados */
 
 /* Container principal */
 .j1-classified-container {
@@ -618,13 +618,25 @@ input[type="checkbox"]#classified_is_job {
     display: none !important;
 }
 
+/* Garantir que o campo apareça quando necessário */
+#conditions-container[style*="display: block"] {
+    display: block !important;
+}
+
+/* Forçar exibição quando necessário */
+#conditions-container.force-show {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
 /* Melhorar espaçamento do botão */
 .dokan-form-group[style*="margin-top: 30px"] {
     padding-top: 20px;
     border-top: 1px solid #eee;
 }
 
-/* Otimizar action-delete */
+/* ✅ Otimizar action-delete - Melhorar performance */
 .action-delete {
     position: absolute;
     top: -8px;
@@ -649,7 +661,7 @@ input[type="checkbox"]#classified_is_job {
     background: #cc0000;
 }
 
-/* Otimizar add-product-images */
+/* ✅ Otimizar add-product-images - Melhorar performance */
 .add-product-images {
     display: flex;
     align-items: center;
