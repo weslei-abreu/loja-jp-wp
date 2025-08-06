@@ -20,6 +20,89 @@ $query = new WP_Query($args);
 get_header();
 ?>
 
+<!-- ✅ Estilos inline para garantir que tudo funcione -->
+<style>
+/* ✅ Loading overlay */
+.j1-loading-overlay {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: rgba(0, 0, 0, 0.5) !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    z-index: 999999 !important;
+    backdrop-filter: blur(4px) !important;
+}
+
+.j1-loading-overlay.hidden {
+    display: none !important;
+}
+
+.j1-loading-spinner {
+    width: 60px !important;
+    height: 60px !important;
+    border: 4px solid rgba(255, 255, 255, 0.3) !important;
+    border-top: 4px solid #ffffff !important;
+    border-radius: 50% !important;
+    animation: j1-spin 1s linear infinite !important;
+    margin: 0 auto !important;
+    display: block !important;
+}
+
+@keyframes j1-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* ✅ Header com botão reposicionado */
+.dokan-dashboard-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    margin-bottom: 20px !important;
+}
+
+.j1-add-classified-btn {
+    margin-left: auto !important;
+}
+
+/* ✅ Botões de ação brancos */
+.dokan-table-action .dokan-btn,
+.dokan-table-action a.dokan-btn {
+    background: #ffffff !important;
+    color: #333333 !important;
+    border: 1px solid #ddd !important;
+    padding: 6px 12px !important;
+    border-radius: 4px !important;
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 5px !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    transition: all 0.3s ease !important;
+    margin-right: 5px !important;
+    box-shadow: none !important;
+}
+
+.dokan-table-action .dokan-btn:hover,
+.dokan-table-action a.dokan-btn:hover {
+    background: #f8f9fa !important;
+    color: #333333 !important;
+    border-color: #007cba !important;
+    text-decoration: none !important;
+    box-shadow: none !important;
+}
+
+.dokan-table-action .dokan-btn:last-child,
+.dokan-table-action a.dokan-btn:last-child {
+    margin-right: 0 !important;
+}
+</style>
+
 <?php do_action('dokan_dashboard_wrap_start'); ?>
 
 <!-- ✅ Loading overlay para a página (sem mensagem) -->
@@ -113,14 +196,14 @@ get_header();
                                     <td>
                                         <div class="dokan-table-action">
                                             <a href="<?php echo esc_url(add_query_arg(['action' => 'edit', 'id' => get_the_ID()], dokan_get_navigation_url('classifieds'))); ?>" 
-                                               class="dokan-btn dokan-btn-white dokan-btn-sm tips j1-loading-link" 
+                                               class="dokan-btn dokan-btn-sm tips j1-loading-link" 
                                                title="<?php esc_attr_e('Editar', 'j1_classificados'); ?>">
                                                 <i class="fas fa-edit"></i>
                                                 <span class="btn-text"><?php esc_html_e('Editar', 'j1_classificados'); ?></span>
                                             </a>
                                             
                                             <a href="<?php echo esc_url(get_permalink()); ?>" 
-                                               class="dokan-btn dokan-btn-white dokan-btn-sm tips j1-loading-link" 
+                                               class="dokan-btn dokan-btn-sm tips j1-loading-link" 
                                                title="<?php esc_attr_e('Ver', 'j1_classificados'); ?>" 
                                                target="_blank">
                                                 <i class="fas fa-eye"></i>
@@ -128,7 +211,7 @@ get_header();
                                             </a>
                                             
                                             <a href="<?php echo wp_nonce_url(add_query_arg(['action' => 'delete', 'id' => get_the_ID()], dokan_get_navigation_url('classifieds')), 'delete_classified_' . get_the_ID()); ?>" 
-                                               class="dokan-btn dokan-btn-white dokan-btn-sm tips j1-loading-link" 
+                                               class="dokan-btn dokan-btn-sm tips j1-loading-link" 
                                                title="<?php esc_attr_e('Excluir', 'j1_classificados'); ?>"
                                                onclick="return confirm('<?php esc_attr_e('Tem certeza que deseja excluir este classificado?', 'j1_classificados'); ?>');">
                                                 <i class="fas fa-trash"></i>
