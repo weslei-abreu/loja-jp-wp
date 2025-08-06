@@ -97,6 +97,11 @@ add_action('template_redirect', function () {
     $regular_price = floatval($_POST['classified_regular_price']);
     $categories = isset($_POST['classified_category']) ? array_map('intval', $_POST['classified_category']) : [];
 
+    // Verificar permissões
+    if ($post_id && !dokan_is_product_author($post_id)) {
+        wp_die(__('Access Denied', 'j1_classificados'));
+    }
+
     $post_data = [
         'post_title'   => $title,
         'post_content' => $content,
@@ -117,59 +122,24 @@ add_action('template_redirect', function () {
         update_post_meta($post_id, '_regular_price', $regular_price);
         wp_set_post_terms($post_id, $categories, 'product_cat', false);
 
-        // Upload imagem destacada
-        if (!empty($_FILES['classified_thumbnail']['name'])) {
-            require_once ABSPATH . 'wp-admin/includes/file.php';
-            $file = wp_handle_upload($_FILES['classified_thumbnail'], ['test_form' => false]);
-            if (!isset($file['error'])) {
-                $attachment_id = wp_insert_attachment([
-                    'post_mime_type' => $file['type'],
-                    'post_title'     => sanitize_file_name($file['file']),
-                    'post_content'   => '',
-                    'post_status'    => 'inherit'
-                ], $file['file'], $post_id);
-                require_once ABSPATH . 'wp-admin/includes/image.php';
-                $attach_data = wp_generate_attachment_metadata($attachment_id, $file['file']);
-                wp_update_attachment_metadata($attachment_id, $attach_data);
-                set_post_thumbnail($post_id, $attachment_id);
+        // Upload imagem destacada via media library
+        if (!empty($_POST['feat_image_id'])) {
+            $thumbnail_id = intval($_POST['feat_image_id']);
+            if ($thumbnail_id > 0) {
+                set_post_thumbnail($post_id, $thumbnail_id);
             }
         }
 
-        // Upload galeria
-        if (!empty($_FILES['classified_gallery']['name'][0])) {
-            require_once ABSPATH . 'wp-admin/includes/file.php';
-            $gallery_ids = [];
-            foreach ($_FILES['classified_gallery']['name'] as $key => $value) {
-                if (!empty($value)) {
-                    $file = [
-                        'name'     => $_FILES['classified_gallery']['name'][$key],
-                        'type'     => $_FILES['classified_gallery']['type'][$key],
-                        'tmp_name' => $_FILES['classified_gallery']['tmp_name'][$key],
-                        'error'    => $_FILES['classified_gallery']['error'][$key],
-                        'size'     => $_FILES['classified_gallery']['size'][$key],
-                    ];
-                    $upload = wp_handle_upload($file, ['test_form' => false]);
-                    if (!isset($upload['error'])) {
-                        $attach_id = wp_insert_attachment([
-                            'post_mime_type' => $upload['type'],
-                            'post_title'     => sanitize_file_name($upload['file']),
-                            'post_content'   => '',
-                            'post_status'    => 'inherit'
-                        ], $upload['file'], $post_id);
-                        require_once ABSPATH . 'wp-admin/includes/image.php';
-                        $attach_data = wp_generate_attachment_metadata($attach_id, $upload['file']);
-                        wp_update_attachment_metadata($attach_id, $attach_data);
-                        $gallery_ids[] = $attach_id;
-                    }
-                }
-            }
+        // Upload galeria via media library
+        if (!empty($_POST['product_image_gallery'])) {
+            $gallery_ids = array_filter(array_map('intval', explode(',', $_POST['product_image_gallery'])));
             if (!empty($gallery_ids)) {
                 update_post_meta($post_id, '_product_image_gallery', implode(',', $gallery_ids));
             }
         }
     }
 
-    wp_redirect(dokan_get_navigation_url('classifieds'));
+    wp_redirect(add_query_arg(['message' => 'success'], dokan_get_navigation_url('classifieds')));
     exit;
 });
 
@@ -245,6 +215,20 @@ add_action( 'wp_enqueue_scripts', function () {
             plugin_dir_url( __FILE__ ) . 'assets/css/style.css',
             [],
             '1.0'
+        );
+    }
+});
+
+// ✅ Carregar scripts para o dashboard de classificados
+add_action( 'wp_enqueue_scripts', function () {
+    if ( dokan_is_seller_dashboard() && isset( $_GET['classifieds'] ) ) {
+        wp_enqueue_media();
+        wp_enqueue_script(
+            'j1-classificados-admin',
+            plugin_dir_url( __FILE__ ) . 'assets/js/admin.js',
+            ['jquery', 'media-upload'],
+            '1.0',
+            true
         );
     }
 });
