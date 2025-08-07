@@ -2,7 +2,7 @@
 /*
 Plugin Name: Fix Password Check ProBid + WP
 Description: Suporta login usuários migrados ProBid com salt e usuários WordPress normais, incluindo alteração de senha via painel.
-Version: 1.0
+Version: 1.1
 Author: Weslei
 */
 
@@ -17,8 +17,15 @@ add_filter('check_password', function ($check, $password, $hash, $user_id) {
     }
 
     $salt = get_user_meta($user_id, 'probid_salt', true);
-    file_put_contents($logFile, "[$timestamp] [check_password] user_id=$user_id | probid_salt=" . ($salt ?: 'vazio') . "\n", FILE_APPEND);
+    file_put_contents($logFile, "[$timestamp] [check_password] user_id=$user_id | probid_salt=" . ($salt ?: 'vazio') . " | hash_prefix=" . substr($hash, 0, 4) . "\n", FILE_APPEND);
 
+    // IMPORTANTE: Se o hash tem prefixo $wp$, deixa o plugin password-bcrypt tratar
+    if (strpos($hash, '$wp$') === 0) {
+        file_put_contents($logFile, "[$timestamp] [check_password] Hash \$wp\$ detectado - deixando plugin password-bcrypt tratar | user_id=$user_id\n", FILE_APPEND);
+        return null; // Retorna null para deixar o WordPress/plugin password-bcrypt validar
+    }
+
+    // Só valida manualmente se tem probid_salt
     if (!empty($salt)) {
         // Usuário ProBid: primeiro faz HMAC + bcrypt
         $hmac = hash_hmac('sha256', $password, $salt);
@@ -38,10 +45,9 @@ add_filter('check_password', function ($check, $password, $hash, $user_id) {
         return false;
     }
 
-    // Usuário sem salt, senha bcrypt WP normal
-    $match = password_verify($password, $hash);
-    file_put_contents($logFile, "[$timestamp] [check_password] WP only | user_id=$user_id | match=" . ($match ? 'true' : 'false') . "\n", FILE_APPEND);
-    return $match;
+    // Para usuários sem salt e sem hash $wp$, deixa o WordPress validar normalmente
+    file_put_contents($logFile, "[$timestamp] [check_password] Sem salt e sem \$wp\$ - deixando WP validar | user_id=$user_id\n", FILE_APPEND);
+    return null; // Retorna null para deixar o WordPress validar
 }, 20, 4);
 
 // Bloqueia login se senha incorreta para usuários com salt ProBid
@@ -55,8 +61,15 @@ add_filter('wp_authenticate_user', function ($user, $password) {
     }
 
     $salt = get_user_meta($user->ID, 'probid_salt', true);
-    file_put_contents($logFile, "[$timestamp] [wp_authenticate_user] user_id={$user->ID} | probid_salt=" . ($salt ?: 'vazio') . "\n", FILE_APPEND);
+    file_put_contents($logFile, "[$timestamp] [wp_authenticate_user] user_id={$user->ID} | probid_salt=" . ($salt ?: 'vazio') . " | hash_prefix=" . substr($user->user_pass, 0, 4) . "\n", FILE_APPEND);
 
+    // Se tem hash $wp$, deixa o plugin password-bcrypt tratar
+    if (strpos($user->user_pass, '$wp$') === 0) {
+        file_put_contents($logFile, "[$timestamp] [wp_authenticate_user] Hash \$wp\$ detectado - deixando plugin password-bcrypt tratar | user_id={$user->ID}\n", FILE_APPEND);
+        return $user; // Deixa o WordPress/plugin password-bcrypt validar
+    }
+
+    // Só valida manualmente se tem probid_salt
     if (!empty($salt)) {
         $hmac = hash_hmac('sha256', $password, $salt);
 
@@ -69,6 +82,8 @@ add_filter('wp_authenticate_user', function ($user, $password) {
         return new WP_Error('authentication_failed', __('Incorrect password.'));
     }
 
+    // Para usuários sem salt, deixa o WordPress validar
+    file_put_contents($logFile, "[$timestamp] [wp_authenticate_user] Sem salt - deixando WP validar | user_id={$user->ID}\n", FILE_APPEND);
     return $user;
 }, 20, 2);
 
