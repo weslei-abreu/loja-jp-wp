@@ -204,6 +204,9 @@ class J1_Classified_Message_Widget extends \Elementor\Widget_Base {
         $user_email = $is_user_logged_in ? $current_user->user_email : '';
         $user_name = $is_user_logged_in ? $current_user->display_name : '';
 
+        // Debug: vamos verificar o valor
+        error_log('J1 Classificados Debug - is_user_logged_in: ' . ($is_user_logged_in ? 'true' : 'false'));
+
         ?>
         <div class="j1-message-widget">
             <!-- Botão para abrir o modal -->

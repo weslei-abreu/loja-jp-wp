@@ -74,6 +74,7 @@ class J1_Classifieds_Elementor_Integration {
                 'login_url' => wp_login_url(get_permalink()),
                 'user_email' => $user_email,
                 'user_name' => $user_name,
+                'is_user_logged_in' => is_user_logged_in(),
                 'strings' => [
                     'sending' => __('Enviando...', 'j1_classificados'),
                     'success' => __('Mensagem enviada com sucesso!', 'j1_classificados'),

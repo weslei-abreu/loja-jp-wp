@@ -11,10 +11,16 @@ jQuery(document).ready(function($) {
     $(document).on('click', '.j1-message-button', function(e) {
         e.preventDefault();
         var button = $(this);
-        var isUserLoggedIn = button.data('user-logged-in') === 'true';
+        
+        // Usar a variável global em vez do atributo data
+        var isUserLoggedIn = j1_message_ajax.is_user_logged_in;
+        
+        // Debug: vamos ver o que está sendo passado
+        console.log('Global login status:', isUserLoggedIn);
         
         // Verificar se o usuário está logado
         if (!isUserLoggedIn) {
+            console.log('User not logged in, showing alert');
             // Mostrar alerta para usuário não logado
             if (typeof dokan_sweetalert !== 'undefined') {
                 // Usar o SweetAlert do Dokan se disponível
@@ -38,6 +44,7 @@ jQuery(document).ready(function($) {
             return;
         }
         
+        console.log('User is logged in, opening modal');
         var classifiedId = button.data('classified-id');
         var modal = $('#j1-message-modal-' + classifiedId);
         
@@ -191,4 +198,4 @@ jQuery(document).ready(function($) {
     $(document).on('click', '.j1-message-modal-content', function(e) {
         e.stopPropagation();
     });
-}); 
+});
