@@ -2,7 +2,7 @@
 /*
 Plugin Name: Fix Password Check ProBid + WP
 Description: Suporta login usuários migrados ProBid com salt e usuários WordPress normais, incluindo alteração de senha via painel.
-Version: 1.2
+Version: 1.3
 Author: Weslei
 */
 
@@ -22,6 +22,14 @@ add_filter('check_password', function ($check, $password, $hash, $user_id) {
     // IMPORTANTE: Se o hash tem prefixo $wp$, deixa o WordPress 6.8+ tratar
     if (strpos($hash, '$wp$') === 0) {
         file_put_contents($logFile, "[$timestamp] [check_password] Hash \$wp\$ detectado - deixando WordPress 6.8+ tratar | user_id=$user_id\n", FILE_APPEND);
+        
+        // Teste adicional: verificar se o WordPress 6.8+ consegue processar
+        $password_to_verify = base64_encode(hash_hmac('sha384', $password, 'wp-sha384', true));
+        $hash_to_verify = substr($hash, 3);
+        $test_check = password_verify($password_to_verify, $hash_to_verify);
+        
+        file_put_contents($logFile, "[$timestamp] [check_password] Teste interno \$wp\$: " . ($test_check ? 'OK' : 'FALHOU') . " | user_id=$user_id\n", FILE_APPEND);
+        
         return null; // Retorna null para deixar o WordPress validar
     }
 
@@ -66,6 +74,14 @@ add_filter('wp_authenticate_user', function ($user, $password) {
     // Se tem hash $wp$, deixa o WordPress 6.8+ tratar
     if (strpos($user->user_pass, '$wp$') === 0) {
         file_put_contents($logFile, "[$timestamp] [wp_authenticate_user] Hash \$wp\$ detectado - deixando WordPress 6.8+ tratar | user_id={$user->ID}\n", FILE_APPEND);
+        
+        // Teste adicional: verificar se o WordPress 6.8+ consegue processar
+        $password_to_verify = base64_encode(hash_hmac('sha384', $password, 'wp-sha384', true));
+        $hash_to_verify = substr($user->user_pass, 3);
+        $test_check = password_verify($password_to_verify, $hash_to_verify);
+        
+        file_put_contents($logFile, "[$timestamp] [wp_authenticate_user] Teste interno \$wp\$: " . ($test_check ? 'OK' : 'FALHOU') . " | user_id={$user->ID}\n", FILE_APPEND);
+        
         return $user; // Deixa o WordPress validar
     }
 
