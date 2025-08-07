@@ -851,6 +851,3 @@ Atenciosamente,
 
 // 🔹 Incluir handlers AJAX
 require_once dirname(__FILE__) . '/includes/ajax-handlers.php';
-
-// 🔹 Incluir debug (remover em produção)
-require_once dirname(__FILE__) . '/debug-widget.php';
