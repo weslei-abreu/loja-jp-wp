@@ -2,13 +2,13 @@
 /*
 Plugin Name: Test Hash
 Description: Teste para verificar processamento de hash $wp$
-Version: 1.0
+Version: 1.1
 Author: Weslei
 */
 
 // Teste direto do hash $wp$
 add_action('init', function() {
-    if (isset($_GET['test_hash']) && current_user_can('manage_options')) {
+    if (isset($_GET['test_hash'])) {
         $password = 'rUrJOPciPz&EjZvnh(vnBghb';
         $hash = '$wp$2y$10$1Z2E2lWPgKW6oGJ7CcdGce4jL6CFSoUUiDf4Pe4j9/IhGEFwBoyQK';
         
