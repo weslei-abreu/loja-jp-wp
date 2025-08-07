@@ -2,7 +2,7 @@
 /*
 Plugin Name: Fix Password Check ProBid + WP
 Description: Suporta login usuários migrados ProBid com salt e usuários WordPress normais, incluindo alteração de senha via painel.
-Version: 1.1
+Version: 1.2
 Author: Weslei
 */
 
@@ -19,10 +19,10 @@ add_filter('check_password', function ($check, $password, $hash, $user_id) {
     $salt = get_user_meta($user_id, 'probid_salt', true);
     file_put_contents($logFile, "[$timestamp] [check_password] user_id=$user_id | probid_salt=" . ($salt ?: 'vazio') . " | hash_prefix=" . substr($hash, 0, 4) . "\n", FILE_APPEND);
 
-    // IMPORTANTE: Se o hash tem prefixo $wp$, deixa o plugin password-bcrypt tratar
+    // IMPORTANTE: Se o hash tem prefixo $wp$, deixa o WordPress 6.8+ tratar
     if (strpos($hash, '$wp$') === 0) {
-        file_put_contents($logFile, "[$timestamp] [check_password] Hash \$wp\$ detectado - deixando plugin password-bcrypt tratar | user_id=$user_id\n", FILE_APPEND);
-        return null; // Retorna null para deixar o WordPress/plugin password-bcrypt validar
+        file_put_contents($logFile, "[$timestamp] [check_password] Hash \$wp\$ detectado - deixando WordPress 6.8+ tratar | user_id=$user_id\n", FILE_APPEND);
+        return null; // Retorna null para deixar o WordPress validar
     }
 
     // Só valida manualmente se tem probid_salt
@@ -63,10 +63,10 @@ add_filter('wp_authenticate_user', function ($user, $password) {
     $salt = get_user_meta($user->ID, 'probid_salt', true);
     file_put_contents($logFile, "[$timestamp] [wp_authenticate_user] user_id={$user->ID} | probid_salt=" . ($salt ?: 'vazio') . " | hash_prefix=" . substr($user->user_pass, 0, 4) . "\n", FILE_APPEND);
 
-    // Se tem hash $wp$, deixa o plugin password-bcrypt tratar
+    // Se tem hash $wp$, deixa o WordPress 6.8+ tratar
     if (strpos($user->user_pass, '$wp$') === 0) {
-        file_put_contents($logFile, "[$timestamp] [wp_authenticate_user] Hash \$wp\$ detectado - deixando plugin password-bcrypt tratar | user_id={$user->ID}\n", FILE_APPEND);
-        return $user; // Deixa o WordPress/plugin password-bcrypt validar
+        file_put_contents($logFile, "[$timestamp] [wp_authenticate_user] Hash \$wp\$ detectado - deixando WordPress 6.8+ tratar | user_id={$user->ID}\n", FILE_APPEND);
+        return $user; // Deixa o WordPress validar
     }
 
     // Só valida manualmente se tem probid_salt
