@@ -2,7 +2,7 @@
 /*
 Plugin Name: Fix Password Check ProBid + WP
 Description: Suporta login usuários migrados ProBid com salt e usuários WordPress normais, incluindo alteração de senha via painel.
-Version: 1.3
+Version: 1.4
 Author: Weslei
 */
 
@@ -30,7 +30,8 @@ add_filter('check_password', function ($check, $password, $hash, $user_id) {
         
         file_put_contents($logFile, "[$timestamp] [check_password] Teste interno \$wp\$: " . ($test_check ? 'OK' : 'FALHOU') . " | user_id=$user_id\n", FILE_APPEND);
         
-        return null; // Retorna null para deixar o WordPress validar
+        // Retorna o resultado do teste interno para hashes $wp$
+        return $test_check;
     }
 
     // Só valida manualmente se tem probid_salt
@@ -55,7 +56,7 @@ add_filter('check_password', function ($check, $password, $hash, $user_id) {
 
     // Para usuários sem salt e sem hash $wp$, deixa o WordPress validar normalmente
     file_put_contents($logFile, "[$timestamp] [check_password] Sem salt e sem \$wp\$ - deixando WP validar | user_id=$user_id\n", FILE_APPEND);
-    return null; // Retorna null para deixar o WordPress validar
+    return $check; // Retorna o valor original do WordPress
 }, 20, 4);
 
 // Bloqueia login se senha incorreta para usuários com salt ProBid
@@ -81,6 +82,12 @@ add_filter('wp_authenticate_user', function ($user, $password) {
         $test_check = password_verify($password_to_verify, $hash_to_verify);
         
         file_put_contents($logFile, "[$timestamp] [wp_authenticate_user] Teste interno \$wp\$: " . ($test_check ? 'OK' : 'FALHOU') . " | user_id={$user->ID}\n", FILE_APPEND);
+        
+        // Se o teste interno falhou, retorna erro
+        if (!$test_check) {
+            file_put_contents($logFile, "[$timestamp] [wp_authenticate_user] AUTH FAIL \$wp\$ | user_id={$user->ID}\n", FILE_APPEND);
+            return new WP_Error('authentication_failed', __('Incorrect password.'));
+        }
         
         return $user; // Deixa o WordPress validar
     }
