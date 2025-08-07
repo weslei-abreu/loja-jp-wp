@@ -10,16 +10,52 @@ jQuery(document).ready(function($) {
     // Abrir modal
     $(document).on('click', '.j1-message-button', function(e) {
         e.preventDefault();
-        var classifiedId = $(this).data('classified-id');
+        var button = $(this);
+        var isUserLoggedIn = button.data('user-logged-in') === 'true';
+        
+        // Verificar se o usuário está logado
+        if (!isUserLoggedIn) {
+            // Mostrar alerta para usuário não logado
+            if (typeof dokan_sweetalert !== 'undefined') {
+                // Usar o SweetAlert do Dokan se disponível
+                dokan_sweetalert(j1_message_ajax.strings.login_required, {
+                    icon: 'warning',
+                    confirmButtonText: j1_message_ajax.strings.login_now,
+                    showCancelButton: true,
+                    cancelButtonText: j1_message_ajax.strings.cancel,
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        // Redirecionar para página de login
+                        window.location.href = j1_message_ajax.login_url;
+                    }
+                });
+            } else {
+                // Fallback para alert padrão
+                if (confirm(j1_message_ajax.strings.login_required + '\n\n' + j1_message_ajax.strings.login_now_confirm)) {
+                    window.location.href = j1_message_ajax.login_url;
+                }
+            }
+            return;
+        }
+        
+        var classifiedId = button.data('classified-id');
         var modal = $('#j1-message-modal-' + classifiedId);
         
         if (modal.length) {
             modal.addClass('show');
             $('body').addClass('modal-open');
             
-            // Focar no primeiro campo
+            // Focar no primeiro campo vazio ou no campo de mensagem
             setTimeout(function() {
-                modal.find('input[type="text"]').first().focus();
+                var firstEmptyField = modal.find('input[type="text"], input[type="email"]').filter(function() {
+                    return !$(this).val();
+                }).first();
+                
+                if (firstEmptyField.length) {
+                    firstEmptyField.focus();
+                } else {
+                    modal.find('textarea').focus();
+                }
             }, 300);
         }
     });
@@ -63,7 +99,7 @@ jQuery(document).ready(function($) {
         });
 
         if (!isValid) {
-            showFeedback(modal, 'error', 'Por favor, preencha todos os campos obrigatórios.');
+            showFeedback(modal, 'error', j1_message_ajax.strings.fill_required_fields);
             return;
         }
 
@@ -87,6 +123,14 @@ jQuery(document).ready(function($) {
                 if (response.success) {
                     showFeedback(modal, 'success', response.data.message || j1_message_ajax.strings.success);
                     form[0].reset();
+                    
+                    // Preencher novamente os campos do usuário logado
+                    if (j1_message_ajax.user_email) {
+                        form.find('input[name="email"]').val(j1_message_ajax.user_email);
+                    }
+                    if (j1_message_ajax.user_name) {
+                        form.find('input[name="name"]').val(j1_message_ajax.user_name);
+                    }
                     
                     // Fechar modal após 2 segundos
                     setTimeout(function() {
@@ -114,6 +158,14 @@ jQuery(document).ready(function($) {
         // Resetar formulário
         modal.find('form')[0].reset();
         modal.find('.error').removeClass('error');
+        
+        // Preencher novamente os campos do usuário logado
+        if (j1_message_ajax.user_email) {
+            modal.find('input[name="email"]').val(j1_message_ajax.user_email);
+        }
+        if (j1_message_ajax.user_name) {
+            modal.find('input[name="name"]').val(j1_message_ajax.user_name);
+        }
     }
 
     // Função para mostrar feedback

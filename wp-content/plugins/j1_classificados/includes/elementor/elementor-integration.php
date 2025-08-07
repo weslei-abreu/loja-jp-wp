@@ -54,17 +54,35 @@ class J1_Classifieds_Elementor_Integration {
                 'j1-message-widget',
                 plugin_dir_url(dirname(dirname(__FILE__))) . 'assets/js/message-widget.js',
                 ['jquery'],
-                '1.0.0',
+                '1.1.0',
                 true
             );
+
+            // Obter dados do usuário logado
+            $current_user = wp_get_current_user();
+            $user_email = '';
+            $user_name = '';
+            
+            if (is_user_logged_in()) {
+                $user_email = $current_user->user_email;
+                $user_name = $current_user->display_name;
+            }
 
             wp_localize_script('j1-message-widget', 'j1_message_ajax', [
                 'ajax_url' => admin_url('admin-ajax.php'),
                 'nonce' => wp_create_nonce('j1_message_nonce'),
+                'login_url' => wp_login_url(get_permalink()),
+                'user_email' => $user_email,
+                'user_name' => $user_name,
                 'strings' => [
                     'sending' => __('Enviando...', 'j1_classificados'),
                     'success' => __('Mensagem enviada com sucesso!', 'j1_classificados'),
                     'error' => __('Erro ao enviar mensagem. Tente novamente.', 'j1_classificados'),
+                    'login_required' => __('Você precisa estar logado para enviar mensagens.', 'j1_classificados'),
+                    'login_now' => __('Fazer Login', 'j1_classificados'),
+                    'login_now_confirm' => __('Deseja ir para a página de login?', 'j1_classificados'),
+                    'cancel' => __('Cancelar', 'j1_classificados'),
+                    'fill_required_fields' => __('Por favor, preencha todos os campos obrigatórios.', 'j1_classificados'),
                 ]
             ]);
         }
@@ -79,7 +97,7 @@ class J1_Classifieds_Elementor_Integration {
                 'j1-message-widget',
                 plugin_dir_url(dirname(dirname(__FILE__))) . 'assets/css/message-widget.css',
                 [],
-                '1.0.0'
+                '1.1.0'
             );
         }
     }

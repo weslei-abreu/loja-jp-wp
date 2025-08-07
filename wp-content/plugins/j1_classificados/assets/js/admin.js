@@ -1,257 +1,11 @@
 jQuery(document).ready(function($) {
     'use strict';
 
-    // ✅ TESTE: Verificar se o JavaScript está sendo carregado
-    console.log('J1 Classificados JavaScript loaded!');
-
-    // ✅ TESTE: Verificar se os inputs estão funcionando
-    console.log('Input de valor encontrado:', $('#classified_price').length);
-    console.log('Input de salário encontrado:', $('#classified_conditions').length);
-    console.log('Checkbox encontrado:', $('#classified_is_job').length);
-
-    // ✅ TESTE: Verificar se os inputs estão funcionando corretamente
-    $('#classified_price').on('input', function() {
-        console.log('Input de valor alterado:', $(this).val());
-    });
-
-    $('#classified_conditions').on('change', function() {
-        console.log('Input de salário alterado:', $(this).val());
-    });
-
     // ✅ Verificar se estamos na página de classificados
-    if (!$('form[name="classified_form"]').length && !$('#j1-classifieds-table').length) {
+    if (!$('form[name="classified_form"]').length) {
         return; // Sair se não estivermos na página de classificados
     }
 
-    // ✅ FUNÇÕES DE LOADING
-    function showPageLoading(text = 'Carregando...') {
-        var loadingOverlay = $('#j1-page-loading');
-        if (loadingOverlay.length) {
-            // ✅ Não mostrar mensagem na listagem - apenas spinner
-            if (text && text !== 'Carregando...') {
-                loadingOverlay.find('.j1-loading-text').text(text);
-            } else {
-                loadingOverlay.find('.j1-loading-text').hide();
-            }
-            loadingOverlay.removeClass('hidden').show();
-        } else {
-            // Criar overlay se não existir
-            var overlay = $('<div id="j1-page-loading" class="j1-loading-overlay">' +
-                '<div style="text-align: center; background: transparent; padding: 0; border-radius: 0; box-shadow: none; min-width: auto; border: none;">' +
-                '<div class="j1-loading-spinner"></div>' +
-                '</div>' +
-                '</div>');
-            $('body').append(overlay);
-        }
-    }
-
-    function hidePageLoading() {
-        var loadingOverlay = $('#j1-page-loading');
-        console.log('hidePageLoading called, overlay found:', loadingOverlay.length);
-        
-        if (loadingOverlay.length) {
-            loadingOverlay.fadeOut(300, function() {
-                $(this).addClass('hidden').hide();
-            });
-            console.log('Loading overlay hidden successfully');
-        } else {
-            console.log('Loading overlay not found for hiding');
-            // Fallback: tentar esconder qualquer elemento com a classe
-            $('.j1-loading-overlay').fadeOut(300, function() {
-                $(this).addClass('hidden').hide();
-            });
-        }
-    }
-
-    function showButtonLoading(button, text = 'Carregando...') {
-        var $btn = $(button);
-        $btn.addClass('j1-btn-loading');
-        $btn.find('.btn-text').text(text);
-    }
-
-    function hideButtonLoading(button) {
-        var $btn = $(button);
-        $btn.removeClass('j1-btn-loading');
-        $btn.find('.btn-text').text($btn.data('original-text') || 'Carregar');
-    }
-
-    function showFormLoading(form) {
-        var $form = $(form);
-        $form.addClass('j1-form-loading');
-    }
-
-    function hideFormLoading(form) {
-        var $form = $(form);
-        $form.removeClass('j1-form-loading');
-    }
-
-    function showUploadLoading(element) {
-        var $element = $(element);
-        $element.addClass('j1-upload-loading');
-    }
-
-    function hideUploadLoading(element) {
-        var $element = $(element);
-        $element.removeClass('j1-upload-loading');
-    }
-
-    // ✅ FUNÇÕES ESPECÍFICAS PARA LOADING DA PÁGINA DE EDIÇÃO
-    function showEditPageLoading() {
-        var loadingOverlay = $('#j1-edit-page-loading');
-        console.log('Loading overlay found:', loadingOverlay.length);
-        
-        if (loadingOverlay.length) {
-            loadingOverlay.removeClass('hidden').show();
-            console.log('Loading overlay shown successfully');
-        } else {
-            console.log('Loading overlay not found!');
-        }
-    }
-
-    function hideEditPageLoading() {
-        var loadingOverlay = $('#j1-edit-page-loading');
-        var pageContent = $('.j1-edit-page-content');
-        
-        console.log('Hiding loading overlay...');
-        console.log('Loading overlay found:', loadingOverlay.length);
-        console.log('Page content found:', pageContent.length);
-        
-        if (loadingOverlay.length) {
-            loadingOverlay.addClass('hidden').hide();
-            
-            // Mostrar conteúdo da página com fade in
-            if (pageContent.length) {
-                pageContent.addClass('loaded');
-            }
-            console.log('Loading overlay hidden successfully');
-        } else {
-            console.log('Loading overlay not found for hiding!');
-        }
-    }
-
-    // ✅ INICIALIZAR LOADINGS
-    function initializeLoadings() {
-        // Verificar se estamos na página de edição/criação
-        var isEditPage = $('form[name="classified_form"]').length > 0;
-        
-        console.log('Is edit page:', isEditPage);
-        console.log('Form found:', $('form[name="classified_form"]').length);
-        
-        if (isEditPage) {
-            initializeEditPageLoading();
-        } else {
-            initializeDefaultLoading();
-        }
-    }
-
-    // ✅ LOADING ESPECÍFICO PARA PÁGINA DE EDIÇÃO/CRIAÇÃO
-    function initializeEditPageLoading() {
-        console.log('Initializing edit page loading...');
-        
-        // Mostrar loading inicialmente
-        showEditPageLoading();
-        console.log('Loading overlay shown');
-        
-        // Esconder loading após 2 segundos
-        setTimeout(function() {
-            hideEditPageLoading();
-            console.log('Loading overlay hidden');
-        }, 2000);
-    }
-
-    // ✅ LOADING PADRÃO PARA OUTRAS PÁGINAS
-    function initializeDefaultLoading() {
-        console.log('Initializing default loading...');
-        
-        // Mostrar loading inicialmente
-        showPageLoading('Carregando...');
-        
-        // ✅ Esconder loading após 1 segundo (mais rápido)
-        setTimeout(function() {
-            console.log('Hiding loading after 1 second...');
-            $('#j1-page-loading').fadeOut(300, function() {
-                $(this).addClass('hidden').hide();
-            });
-        }, 1000);
-
-        // Adicionar loading nos links
-        $('.j1-loading-link').on('click', function(e) {
-            showPageLoading('Carregando...');
-            showButtonLoading(this, 'Carregando...');
-        });
-
-        // Adicionar loading nos links de ação da tabela
-        $('.dokan-table-action a').on('click', function(e) {
-            if (!$(this).hasClass('j1-loading-link')) {
-                showPageLoading('Carregando...');
-                showButtonLoading(this, 'Carregando...');
-            }
-        });
-
-        // Adicionar loading no formulário
-        $('form[name="classified_form"]').on('submit', function(e) {
-            showPageLoading('Publicando...');
-            showFormLoading(this);
-            showButtonLoading('.j1-submit-btn', 'Publicando...');
-        });
-
-        // Adicionar loading nos links de navegação do Dokan
-        $('.dokan-dashboard-navigation a, .dokan-dashboard-wrap a[href*="classifieds"]').on('click', function(e) {
-            if (!$(this).hasClass('j1-loading-link')) {
-                showPageLoading('Carregando...');
-            }
-        });
-
-        // Adicionar loading para imagens
-        $('img').on('load', function() {
-            $(this).removeClass('j1-image-loading');
-        }).on('error', function() {
-            $(this).removeClass('j1-image-loading');
-        });
-
-        // Adicionar classe de loading para imagens que ainda não carregaram
-        $('img').each(function() {
-            if (!this.complete) {
-                $(this).addClass('j1-image-loading');
-            }
-        });
-
-        // Adicionar loading para a tabela
-        if ($('#j1-classifieds-table').length) {
-            $('#j1-classifieds-table').addClass('j1-table-loading');
-            setTimeout(function() {
-                $('#j1-classifieds-table').removeClass('j1-table-loading');
-            }, 1000);
-        }
-
-        // Adicionar loading para o formulário
-        if ($('form[name="classified_form"]').length) {
-            $('form[name="classified_form"]').addClass('j1-form-loading');
-            setTimeout(function() {
-                $('form[name="classified_form"]').removeClass('j1-form-loading');
-            }, 800);
-        }
-
-        // Adicionar loading para a galeria de imagens
-        if ($('.dokan-product-gallery').length) {
-            $('.dokan-product-gallery').addClass('j1-upload-loading');
-            setTimeout(function() {
-                $('.dokan-product-gallery').removeClass('j1-upload-loading');
-            }, 600);
-        }
-
-        // Adicionar loading para o upload de imagens
-        if ($('.dokan-feat-image-upload').length) {
-            $('.dokan-feat-image-upload').addClass('j1-upload-loading');
-            setTimeout(function() {
-                $('.dokan-feat-image-upload').removeClass('j1-upload-loading');
-            }, 500);
-        }
-    }
-
-    // ✅ EXECUTAR INICIALIZAÇÃO
-    initializeLoadings();
-    
     // ✅ Desabilitar validação do Dokan para nosso formulário
     $('form[name="classified_form"]').off('submit.dokan-validation');
 
@@ -292,206 +46,101 @@ jQuery(document).ready(function($) {
         var conditionsContainer = $('#conditions-container');
         var isChecked = $(this).is(':checked');
         
-        console.log('Checkbox changed:', isChecked);
-        console.log('Container found:', conditionsContainer.length);
-        console.log('Container HTML:', conditionsContainer.html());
-        
         if (isChecked) {
             conditionsContainer.show();
-            console.log('Showing conditions container');
         } else {
             conditionsContainer.hide();
             $('#classified_conditions').val(''); // Limpar o valor quando desmarcar
-            console.log('Hiding conditions container');
         }
     });
 
     // ✅ SIMPLES: Inicializar estado das condições
     function initializeConditionsState() {
         var isJobChecked = $('#classified_is_job').is(':checked');
-        var conditionsContainer = $('#conditions-container');
-        
-        console.log('Initializing conditions state:', isJobChecked);
-        console.log('Container found:', conditionsContainer.length);
-        console.log('Container HTML:', conditionsContainer.html());
         
         if (isJobChecked) {
-            conditionsContainer.show();
-            console.log('Showing conditions container on init');
+            $('#conditions-container').show();
         } else {
-            conditionsContainer.hide();
-            console.log('Hiding conditions container on init');
+            $('#conditions-container').hide();
         }
     }
 
     // Executar inicialização após o DOM estar pronto
     $(document).ready(function() {
-        console.log('DOM ready, initializing conditions state');
-        console.log('Checkbox found:', $('#classified_is_job').length);
-        console.log('Container found:', $('#conditions-container').length);
         initializeConditionsState();
     });
 
-    // ✅ Upload de imagem destacada com loading
-    $('.dokan-feat-image-btn').off('click').on('click', function(e) {
+    // ✅ Upload de imagem destacada
+    $('.dokan-feat-image-btn').on('click', function(e) {
         e.preventDefault();
-        e.stopPropagation();
-        e.stopImmediatePropagation();
         
-        var $btn = $(this);
-        
-        // Evitar cliques múltiplos
-        if ($btn.hasClass('loading')) {
-            return false;
-        }
-        
-        $btn.addClass('loading');
-        
-        // ✅ MOSTRAR LOADING IMEDIATAMENTE
-        showPageLoading('Carregando biblioteca de mídia...');
-        showUploadLoading('.dokan-feat-image-upload');
-        
-        // Abrir biblioteca imediatamente
-        try {
-            var frame = wp.media({
-                title: strings.select_featured_image || 'Selecionar Imagem Destacada',
-                multiple: false
-            });
+        var frame = wp.media({
+            title: strings.select_featured_image || 'Selecionar Imagem Destacada',
+            multiple: false
+        });
 
-            // ✅ ESCONDER LOADING QUANDO A BIBLIOTECA ABRIR
-            frame.on('open', function() {
-                hidePageLoading();
-                hideUploadLoading('.dokan-feat-image-upload');
-                $btn.removeClass('loading');
-            });
+        frame.on('select', function() {
+            var attachment = frame.state().get('selection').first().toJSON();
+            if (attachment && attachment.url) {
+                // Corrigir URL malformada
+                attachment = fixAttachmentUrls(attachment);
+                
+                $('.dokan-feat-image-id').val(attachment.id);
+                $('.image-wrap img').attr('src', attachment.url);
+                $('.image-wrap').removeClass('dokan-hide');
+                $('.instruction-inside').addClass('dokan-hide');
+            }
+        });
 
-            frame.on('select', function() {
-                var attachment = frame.state().get('selection').first().toJSON();
-                if (attachment && attachment.url) {
-                    // Corrigir URL malformada
-                    attachment = fixAttachmentUrls(attachment);
-                    
-                    $('.dokan-feat-image-id').val(attachment.id);
-                    $('.image-wrap img').attr('src', attachment.url);
-                    $('.image-wrap').removeClass('dokan-hide');
-                    $('.instruction-inside').addClass('dokan-hide');
-                }
-            });
-
-            frame.on('close', function() {
-                // Garantir que o loading seja escondido se ainda estiver visível
-                hidePageLoading();
-                hideUploadLoading('.dokan-feat-image-upload');
-                $btn.removeClass('loading');
-            });
-
-            // Fallback: esconder loading após 5 segundos se a biblioteca não abrir
-            setTimeout(function() {
-                hidePageLoading();
-                hideUploadLoading('.dokan-feat-image-upload');
-                $btn.removeClass('loading');
-            }, 5000);
-
-            frame.open();
-        } catch (error) {
-            console.log('Erro ao abrir biblioteca:', error);
-            hidePageLoading();
-            hideUploadLoading('.dokan-feat-image-upload');
-            $btn.removeClass('loading');
-        }
+        frame.open();
     });
 
     // Remover imagem destacada
     $('.dokan-remove-feat-image').on('click', function(e) {
         e.preventDefault();
-        
         $('.dokan-feat-image-id').val('');
         $('.image-wrap').addClass('dokan-hide');
         $('.instruction-inside').removeClass('dokan-hide');
         $('.image-wrap img').attr('src', '');
     });
 
-    // ✅ Upload galeria de imagens com loading
-    $('.add-product-images').off('click').on('click', function(e) {
+    // ✅ Upload galeria de imagens
+    $('.add-product-images').on('click', function(e) {
         e.preventDefault();
-        e.stopPropagation();
-        e.stopImmediatePropagation();
         
-        var $btn = $(this);
-        
-        // Evitar cliques múltiplos
-        if ($btn.hasClass('loading')) {
-            return false;
-        }
-        
-        $btn.addClass('loading');
-        
-        // ✅ MOSTRAR LOADING IMEDIATAMENTE
-        showPageLoading('Carregando biblioteca de mídia...');
-        showUploadLoading('.dokan-product-gallery');
-        
-        // Abrir biblioteca imediatamente
-        try {
-            var frame = wp.media({
-                title: strings.select_gallery_images || 'Selecionar Imagens da Galeria',
-                multiple: true
-            });
+        var frame = wp.media({
+            title: strings.select_gallery_images || 'Selecionar Imagens da Galeria',
+            multiple: true
+        });
 
-            // ✅ ESCONDER LOADING QUANDO A BIBLIOTECA ABRIR
-            frame.on('open', function() {
-                hidePageLoading();
-                hideUploadLoading('.dokan-product-gallery');
-                $btn.removeClass('loading');
-            });
-
-            frame.on('select', function() {
-                var attachments = frame.state().get('selection').toJSON();
-                var galleryIds = [];
-                
-                attachments.forEach(function(attachment) {
-                    if (attachment && attachment.url) {
-                        // Corrigir URL malformada
-                        attachment = fixAttachmentUrls(attachment);
-                        
-                        galleryIds.push(attachment.id);
-                        
-                        var imageHtml = '<li class="image" data-attachment_id="' + attachment.id + '">' +
-                            '<img src="' + attachment.url + '" alt="">' +
-                            '<a href="#" class="action-delete" title="' + (strings.delete_image || 'Excluir imagem') + '">&times;</a>' +
-                            '</li>';
-                        
-                        $('.product_images li.add-image').before(imageHtml);
-                    }
-                });
-                
-                if (galleryIds.length > 0) {
-                    var currentGallery = $('#product_image_gallery').val();
-                    var newGallery = currentGallery ? currentGallery + ',' + galleryIds.join(',') : galleryIds.join(',');
-                    $('#product_image_gallery').val(newGallery);
+        frame.on('select', function() {
+            var attachments = frame.state().get('selection').toJSON();
+            var galleryIds = [];
+            
+            attachments.forEach(function(attachment) {
+                if (attachment && attachment.url) {
+                    // Corrigir URL malformada
+                    attachment = fixAttachmentUrls(attachment);
+                    
+                    galleryIds.push(attachment.id);
+                    
+                    var imageHtml = '<li class="image" data-attachment_id="' + attachment.id + '">' +
+                        '<img src="' + attachment.url + '" alt="">' +
+                        '<a href="#" class="action-delete" title="' + (strings.delete_image || 'Excluir imagem') + '">&times;</a>' +
+                        '</li>';
+                    
+                    $('.product_images li.add-image').before(imageHtml);
                 }
             });
+            
+            if (galleryIds.length > 0) {
+                var currentGallery = $('#product_image_gallery').val();
+                var newGallery = currentGallery ? currentGallery + ',' + galleryIds.join(',') : galleryIds.join(',');
+                $('#product_image_gallery').val(newGallery);
+            }
+        });
 
-            frame.on('close', function() {
-                // Garantir que o loading seja escondido se ainda estiver visível
-                hidePageLoading();
-                hideUploadLoading('.dokan-product-gallery');
-                $btn.removeClass('loading');
-            });
-
-            // Fallback: esconder loading após 5 segundos se a biblioteca não abrir
-            setTimeout(function() {
-                hidePageLoading();
-                hideUploadLoading('.dokan-product-gallery');
-                $btn.removeClass('loading');
-            }, 5000);
-
-            frame.open();
-        } catch (error) {
-            console.log('Erro ao abrir biblioteca:', error);
-            hidePageLoading();
-            hideUploadLoading('.dokan-product-gallery');
-            $btn.removeClass('loading');
-        }
+        frame.open();
     });
 
     // Remover imagem da galeria
@@ -529,19 +178,14 @@ jQuery(document).ready(function($) {
         }
     });
 
-    // ✅ Validação específica para nosso formulário com loading
+    // ✅ Validação específica para nosso formulário
     $('form[name="classified_form"]').on('submit', function(e) {
-        // Prevenir validação padrão do Dokan
-        e.stopPropagation();
-        e.stopImmediatePropagation();
-        
         var title = $('#classified_title').val();
         var price = $('#classified_price').val();
         
         // Verificar se title existe e não está vazio
         if (!title || (typeof title === 'string' && !title.trim())) {
             e.preventDefault();
-            hideFormLoading(this);
             alert('Por favor, preencha o título do classificado.');
             $('#classified_title').focus();
             return false;
@@ -550,76 +194,12 @@ jQuery(document).ready(function($) {
         // Verificar se price existe e é válido
         if (!price || isNaN(parseFloat(price))) {
             e.preventDefault();
-            hideFormLoading(this);
             alert('Por favor, preencha um preço válido.');
             $('#classified_price').focus();
             return false;
         }
         
-        // Mostrar loading no formulário
-        showFormLoading(this);
-        
         // Se chegou até aqui, permitir o envio
         return true;
-    });
-
-    // ✅ Sistema de visualizações
-    function incrementViews(postId) {
-        if (!postId) return;
-        
-        $.ajax({
-            url: j1_classificados_ajax.ajax_url,
-            type: 'POST',
-            data: {
-                action: 'j1_classificados_increment_views',
-                post_id: postId,
-                nonce: j1_classificados_ajax.nonce
-            },
-            success: function(response) {
-                if (response.success) {
-                    // Atualizar o contador na tabela
-                    var viewsElement = $('.j1-views-count[data-post-id="' + postId + '"]');
-                    if (viewsElement.length) {
-                        var currentViews = parseInt(viewsElement.text().replace(/[^\d]/g, ''));
-                        var newViews = currentViews + 1;
-                        viewsElement.html('<i class="fas fa-eye"></i> ' + newViews.toLocaleString());
-                    }
-                }
-            },
-            error: function() {
-                console.log('Erro ao incrementar visualizações');
-            }
-        });
-    }
-
-    // ✅ Incrementar visualizações quando clica no link "Ver"
-    $(document).on('click', '.dokan-table-action a[href*="classifieds"][target="_blank"]', function(e) {
-        var $link = $(this);
-        var href = $link.attr('href');
-        
-        // Tentar extrair o ID do post da URL
-        var urlParts = href.split('/');
-        var lastPart = urlParts[urlParts.length - 1];
-        
-        // Se a URL termina com um número, é provavelmente o ID
-        if (/^\d+$/.test(lastPart)) {
-            incrementViews(lastPart);
-        } else {
-            // Tentar encontrar o ID via AJAX
-            $.ajax({
-                url: j1_classificados_ajax.ajax_url,
-                type: 'POST',
-                data: {
-                    action: 'j1_classificados_get_post_id_by_url',
-                    url: href,
-                    nonce: j1_classificados_ajax.nonce
-                },
-                success: function(response) {
-                    if (response.success && response.data.post_id) {
-                        incrementViews(response.data.post_id);
-                    }
-                }
-            });
-        }
     });
 }); 

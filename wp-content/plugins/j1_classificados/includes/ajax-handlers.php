@@ -11,9 +11,15 @@ if (!defined('ABSPATH')) exit;
  * Handler para enviar mensagem
  */
 add_action('wp_ajax_j1_send_message', 'j1_handle_send_message');
-add_action('wp_ajax_nopriv_j1_send_message', 'j1_handle_send_message');
+// Remover a ação para usuários não logados
+// add_action('wp_ajax_nopriv_j1_send_message', 'j1_handle_send_message');
 
 function j1_handle_send_message() {
+    // Verificar se o usuário está logado
+    if (!is_user_logged_in()) {
+        wp_send_json_error(['message' => 'Você precisa estar logado para enviar mensagens.']);
+    }
+
     // Verificar nonce
     if (!wp_verify_nonce($_POST['nonce'], 'j1_message_nonce')) {
         wp_send_json_error(['message' => 'Erro de segurança. Tente novamente.']);
@@ -49,6 +55,12 @@ function j1_handle_send_message() {
     $author = get_user_by('ID', $author_id);
     if (!$author) {
         wp_send_json_error(['message' => 'Vendedor não encontrado.']);
+    }
+
+    // Verificar se o usuário não está tentando enviar mensagem para si mesmo
+    $current_user_id = get_current_user_id();
+    if ($current_user_id === $author_id) {
+        wp_send_json_error(['message' => 'Você não pode enviar mensagem para si mesmo.']);
     }
 
     // Criar a mensagem
@@ -101,10 +113,7 @@ function j1_handle_send_message() {
         $email
     ));
 
-    wp_send_json_success([
-        'message' => 'Mensagem enviada com sucesso! O vendedor será notificado.',
-        'message_id' => $message_id
-    ]);
+    wp_send_json_success(['message' => 'Mensagem enviada com sucesso!']);
 }
 
 /**

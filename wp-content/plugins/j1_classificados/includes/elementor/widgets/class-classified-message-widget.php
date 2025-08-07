@@ -198,10 +198,16 @@ class J1_Classified_Message_Widget extends \Elementor\Widget_Base {
             return;
         }
 
+        // Verificar se o usuário está logado
+        $is_user_logged_in = is_user_logged_in();
+        $current_user = wp_get_current_user();
+        $user_email = $is_user_logged_in ? $current_user->user_email : '';
+        $user_name = $is_user_logged_in ? $current_user->display_name : '';
+
         ?>
         <div class="j1-message-widget">
             <!-- Botão para abrir o modal -->
-            <button type="button" class="j1-message-button" data-classified-id="<?php echo esc_attr($post_id); ?>">
+            <button type="button" class="j1-message-button" data-classified-id="<?php echo esc_attr($post_id); ?>" data-user-logged-in="<?php echo $is_user_logged_in ? 'true' : 'false'; ?>">
                 <?php if ($settings['button_icon']['value']) : ?>
                     <i class="<?php echo esc_attr($settings['button_icon']['value']); ?>"></i>
                 <?php endif; ?>
@@ -229,12 +235,12 @@ class J1_Classified_Message_Widget extends \Elementor\Widget_Base {
                             
                             <div class="j1-form-group">
                                 <label for="j1-message-name-<?php echo esc_attr($post_id); ?>"><?php _e('Nome', 'j1_classificados'); ?> *</label>
-                                <input type="text" id="j1-message-name-<?php echo esc_attr($post_id); ?>" name="name" required>
+                                <input type="text" id="j1-message-name-<?php echo esc_attr($post_id); ?>" name="name" value="<?php echo esc_attr($user_name); ?>" required>
                             </div>
 
                             <div class="j1-form-group">
                                 <label for="j1-message-email-<?php echo esc_attr($post_id); ?>"><?php _e('Email', 'j1_classificados'); ?> *</label>
-                                <input type="email" id="j1-message-email-<?php echo esc_attr($post_id); ?>" name="email" required>
+                                <input type="email" id="j1-message-email-<?php echo esc_attr($post_id); ?>" name="email" value="<?php echo esc_attr($user_email); ?>" required>
                             </div>
 
                             <div class="j1-form-group">
