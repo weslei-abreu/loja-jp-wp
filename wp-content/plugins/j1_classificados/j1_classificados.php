@@ -273,6 +273,13 @@ add_filter('elementor/utils/is_post_type_support', function($is_supported, $post
     return $is_supported;
 }, 10, 2);
 
+// ✅ Integração com Elementor para widgets
+add_action('plugins_loaded', function() {
+    if (did_action('elementor/loaded')) {
+        require_once plugin_dir_path(__FILE__) . 'includes/elementor/elementor-integration.php';
+    }
+});
+
 // ✅ Corrigir URLs malformadas de anexos
 add_filter('wp_get_attachment_url', function($url, $attachment_id) {
     // DEBUG: Vamos investigar onde está acontecendo a concatenação
@@ -702,3 +709,142 @@ add_action('wp_loaded', function() {
         return $should_render;
     }, 10, 2);
 });
+
+// ✅ Sistema de mensagens para classificados
+function j1_classificados_create_messages_table() {
+    global $wpdb;
+    
+    $table_name = $wpdb->prefix . 'j1_classified_messages';
+    $charset_collate = $wpdb->get_charset_collate();
+    
+    $sql = "CREATE TABLE $table_name (
+        id mediumint(9) NOT NULL AUTO_INCREMENT,
+        classified_id bigint(20) NOT NULL,
+        sender_name varchar(100) NOT NULL,
+        sender_email varchar(100) NOT NULL,
+        sender_id bigint(20) DEFAULT NULL,
+        receiver_id bigint(20) NOT NULL,
+        message text NOT NULL,
+        status varchar(20) DEFAULT 'unread',
+        created_at datetime DEFAULT CURRENT_TIMESTAMP,
+        parent_id mediumint(9) DEFAULT NULL,
+        PRIMARY KEY (id),
+        KEY classified_id (classified_id),
+        KEY sender_id (sender_id),
+        KEY receiver_id (receiver_id),
+        KEY status (status),
+        KEY parent_id (parent_id)
+    ) $charset_collate;";
+    
+    require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+    dbDelta($sql);
+}
+
+// ✅ Criar tabela na ativação do plugin
+register_activation_hook(__FILE__, 'j1_classificados_create_messages_table');
+
+// ✅ AJAX para enviar mensagem
+add_action('wp_ajax_j1_send_message', 'j1_classificados_send_message');
+add_action('wp_ajax_nopriv_j1_send_message', 'j1_classificados_send_message');
+
+function j1_classificados_send_message() {
+    // Verificar nonce
+    if (!wp_verify_nonce($_POST['nonce'], 'j1_message_nonce')) {
+        wp_send_json_error(['message' => 'Erro de segurança.']);
+    }
+    
+    // Validar dados
+    $classified_id = intval($_POST['classified_id'] ?? 0);
+    $author_id = intval($_POST['author_id'] ?? 0);
+    $name = sanitize_text_field($_POST['name'] ?? '');
+    $email = sanitize_email($_POST['email'] ?? '');
+    $message = sanitize_textarea_field($_POST['message'] ?? '');
+    
+    if (!$classified_id || !$author_id || !$name || !$email || !$message) {
+        wp_send_json_error(['message' => 'Todos os campos são obrigatórios.']);
+    }
+    
+    // Verificar se o classificado existe
+    if (get_post_type($classified_id) !== 'classified') {
+        wp_send_json_error(['message' => 'Classificado não encontrado.']);
+    }
+    
+    // Verificar se o autor é um vendedor
+    if (!dokan_is_user_seller($author_id)) {
+        wp_send_json_error(['message' => 'Vendedor não encontrado.']);
+    }
+    
+    // Inserir mensagem no banco
+    global $wpdb;
+    $table_name = $wpdb->prefix . 'j1_classified_messages';
+    
+    $result = $wpdb->insert(
+        $table_name,
+        [
+            'classified_id' => $classified_id,
+            'sender_name' => $name,
+            'sender_email' => $email,
+            'sender_id' => get_current_user_id() ?: null,
+            'receiver_id' => $author_id,
+            'message' => $message,
+            'status' => 'unread',
+            'created_at' => current_time('mysql')
+        ],
+        ['%d', '%s', '%s', '%d', '%d', '%s', '%s', '%s']
+    );
+    
+    if ($result === false) {
+        wp_send_json_error(['message' => 'Erro ao salvar mensagem.']);
+    }
+    
+    $message_id = $wpdb->insert_id;
+    
+    // Enviar email para o vendedor
+    j1_classificados_send_message_email($message_id, $classified_id, $author_id, $name, $email, $message);
+    
+    wp_send_json_success(['message' => 'Mensagem enviada com sucesso!']);
+}
+
+// ✅ Função para enviar email
+function j1_classificados_send_message_email($message_id, $classified_id, $author_id, $sender_name, $sender_email, $message) {
+    $classified_title = get_the_title($classified_id);
+    $classified_url = get_permalink($classified_id);
+    $vendor = dokan()->vendor->get($author_id);
+    $vendor_email = $vendor ? $vendor->get_email() : '';
+    
+    if (!$vendor_email) {
+        return false;
+    }
+    
+    $subject = sprintf(__('Nova mensagem sobre o classificado: %s', 'j1_classificados'), $classified_title);
+    
+    $body = sprintf(
+        __("
+Olá!
+
+Você recebeu uma nova mensagem sobre o classificado: %s
+
+De: %s (%s)
+Mensagem:
+%s
+
+Para responder, acesse seu painel de classificados.
+
+Atenciosamente,
+%s
+        ", 'j1_classificados'),
+        $classified_title,
+        $sender_name,
+        $sender_email,
+        $message,
+        get_bloginfo('name')
+    );
+    
+    $headers = [
+        'Content-Type: text/html; charset=UTF-8',
+        'From: ' . get_bloginfo('name') . ' <' . get_option('admin_email') . '>',
+        'Reply-To: ' . $sender_name . ' <' . $sender_email . '>'
+    ];
+    
+    return wp_mail($vendor_email, $subject, $body, $headers);
+}
