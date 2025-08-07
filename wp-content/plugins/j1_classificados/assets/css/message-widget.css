@@ -49,7 +49,6 @@
     align-items: center !important;
     justify-content: center !important;
     flex-direction: row !important;
-    text-align: center;
 }
 
 .j1-message-modal-content {
@@ -120,6 +119,7 @@
 /* Body do modal */
 .j1-message-modal-body {
     padding: 24px;
+    text-align: left;
 }
 
 .j1-message-form-title {
@@ -134,12 +134,14 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
+    text-align: left;
 }
 
 .j1-form-group {
     display: flex;
     flex-direction: column;
     gap: 6px;
+    text-align: left;
 }
 
 .j1-form-group label {
@@ -147,6 +149,7 @@
     font-weight: 500;
     color: var(--e-global-color-text, #333);
     margin: 0;
+    text-align: left;
 }
 
 .j1-form-group input,
