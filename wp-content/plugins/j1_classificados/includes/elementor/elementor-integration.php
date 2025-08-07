@@ -52,7 +52,7 @@ class J1_Classifieds_Elementor_Integration {
         if (is_singular('classified')) {
             wp_enqueue_script(
                 'j1-message-widget',
-                plugin_dir_url(dirname(__FILE__)) . 'assets/js/message-widget.js',
+                plugin_dir_url(dirname(dirname(__FILE__))) . 'assets/js/message-widget.js',
                 ['jquery'],
                 '1.0.0',
                 true
@@ -77,7 +77,7 @@ class J1_Classifieds_Elementor_Integration {
         if (is_singular('classified')) {
             wp_enqueue_style(
                 'j1-message-widget',
-                plugin_dir_url(dirname(__FILE__)) . 'assets/css/message-widget.css',
+                plugin_dir_url(dirname(dirname(__FILE__))) . 'assets/css/message-widget.css',
                 [],
                 '1.0.0'
             );

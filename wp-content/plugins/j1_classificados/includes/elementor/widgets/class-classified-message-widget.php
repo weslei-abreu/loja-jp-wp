@@ -201,7 +201,7 @@ class J1_Classified_Message_Widget extends \Elementor\Widget_Base {
         ?>
         <div class="j1-message-widget">
             <!-- Botão para abrir o modal -->
-            <button type="button" class="j1-message-button" data-classified-id="<?php echo esc_attr($post_id); ?>" data-author-id="<?php echo esc_attr($author_id); ?>">
+            <button type="button" class="j1-message-button" data-classified-id="<?php echo esc_attr($post_id); ?>">
                 <?php if ($settings['button_icon']['value']) : ?>
                     <i class="<?php echo esc_attr($settings['button_icon']['value']); ?>"></i>
                 <?php endif; ?>
@@ -217,8 +217,15 @@ class J1_Classified_Message_Widget extends \Elementor\Widget_Base {
                     </div>
                     <div class="j1-message-modal-body">
                         <p class="j1-message-form-title"><?php echo esc_html($settings['form_title']); ?></p>
-                        <form class="j1-message-form" data-classified-id="<?php echo esc_attr($post_id); ?>" data-author-id="<?php echo esc_attr($author_id); ?>">
-                            <?php wp_nonce_field('j1_send_message', 'j1_message_nonce'); ?>
+                        
+                        <!-- Feedback messages -->
+                        <div class="j1-message-feedback" style="display: none;"></div>
+                        
+                        <form class="j1-message-form">
+                            <?php wp_nonce_field('j1_message_nonce', 'nonce'); ?>
+                            
+                            <input type="hidden" name="classified_id" value="<?php echo esc_attr($post_id); ?>">
+                            <input type="hidden" name="author_id" value="<?php echo esc_attr($author_id); ?>">
                             
                             <div class="j1-form-group">
                                 <label for="j1-message-name-<?php echo esc_attr($post_id); ?>"><?php _e('Nome', 'j1_classificados'); ?> *</label>

@@ -848,3 +848,9 @@ Atenciosamente,
     
     return wp_mail($vendor_email, $subject, $body, $headers);
 }
+
+// 🔹 Incluir handlers AJAX
+require_once dirname(__FILE__) . '/includes/ajax-handlers.php';
+
+// 🔹 Incluir debug (remover em produção)
+require_once dirname(__FILE__) . '/debug-widget.php';
