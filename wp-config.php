@@ -13,7 +13,7 @@ define( 'ITSEC_ENCRYPTION_KEY', 'I2Y7W182ZG5maXF6I1VHcFM3NT1AX198PEZ5NzkrdixfUHV
 // =========================
 // Configurações do Banco
 // =========================
-define( 'DB_NAME', 'loja_jp_wp' );
+define( 'DB_NAME', 'loja_jp_wp_dev' );
 define( 'DB_USER', 'lojajp' );
 define( 'DB_PASSWORD', 'Lojajp2024#' );
 define( 'DB_HOST', 'localhost' );
