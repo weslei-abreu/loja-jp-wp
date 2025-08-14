@@ -33,7 +33,7 @@ class J1_Classified_Messages_Integration {
         add_action('init', [$this, 'load_messages_system']);
         
         // Carregar widget do Elementor
-        add_action('elementor/widgets/register', [$this, 'load_elementor_widget']);
+        add_action('elementor/widgets/widgets_registered', [$this, 'load_elementor_widget']);
         
         // Enqueue assets
         add_action('wp_enqueue_scripts', [$this, 'enqueue_assets']);
@@ -70,6 +70,9 @@ class J1_Classified_Messages_Integration {
      */
     public function load_elementor_widget() {
         require_once plugin_dir_path(__FILE__) . 'class-elementor-widget.php';
+        
+        // Registrar o widget no Elementor
+        \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new \J1_Classified_Message_Widget());
     }
     
     /**
