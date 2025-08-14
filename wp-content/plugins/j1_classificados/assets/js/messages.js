@@ -46,14 +46,8 @@
      * Carregar CSS do sistema de mensagens
      */
     function j1_load_messages_css() {
-        if (!$('#j1-messages-css').length) {
-            $('<link>', {
-                rel: 'stylesheet',
-                type: 'text/css',
-                href: j1_classifieds_ajax.plugin_url + 'assets/css/messages.css',
-                id: 'j1-messages-css'
-            }).appendTo('head');
-        }
+        // CSS já é carregado via PHP, não precisamos carregar via JS
+        // Esta função foi removida para evitar problemas de carregamento
     }
 
     /**
@@ -142,7 +136,7 @@
         if (Notification.permission === 'granted') {
             new Notification('Novas Mensagens', {
                 body: 'Você tem ' + count + ' mensagem(ns) não lida(s)',
-                icon: j1_classifieds_ajax.plugin_url + 'assets/images/icon.png',
+                icon: '/wp-content/plugins/j1_classificados/assets/images/icon.png',
                 tag: 'j1-messages'
             });
         }
@@ -152,11 +146,6 @@
      * Inicializar modal de mensagem
      */
     function j1_init_message_modal() {
-        // Adicionar modal ao body se não existir
-        if (!$('#j1-message-modal').length) {
-            j1_load_message_modal();
-        }
-
         // Event listeners para fechar modal
         $(document).on('keydown', function(e) {
             if (e.key === 'Escape' && j1MessageModal.isOpen) {
@@ -172,8 +161,9 @@
     /**
      * Carregar modal de mensagem via AJAX
      */
-    function j1_load_message_modal() {
+    function j1_load_message_modal(callback) {
         if (!j1_classifieds_ajax || !j1_classifieds_ajax.ajax_url) {
+            if (callback) callback();
             return;
         }
 
@@ -187,7 +177,13 @@
             success: function(response) {
                 if (response.success) {
                     $('body').append(response.data.html);
+                    if (callback) callback();
+                } else {
+                    if (callback) callback();
                 }
+            },
+            error: function() {
+                if (callback) callback();
             }
         });
     }
@@ -211,7 +207,20 @@
         j1MessageModal.currentClassifiedId = classifiedId;
         j1MessageModal.isOpen = true;
 
-        // Mostrar modal
+        // Carregar modal via AJAX se não existir
+        if (!$('#j1-message-modal').length) {
+            j1_load_message_modal(function() {
+                j1_show_modal();
+            });
+        } else {
+            j1_show_modal();
+        }
+    };
+
+    /**
+     * Mostrar modal
+     */
+    function j1_show_modal() {
         $('#j1-message-modal').fadeIn(300);
         $('body').css('overflow', 'hidden');
 
@@ -221,8 +230,8 @@
         }, 300);
 
         // Carregar dados do classificado
-        j1_load_classified_info(classifiedId);
-    };
+        j1_load_classified_info(j1MessageModal.currentClassifiedId);
+    }
 
     /**
      * Fechar modal de mensagem
@@ -442,7 +451,7 @@
     function j1_mark_all_messages_read(classifiedId, senderId) {
         // Implementar funcionalidade para marcar todas como lidas
         // Esta função pode ser expandida conforme necessário
-        alert('Funcionalidade em desenvolvimento');
+        console.log('Funcionalidade em desenvolvimento');
     }
 
     /**
