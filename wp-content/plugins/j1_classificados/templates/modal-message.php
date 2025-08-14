@@ -8,13 +8,26 @@
 
 if (!defined('ABSPATH')) exit;
 
-// Verificar se estamos em uma página de classificado
-if (!is_singular('classified')) {
+// Quando carregado via AJAX, precisamos do ID do classificado
+$classified_id = null;
+$classified = null;
+
+// Se estamos em uma página de classificado, usar get_the_ID()
+if (is_singular('classified')) {
+    $classified_id = get_the_ID();
+    $classified = get_post($classified_id);
+} 
+// Se não, tentar pegar do POST (quando carregado via AJAX)
+elseif (isset($_POST['classified_id'])) {
+    $classified_id = intval($_POST['classified_id']);
+    $classified = get_post($classified_id);
+}
+
+// Se não conseguimos obter o classificado, retornar
+if (!$classified_id || !$classified) {
     return;
 }
 
-$classified_id = get_the_ID();
-$classified = get_post($classified_id);
 $current_user = wp_get_current_user();
 $is_user_logged_in = is_user_logged_in();
 

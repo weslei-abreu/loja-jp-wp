@@ -182,7 +182,8 @@
             type: 'POST',
             data: {
                 action: 'j1_load_message_modal',
-                nonce: j1_classifieds_ajax.nonce
+                nonce: j1_classifieds_ajax.nonce,
+                classified_id: j1MessageModal.currentClassifiedId
             },
             success: function(response) {
                 console.log('Resposta AJAX recebida:', response);
