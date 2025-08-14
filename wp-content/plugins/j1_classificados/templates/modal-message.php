@@ -46,13 +46,13 @@ $nonce = wp_create_nonce('j1_message_nonce');
 
 <!-- Modal de Mensagem -->
 <div id="j1-message-modal" class="j1-message-modal" style="display: none;">
-    <div class="j1-modal-overlay" onclick="j1_close_message_modal()"></div>
+    <div class="j1-modal-overlay"></div>
     
     <div class="j1-modal-content">
         <!-- Header do Modal -->
         <div class="j1-modal-header">
             <h3><?php esc_html_e('Enviar Mensagem', 'j1_classificados'); ?></h3>
-            <button type="button" class="j1-modal-close" onclick="j1_close_message_modal()">
+            <button type="button" class="j1-modal-close">
                 <i class="fas fa-times"></i>
             </button>
         </div>
@@ -112,7 +112,7 @@ $nonce = wp_create_nonce('j1_message_nonce');
                 
                 <!-- Botões de Ação -->
                 <div class="j1-form-actions">
-                    <button type="button" class="j1-btn j1-btn-secondary" onclick="j1_close_message_modal()">
+                    <button type="button" class="j1-btn j1-btn-secondary">
                         <?php esc_html_e('Cancelar', 'j1_classificados'); ?>
                     </button>
                     <button type="submit" class="j1-btn j1-btn-primary" id="j1-send-message-btn">

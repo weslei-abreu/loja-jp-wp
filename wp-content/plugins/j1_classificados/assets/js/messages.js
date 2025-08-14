@@ -159,6 +159,15 @@
         $(document).on('click', '.j1-modal-overlay', function() {
             j1_close_message_modal();
         });
+        
+        // Event listeners para botões do modal
+        $(document).on('click', '.j1-modal-close', function() {
+            j1_close_message_modal();
+        });
+        
+        $(document).on('click', '.j1-btn-secondary', function() {
+            j1_close_message_modal();
+        });
     }
 
     /**
@@ -193,6 +202,14 @@
                     
                     // Garantir que o modal esteja escondido após ser adicionado
                     $('#j1-message-modal').hide();
+                    console.log('Modal escondido após adição ao DOM');
+                    
+                    // Verificar se o modal está realmente escondido
+                    setTimeout(function() {
+                        const modalDisplay = $('#j1-message-modal').css('display');
+                        console.log('Status do modal após 100ms:', modalDisplay);
+                        console.log('Modal visível?', $('#j1-message-modal').is(':visible'));
+                    }, 100);
                     
                     if (callback) callback();
                 } else {
@@ -249,9 +266,14 @@
      * Mostrar modal
      */
     function j1_show_modal() {
+        console.log('j1_show_modal chamado');
+        console.log('Modal antes de mostrar:', $('#j1-message-modal').css('display'));
+        
         // Garantir que o modal esteja escondido inicialmente
         $('#j1-message-modal').hide().fadeIn(300);
         $('body').css('overflow', 'hidden');
+        
+        console.log('Modal após fadeIn:', $('#j1-message-modal').css('display'));
 
         // Focar no campo de mensagem
         setTimeout(function() {
