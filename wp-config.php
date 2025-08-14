@@ -1,17 +1,19 @@
 <?php
-define('DISABLE_WP_CRON', true);
 
 // BEGIN iThemes Security - Do not modify or remove this line
 // iThemes Security Config Details: 2
+define( 'FORCE_SSL_ADMIN', true ); // Redirect All HTTP Page Requests to HTTPS - Security > Settings > Enforce SSL
 define( 'DISALLOW_FILE_EDIT', true ); // Disable File Editor - Security > Settings > WordPress Tweaks > File Editor
 // END iThemes Security - Do not modify or remove this line
+
+define('DISABLE_WP_CRON', true);
 
 define( 'ITSEC_ENCRYPTION_KEY', 'I2Y7W182ZG5maXF6I1VHcFM3NT1AX198PEZ5NzkrdixfUHVaZGQoLS59MWNlRVpSMWVbenpmTndbSkhMMUFyTA==' );
 
 // =========================
 // Configurações do Banco
 // =========================
-define( 'DB_NAME', 'loja_jp_wp' );
+define( 'DB_NAME', 'loja_jp_wp_dev' );
 define( 'DB_USER', 'lojajp' );
 define( 'DB_PASSWORD', 'Lojajp2024#' );
 define( 'DB_HOST', 'localhost' );
@@ -42,6 +44,9 @@ define( 'WP_DEBUG', true );
 define( 'WP_DEBUG_LOG', true );
 define( 'WP_DEBUG_DISPLAY', false );
 @ini_set( 'display_errors', 0 );
+define('WP_ENVIRONMENT_TYPE', 'development');
+define('WP_CACHE', false);
+define('WP_REDIS_DISABLED', true);
 
 // =========================
 // Restrições de segurança
