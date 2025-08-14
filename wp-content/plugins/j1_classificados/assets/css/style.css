@@ -163,7 +163,7 @@
 /* ✅ ESTILOS PARA A LISTAGEM DE CLASSIFICADOS */
 
 /* ✅ Loading overlay sem mensagem */
-.j1-loading-overlay {
+.j1-loading-overlay:not(#j1-message-loading) {
     position: fixed !important;
     top: 0 !important;
     left: 0 !important;
