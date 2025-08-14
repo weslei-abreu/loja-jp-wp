@@ -540,6 +540,9 @@ add_action('init', function() {
     }
 });
 
+// ✅ Incluir sistema de mensagens
+require_once plugin_dir_path(__FILE__) . 'includes/class-messages-integration.php';
+
 // ✅ Sistema de visualizações para classificados
 function j1_classificados_increment_views($post_id) {
     if (!$post_id) return;

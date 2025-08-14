@@ -1,0 +1,678 @@
+/**
+ * Estilos para Sistema de Mensagens - J1 Classificados
+ * 
+ * @package J1_Classificados
+ * @since 1.2.0
+ */
+
+/* ========================================
+   MODAL DE MENSAGEM
+   ======================================== */
+
+.j1-message-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    display: none;
+}
+
+.j1-modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+}
+
+.j1-modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    animation: j1-modal-slide-in 0.3s ease-out;
+}
+
+@keyframes j1-modal-slide-in {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.j1-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.j1-modal-header h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+.j1-modal-close {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #666;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.j1-modal-close:hover {
+    background: #e9ecef;
+    color: #333;
+}
+
+.j1-modal-body {
+    padding: 24px;
+    max-height: calc(90vh - 120px);
+    overflow-y: auto;
+}
+
+/* ========================================
+   INFORMAÇÕES DO CLASSIFICADO
+   ======================================== */
+
+.j1-classified-info {
+    margin-bottom: 24px;
+    padding: 16px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #007cba;
+}
+
+.j1-classified-info h4 {
+    margin: 0 0 8px 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.j1-classified-info p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.j1-classified-thumbnail {
+    margin-top: 12px;
+}
+
+.j1-classified-thumbnail img {
+    max-width: 80px;
+    height: auto;
+    border-radius: 6px;
+    border: 2px solid #e9ecef;
+}
+
+/* ========================================
+   FORMULÁRIO DE MENSAGEM
+   ======================================== */
+
+.j1-message-form {
+    margin-top: 20px;
+}
+
+.j1-form-group {
+    margin-bottom: 20px;
+}
+
+.j1-form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+    font-size: 14px;
+}
+
+.j1-form-group .required {
+    color: #dc3545;
+}
+
+.j1-form-control {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+.j1-form-control:focus {
+    outline: none;
+    border-color: #007cba;
+    box-shadow: 0 0 0 3px rgba(0, 124, 186, 0.1);
+}
+
+.j1-form-control::placeholder {
+    color: #adb5bd;
+}
+
+.j1-char-count {
+    text-align: right;
+    margin-top: 4px;
+    font-size: 12px;
+    color: #666;
+}
+
+/* ========================================
+   INFORMAÇÕES DO REMETENTE
+   ======================================== */
+
+.j1-sender-info {
+    margin: 24px 0;
+    padding: 16px;
+    background: #e8f4fd;
+    border-radius: 8px;
+    border: 1px solid #b3d9f2;
+}
+
+.j1-sender-info h4 {
+    margin: 0 0 12px 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #005a87;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.j1-sender-details p {
+    margin: 4px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.j1-sender-details strong {
+    color: #005a87;
+}
+
+/* ========================================
+   BOTÕES DE AÇÃO
+   ======================================== */
+
+.j1-form-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid #e9ecef;
+}
+
+.j1-btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.j1-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.j1-btn-primary {
+    background: #007cba;
+    color: #ffffff;
+}
+
+.j1-btn-primary:hover:not(:disabled) {
+    background: #005a87;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 124, 186, 0.3);
+}
+
+.j1-btn-secondary {
+    background: #6c757d;
+    color: #ffffff;
+}
+
+.j1-btn-secondary:hover:not(:disabled) {
+    background: #5a6268;
+    transform: translateY(-1px);
+}
+
+.j1-btn-small {
+    padding: 6px 12px;
+    font-size: 12px;
+}
+
+/* ========================================
+   LOADING E NOTIFICAÇÕES
+   ======================================== */
+
+.j1-loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999998;
+}
+
+.j1-loading-content {
+    text-align: center;
+    color: #ffffff;
+}
+
+.j1-loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #ffffff;
+    border-radius: 50%;
+    animation: j1-spin 1s linear infinite;
+    margin: 0 auto 16px;
+}
+
+@keyframes j1-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.j1-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999997;
+    max-width: 400px;
+    animation: j1-notification-slide-in 0.3s ease-out;
+}
+
+@keyframes j1-notification-slide-in {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.j1-notification-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    font-weight: 500;
+}
+
+.j1-notification-success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.j1-notification-error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.j1-notification i {
+    font-size: 18px;
+}
+
+/* ========================================
+   DASHBOARD DE MENSAGENS
+   ======================================== */
+
+.dokan-messages-content {
+    padding: 20px;
+}
+
+.j1-conversation-item {
+    background: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.j1-conversation-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.j1-user-info h3 {
+    margin: 0 0 4px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.j1-user-email {
+    margin: 0 0 8px 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.j1-message-stats {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.j1-total-count {
+    font-size: 12px;
+    color: #666;
+    background: #e9ecef;
+    padding: 4px 8px;
+    border-radius: 12px;
+}
+
+.j1-unread-badge {
+    background: #dc3545;
+    color: #ffffff;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.j1-conversation-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.j1-messages-list {
+    padding: 20px;
+}
+
+.j1-message-item {
+    padding: 16px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    border-left: 4px solid #e9ecef;
+    transition: all 0.2s ease;
+}
+
+.j1-message-item.j1-unread {
+    background: #fff3cd;
+    border-left-color: #ffc107;
+}
+
+.j1-message-item.j1-read {
+    background: #f8f9fa;
+    border-left-color: #28a745;
+}
+
+.j1-message-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.j1-message-date {
+    font-size: 12px;
+    color: #666;
+}
+
+.j1-unread-indicator {
+    background: #ffc107;
+    color: #212529;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.j1-message-subject {
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #495057;
+}
+
+.j1-message-content {
+    margin-bottom: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.j1-message-content p {
+    margin: 0 0 8px 0;
+}
+
+.j1-message-actions {
+    display: flex;
+    gap: 8px;
+}
+
+/* ========================================
+   TABELA DE CLASSIFICADOS COM MENSAGENS
+   ======================================== */
+
+.j1-classifieds-messages-list {
+    margin-top: 20px;
+}
+
+.dokan-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.dokan-table th {
+    background: #f8f9fa;
+    padding: 16px;
+    text-align: left;
+    font-weight: 600;
+    color: #333;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.dokan-table td {
+    padding: 16px;
+    border-bottom: 1px solid #e9ecef;
+    vertical-align: middle;
+}
+
+.dokan-table tr:last-child td {
+    border-bottom: none;
+}
+
+.j1-message-count {
+    background: #e9ecef;
+    color: #495057;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.j1-all-read {
+    color: #28a745;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* ========================================
+   WIDGET ELEMENTOR
+   ======================================== */
+
+.j1-message-widget {
+    margin: 20px 0;
+}
+
+.j1-message-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: #007cba;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.j1-message-button:hover {
+    background: #005a87;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 124, 186, 0.3);
+}
+
+.j1-message-button.j1-guest-button {
+    background: #6c757d;
+}
+
+.j1-message-button.j1-guest-button:hover {
+    background: #5a6268;
+}
+
+.j1-widget-notice {
+    padding: 12px 16px;
+    background: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeaa7;
+    border-radius: 6px;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* ========================================
+   RESPONSIVIDADE
+   ======================================== */
+
+@media (max-width: 768px) {
+    .j1-modal-content {
+        width: 95%;
+        max-height: 95vh;
+    }
+    
+    .j1-modal-body {
+        padding: 16px;
+    }
+    
+    .j1-form-actions {
+        flex-direction: column;
+    }
+    
+    .j1-conversation-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    
+    .j1-conversation-actions {
+        width: 100%;
+        justify-content: flex-end;
+    }
+    
+    .dokan-table {
+        font-size: 14px;
+    }
+    
+    .dokan-table th,
+    .dokan-table td {
+        padding: 12px 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .j1-modal-content {
+        width: 98%;
+        border-radius: 8px;
+    }
+    
+    .j1-modal-header {
+        padding: 16px;
+    }
+    
+    .j1-modal-body {
+        padding: 12px;
+    }
+    
+    .j1-form-actions {
+        gap: 8px;
+    }
+    
+    .j1-btn {
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+}
+
+/* ========================================
+   UTILITÁRIOS
+   ======================================== */
+
+.j1-hidden {
+    display: none !important;
+}
+
+.j1-text-center {
+    text-align: center;
+}
+
+.j1-text-right {
+    text-align: right;
+}
+
+.j1-mb-0 {
+    margin-bottom: 0 !important;
+}
+
+.j1-mt-20 {
+    margin-top: 20px !important;
+}
+
+.j1-p-0 {
+    padding: 0 !important;
+}
