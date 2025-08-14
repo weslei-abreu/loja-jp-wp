@@ -18,6 +18,9 @@
     // Inicializar quando o DOM estiver pronto
     $(document).ready(function() {
         j1_init_messages_system();
+        
+        // Detectar mudanças de login/logout
+        j1_init_login_detection();
     });
 
     /**
@@ -192,8 +195,8 @@
      * Abrir modal de mensagem
      */
     window.j1_open_message_modal = function(classifiedId) {
-        // Verificar se o usuário está logado
-        if (!j1_classifieds_ajax.current_user || !j1_classifieds_ajax.current_user.id) {
+        // Verificar se o usuário está logado (verificação mais robusta)
+        if (!j1_is_user_logged_in()) {
             j1_show_error('Você precisa estar logado para enviar mensagens.');
             return;
         }
@@ -395,6 +398,60 @@
     }
 
     /**
+     * Verificar se o usuário está logado (verificação robusta)
+     */
+    function j1_is_user_logged_in() {
+        // Verificar se temos dados do usuário no objeto AJAX
+        if (j1_classifieds_ajax && j1_classifieds_ajax.current_user && j1_classifieds_ajax.current_user.id) {
+            return true;
+        }
+        
+        // Verificar se há elementos que indicam que o usuário está logado
+        if ($('.logged-in').length > 0 || $('.wp-admin-bar').length > 0) {
+            // Se detectamos que está logado mas não temos dados, vamos atualizar
+            if (!j1_classifieds_ajax.current_user || !j1_classifieds_ajax.current_user.id) {
+                j1_update_user_data();
+            }
+            return true;
+        }
+        
+        // Verificar se há cookies de login
+        if (document.cookie.indexOf('wordpress_logged_in_') !== -1) {
+            // Se detectamos cookie mas não temos dados, vamos atualizar
+            if (!j1_classifieds_ajax.current_user || !j1_classifieds_ajax.current_user.id) {
+                j1_update_user_data();
+            }
+            return true;
+        }
+        
+        return false;
+    }
+
+    /**
+     * Atualizar dados do usuário via AJAX
+     */
+    function j1_update_user_data() {
+        if (!j1_classifieds_ajax || !j1_classifieds_ajax.ajax_url) {
+            return;
+        }
+
+        $.ajax({
+            url: j1_classifieds_ajax.ajax_url,
+            type: 'POST',
+            data: {
+                action: 'j1_get_current_user',
+                nonce: j1_classifieds_ajax.nonce
+            },
+            success: function(response) {
+                if (response.success) {
+                    // Atualizar dados do usuário no objeto global
+                    j1_classifieds_ajax.current_user = response.data;
+                }
+            }
+        });
+    }
+
+    /**
      * Inicializar funcionalidades do dashboard
      */
     function j1_init_dashboard_features() {
@@ -452,6 +509,22 @@
         // Implementar funcionalidade para marcar todas como lidas
         // Esta função pode ser expandida conforme necessário
         console.log('Funcionalidade em desenvolvimento');
+    }
+
+    /**
+     * Inicializar detecção de mudanças de login
+     */
+    function j1_init_login_detection() {
+        // Verificar a cada 2 segundos se o status de login mudou
+        setInterval(function() {
+            const wasLoggedIn = j1_classifieds_ajax.current_user && j1_classifieds_ajax.current_user.id;
+            const isCurrentlyLoggedIn = j1_is_user_logged_in();
+            
+            // Se o status mudou, atualizar dados
+            if (isCurrentlyLoggedIn && !wasLoggedIn) {
+                j1_update_user_data();
+            }
+        }, 2000);
     }
 
     /**
