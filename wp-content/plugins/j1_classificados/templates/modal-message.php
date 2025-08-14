@@ -204,62 +204,7 @@ document.getElementById('j1-message-content').addEventListener('input', function
     }
 });
 
-// Envio do formulário
-document.getElementById('j1-message-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const form = this;
-    const submitBtn = document.getElementById('j1-send-message-btn');
-    const btnText = submitBtn.querySelector('.btn-text');
-    const btnLoading = submitBtn.querySelector('.btn-loading');
-    
-    // Validar campos
-    const message = document.getElementById('j1-message-content').value.trim();
-    if (!message) {
-        j1_show_error('<?php esc_html_e('Por favor, digite sua mensagem.', 'j1_classificados'); ?>');
-        return;
-    }
-    
-    // Mostrar loading
-    submitBtn.disabled = true;
-    btnText.style.display = 'none';
-    btnLoading.style.display = 'inline-block';
-    
-    // Preparar dados
-    const formData = new FormData();
-    formData.append('action', 'j1_send_message');
-    formData.append('nonce', window.j1MessageModal.nonce);
-    formData.append('classified_id', window.j1MessageModal.classifiedId);
-    formData.append('subject', document.getElementById('j1-message-subject').value.trim());
-    formData.append('message', message);
-    
-    // Enviar via AJAX
-    fetch(j1_classifieds_ajax.ajax_url, {
-        method: 'POST',
-        body: formData
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            j1_show_success();
-            setTimeout(() => {
-                j1_close_message_modal();
-            }, 2000);
-        } else {
-            j1_show_error(data.data || '<?php esc_html_e('Erro ao enviar mensagem.', 'j1_classificados'); ?>');
-        }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        j1_show_error('<?php esc_html_e('Erro de conexão. Tente novamente.', 'j1_classificados'); ?>');
-    })
-    .finally(() => {
-        // Restaurar botão
-        submitBtn.disabled = false;
-        btnText.style.display = 'inline-block';
-        btnLoading.style.display = 'none';
-    });
-});
+// Envio do formulário será gerenciado pelo arquivo messages.js
 
 // Funções de notificação
 function j1_show_success() {

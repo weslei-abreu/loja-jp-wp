@@ -217,13 +217,15 @@
         j1MessageModal.currentClassifiedId = classifiedId;
         j1MessageModal.isOpen = true;
 
-        // Mostrar modal diretamente (já está incluído na página)
-        if ($('#j1-message-modal').length) {
+        // Carregar modal via AJAX se não existir
+        if (!$('#j1-message-modal').length) {
+            console.log('Modal não encontrado, carregando via AJAX...');
+            j1_load_message_modal(function() {
+                j1_show_modal();
+            });
+        } else {
             console.log('Modal encontrado, mostrando...');
             j1_show_modal();
-        } else {
-            console.log('Modal não encontrado na página');
-            j1_show_error('Modal não encontrado. Recarregue a página.');
         }
     };
 
