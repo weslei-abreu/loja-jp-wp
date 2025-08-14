@@ -19,3 +19,4 @@ wp-content/aios_backups/
 wp-content/cache/
 wp-content/debug.log
 migracao-node/
+wp-config.php
