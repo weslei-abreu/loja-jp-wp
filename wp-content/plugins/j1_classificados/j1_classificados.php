@@ -223,11 +223,28 @@ add_action( 'wp_enqueue_scripts', function () {
 
 // ✅ Carregar scripts para o dashboard de classificados
 add_action( 'wp_enqueue_scripts', function () {
-    // Carregar quando estivermos no dashboard de classificados (listagem, add ou edit)
-    if ( dokan_is_seller_dashboard() && 
-         (isset( $_GET['classifieds'] ) || 
-          (isset( $_GET['action'] ) && in_array( $_GET['action'], ['add', 'edit'] ))) ) {
-        
+    // ✅ Carregar quando estivermos no dashboard de classificados (listagem, add ou edit)
+    // Verificar se estamos na página de classificados de várias formas
+    $is_classifieds_page = false;
+    
+    // Verificar se estamos no dashboard Dokan
+    if (function_exists('dokan_is_seller_dashboard') && dokan_is_seller_dashboard()) {
+        $is_classifieds_page = true;
+    }
+    
+    // Verificar se estamos na página de classificados via URL
+    if (isset($_GET['classifieds']) || 
+        (isset($_GET['action']) && in_array($_GET['action'], ['add', 'edit']))) {
+        $is_classifieds_page = true;
+    }
+    
+    // Verificar se estamos na página de classificados via query vars
+    global $wp_query;
+    if (isset($wp_query->query_vars['classifieds'])) {
+        $is_classifieds_page = true;
+    }
+    
+    if ($is_classifieds_page) {
         wp_enqueue_media();
         
         // Carregar CSS específico para a página de edição
@@ -257,6 +274,9 @@ add_action( 'wp_enqueue_scripts', function () {
                 'select_categories' => __('Selecione categorias', 'j1_classificados')
             )
         ));
+        
+        // Debug: log para verificar se os scripts estão sendo carregados
+        error_log('J1 Classificados: Scripts carregados para página de classificados');
     }
 });
 

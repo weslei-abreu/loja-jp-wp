@@ -118,10 +118,13 @@
     align-items: center !important;
     z-index: 999999 !important;
     backdrop-filter: blur(4px) !important;
+    transition: opacity 0.3s ease, visibility 0.3s ease !important;
 }
 
 .j1-edit-page-loading.hidden {
-    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
 }
 
 .j1-edit-page-loading > div {
@@ -154,10 +157,12 @@
 .j1-edit-page-content {
     opacity: 0 !important;
     transition: opacity 0.5s ease !important;
+    visibility: hidden !important;
 }
 
 .j1-edit-page-content.loaded {
     opacity: 1 !important;
+    visibility: visible !important;
 }
 
 /* ✅ ESTILOS PARA A LISTAGEM DE CLASSIFICADOS */

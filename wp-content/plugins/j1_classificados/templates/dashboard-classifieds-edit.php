@@ -35,6 +35,13 @@ get_header();
 <div id="j1-edit-page-loading" class="j1-edit-page-loading">
     <div>
         <div class="j1-loading-spinner"></div>
+        <p style="color: white; margin-top: 20px; font-size: 16px;">Carregando...</p>
+        <!-- ✅ Botão de emergência para esconder o loading -->
+        <button id="j1-emergency-hide-loading" 
+                style="margin-top: 20px; padding: 10px 20px; background: #dc3545; color: white; border: none; border-radius: 4px; cursor: pointer;"
+                onclick="document.getElementById('j1-edit-page-loading').classList.add('hidden'); document.querySelector('.j1-edit-page-content').classList.add('loaded');">
+            Se a página não carregar, clique aqui
+        </button>
     </div>
 </div>
 

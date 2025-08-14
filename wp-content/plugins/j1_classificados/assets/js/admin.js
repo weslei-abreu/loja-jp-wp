@@ -1,9 +1,78 @@
 jQuery(document).ready(function($) {
     'use strict';
 
+    console.log('✅ J1 Classificados Admin JS carregado');
+
+    // ✅ Verificar se jQuery está disponível
+    if (typeof $ === 'undefined') {
+        console.error('❌ jQuery não está disponível');
+        return;
+    }
+
     // ✅ Verificar se estamos na página de classificados
     if (!$('form[name="classified_form"]').length) {
+        console.log('❌ Formulário de classificados não encontrado, saindo...');
         return; // Sair se não estivermos na página de classificados
+    }
+
+    console.log('✅ Formulário de classificados encontrado, inicializando...');
+
+    // ✅ CORREÇÃO: Esconder loading e mostrar conteúdo da página
+    function hidePageLoading() {
+        console.log('✅ Escondendo loading da página...');
+        $('#j1-edit-page-loading').addClass('hidden');
+        $('.j1-edit-page-content').addClass('loaded');
+    }
+
+    // ✅ Esconder loading quando a página estiver completamente carregada
+    $(window).on('load', function() {
+        console.log('✅ Evento window.load disparado');
+        // Aguardar um pouco para garantir que tudo carregou
+        setTimeout(function() {
+            hidePageLoading();
+        }, 500);
+    });
+
+    // ✅ Fallback: esconder loading após 3 segundos mesmo se o evento load não disparar
+    setTimeout(function() {
+        if ($('#j1-edit-page-loading').is(':visible')) {
+            console.log('⚠️ Fallback: escondendo loading após timeout');
+            hidePageLoading();
+        }
+    }, 3000);
+
+    // ✅ Fallback adicional: esconder loading quando o DOM estiver pronto
+    $(document).ready(function() {
+        // Aguardar um pouco mais para garantir que tudo carregou
+        setTimeout(function() {
+            if ($('#j1-edit-page-loading').is(':visible')) {
+                console.log('⚠️ Fallback DOM ready: escondendo loading');
+                hidePageLoading();
+            }
+        }, 1000);
+    });
+
+    // ✅ Fallback final: esconder loading quando qualquer elemento da página carregar
+    $(document).on('DOMNodeInserted', function() {
+        // Se algum elemento foi inserido e o loading ainda está visível, esconder
+        if ($('#j1-edit-page-loading').is(':visible') && $('.j1-edit-page-content').length > 0) {
+            console.log('⚠️ Fallback DOMNodeInserted: escondendo loading');
+            hidePageLoading();
+        }
+    });
+
+    // ✅ Verificar se o loading está visível
+    if ($('#j1-edit-page-loading').length) {
+        console.log('✅ Loading overlay encontrado');
+    } else {
+        console.log('❌ Loading overlay não encontrado');
+    }
+
+    // ✅ Verificar se o conteúdo está oculto
+    if ($('.j1-edit-page-content').length) {
+        console.log('✅ Conteúdo da página encontrado');
+    } else {
+        console.log('❌ Conteúdo da página não encontrado');
     }
 
     // ✅ Desabilitar validação do Dokan para nosso formulário
