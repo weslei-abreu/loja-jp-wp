@@ -165,10 +165,17 @@
      * Carregar modal de mensagem via AJAX
      */
     function j1_load_message_modal(callback) {
+        console.log('j1_load_message_modal chamado');
+        
         if (!j1_classifieds_ajax || !j1_classifieds_ajax.ajax_url) {
+            console.log('j1_classifieds_ajax não disponível');
             if (callback) callback();
             return;
         }
+
+        console.log('Fazendo requisição AJAX para:', j1_classifieds_ajax.ajax_url);
+        console.log('Action:', 'j1_load_message_modal');
+        console.log('Nonce:', j1_classifieds_ajax.nonce);
 
         $.ajax({
             url: j1_classifieds_ajax.ajax_url,
@@ -178,14 +185,18 @@
                 nonce: j1_classifieds_ajax.nonce
             },
             success: function(response) {
+                console.log('Resposta AJAX recebida:', response);
                 if (response.success) {
+                    console.log('Modal carregado com sucesso, adicionando ao DOM');
                     $('body').append(response.data.html);
                     if (callback) callback();
                 } else {
+                    console.log('Erro na resposta AJAX:', response);
                     if (callback) callback();
                 }
             },
-            error: function() {
+            error: function(xhr, status, error) {
+                console.log('Erro na requisição AJAX:', {xhr, status, error});
                 if (callback) callback();
             }
         });
