@@ -333,6 +333,9 @@
         $btnText.hide();
         $btnLoading.show();
 
+        // Mostrar loading overlay
+        $('#j1-message-loading').addClass('show');
+        
         // Preparar dados
         const formData = new FormData();
         formData.append('action', 'j1_send_message');
@@ -367,6 +370,9 @@
                 j1_show_error('Erro de conexão. Tente novamente.');
             },
             complete: function() {
+                // Esconder loading overlay
+                $('#j1-message-loading').removeClass('show');
+                
                 // Restaurar botão
                 $submitBtn.prop('disabled', false);
                 $btnText.show();

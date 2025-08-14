@@ -283,10 +283,14 @@
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.7);
-    display: flex;
+    display: none; /* Escondido por padrão */
     justify-content: center;
     align-items: center;
     z-index: 999998;
+}
+
+.j1-loading-overlay.show {
+    display: flex; /* Mostrar apenas quando necessário */
 }
 
 .j1-loading-content {
