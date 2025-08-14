@@ -195,28 +195,35 @@
      * Abrir modal de mensagem
      */
     window.j1_open_message_modal = function(classifiedId) {
+        console.log('j1_open_message_modal chamado com ID:', classifiedId);
+        
         // Verificar se o usuário está logado (verificação mais robusta)
         if (!j1_is_user_logged_in()) {
+            console.log('Usuário não está logado');
             j1_show_error('Você precisa estar logado para enviar mensagens.');
             return;
         }
 
+        console.log('Usuário está logado, verificando se não está enviando para si mesmo');
+
         // Verificar se não está enviando para si mesmo
         if (classifiedId === j1_classifieds_ajax.current_user.id) {
+            console.log('Usuário tentando enviar mensagem para si mesmo');
             j1_show_error('Você não pode enviar mensagem para si mesmo.');
             return;
         }
 
+        console.log('Configurando modal para classificado:', classifiedId);
         j1MessageModal.currentClassifiedId = classifiedId;
         j1MessageModal.isOpen = true;
 
-        // Carregar modal via AJAX se não existir
-        if (!$('#j1-message-modal').length) {
-            j1_load_message_modal(function() {
-                j1_show_modal();
-            });
-        } else {
+        // Mostrar modal diretamente (já está incluído na página)
+        if ($('#j1-message-modal').length) {
+            console.log('Modal encontrado, mostrando...');
             j1_show_modal();
+        } else {
+            console.log('Modal não encontrado na página');
+            j1_show_error('Modal não encontrado. Recarregue a página.');
         }
     };
 
@@ -408,19 +415,11 @@
         
         // Verificar se há elementos que indicam que o usuário está logado
         if ($('.logged-in').length > 0 || $('.wp-admin-bar').length > 0) {
-            // Se detectamos que está logado mas não temos dados, vamos atualizar
-            if (!j1_classifieds_ajax.current_user || !j1_classifieds_ajax.current_user.id) {
-                j1_update_user_data();
-            }
             return true;
         }
         
         // Verificar se há cookies de login
         if (document.cookie.indexOf('wordpress_logged_in_') !== -1) {
-            // Se detectamos cookie mas não temos dados, vamos atualizar
-            if (!j1_classifieds_ajax.current_user || !j1_classifieds_ajax.current_user.id) {
-                j1_update_user_data();
-            }
             return true;
         }
         

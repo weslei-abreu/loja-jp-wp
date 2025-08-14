@@ -131,8 +131,9 @@ class J1_Classified_Messages_Integration {
      * Incluir modal de mensagem
      */
     public function include_message_modal() {
-        // Modal será carregado via AJAX quando necessário
-        // Não incluir automaticamente para evitar problemas de carregamento
+        if (is_singular('classified')) {
+            include plugin_dir_path(__FILE__) . '../templates/modal-message.php';
+        }
     }
     
     /**
