@@ -190,6 +190,10 @@
                 if (response.success) {
                     console.log('Modal carregado com sucesso, adicionando ao DOM');
                     $('body').append(response.data.html);
+                    
+                    // Garantir que o modal esteja escondido após ser adicionado
+                    $('#j1-message-modal').hide();
+                    
                     if (callback) callback();
                 } else {
                     console.log('Erro na resposta AJAX:', response);
@@ -245,7 +249,8 @@
      * Mostrar modal
      */
     function j1_show_modal() {
-        $('#j1-message-modal').fadeIn(300);
+        // Garantir que o modal esteja escondido inicialmente
+        $('#j1-message-modal').hide().fadeIn(300);
         $('body').css('overflow', 'hidden');
 
         // Focar no campo de mensagem
