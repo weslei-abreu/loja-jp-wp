@@ -9,9 +9,17 @@
 if (!defined('ABSPATH')) exit;
 
 // Verificar se o usuário está logado e é vendedor
-if (!is_user_logged_in() || !dokan_is_seller_enabled(get_current_user_id())) {
-    wp_die(__('Access Denied', 'j1_classificados'));
+if (!is_user_logged_in()) {
+    wp_die(__('Você precisa estar logado para acessar esta página.', 'j1_classificados'));
 }
+
+if (!dokan_is_seller_enabled(get_current_user_id())) {
+    wp_die(__('Você precisa ser um vendedor habilitado para acessar esta página.', 'j1_classificados'));
+}
+
+// Debug: Mostrar informações do usuário
+$current_user = wp_get_current_user();
+echo '<!-- Debug: Usuário ID: ' . esc_html($current_user->ID) . ' | Nome: ' . esc_html($current_user->display_name) . ' | Vendedor: ' . (dokan_is_seller_enabled($current_user->ID) ? 'Sim' : 'Não') . ' -->';
 
 $current_user_id = get_current_user_id();
 $classified_id = isset($_GET['classified_id']) ? intval($_GET['classified_id']) : 0;
@@ -52,6 +60,16 @@ get_header();
 
         <div class="dokan-messages-container">
             <?php if ($classified_id) : ?>
+                <!-- Debug: Informações do classificado -->
+                <?php 
+                $debug_classified = get_post($classified_id);
+                if ($debug_classified) {
+                    echo '<!-- Debug: Classificado ID: ' . esc_html($classified_id) . ' | Título: ' . esc_html($debug_classified->post_title) . ' | Autor: ' . esc_html($debug_classified->post_author) . ' | Status: ' . esc_html($debug_classified->post_status) . ' -->';
+                } else {
+                    echo '<!-- Debug: Classificado ID ' . esc_html($classified_id) . ' não encontrado -->';
+                }
+                ?>
+                
                 <!-- Mensagens de um classificado específico -->
                 <?php render_classified_messages($classified_id, $current_user_id); ?>
             <?php else : ?>
@@ -80,8 +98,23 @@ function render_classified_messages($classified_id, $user_id) {
     $table_messages = $wpdb->prefix . 'j1_messages';
     $classified = get_post($classified_id);
     
-    if (!$classified || $classified->post_author !== $user_id) {
-        echo '<div class="dokan-message dokan-error">' . __('Acesso negado.', 'j1_classificados') . '</div>';
+    // Debug: Verificar se o classificado existe
+    if (!$classified) {
+        echo '<div class="dokan-message dokan-error">';
+        echo '<strong>Erro:</strong> Classificado ID ' . esc_html($classified_id) . ' não encontrado.';
+        echo '</div>';
+        return;
+    }
+    
+    // Debug: Verificar se o usuário é o autor
+    if ($classified->post_author !== $user_id) {
+        echo '<div class="dokan-message dokan-error">';
+        echo '<strong>Erro de Permissão:</strong> ';
+        echo 'Você não é o autor deste classificado. ';
+        echo 'Classificado ID: ' . esc_html($classified_id) . ' | ';
+        echo 'Autor ID: ' . esc_html($classified->post_author) . ' | ';
+        echo 'Seu ID: ' . esc_html($user_id);
+        echo '</div>';
         return;
     }
     
