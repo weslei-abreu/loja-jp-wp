@@ -294,7 +294,11 @@ class J1_Classified_Messages {
         }
         
         // Apenas o autor do classificado pode ver as mensagens
-        if ($classified->post_author !== $user_id) {
+        // Converter ambos para inteiros para comparação correta
+        $author_id = intval($classified->post_author);
+        $user_id_int = intval($user_id);
+        
+        if ($author_id !== $user_id_int) {
             wp_send_json_error('Access denied');
         }
         
@@ -544,8 +548,17 @@ Equipe %s', 'j1_classificados'),
         }
         
         $current_user_id = get_current_user_id();
-        if ($classified->post_author !== $current_user_id) {
-            wp_send_json_error('Access denied - you are not the author of this classified');
+        
+        // Debug: Log dos IDs para verificar permissão
+        error_log("J1 Debug - Classified ID: $classified_id | Author ID: " . $classified->post_author . " | Current User ID: $current_user_id");
+        error_log("J1 Debug - Author type: " . gettype($classified->post_author) . " | Current User type: " . gettype($current_user_id));
+        
+        // Converter ambos para inteiros para comparação correta
+        $author_id = intval($classified->post_author);
+        $current_user_id_int = intval($current_user_id);
+        
+        if ($author_id !== $current_user_id_int) {
+            wp_send_json_error("Access denied - you are not the author of this classified. Author: $author_id, Current User: $current_user_id_int");
         }
         
         // Verificar se a mensagem original existe
@@ -555,7 +568,7 @@ Equipe %s', 'j1_classificados'),
         }
         
         // Criar ou obter thread existente
-        $thread_id = $this->get_or_create_thread($classified_id, $current_user_id, $sender_id);
+        $thread_id = $this->get_or_create_thread($classified_id);
         
         if (!$thread_id) {
             wp_send_json_error('Failed to create thread');
