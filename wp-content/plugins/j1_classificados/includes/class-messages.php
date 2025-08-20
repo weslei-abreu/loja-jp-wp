@@ -56,8 +56,11 @@ class J1_Classified_Messages {
         // Endpoint para enviar respostas
         add_action('wp_ajax_j1_send_reply', [$this, 'ajax_send_reply']);
         
-        // Endpoint para cliente ver suas mensagens enviadas
+        // Endpoint para cliente ver suas mensagens enviadas E recebidas
         add_action('wp_ajax_j1_get_my_messages', [$this, 'ajax_get_my_messages']);
+        
+        // Endpoint para obter conversas organizadas por thread
+        add_action('wp_ajax_j1_get_conversations', [$this, 'ajax_get_conversations']);
     }
     
     /**
@@ -73,11 +76,16 @@ class J1_Classified_Messages {
         $sql_threads = "CREATE TABLE $table_threads (
             id bigint(20) NOT NULL AUTO_INCREMENT,
             classified_id bigint(20) NOT NULL,
+            client_id bigint(20) NOT NULL,
+            vendor_id bigint(20) NOT NULL,
             status varchar(20) DEFAULT 'open',
             created_at datetime DEFAULT CURRENT_TIMESTAMP,
             updated_at datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
             PRIMARY KEY (id),
+            UNIQUE KEY unique_conversation (classified_id, client_id),
             KEY classified_id (classified_id),
+            KEY client_id (client_id),
+            KEY vendor_id (vendor_id),
             KEY status (status)
         ) $charset_collate;";
         
@@ -107,7 +115,7 @@ class J1_Classified_Messages {
         dbDelta($sql_messages);
         
         // Adicionar versão das tabelas
-        add_option('j1_messages_db_version', '1.0');
+        add_option('j1_messages_db_version', '1.1');
     }
     
     /**
@@ -139,29 +147,30 @@ class J1_Classified_Messages {
             wp_send_json_error('Invalid classified');
         }
         
-        $receiver_id = $classified->post_author;
+        $vendor_id = $classified->post_author;
         
         // Verificar se não está enviando para si mesmo
-        if ($user_id === $receiver_id) {
+        if ($user_id === $vendor_id) {
             wp_send_json_error('Cannot send message to yourself');
         }
         
         // Criar ou obter thread
-        $thread_id = $this->get_or_create_thread($classified_id);
+        $thread_id = $this->get_or_create_thread($classified_id, $user_id, $vendor_id);
         
         // Salvar mensagem
-        $message_id = $this->save_message($thread_id, $classified_id, $user_id, $receiver_id, $subject, $message);
+        $message_id = $this->save_message($thread_id, $classified_id, $user_id, $vendor_id, $subject, $message);
         
         if ($message_id) {
             // Atualizar thread
             $this->update_thread($thread_id);
             
             // Disparar ação para notificações
-            do_action('j1_message_sent', $message_id, $receiver_id);
+            do_action('j1_message_sent', $message_id, $vendor_id);
             
             wp_send_json_success([
                 'message' => 'Message sent successfully',
-                'message_id' => $message_id
+                'message_id' => $message_id,
+                'thread_id' => $thread_id
             ]);
         } else {
             wp_send_json_error('Failed to send message');
@@ -171,15 +180,15 @@ class J1_Classified_Messages {
     /**
      * Obter ou criar thread de mensagens
      */
-    private function get_or_create_thread($classified_id) {
+    private function get_or_create_thread($classified_id, $client_id, $vendor_id) {
         global $wpdb;
         
         $table_threads = $wpdb->prefix . 'j1_message_threads';
         
-        // Verificar se já existe thread para este classificado
+        // Verificar se já existe thread para este classificado e cliente
         $existing_thread = $wpdb->get_var($wpdb->prepare(
-            "SELECT id FROM $table_threads WHERE classified_id = %d",
-            $classified_id
+            "SELECT id FROM $table_threads WHERE classified_id = %d AND client_id = %d",
+            $classified_id, $client_id
         ));
         
         if ($existing_thread) {
@@ -191,9 +200,11 @@ class J1_Classified_Messages {
             $table_threads,
             [
                 'classified_id' => $classified_id,
+                'client_id' => $client_id,
+                'vendor_id' => $vendor_id,
                 'status' => 'open'
             ],
-            ['%d', '%s']
+            ['%d', '%d', '%d', '%s']
         );
         
         return $wpdb->insert_id;
@@ -280,7 +291,7 @@ class J1_Classified_Messages {
     }
     
     /**
-     * Obter mensagens de um classificado
+     * Obter mensagens de um classificado (para vendedor)
      */
     public function ajax_get_messages() {
         if (!wp_verify_nonce($_POST['nonce'], 'j1_message_nonce')) {
@@ -297,7 +308,6 @@ class J1_Classified_Messages {
         }
         
         // Apenas o autor do classificado pode ver as mensagens
-        // Converter ambos para inteiros para comparação correta
         $author_id = intval($classified->post_author);
         $user_id_int = intval($user_id);
         
@@ -305,69 +315,63 @@ class J1_Classified_Messages {
             wp_send_json_error('Access denied');
         }
         
-        $messages = $this->get_messages_by_classified($classified_id);
-        wp_send_json_success($messages);
+        $conversations = $this->get_conversations_by_classified($classified_id);
+        wp_send_json_success($conversations);
     }
     
     /**
-     * Obter mensagens organizadas por usuário
+     * Obter conversas organizadas por thread para um classificado
      */
-    private function get_messages_by_classified($classified_id) {
+    private function get_conversations_by_classified($classified_id) {
         global $wpdb;
         
+        $table_threads = $wpdb->prefix . 'j1_message_threads';
         $table_messages = $wpdb->prefix . 'j1_messages';
         
-        $messages = $wpdb->get_results($wpdb->prepare(
-            "SELECT m.*, u.display_name as sender_name, u.user_email as sender_email
-             FROM $table_messages m
-             LEFT JOIN {$wpdb->users} u ON m.sender_id = u.ID
-             WHERE m.classified_id = %d
-             ORDER BY m.created_at ASC",
+        // Buscar todas as threads deste classificado
+        $threads = $wpdb->get_results($wpdb->prepare(
+            "SELECT t.*, u.display_name as client_name, u.user_email as client_email
+             FROM $table_threads t
+             LEFT JOIN {$wpdb->users} u ON t.client_id = u.ID
+             WHERE t.classified_id = %d
+             ORDER BY t.updated_at DESC",
             $classified_id
         ));
         
-        // Organizar por thread de conversa (usuário que iniciou)
-        $organized = [];
-        foreach ($messages as $message) {
-            // Para respostas, usar o receiver_id original para manter na mesma conversa
-            $conversation_key = $message->sender_id;
+        $conversations = [];
+        foreach ($threads as $thread) {
+            // Buscar mensagens desta thread
+            $messages = $wpdb->get_results($wpdb->prepare(
+                "SELECT m.*, u.display_name as sender_name, u.user_email as sender_email
+                 FROM $table_messages m
+                 LEFT JOIN {$wpdb->users} u ON m.sender_id = u.ID
+                 WHERE m.thread_id = %d
+                 ORDER BY m.created_at ASC",
+                $thread->id
+            ));
             
-            // Se é uma resposta do vendedor, agrupar com a conversa original do cliente
-            if ($message->receiver_id !== $message->sender_id) {
-                // Buscar a primeira mensagem desta thread para agrupar corretamente
-                $first_message = $wpdb->get_row($wpdb->prepare(
-                    "SELECT sender_id FROM $table_messages 
-                     WHERE thread_id = %d 
-                     ORDER BY created_at ASC 
-                     LIMIT 1",
-                    $message->thread_id
-                ));
-                
-                if ($first_message) {
-                    $conversation_key = $first_message->sender_id;
+            // Contar mensagens não lidas (apenas as recebidas pelo vendedor)
+            $unread_count = 0;
+            foreach ($messages as $message) {
+                if ($message->receiver_id == $thread->vendor_id && !$message->is_read) {
+                    $unread_count++;
                 }
             }
             
-            if (!isset($organized[$conversation_key])) {
-                $organized[$conversation_key] = [
-                    'user_id' => $conversation_key,
-                    'user_name' => $message->sender_name,
-                    'user_email' => $message->sender_email,
-                    'messages' => [],
-                    'unread_count' => 0,
-                    'total_count' => 0
-                ];
-            }
-            
-            $organized[$conversation_key]['messages'][] = $message;
-            $organized[$conversation_key]['total_count']++;
-            
-            if (!$message->is_read) {
-                $organized[$conversation_key]['unread_count']++;
-            }
+            $conversations[] = [
+                'thread_id' => $thread->id,
+                'classified_id' => $thread->classified_id,
+                'client_id' => $thread->client_id,
+                'client_name' => $thread->client_name,
+                'client_email' => $thread->client_email,
+                'messages' => $messages,
+                'unread_count' => $unread_count,
+                'total_count' => count($messages),
+                'last_updated' => $thread->updated_at
+            ];
         }
         
-        return $organized;
+        return $conversations;
     }
     
     /**
@@ -480,7 +484,7 @@ Você recebeu uma nova mensagem sobre o classificado "%s".
 De: %s
 Mensagem: %s
 
-Para responder, acesse seu dashboard de vendedor.
+Para responder, acesse seu dashboard.
 
 Atenciosamente,
 Equipe %s', 'j1_classificados'),
@@ -551,9 +555,9 @@ Equipe %s', 'j1_classificados'),
             wp_send_json_error('User not logged in');
         }
         
+        $thread_id = intval($_POST['thread_id']);
         $classified_id = intval($_POST['classified_id']);
-        $sender_id = intval($_POST['sender_id']); // ID do usuário que enviou a mensagem original
-        $message_id = intval($_POST['message_id']);
+        $client_id = intval($_POST['client_id']); // ID do cliente que iniciou a conversa
         $subject = sanitize_text_field($_POST['subject']);
         $message = sanitize_textarea_field($_POST['message']);
         
@@ -569,48 +573,53 @@ Equipe %s', 'j1_classificados'),
         }
         
         $current_user_id = get_current_user_id();
-        
-        // Debug: Log dos IDs para verificar permissão
-        error_log("J1 Debug - Classified ID: $classified_id | Author ID: " . $classified->post_author . " | Current User ID: $current_user_id");
-        error_log("J1 Debug - Author type: " . gettype($classified->post_author) . " | Current User type: " . gettype($current_user_id));
-        
-        // Converter ambos para inteiros para comparação correta
         $author_id = intval($classified->post_author);
-        $current_user_id_int = intval($current_user_id);
         
-        if ($author_id !== $current_user_id_int) {
-            wp_send_json_error("Access denied - you are not the author of this classified. Author: $author_id, Current User: $current_user_id_int");
+        if ($author_id !== $current_user_id) {
+            wp_send_json_error('Access denied - you are not the author of this classified');
         }
         
-        // Verificar se a mensagem original existe
-        $original_message = $this->get_message($message_id);
-        if (!$original_message) {
-            wp_send_json_error('Original message not found');
-        }
-        
-        // Criar ou obter thread existente
-        $thread_id = $this->get_or_create_thread($classified_id);
-        
-        if (!$thread_id) {
-            wp_send_json_error('Failed to create thread');
+        // Verificar se a thread existe
+        $thread = $this->get_thread($thread_id);
+        if (!$thread) {
+            wp_send_json_error('Thread not found');
         }
         
         // Enviar a resposta - O vendedor (autor do classificado) responde para o cliente
-        // IMPORTANTE: O vendedor (current_user_id) envia para o cliente (sender_id)
-        $reply_id = $this->save_message($thread_id, $classified_id, $current_user_id, $sender_id, $subject, $message);
+        $reply_id = $this->save_message($thread_id, $classified_id, $current_user_id, $client_id, $subject, $message);
         
         if ($reply_id) {
-            // Enviar notificação por email
-            $this->send_email_notification($reply_id, $sender_id);
+            // Atualizar thread
+            $this->update_thread($thread_id);
             
-            wp_send_json_success('Reply sent successfully');
+            // Enviar notificação por email
+            $this->send_email_notification($reply_id, $client_id);
+            
+            wp_send_json_success([
+                'message' => 'Reply sent successfully',
+                'reply_id' => $reply_id
+            ]);
         } else {
             wp_send_json_error('Failed to send reply');
         }
     }
     
     /**
-     * Cliente ver suas mensagens enviadas
+     * Obter thread por ID
+     */
+    private function get_thread($thread_id) {
+        global $wpdb;
+        
+        $table_threads = $wpdb->prefix . 'j1_message_threads';
+        
+        return $wpdb->get_row($wpdb->prepare(
+            "SELECT * FROM $table_threads WHERE id = %d",
+            $thread_id
+        ));
+    }
+    
+    /**
+     * Cliente ver suas mensagens enviadas E recebidas
      */
     public function ajax_get_my_messages() {
         if (!wp_verify_nonce($_POST['nonce'], 'j1_message_nonce')) {
@@ -623,53 +632,139 @@ Equipe %s', 'j1_classificados'),
         
         $user_id = get_current_user_id();
         
-        // Buscar mensagens que o usuário enviou
-        $messages = $this->get_messages_sent_by_user($user_id);
-        wp_send_json_success($messages);
+        // Buscar conversas onde o usuário é cliente OU vendedor
+        $conversations = $this->get_conversations_for_user($user_id);
+        wp_send_json_success($conversations);
     }
     
     /**
-     * Obter mensagens enviadas por um usuário
+     * Obter conversas para um usuário (como cliente ou vendedor)
      */
-    private function get_messages_sent_by_user($user_id) {
+    private function get_conversations_for_user($user_id) {
+        global $wpdb;
+        
+        $table_threads = $wpdb->prefix . 'j1_message_threads';
+        $table_messages = $wpdb->prefix . 'j1_messages';
+        
+        // Buscar threads onde o usuário é cliente
+        $client_threads = $wpdb->get_results($wpdb->prepare(
+            "SELECT t.*, p.post_title as classified_title, u.display_name as vendor_name
+             FROM $table_threads t
+             LEFT JOIN {$wpdb->posts} p ON t.classified_id = p.ID
+             LEFT JOIN {$wpdb->users} u ON t.vendor_id = u.ID
+             WHERE t.client_id = %d
+             ORDER BY t.updated_at DESC",
+            $user_id
+        ));
+        
+        // Buscar threads onde o usuário é vendedor
+        $vendor_threads = $wpdb->get_results($wpdb->prepare(
+            "SELECT t.*, p.post_title as classified_title, u.display_name as client_name
+             FROM $table_threads t
+             LEFT JOIN {$wpdb->posts} p ON t.classified_id = p.ID
+             LEFT JOIN {$wpdb->users} u ON t.client_id = u.ID
+             WHERE t.vendor_id = %d
+             ORDER BY t.updated_at DESC",
+            $user_id
+        ));
+        
+        $conversations = [];
+        
+        // Processar threads como cliente
+        foreach ($client_threads as $thread) {
+            $messages = $this->get_messages_for_thread($thread->id);
+            $unread_count = $this->count_unread_for_user_in_thread($thread->id, $user_id);
+            
+            $conversations[] = [
+                'thread_id' => $thread->id,
+                'classified_id' => $thread->classified_id,
+                'classified_title' => $thread->classified_title,
+                'other_user_id' => $thread->vendor_id,
+                'other_user_name' => $thread->vendor_name,
+                'role' => 'client',
+                'messages' => $messages,
+                'unread_count' => $unread_count,
+                'total_count' => count($messages),
+                'last_updated' => $thread->updated_at
+            ];
+        }
+        
+        // Processar threads como vendedor
+        foreach ($vendor_threads as $thread) {
+            $messages = $this->get_messages_for_thread($thread->id);
+            $unread_count = $this->count_unread_for_user_in_thread($thread->id, $user_id);
+            
+            $conversations[] = [
+                'thread_id' => $thread->id,
+                'classified_id' => $thread->classified_id,
+                'classified_title' => $thread->classified_title,
+                'other_user_id' => $thread->client_id,
+                'other_user_name' => $thread->client_name,
+                'role' => 'vendor',
+                'messages' => $messages,
+                'unread_count' => $unread_count,
+                'total_count' => count($messages),
+                'last_updated' => $thread->updated_at
+            ];
+        }
+        
+        // Ordenar por última atualização
+        usort($conversations, function($a, $b) {
+            return strtotime($b['last_updated']) - strtotime($a['last_updated']);
+        });
+        
+        return $conversations;
+    }
+    
+    /**
+     * Obter mensagens para uma thread específica
+     */
+    private function get_messages_for_thread($thread_id) {
         global $wpdb;
         
         $table_messages = $wpdb->prefix . 'j1_messages';
         
-        $messages = $wpdb->get_results($wpdb->prepare(
-            "SELECT m.*, p.post_title as classified_title, u.display_name as receiver_name
+        return $wpdb->get_results($wpdb->prepare(
+            "SELECT m.*, u.display_name as sender_name, u.user_email as sender_email
              FROM $table_messages m
-             LEFT JOIN {$wpdb->posts} p ON m.classified_id = p.ID
-             LEFT JOIN {$wpdb->users} u ON m.receiver_id = u.ID
-             WHERE m.sender_id = %d
-             ORDER BY m.created_at DESC",
-            $user_id
+             LEFT JOIN {$wpdb->users} u ON m.sender_id = u.ID
+             WHERE m.thread_id = %d
+             ORDER BY m.created_at ASC",
+            $thread_id
         ));
+    }
+    
+    /**
+     * Contar mensagens não lidas para um usuário em uma thread específica
+     */
+    private function count_unread_for_user_in_thread($thread_id, $user_id) {
+        global $wpdb;
         
-        // Organizar por classificado
-        $organized = [];
-        foreach ($messages as $message) {
-            $classified_id = $message->classified_id;
-            if (!isset($organized[$classified_id])) {
-                $organized[$classified_id] = [
-                    'classified_id' => $classified_id,
-                    'classified_title' => $message->classified_title,
-                    'receiver_name' => $message->receiver_name,
-                    'messages' => [],
-                    'unread_count' => 0,
-                    'total_count' => 0
-                ];
-            }
-            
-            $organized[$classified_id]['messages'][] = $message;
-            $organized[$classified_id]['total_count']++;
-            
-            if (!$message->is_read) {
-                $organized[$classified_id]['unread_count']++;
-            }
+        $table_messages = $wpdb->prefix . 'j1_messages';
+        
+        return $wpdb->get_var($wpdb->prepare(
+            "SELECT COUNT(*) FROM $table_messages 
+             WHERE thread_id = %d AND receiver_id = %d AND is_read = 0",
+            $thread_id, $user_id
+        ));
+    }
+    
+    /**
+     * Endpoint para obter conversas organizadas (para compatibilidade)
+     */
+    public function ajax_get_conversations() {
+        if (!wp_verify_nonce($_POST['nonce'], 'j1_message_nonce')) {
+            wp_send_json_error('Security check failed');
         }
         
-        return $organized;
+        if (!is_user_logged_in()) {
+            wp_send_json_error('User not logged in');
+        }
+        
+        $user_id = get_current_user_id();
+        $conversations = $this->get_conversations_for_user($user_id);
+        
+        wp_send_json_success($conversations);
     }
 }
 
