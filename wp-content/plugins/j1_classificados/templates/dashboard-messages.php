@@ -212,11 +212,19 @@ function render_classified_messages($classified_id, $user_id) {
                         
                         <div class="j1-message-actions">
                             <?php if (!$message->is_read) : ?>
-                                                            <button type="button" class="j1-btn j1-btn-small j1-mark-read" 
-                                    data-message-id="<?php echo esc_attr($message->id); ?>">
-                                <?php esc_html_e('Marcar como lida', 'j1_classificados'); ?>
-                            </button>
+                                <button type="button" class="j1-btn j1-btn-small j1-mark-read" 
+                                        data-message-id="<?php echo esc_attr($message->id); ?>">
+                                    <?php esc_html_e('Marcar como lida', 'j1_classificados'); ?>
+                                </button>
                             <?php endif; ?>
+                            
+                            <!-- Botão para responder -->
+                            <button type="button" class="j1-btn j1-btn-small j1-btn-primary j1-reply-btn" 
+                                    data-message-id="<?php echo esc_attr($message->id); ?>"
+                                    data-sender-id="<?php echo esc_attr($sender_id); ?>"
+                                    data-classified-id="<?php echo esc_attr($classified_id); ?>">
+                                <?php esc_html_e('Responder', 'j1_classificados'); ?>
+                            </button>
                         </div>
                     </div>
                 <?php endforeach; ?>
@@ -299,6 +307,48 @@ function render_all_messages($user_id) {
 }
 ?>
 
+<!-- Modal de Resposta -->
+<div id="j1-reply-modal" class="j1-reply-modal" style="display: none;">
+    <div class="j1-modal-content">
+        <div class="j1-modal-header">
+            <h3><?php esc_html_e('Responder Mensagem', 'j1_classificados'); ?></h3>
+            <button type="button" class="j1-modal-close">&times;</button>
+        </div>
+        
+        <div class="j1-modal-body">
+            <form id="j1-reply-form">
+                <input type="hidden" id="j1-reply-classified-id" name="classified_id" value="">
+                <input type="hidden" id="j1-reply-sender-id" name="sender_id" value="">
+                <input type="hidden" id="j1-reply-message-id" name="message_id" value="">
+                
+                <div class="j1-form-group">
+                    <label for="j1-reply-subject"><?php esc_html_e('Assunto:', 'j1_classificados'); ?></label>
+                    <input type="text" id="j1-reply-subject" name="subject" class="j1-form-control" 
+                           placeholder="<?php esc_attr_e('Assunto da resposta', 'j1_classificados'); ?>" required>
+                </div>
+                
+                <div class="j1-form-group">
+                    <label for="j1-reply-message"><?php esc_html_e('Mensagem:', 'j1_classificados'); ?></label>
+                    <textarea id="j1-reply-message" name="message" class="j1-form-control" rows="5" 
+                              placeholder="<?php esc_attr_e('Digite sua resposta...', 'j1_classificados'); ?>" required></textarea>
+                    <div class="j1-char-count">
+                        <span id="j1-reply-char-count">0</span> / 1000 caracteres
+                    </div>
+                </div>
+                
+                <div class="j1-form-actions">
+                    <button type="button" class="j1-btn j1-btn-default j1-modal-cancel">
+                        <?php esc_html_e('Cancelar', 'j1_classificados'); ?>
+                    </button>
+                    <button type="submit" class="j1-btn j1-btn-primary">
+                        <?php esc_html_e('Enviar Resposta', 'j1_classificados'); ?>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
 <!-- Scripts para funcionalidades -->
 <script>
 // Marcar mensagem como lida
@@ -359,5 +409,118 @@ function j1_update_unread_count() {
 // Atualizar contadores quando a página carrega
 document.addEventListener('DOMContentLoaded', function() {
     j1_update_unread_count();
+    
+    // Inicializar funcionalidades do modal de resposta
+    j1_init_reply_modal();
 });
+
+// Inicializar modal de resposta
+function j1_init_reply_modal() {
+    // Botões para abrir modal
+    document.querySelectorAll('.j1-reply-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const messageId = this.getAttribute('data-message-id');
+            const senderId = this.getAttribute('data-sender-id');
+            const classifiedId = this.getAttribute('data-classified-id');
+            
+            j1_open_reply_modal(messageId, senderId, classifiedId);
+        });
+    });
+    
+    // Botão fechar modal
+    document.querySelector('.j1-modal-close').addEventListener('click', j1_close_reply_modal);
+    document.querySelector('.j1-modal-cancel').addEventListener('click', j1_close_reply_modal);
+    
+    // Contador de caracteres
+    const messageTextarea = document.getElementById('j1-reply-message');
+    const charCount = document.getElementById('j1-reply-char-count');
+    
+    if (messageTextarea && charCount) {
+        messageTextarea.addEventListener('input', function() {
+            const length = this.value.length;
+            charCount.textContent = length;
+            
+            if (length > 1000) {
+                charCount.style.color = '#e74c3c';
+            } else if (length > 800) {
+                charCount.style.color = '#f39c12';
+            } else {
+                charCount.style.color = '#666';
+            }
+        });
+    }
+    
+    // Formulário de resposta
+    document.getElementById('j1-reply-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        j1_send_reply();
+    });
+}
+
+// Abrir modal de resposta
+function j1_open_reply_modal(messageId, senderId, classifiedId) {
+    document.getElementById('j1-reply-classified-id').value = classifiedId;
+    document.getElementById('j1-reply-sender-id').value = senderId;
+    document.getElementById('j1-reply-message-id').value = messageId;
+    
+    // Limpar campos
+    document.getElementById('j1-reply-subject').value = '';
+    document.getElementById('j1-reply-message').value = '';
+    document.getElementById('j1-reply-char-count').textContent = '0';
+    
+    // Mostrar modal
+    document.getElementById('j1-reply-modal').style.display = 'block';
+}
+
+// Fechar modal de resposta
+function j1_close_reply_modal() {
+    document.getElementById('j1-reply-modal').style.display = 'none';
+}
+
+// Enviar resposta
+function j1_send_reply() {
+    const formData = new FormData();
+    formData.append('action', 'j1_send_reply');
+    formData.append('nonce', j1_classifieds_ajax.nonce);
+    formData.append('classified_id', document.getElementById('j1-reply-classified-id').value);
+    formData.append('sender_id', document.getElementById('j1-reply-sender-id').value);
+    formData.append('message_id', document.getElementById('j1-reply-message-id').value);
+    formData.append('subject', document.getElementById('j1-reply-subject').value);
+    formData.append('message', document.getElementById('j1-reply-message').value);
+    
+    // Mostrar loading
+    const submitBtn = document.querySelector('#j1-reply-form button[type="submit"]');
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = 'Enviando...';
+    submitBtn.disabled = true;
+    
+    fetch(j1_classifieds_ajax.ajax_url, {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            // Fechar modal
+            j1_close_reply_modal();
+            
+            // Mostrar mensagem de sucesso
+            alert('Resposta enviada com sucesso!');
+            
+            // Recarregar página para mostrar a nova mensagem
+            location.reload();
+        } else {
+            alert('Erro ao enviar resposta: ' + (data.data || 'Erro desconhecido'));
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Erro ao enviar resposta. Tente novamente.');
+    })
+    .finally(() => {
+        // Restaurar botão
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+    });
+}
 </script>

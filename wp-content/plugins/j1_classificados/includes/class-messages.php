@@ -52,6 +52,9 @@ class J1_Classified_Messages {
         // Contador de mensagens não lidas
         add_action('wp_ajax_j1_get_unread_count', [$this, 'ajax_get_unread_count']);
         add_action('wp_ajax_nopriv_j1_get_unread_count', [$this, 'ajax_get_unread_count']);
+        
+        // Endpoint para enviar respostas
+        add_action('wp_ajax_j1_send_reply', [$this, 'ajax_send_reply']);
     }
     
     /**
@@ -509,6 +512,66 @@ Equipe %s', 'j1_classificados'),
              WHERE receiver_id = %d AND is_read = 0",
             $user_id
         ));
+    }
+    
+    /**
+     * Enviar resposta a uma mensagem
+     */
+    public function ajax_send_reply() {
+        if (!wp_verify_nonce($_POST['nonce'], 'j1_message_nonce')) {
+            wp_send_json_error('Security check failed');
+        }
+        
+        if (!is_user_logged_in()) {
+            wp_send_json_error('User not logged in');
+        }
+        
+        $classified_id = intval($_POST['classified_id']);
+        $sender_id = intval($_POST['sender_id']); // ID do usuário que enviou a mensagem original
+        $message_id = intval($_POST['message_id']);
+        $subject = sanitize_text_field($_POST['subject']);
+        $message = sanitize_textarea_field($_POST['message']);
+        
+        // Validar dados
+        if (empty($subject) || empty($message)) {
+            wp_send_json_error('Subject and message are required');
+        }
+        
+        // Verificar se o usuário atual é o autor do classificado
+        $classified = get_post($classified_id);
+        if (!$classified || $classified->post_type !== 'classified') {
+            wp_send_json_error('Invalid classified');
+        }
+        
+        $current_user_id = get_current_user_id();
+        if ($classified->post_author !== $current_user_id) {
+            wp_send_json_error('Access denied - you are not the author of this classified');
+        }
+        
+        // Verificar se a mensagem original existe
+        $original_message = $this->get_message($message_id);
+        if (!$original_message) {
+            wp_send_json_error('Original message not found');
+        }
+        
+        // Criar ou obter thread existente
+        $thread_id = $this->get_or_create_thread($classified_id, $current_user_id, $sender_id);
+        
+        if (!$thread_id) {
+            wp_send_json_error('Failed to create thread');
+        }
+        
+        // Enviar a resposta
+        $reply_id = $this->save_message($thread_id, $classified_id, $current_user_id, $sender_id, $subject, $message);
+        
+        if ($reply_id) {
+            // Enviar notificação por email
+            $this->send_email_notification($reply_id, $sender_id);
+            
+            wp_send_json_success('Reply sent successfully');
+        } else {
+            wp_send_json_error('Failed to send reply');
+        }
     }
 }
 
