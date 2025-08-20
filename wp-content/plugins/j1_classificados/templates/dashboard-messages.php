@@ -40,7 +40,7 @@ get_header();
                 <?php if ($classified_id) : ?>
                     <?php 
                     $classified = get_post($classified_id);
-                    if ($classified && $classified->post_author === $current_user_id) {
+                    if ($classified && intval($classified->post_author) === intval($current_user_id)) {
                         echo sprintf(__('Mensagens sobre: %s', 'j1_classificados'), $classified->post_title);
                     } else {
                         echo __('Mensagens', 'j1_classificados');
@@ -64,7 +64,7 @@ get_header();
                 <?php 
                 $debug_classified = get_post($classified_id);
                 if ($debug_classified) {
-                    echo '<!-- Debug: Classificado ID: ' . esc_html($classified_id) . ' | Título: ' . esc_html($debug_classified->post_title) . ' | Autor: ' . esc_html($debug_classified->post_author) . ' | Status: ' . esc_html($debug_classified->post_status) . ' -->';
+                    echo '<!-- Debug: Classificado ID: ' . esc_html($classified_id) . ' | Título: ' . esc_html($debug_classified->post_title) . ' | Autor: ' . esc_html($debug_classified->post_author) . ' (tipo: ' . gettype($debug_classified->post_author) . ') | Status: ' . esc_html($debug_classified->post_status) . ' -->';
                 } else {
                     echo '<!-- Debug: Classificado ID ' . esc_html($classified_id) . ' não encontrado -->';
                 }
@@ -107,13 +107,19 @@ function render_classified_messages($classified_id, $user_id) {
     }
     
     // Debug: Verificar se o usuário é o autor
-    if ($classified->post_author !== $user_id) {
+    // Converter ambos para inteiros para comparação correta
+    $author_id = intval($classified->post_author);
+    $current_user_id = intval($user_id);
+    
+    if ($author_id !== $current_user_id) {
         echo '<div class="dokan-message dokan-error">';
         echo '<strong>Erro de Permissão:</strong> ';
         echo 'Você não é o autor deste classificado. ';
         echo 'Classificado ID: ' . esc_html($classified_id) . ' | ';
-        echo 'Autor ID: ' . esc_html($classified->post_author) . ' | ';
-        echo 'Seu ID: ' . esc_html($user_id);
+        echo 'Autor ID: ' . esc_html($classified->post_author) . ' (tipo: ' . gettype($classified->post_author) . ') | ';
+        echo 'Seu ID: ' . esc_html($user_id) . ' (tipo: ' . gettype($user_id) . ') | ';
+        echo 'Autor convertido: ' . esc_html($author_id) . ' | ';
+        echo 'Seu ID convertido: ' . esc_html($current_user_id);
         echo '</div>';
         return;
     }
