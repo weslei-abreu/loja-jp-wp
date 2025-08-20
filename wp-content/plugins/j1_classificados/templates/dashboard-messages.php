@@ -351,12 +351,24 @@ function render_all_messages($user_id) {
 
 <!-- Scripts para funcionalidades -->
 <script>
+// Objeto AJAX local para o dashboard
+const j1_classifieds_ajax = {
+    ajax_url: '<?php echo admin_url('admin-ajax.php'); ?>',
+    nonce: '<?php echo wp_create_nonce('j1_message_nonce'); ?>'
+};
+
 // Marcar mensagem como lida
 function j1_mark_message_read(messageId) {
     const formData = new FormData();
     formData.append('action', 'j1_mark_message_read');
     formData.append('nonce', j1_classifieds_ajax.nonce);
     formData.append('message_id', messageId);
+    
+    // Verificar se o objeto AJAX está disponível
+    if (!j1_classifieds_ajax || !j1_classifieds_ajax.ajax_url) {
+        console.error('Erro: Sistema AJAX não disponível');
+        return;
+    }
     
     fetch(j1_classifieds_ajax.ajax_url, {
         method: 'POST',
@@ -463,8 +475,23 @@ function j1_open_reply_modal(messageId, senderId, classifiedId) {
     document.getElementById('j1-reply-sender-id').value = senderId;
     document.getElementById('j1-reply-message-id').value = messageId;
     
-    // Limpar campos
-    document.getElementById('j1-reply-subject').value = '';
+    // Obter o assunto da mensagem original para preencher automaticamente
+    const messageItem = document.querySelector(`[data-message-id="${messageId}"]`);
+    let originalSubject = '';
+    
+    if (messageItem) {
+        const subjectElement = messageItem.querySelector('.j1-message-subject strong');
+        if (subjectElement && subjectElement.nextSibling) {
+            // Pegar o texto após "Assunto: "
+            originalSubject = subjectElement.nextSibling.textContent.trim();
+        }
+    }
+    
+    // Preencher assunto com "Re: " + assunto original, ou "Re: Mensagem" se não houver assunto
+    const replySubject = originalSubject ? `Re: ${originalSubject}` : 'Re: Mensagem';
+    document.getElementById('j1-reply-subject').value = replySubject;
+    
+    // Limpar campo de mensagem
     document.getElementById('j1-reply-message').value = '';
     document.getElementById('j1-reply-char-count').textContent = '0';
     
@@ -493,6 +520,14 @@ function j1_send_reply() {
     const originalText = submitBtn.textContent;
     submitBtn.textContent = 'Enviando...';
     submitBtn.disabled = true;
+    
+    // Verificar se o objeto AJAX está disponível
+    if (!j1_classifieds_ajax || !j1_classifieds_ajax.ajax_url) {
+        alert('Erro: Sistema AJAX não disponível. Recarregue a página e tente novamente.');
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+        return;
+    }
     
     fetch(j1_classifieds_ajax.ajax_url, {
         method: 'POST',
